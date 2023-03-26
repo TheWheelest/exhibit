@@ -1,0 +1,1074 @@
+
+<head>
+</head>
+<style>
+body{
+margin:0;
+overflow:hidden;
+}
+@font-face { font-family: skipbutton; src: url(https://dl.dropboxusercontent.com/s/rs00gzeysfei1kr/waltograph42.otf?dl=0) }
+@font-face { font-family: menu; src: url(https://dl.dropboxusercontent.com/s/p7xovlzhi7hepr0/DFPW5_EUR.ttf?) }
+@font-face { font-family: menuthin; src: url(https://dl.dropboxusercontent.com/s/3ncthutdac0n60i/Vox%20Bold.ttf?) }
+@font-face { font-family: title; src: url(https://dl.dropboxusercontent.com/s/l95amobro4ungx2/KH2_ALL_MENU_I.TTF?) }
+
+.gif{
+position:absolute;
+right:0vw;
+transform:translateX(100%);
+transition:24s;
+z-index:2;
+animation-timing-function: linear;
+pointer-events:none;
+}
+
+#khlogo{
+position:absolute;
+right:30vh;
+bottom:30vh;
+width:56vh;
+height:36vh;
+background-size:cover;
+background-image:url(https://i.imgur.com/ZPhSrqh.png);
+pointer-events:none;
+}
+
+#sorasplash{
+position:absolute;
+right:0vh;
+bottom:0vh;
+width:100%;
+height:100%;
+background-size:45.02vh 70vh;
+background-image:url(https://i.imgur.com/GSXYcnY.jpg);
+pointer-events:none;
+background-repeat:no-repeat;
+background-position:bottom right;
+background-color:white;
+}
+
+#developedby{
+position:absolute;
+right:42vh;
+bottom:26vh;
+font-family:menu;
+font-size:2vh;
+color:rgb(0,0,0,0.3);
+border-bottom:3px solid rgb(0,0,0,0.3);
+width:100%;
+text-align:right;
+z-index:2;
+pointer-events:none;
+}
+
+.menubar{
+padding-left:6vh;
+font-family:menu;
+font-size:4vh;
+color:rgb(0,0,0,0.6);
+bottom:15vh;
+position:absolute;
+right:0vh;
+z-index:2;
+width:88vh;
+background-image: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255, 255,255,0) 45%,rgba(0,0,0,.3) 100%);
+text-shadow:.4vh .4vh rgb(0,0,0,0.2);
+border-bottom:5px solid rgb(0,0,0,0.5);
+transition:.5s;
+cursor:pointer;
+}
+
+.square{
+position:absolute;
+display:inline-block;
+width:5vh;
+height:5vh;
+bottom:0px;
+left:0vh;
+background-color:rgb(0,0,0,0.6);
+box-shadow:.4vh .4vh rgb(0,0,0,0.2);
+transition:.5s;
+pointer-events:none;
+}
+
+.squareinside{
+position:absolute;
+width:2.5vh;
+height:2.5vh;
+background-color:coral;
+left:1.5vh;
+top:1.5vh;
+opacity:0;
+transition:.25s;
+z-index:2;
+pointer-events:none;
+}
+.squareinside2{
+position:absolute;
+width:3vh;
+height:3vh;
+background-color:red;
+left:1vh;
+top:1vh;
+opacity:0;
+transition:.25s;
+z-index:1;
+pointer-events:none;
+}
+.menubar:hover{
+transform:scale(1.1);
+color:black;
+border-bottom:5px solid rgb(0,0,0,1);
+}
+.menubar:hover .square{
+background-color:black;
+display:visible;
+}
+.menubar:hover .squareinside{
+opacity:1;
+}
+.menubar:hover .squareinside2{
+opacity:1;
+}
+
+#confirmbox{
+width:100vw;
+height:100vh;
+background-color:white;
+z-index:10;
+position:absolute;
+ display:flex;
+ justify-content:center;
+ align-items:center;
+ background-color:black;
+ transition:2s;
+ cursor:pointer;
+}
+#darkbox{
+width:100%;
+height:100%;
+z-index:1;
+background-color:black;
+opacity:0;
+}
+
+#keyhole{
+width:50vh;
+height:50vh;
+position:absolute;
+left:50%;
+top:50%;
+background-size:contain;
+background-position:center;
+margin-left:-25vh;
+margin-top:-25vh;
+background-image:url(https://i.imgur.com/xCEUbNt.png);
+background-repeat:no-repeat;
+opacity:0;
+transition:6s;
+}
+
+#profilesplash{
+background-image:url(https://i.imgur.com/k1IyItf.png);
+height:80vh;
+width:60vh;
+position:absolute;
+right:0vh;
+bottom:0vh;
+background-size:cover;
+background-repeat:no-repeat;
+}
+
+#profilecontainer{
+width:100%;
+height:100%;
+right:0vh;
+bottom:0vh;
+opacity:0;
+pointer-events:none;
+transition:2s;
+position:absolute;
+z-index:12;
+}
+.box {
+position: fixed;
+top:60vh;
+right: 150vh;
+width: 70vh;
+height: 40vh;
+color: #453d3b;
+font-weight:bold;
+font-size: 2.4vh;
+opacity: 0;
+transition: all 0.8s ease-in-out;
+-webkit-transition: all 0.8s ease-in-out;
+-moz-transition: all 0.8s ease-in-out;
+-o-transition: all 0.8s ease-in-out;
+-ms-transition: all 0.8s ease-in-out;
+z-index: 1;
+pointer-events:none;
+font-family:menu;}
+
+.box:target {
+top:55vh;
+right: 100vh;
+opacity: 1;
+pointer-events:auto;
+transition: all 0.8s ease-in-out;
+-webkit-transition: all 0.8s ease-in-out;
+-moz-transition: all 0.8s ease-in-out;
+-o-transition: all 0.8s ease-in-out;
+-ms-transition: all 0.8s ease-in-out;
+overflow-y:auto;}
+
+h{
+font-family:title;
+font-size:4vh;
+}
+a{
+text-decoration:none;
+color:coral;
+text-shadow:0.25vh 0.25vh red;
+}
+
+::-webkit-scrollbar {
+ width: 0px;
+}
+#skipbutton{
+font-family:skipbutton;
+font-size:8vh;
+color:yellow;
+opacity:0;
+position:absolute;
+z-index:8;
+top:8vh;
+right:20vh;
+cursor:pointer;
+}
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 99;
+    position: absolute;
+    width: 66.1vh;
+    height: 44vh;
+    bottom: 18.2vw;
+    margin-left: -47vw;
+}
+
+ .scanlines:before, .scanlines:after {
+	 display: block;
+	 pointer-events: none;
+	 content: '';
+	 position: absolute;
+}
+
+ .scanlines:before, .scanlines:after {
+	 display: block;
+	 pointer-events: none;
+	 content: '';
+	 position: absolute;
+}
+ .scanlines:before {
+	 height: 2px;
+	 width: 100%;
+	 z-index: 2147483649;
+	 background: rgba(0, 0, 0, .3);
+	 opacity: 0.75;
+	 animation: scanline 6s linear infinite;
+}
+ .scanlines:after {
+	 top: 0;
+	 right: 0;
+	 bottom: 0;
+	 left: 0;
+	 z-index: 2147483648;
+	 background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, .3) 51%);
+	 background-size: 100% 4px;
+	 animation: scanlines 1s steps(60) infinite;
+}
+ @keyframes scanline {
+	 0% {
+		 transform: translate3d(0, 200000%, 0);
+	}
+}
+ @keyframes scanlines {
+	 0% {
+		 background-position: 0 50%;
+	}
+}
+
+#topbar{
+background:linear-gradient(0deg, #101151, #000000);
+width:10vw;
+height:20vh;
+position:absolute;
+top:0vh;
+left:0vw;
+z-index:5;
+border-bottom:solid .5vh #0f10de;
+border-right:solid .5vh #0f10de;
+border-radius: 0vh 0vh 1vh 0vh;
+}
+#topbar2{
+background:linear-gradient(0deg, #101151, #000000);
+width:100%;
+height:20vh;
+position:absolute;
+top:0vh;
+left:10.6vw;
+z-index:5;
+border-bottom:solid .5vh #0f10de;
+border-left:solid .5vh #0f10de;
+border-radius: 0vh 0vh 0vh 1vh;
+}
+
+#bottombar{
+background:linear-gradient(180deg, #101151, #000000);
+width:20vw;
+height:20vh;
+position:absolute;
+bottom:0vh;
+z-index:5;
+border-top:solid .5vh #0f10de;
+border-right:solid .5vh #0f10de;
+border-radius: 0vh 1vh 0vh 0vh;
+pointer-events:none;
+}
+#bottombar2{
+background:linear-gradient(180deg, #101151, #000000);
+width:100%;
+height:20vh;
+position:absolute;
+bottom:0vh;
+left:20.6vw;
+z-index:5;
+border-top:solid .5vh #0f10de;
+border-left:solid .5vh #0f10de;
+border-radius: 1vh 0vh 0vh 0vh;
+}
+#mouseears{
+position:absolute;
+background-size:cover;
+width:128vh;
+height:72vh;
+left:50%;
+bottom:50%;
+margin-left:-64vh;
+margin-bottom:-36vh;
+z-index:6;
+background-image:url(https://media.discordapp.net/attachments/898474723778904078/948273852864159804/bg.png?width=1618&height=910);
+}
+.profilemenu{
+width:24vh;
+height:6vh;
+position:relative;
+left:50%;
+bottom:50%;
+background-color:rgb(0,0,0,0.75);
+border-radius: 3vh .5vh 3vh .5vh;
+transition:.25s;
+transition-timing-function:ease-in-out;
+z-index:12;
+display:block;
+margin-top:0vh;
+border-top:solid .25vh rgb(216,216,216,0.7);
+}
+.profilemenu:hover{
+margin-left:3vh;
+border:solid .35vh red;
+background-image: linear-gradient(rgb(0,0,0,0), 60%, rgb(88,0,0,1));
+}
+.profilemenu:hover > .profilemenuhand{
+visibility:visible;
+margin-left:-4vh;
+}
+.profilemenu:hover > .menuhighlighter{
+visibility:visible;
+margin-left:14vh;
+}
+.profilemenu:hover > .menudescription{
+visibility:visible;position:sticky;
+}
+.profilemenuhand{
+width:8vh;
+height:5vh;
+background-image:url(https://media.discordapp.net/attachments/898474723778904078/948275833456459786/Untitled-2.png);
+background-size:cover;
+z-index:12;
+position:absolute;
+top:50%;
+margin-top:-2.5vh;
+left:-2vh;
+visibility:hidden;
+animation: pointright 1.5s ease-in-out infinite;
+pointer-events:none;
+}
+@keyframes pointright {
+  0% {
+    transform: translateX(0%);
+  }
+
+  50% {
+    transform: translateX(30%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+#menucontainer{
+position:absolute;
+bottom:50%;
+left:50%;
+height:0vh;
+width:24vh;
+margin-left:-40vw;
+margin-bottom:20vh;
+cursor:pointer;
+}
+.menuhighlighter{
+width:3vh;
+height:3vh;
+background-image:url(https://media.discordapp.net/attachments/898474723778904078/948283306103943228/star.png);
+background-size:cover;
+z-index:12;
+position:absolute;
+top:50%;
+margin-top:-3.5vh;
+left:7vh;
+visibility:hidden;
+animation: myOrbit 1.75s linear infinite;
+filter:brightness(1.25);
+pointer-events:none;
+}
+
+@keyframes myOrbit {
+    from { transform: rotate(0deg) translateX(1.75vh) rotate(0deg); }
+    to   { transform: rotate(360deg) translateX(1.75vh) rotate(-360deg); }
+}
+p{position:absolute;
+text-align:center;
+width:100%;
+color:white;
+font-family:menuthin;
+font-size:3vh;
+bottom:-1.75vh;
+letter-spacing:.25vh;
+pointer-events:none;
+text-shadow:.4vh .3vh rgb(0,0,0,0.6);
+}
+#locationdiv{
+position:absolute;
+top:13vh;
+right:17vw;
+width:38vw;
+font-size:3vh;
+font-family:menuthin;
+color:#ff6326;
+z-index:12;
+pointer-events:none;
+text-align:center;
+margin-right:-14vw;
+font-size:4.5vh;
+}
+#locationlinediv{
+position:absolute;
+top:19vh;
+right:1vw;
+width:38vw;
+height:.35vh;
+font-size:3vh;
+font-family:title;
+background-image:linear-gradient(90deg, transparent 0%, #ff6326 40%, transparent 90%);
+z-index:12;
+}
+#menudiv{
+width:18vw;
+height;4vh;
+font-family:title;
+color:white;
+font-size:4vh;
+position:absolute;
+z-index:12;
+background-color:#01008a;
+left:5vw;
+top:4vh;
+text-align:center;
+border-radius:6vh;
+text-shadow:.4vh .3vh rgb(0,0,0,0.6);
+box-shadow:.5vh .5vh rgb(0,0,0,1);
+border:.5vh groove #0300f2;
+cursor:pointer;
+}
+#moneydiv{
+position:absolute;
+bottom:15vh;
+left:7vw;
+width:10vw;
+font-size:3vh;
+font-family:title;
+color:#ff6326;
+}
+#moneylinediv{
+position:absolute;
+bottom:14.75vh;
+left:1vw;
+width:18vw;
+height:.35vh;
+font-size:3vh;
+font-family:title;
+background-image:linear-gradient(90deg, transparent 0%, #ff6326 40%, transparent 90%);
+}
+#moneydivamountdiv{
+position:absolute;
+bottom:10vh;
+left:10vw;
+width:10vw;
+font-size:3.75vh;
+font-family:title;
+color:#fda811;
+}
+#timediv{
+position:absolute;
+bottom:7vh;
+left:7vw;
+width:10vw;
+font-size:3vh;
+font-family:title;
+color:#154ffb;
+}
+#timelinediv{
+position:absolute;
+bottom:6.75vh;
+left:1vw;
+width:18vw;
+height:.35vh;
+font-size:3vh;
+font-family:title;
+background-image:linear-gradient(90deg, transparent 0%, #154ffb 40%, transparent 90%);
+}
+#currenttimediv{
+position:absolute;
+bottom:1.5vh;
+left:8.5vw;
+width:14vw;
+font-size:3.75vh;
+font-family:title;
+color:#1de7ff;
+}
+
+@keyframes blink {
+  0%,49%,100% {
+    opacity: 1;
+  }
+  50%,99% {
+    opacity: 0;
+  }
+}
+.menudescription{
+width:40vw;
+height:19vh;
+z-index:12;
+position:absolute;
+bottom:0vh;;
+left:21.5vw;
+visibility:hidden;
+pointer-events:none;
+color:#3b88c0;
+font-family:menuthin;
+font-size:4vh;
+}
+
+#statsdiv:hover ~ #statdescription {
+background-color:red;
+}
+.blueline{
+height:100%;
+position:absolute;
+z-index:4;
+left:2vw;
+box-shadow:0vh 0vh 2vw .5vw #0b0dff;
+background-color:#154ffb;
+}
+
+.profilecontent{
+width:38vw;
+height:49vh;
+position:absolute;
+left:50%;
+bottom:50%;
+margin-bottom:-25vh;
+margin-left:-18vw;
+z-index:12;
+background-color:rgb(0,0,0,0.75);
+border-radius: 3vh .5vh 3vh .5vh;
+transition-timing-function:ease-in-out;
+opacity:0;
+transition:.25s;
+font-family:menuthin;
+color:white;
+text-shadow:.4vh .3vh rgb(0,0,0,0.6);
+padding-left:1vw;
+padding-top:1vh;
+font-size:3.25vh;
+padding-right:1vw;
+}
+p2{
+float:right;
+}
+</style>
+<body onload="setTime()">
+<div id="profilecontainer">
+<div id="locationdiv">Destiny Islands</div>
+<div id="locationlinediv"></div>
+<div id="menudiv" onclick="finalmusicfunction()">Menu</div>
+<div id="topbar"></div>
+<div id="topbar2"></div>
+<div id="bottombar"><div id="moneydiv">Munnies</div><div id="moneydivamountdiv">1337</div><div id="moneylinediv"></div>
+<div id="timediv">Time</div><div id="currenttimediv"><span id="hoursdiv"></span><span style="font-family:menu;font-size:6vh;bottom:-0.5vh;position:relative;animation:2s blink infinite;">&thinsp;:&thinsp;</span><span id="minutesdiv"></span></div><div id="timelinediv"></div>
+</div>
+<div id="bottombar2"></div>
+<div class="blueline" style="width:.1vw; opacity:.5;"></div><div class="blueline" style="width:.5vw;margin-left:2vw;opacity:0.8;"></div> <div class="blueline" style="width:.5vw;margin-left:4vw;opacity:0.6;"></div>
+<div id="mouseears"></div><div id="menucontainer">
+<div class="profilemenu" id="statsdiv" onmouseover="action(); makevisible('stats')" onmouseout="hidestuff()" onclick="playshortsound(); showstats();" ><div class="profilemenuhand"></div><div class="menuhighlighter"></div><p>Items</p></div>
+<div class="profilemenu" id="historydiv" onmouseover="action(); makevisible('history')" onmouseout="hidestuff()" onclick="playshortsound(); showhistory();"><div class="profilemenuhand"></div><div class="menuhighlighter"></div><p>Abilities</p></div>
+<div class="profilemenu" id="hcanonsdiv" onmouseover="action(); makevisible('hcanons')" onmouseout="hidestuff()" onclick="playshortsound(); showhcanons();" ><div class="profilemenuhand"></div><div class="menuhighlighter"></div><p>Customize</p></div>
+<div class="profilemenu" id="friendsdiv" onmouseover="action(); makevisible('friends')" onmouseout="hidestuff()" onclick="playshortsound(); showfriends();" ><div class="profilemenuhand"></div><div class="menuhighlighter"></div><p>Party</p></div>
+<div class="profilemenu" id="musicdiv" onmouseover="action(); makevisible('music')" onmouseout="hidestuff()" onclick="playshortsound(); showmusic();"><div class="profilemenuhand"></div><div class="menuhighlighter"></div><p>Status</p></div>
+<div class="profilemenu" id="codediv" onmouseover="action(); makevisible('code')" onmouseout="hidestuff()" onclick="playshortsound(); showcode();" ><div class="profilemenuhand"></div><div class="menuhighlighter"></div><p>Config</p></div>
+</div>
+<div class="menudescription" id="statdescription">Use and equip items you have found.</div>
+<div class="menudescription" id="historydescription">Equip, learn, and change your abilities.</div>
+<div class="menudescription" id="hcanondescription">View or change your current equipment.</div>
+<div class="menudescription" id="friendsdescription">Customize your party.</div>
+<div class="menudescription" id="musicdescription">Check the status of your party.</div>
+<div class="menudescription" id="codedescription">Change configuration.</div>
+<div style="width:100%;height:100%;filter:brightness(50%);background-color:white;"  class="scanlines">
+<div id="profilesplash"></div>
+</div>
+<div class="profilecontent" id="statcontent"><div class="menuhighlighter" style="z-index:12;position:absolute;visibility:visible;top:4vh;left:8vw;animation-duration:3s;"></div><span style="font-size:4vh;font-family:menu;display:inline;">Journal</span><div style="overflow:auto;height:42vh;margin-top:0vh;">
+ > Name : <p2>Sora</p2><br>
+ > Age : <p2>16</p2><br>
+ > Gender : <p2>Male</p2><br>
+ > Height : <p2>5'2"</p2><br>
+ > Hair Color : <p2>Light Brown</p2><br>
+ > Eye Color : <p2>Blue</p2><br>
+ > Likes : <p2>Paopu Fruit</p2><br>
+ > Occupation : <p2>Keyblade Wielder</p2><br><br>Sora is the main protagonist and main playable character in Kingdom Hearts, Kingdom Hearts: Chain of Memories, Kingdom Hearts II, Kingdom Hearts 3D: Dream Drop Distance, and Kingdom Hearts III.
+<br><br>
+Sora is a Keyblade wielder from the Destiny Islands where he, along with his childhood friends Riku and Kairi, dreamed of venturing away to find out what lies beyond their home.
+</div></div>
+<div class="profilecontent" id="historycontent"><div class="menuhighlighter" style="z-index:12;position:absolute;visibility:visible;top:3vh;left:7vw;animation-duration:3s;"></div><span style="font-size:4vh;font-family:menu;display:inline;">History</span><br><div style="overflow:auto;height:42vh;margin-top:0vh;">
+Sora, Donald, and Goofy awake in the basement of the Old Mansion located in Twilight Town with their former memories restored, although they cannot remember what happened in Castle Oblivion. But before they awake in Twilight Town, Roxas comes to see Sora and eventually fuses with him.<br><br>
+ Continuing their journey to find Riku and King Mickey, they set out traveling across new worlds, meeting old friends and enemies from the original Kingdom Hearts game while also making new friends. 
+ <br><br>They continue the battle against the Heartless and now a new threat, the remaining members of the Organization they encountered in Chain of Memories.</div></div>
+<div class="profilecontent" id="hcanoncontent"><div class="menuhighlighter" style="z-index:12;position:absolute;visibility:visible;top:3vh;left:10.5vw;animation-duration:3s;"></div><span style="font-size:4vh;font-family:menu;display:inline;">Headcanons</span><br><div style="overflow:auto;height:42vh;margin-top:0vh;">Nebulously at the end of KH2.</div></div>
+<div class="profilecontent" id="friendscontent"><div class="menuhighlighter" style="z-index:12;position:absolute;visibility:visible;top:3vh;left:7vw;animation-duration:3s;"></div><span style="font-size:4vh;font-family:menu;display:inline;">Friends</span><br><div style="overflow:auto;height:42vh;margin-top:0vh;">Filled soon!</div></div>
+<div class="profilecontent" id="musiccontent"><div class="menuhighlighter" style="z-index:12;position:absolute;visibility:visible;top:3vh;left:7vw;animation-duration:3s;"></div><span style="font-size:4vh;font-family:menu;display:inline;">Gallery</span><br><div style="overflow:auto;height:42vh;margin-top:0vh;">Filled soon!</div></div>
+<div class="profilecontent" id="codecontent"><div class="menuhighlighter" style="z-index:12;position:absolute;visibility:visible;top:3vh;left:4.5vw;animation-duration:3s;"></div><span style="font-size:4vh;font-family:menu;display:inline;">OOC</span><br><div style="overflow:auto;height:42vh;margin-top:0vh;">Friendly.<br>Don't be weird.<br>My code.<br></div></div>
+</div>
+<div id="confirmbox">
+<video preload="auto" id="startvideo" onloadstart="this.volume=0.5"	onclick="this.play(),start()" style="height:100%;width:auto;" >
+ <source type="video/mp4" src="https://dl.dropboxusercontent.com/s/m9n4see6qy0bxrm/fwww.mp4">
+</video>
+</div>
+
+<div id="darkbox"><div id="keyhole"></div></div>
+<div id="container">
+<div id="developedby">
+D e v e l o p e d   b y   W H E E L S O F T</div>
+<div class="menubar" onmouseover="action()" onclick="playlong()">
+<div class="square"><div class="squareinside"></div><div class="squareinside2" ></div></div>N e w&nbsp&nbspG a m e
+</div>
+<div class="menubar" onmouseover="action()" onclick="playshort()" style="bottom:7vh">
+<div class="square"><div class="squareinside"></div><div class="squareinside2" ></div></div>L o a d
+</div>
+<div id="sorasplash"></div>
+<div id="khlogo"></div>
+</div>
+
+<div id="1" class="gif" style="top:66vh;"><img src="https://i.imgur.com/k3Jbc02.gif"></div>
+
+<div id="2" class="gif" style="top:6vh;"><img src="https://i.imgur.com/xWDEWaQ.gif"></div>
+
+<div id="3" class="gif" style="top:50vh;"><img src="https://i.imgur.com/KsCToLS.gif"></div>
+
+<div id="4" class="gif" style="top:30vh;"><img src="https://i.imgur.com/ttvHiEV.gif"></div>
+
+<div id="5" class="gif" style="top:20vh;"><img src="https://i.imgur.com/E9Ms5zE.gif"></div>
+
+<div id="6" class="gif" style="top:70vh;"><img src="https://i.imgur.com/JlpyUCF.gif"></div>
+
+<div id="7" class="gif" style="top:40vh;"><img src="https://i.imgur.com/kevdJr3.gif"></div>
+
+<div id="8" class="gif" style="top:15vh;"><img src="https://i.imgur.com/6bfBDor.gif"></div>
+
+<div id="9" class="gif" style="top:57vh;"><img src="https://i.imgur.com/RFzGXDn.gif"></div>
+
+<div id="10" class="gif" style="top:42vh;"><img src="https://i.imgur.com/ATDqhQk.gif"></div>
+
+<div id="11" class="gif" style="top:23vh;"><img src="https://i.imgur.com/WDMqeQS.gif"></div>
+
+<div id="12" class="gif" style="top:77vh;"><img src="https://i.postimg.cc/pLzxDwLn/tumblr-pmkkz7-VMl-M1qf5hjqo2-540.gif"></div>
+
+<audio id="audio" src="https://dl.dropboxusercontent.com/s/pmzvtz4xbpxpub8/change.mp3"></audio>
+<audio id="dearlybeloved" src="https://dl.dropboxusercontent.com/s/zcgi89xuslqc4r9/Kingdom%20Hearts%20-%20Dearly%20Beloved%20%28With%20Beach%20Waves%29-tRFWYElAPBw.m4a" loop autoloop></audio>
+<audio id="confirm" src="https://dl.dropboxusercontent.com/s/wqlfel3q683dnsy/newgame.mp3"></audio>
+<audio id="gallerymusic" src="https://dl.dropboxusercontent.com/s/l6mt738w0ks8xd7/cutscenesound_1.mp3"></audio>
+<audio id="finalmusic" src="https://dl.dropboxusercontent.com/s/cvg8fdpzl282pa8/Kingdom%20Hearts%201.5%20HD%20ReMix%20-Treasured%20Memories-%20Extended-qN3iOUQQ1hs.opus"></audio>
+
+
+<div id="skipbutton" onclick="skipcinematic()">Skip</div>
+
+<script>
+var a1 = document.getElementById('1');
+var a2 = document.getElementById('2');
+var a3 = document.getElementById('3');
+var a4 = document.getElementById('4');
+var a5 = document.getElementById('5');
+var a6 = document.getElementById('6');
+var a7 = document.getElementById('7');
+var a8 = document.getElementById('8');
+var a9 = document.getElementById('9');
+var a10 = document.getElementById('10');
+var a11 = document.getElementById('11');
+var a12 = document.getElementById('12');
+var startmusic = document.getElementById('dearlybeloved');
+var confirmbox = document.getElementById('confirmbox');
+var ars = document.getElementsByClassName('menubar');
+var startvideo = document.getElementById('startvideo');
+var confirm = document.getElementById('confirm');
+var gallerymusic = document.getElementById('gallerymusic');
+var container = document.getElementById('container');
+var darkbox = document.getElementById('darkbox');
+var keyhole = document.getElementById('keyhole');
+var profilecontainer = document.getElementById('profilecontainer');
+var finalmusic = document.getElementById('finalmusic');
+var skipbutton = document.getElementById('skipbutton');
+var timeid = document.getElementById('currenttimediv');
+var playing = false;
+gallerymusic.volume = 0.3;
+confirm.volume = .3;
+var currenttime = document.getElementById('currenttimediv');
+function makevisible(section){
+switch (section){
+case 'stats':
+statdescription.style.visibility="visible";
+historydescription.style.visibility="hidden";
+hcanondescription.style.visibility="hidden";
+friendsdescription.style.visibility="hidden";
+musicdescription.style.visibility="hidden";
+codedescription.style.visibility="hidden";
+break;
+case 'history':
+statdescription.style.visibility="hidden";
+historydescription.style.visibility="visible";
+hcanondescription.style.visibility="hidden";
+friendsdescription.style.visibility="hidden";
+musicdescription.style.visibility="hidden";
+codedescription.style.visibility="hidden";
+break;
+case 'hcanons':
+statdescription.style.visibility="hidden";
+historydescription.style.visibility="hidden";
+hcanondescription.style.visibility="visible";
+friendsdescription.style.visibility="hidden";
+musicdescription.style.visibility="hidden";
+codedescription.style.visibility="hidden";
+break;
+case 'friends':
+statdescription.style.visibility="hidden";
+historydescription.style.visibility="hidden";
+hcanondescription.style.visibility="hidden";
+friendsdescription.style.visibility="visible";
+musicdescription.style.visibility="hidden";
+codedescription.style.visibility="hidden";
+break;
+case 'music':
+statdescription.style.visibility="hidden";
+historydescription.style.visibility="hidden";
+hcanondescription.style.visibility="hidden";
+friendsdescription.style.visibility="hidden";
+musicdescription.style.visibility="visible";
+codedescription.style.visibility="hidden";
+break;
+case 'code':
+statdescription.style.visibility="hidden";
+historydescription.style.visibility="hidden";
+hcanondescription.style.visibility="hidden";
+friendsdescription.style.visibility="hidden";
+musicdescription.style.visibility="hidden";
+codedescription.style.visibility="visible";
+break;
+}
+}
+function showstats(){
+statcontent.style.opacity="1";
+historycontent.style.opacity="0";
+hcanoncontent.style.opacity="0";
+friendscontent.style.opacity="0";
+musiccontent.style.opacity="0";
+codecontent.style.opacity="0";
+statcontent.style.pointerEvents="auto";
+historycontent.style.pointerEvents="none";
+hcanoncontent.style.pointerEvents="none";
+friendscontent.style.pointerEvents="none";
+musiccontent.style.pointerEvents="none";
+codecontent.style.pointerEvents="none";
+
+}
+function showhistory(){
+statcontent.style.opacity="0";
+historycontent.style.opacity="1";
+hcanoncontent.style.opacity="0";
+friendscontent.style.opacity="0";
+musiccontent.style.opacity="0";
+codecontent.style.opacity="0";
+statcontent.style.pointerEvents="none";
+historycontent.style.pointerEvents="auto";
+hcanoncontent.style.pointerEvents="none";
+friendscontent.style.pointerEvents="none";
+musiccontent.style.pointerEvents="none";
+codecontent.style.pointerEvents="none";
+
+}
+function showhcanons(){
+statcontent.style.opacity="0";
+historycontent.style.opacity="0";
+hcanoncontent.style.opacity="1";
+friendscontent.style.opacity="0";
+musiccontent.style.opacity="0";
+codecontent.style.opacity="0";
+statcontent.style.pointerEvents="none";
+historycontent.style.pointerEvents="none";
+hcanoncontent.style.pointerEvents="auto";
+friendscontent.style.pointerEvents="none";
+musiccontent.style.pointerEvents="none";
+codecontent.style.pointerEvents="none";
+
+}
+function showfriends(){
+statcontent.style.opacity="0";
+historycontent.style.opacity="0";
+hcanoncontent.style.opacity="0";
+friendscontent.style.opacity="1";
+musiccontent.style.opacity="0";
+codecontent.style.opacity="0";
+statcontent.style.pointerEvents="none";
+historycontent.style.pointerEvents="none";
+hcanoncontent.style.pointerEvents="none";
+friendscontent.style.pointerEvents="auto";
+musiccontent.style.pointerEvents="none";
+codecontent.style.pointerEvents="none";
+
+}
+function showmusic(){
+statcontent.style.opacity="0";
+historycontent.style.opacity="0";
+hcanoncontent.style.opacity="0";
+friendscontent.style.opacity="0";
+musiccontent.style.opacity="1";
+codecontent.style.opacity="0";
+statcontent.style.pointerEvents="none";
+historycontent.style.pointerEvents="none";
+hcanoncontent.style.pointerEvents="none";
+friendscontent.style.pointerEvents="none";
+musiccontent.style.pointerEvents="auto";
+codecontent.style.pointerEvents="none";
+
+}
+function showcode(){
+statcontent.style.opacity="0";
+historycontent.style.opacity="0";
+hcanoncontent.style.opacity="0";
+friendscontent.style.opacity="0";
+musiccontent.style.opacity="0";
+codecontent.style.opacity="1";
+statcontent.style.pointerEvents="none";
+historycontent.style.pointerEvents="none";
+hcanoncontent.style.pointerEvents="none";
+friendscontent.style.pointerEvents="none";
+musiccontent.style.pointerEvents="none";
+codecontent.style.pointerEvents="auto";
+
+}
+function hidestuff(){
+statdescription.style.visibility="hidden";
+historydescription.style.visibility="hidden";
+hcanondescription.style.visibility="hidden";
+friendsdescription.style.visibility="hidden";
+musicdescription.style.visibility="hidden";
+codedescription.style.visibility="hidden";
+}
+var hours;
+var minutes;
+function setTime(){ 
+var today = new Date();
+hours = today.getHours();
+minutes = (today.getMinutes()<10?'0':'') + today.getMinutes();
+hoursdiv.innerHTML=hours;
+minutesdiv.innerHTML= minutes;
+console.log(today.getSeconds());
+var updateTime = setInterval(resetTime, 60000);
+}
+
+function resetTime(){
+today = new Date();
+hours = today.getHours();
+minutes = (today.getMinutes()<10?'0':'') + today.getMinutes();
+hoursdiv.innerHTML=hours;
+minutesdiv.innerHTML= minutes;
+console.log(today.getSeconds());
+}
+function cascade(){
+a1.style.right = "100vw";
+}
+var audio = document.getElementById("audio");
+function action(){
+audio.currentTime = 0;
+ audio.play();
+audio.volume = .3;
+}
+function start(){
+setTimeout(function(){
+confirmbox.volume = 1;
+confirmbox.style.pointerEvents = "none";
+confirmbox.style.opacity = "0";
+setTimeout(function(){	
+startmusic.volume = 0.1;
+startmusic.play();
+}, 2500);
+}, 1000);
+}
+
+function playlong(){
+container.style.pointerEvents = "none";
+darkbox.style.transition = "4s";
+darkbox.style.opacity = "1";
+confirm.currentTime = 0;
+confirm.play();
+fade();
+a1.style.transition="35s";
+a2.style.transition="37s";
+a4.style.transition="32s";
+a3.style.transition="37s";
+a5.style.transition="39s";
+a6.style.transition="37s";
+a7.style.transition="39s";
+a8.style.transition="34s";
+a9.style.transition="32s";
+a10.style.transition="28s";
+a11.style.transition="26s";
+a12.style.transition="25s";
+container.style.transition = "4s";
+container.style.opacity = "0";
+setTimeout(function(){
+gallerymusic.play();
+skipbutton.style.transition = "3s";
+skipbutton.style.opacity = "1";
+setTimeout(function(){
+a1.style.right = "139vw";
+}, 1000);
+setTimeout(function(){
+a2.style.right = "134vw";
+}, 3000);
+setTimeout(function(){
+a3.style.right = "130vw";
+}, 6500);
+setTimeout(function(){
+a4.style.right = "135vw";
+}, 9000);
+setTimeout(function(){
+a5.style.right = "132vw";
+}, 12000);
+setTimeout(function(){
+a6.style.right = "131vw";
+}, 15000);
+setTimeout(function(){
+a7.style.right = "138vw";
+}, 18000);
+setTimeout(function(){
+a8.style.right = "131vw";
+}, 21000);
+setTimeout(function(){
+a9.style.right = "133vw";
+}, 24000);
+setTimeout(function(){
+a10.style.right = "132vw";
+}, 27000);
+setTimeout(function(){
+a11.style.right = "132vw";
+}, 30000);
+setTimeout(function(){
+a12.style.right = "138vw";
+}, 33000);
+setTimeout(function(){
+keyhole.style.opacity = "1";
+}, 36000);
+setTimeout(function(){
+keyhole.style.transform = "scale(5.0)";
+}, 50000);
+setTimeout(function(){
+profilecontainer.style.opacity = "1";
+profilecontainer.style.pointerEvents = "auto";
+}, 52000);
+
+},3000);
+
+}
+
+function fade(){
+ if(startmusic.volume > 0){
+ startmusic.volume -= 0.025;
+ setTimeout(fade, 200);
+ }else{
+ startmusic.pause();
+ }
+}
+
+function playshortsound(){
+confirm.currentTime = 0;
+confirm.play();
+}
+function playshort(){
+container.style.visibility = "hidden";
+confirm.currentTime = 0;
+confirm.play();
+fade();
+profilecontainer.style.transition = "1s";
+profilecontainer.style.opacity = "1";
+profilecontainer.style.pointerEvents = "auto";
+container.style.transition = "6s";
+container.style.opacity = "0";
+}
+
+function finalmusicfunction(){
+ if(playing === false){
+ finalmusic.play();
+ playing = true;
+ }else{
+ finalmusic.pause();
+ playing = false;
+ }
+finalmusic.volume = 0.1;
+}
+
+
+
+function skipcinematic(){
+confirm.currentTime = 0;
+confirm.play();
+profilecontainer.style.opacity = "1";
+profilecontainer.style.pointerEvents = "auto";
+fadegallery();
+}
+
+function fadegallery(){
+ if(gallerymusic.volume > 0){
+ gallerymusic.volume -= 0.025;
+ setTimeout(fadegallery, 300);
+ }else{
+ gallerymusic.pause();
+ }
+	
+}
+</script>
+</body>

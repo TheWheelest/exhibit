@@ -1,0 +1,315 @@
+<head>
+</head>
+<style>
+@font-face { font-family: Lemon; src: url(https://dl.dropboxusercontent.com/s/8ov9l70d702t7oa/LemonMilklight.otf) }
+@font-face {font-family: Caviar; src: url(https://dl.dropboxusercontent.com/s/348kbbuapao26e4/CaviarDreams.ttf) }
+ 
+ body {
+	 height: 100%
+	 width:100%;
+	 overflow: hidden;
+	 margin:0;
+}
+ .background {
+	 position: relative;
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+	 width: 100%;
+	 height: 100%;
+}
+ .background::before {
+	 content: '';
+	 position: absolute;
+	 top: 0;
+	 left: 0;
+	 width: calc(100% + var(--stripe-size));
+	 height: 100%;
+		 background: repeating-linear-gradient(45deg, var(--color2) 25%, var(--color2) 50%, var(--color1) 50%, var(--color1) 75%);
+		 background-size: var(--stripe-size) var(--stripe-size);
+	 animation: stripeTransform var(--duration) linear infinite;
+}
+ @keyframes stripeTransform {
+	 0% {
+		 transform: translateX(0);
+	}
+	 100% {
+		 transform: translateX(calc(var(--stripe-size) * -1));
+	}
+}
+ 
+:root {
+	 --stripe-size: 20vh;
+	 --color1: #a1a8b8;
+	 --color2: #cdcdcd;
+	 --duration: 5s;
+	 width:100%;
+	 height:100%;
+}
+
+#gun{
+background-image:url(https://media.discordapp.net/attachments/898474723778904078/949137427803549756/itqzpD7.jpeg);
+background-size:contain;
+width:30vh;
+height:48.4vh;
+position:absolute;
+left:50%;
+bottom:50%;
+margin-bottom:-24.2vh;
+box-shadow:-1vh 1vh #a1a8b8;
+margin-left:-70vh;
+}
+#title{
+position:absolute;
+left:50%;
+bottom:50%;
+font-family:lemon;
+font-size:14vh;
+color:#a04b4e;
+text-shadow: .25vh .25vh #cdcdcd;
+margin-left:-39vh;
+margin-bottom:10vh;
+}
+
+.contentbox{
+background-color:rgb(205,205,205,0.8);
+width:54.5vh;
+height:36.4vh;
+position:absolute;
+left:50%;
+bottom:50%;
+margin-bottom:-24.2vh;
+box-shadow:1vh 1vh #a1a8b8;
+margin-left:-39vh;
+pointer-events:none;
+opacity:0;
+transition:.5s;
+font-family:caviar;
+color:#3b3e6b;
+font-size:2.5vh;
+font-weight:bold;
+display: inline-block;
+}
+
+.line{
+width:96vh;
+height:.5vh;
+position:absolute;
+background-color:#a04b4e;
+left:50%;
+bottom:50%;
+margin-bottom:-30vh;
+margin-left:-76vh;
+}
+
+.line2{
+width:.5vh;
+height:58vh;
+position:absolute;
+background-color:#a04b4e;
+left:50%;
+bottom:50%;
+margin-bottom:-30vh;
+margin-left:-76vh;
+}
+.box{
+width:2.5vh;
+height:28.2vh;
+position:absolute;
+background-color:#a04b4e;
+left:50%;
+bottom:50%;
+margin-bottom:-14.1vh;
+margin-left:-77vh;
+}
+.box2{
+width:48.25vh;
+height:2.5vh;
+position:absolute;
+background-color:#a04b4e;
+left:50%;
+bottom:50%;
+margin-bottom:27.1vh;
+margin-left:-51.875vh;
+}
+#nextbutton{
+position:absolute;
+font-size:3vh;
+color:#a1a8b8;
+bottom:50%;
+left:50%;
+margin-bottom:-24.5vh;
+margin-left:11.5vh;
+cursor:pointer;
+}
+#backbutton{
+position:absolute;
+font-size:3vh;
+color:#a1a8b8;
+bottom:50%;
+left:50%;
+margin-bottom:-24.5vh;
+margin-left:-38.5vh;
+cursor:pointer;
+}
+p{
+display: inline;
+float:right;
+}
+::-webkit-scrollbar {
+ width: 5px;
+}
+::-webkit-scrollbar-track {
+ background: transparent;
+}
+::-webkit-scrollbar-thumb {
+background-color:#a04b4e;
+}
+a{
+color:#a04b4e;
+text-decoration:none;
+transition:.2s;}
+a:hover{
+color:#a1a8b8;
+}
+img{
+width:9.7vh;
+height:9.7vh;
+object-fit:cover;
+box-shadow:.5vh .5vh #a04b4e;
+}
+</style>
+<body>
+<div class="background"></div>
+<a href="https://imgur.com/a/UxAYwq5" target="_blank"><div id="gun"></div></a>
+<div id="title">Shikikan</div>
+<div class="contentbox" id="page1" style="opacity:1;pointer-events:auto;"><div style="overflow:auto;height:31.4vh; padding:1vh;">
+Name:<span style="float:right">Smuggo</span><br>
+Age:<span style="float:right">Dunno</span><br>
+Gender:<span style="float:right">Male(?)</span><br>
+Occupation:<span style="float:right">Cool Kid</span><br>
+Status:<span style="float:right"><a href="">Pumping</a></span><br>
+</div></div>
+<div class="contentbox" id="page2" ><div style="overflow:auto;height:31.4vh; padding:1vh;">
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+</div></div>
+<div class="contentbox" id="page3" ><div style="overflow:auto;height:31.4vh; padding:1vh;">
+<a href="https://roleplay.chat/profile.php?user=" target="_blank"><img src="https://media.discordapp.net/attachments/898474723778904078/949137427803549756/itqzpD7.jpeg"></a>
+
+</div></div>
+<div class="contentbox" id="page4" ><div style="overflow:auto;height:31.4vh; padding:1vh;">
+Don't be weird.<br>
+Friendly.
+</div></div>
+<div class="line"></div>
+<div class="line" style="margin-bottom:28vh;"></div>
+<div class="line2"></div>
+<div class="line2" style="margin-left:20vh;height:58.5vh"></div>
+<div class="box"></div>
+<div class="box" style="margin-left:19vh;"></div>
+<div class="box2"></div>
+<div class="box2" style="margin-bottom:-31vh;"></div>
+<div id="backbutton" onclick="backpage()">&#9665;</div>
+<div id="nextbutton" onclick="nextpage()">&#9655;</div>
+
+<script>
+var page = 1;
+function nextpage(){
+switch (page) {
+case 1:
+page2.style.opacity="1";
+page2.style.pointerEvents ="auto";
+page1.style.opacity="0";
+page3.style.opacity="0";
+page4.style.opacity="0";
+page1.style.pointerEvents ="none";
+page3.style.pointerEvents ="none";
+page4.style.pointerEvents ="none";
+page = 2;
+break;
+case 2:
+page3.style.opacity="1";
+page3.style.pointerEvents ="auto";
+page2.style.opacity="0";
+page4.style.opacity="0";
+page1.style.opacity="0";
+page2.style.pointerEvents ="none";
+page4.style.pointerEvents ="none";
+page1.style.pointerEvents ="none";
+page = 3;
+break;
+case 3:
+page4.style.opacity="1";
+page4.style.pointerEvents ="auto";
+page1.style.opacity="0";
+page2.style.opacity="0";
+page3.style.opacity="0";
+page1.style.pointerEvents ="none";
+page2.style.pointerEvents ="none";
+page3.style.pointerEvents ="none";
+page = 4;
+break;
+case 4:
+page1.style.opacity="1";
+page1.style.pointerEvents ="auto";
+page2.style.opacity="0";
+page3.style.opacity="0";
+page4.style.opacity="0";
+page2.style.pointerEvents ="none";
+page3.style.pointerEvents ="none";
+page4.style.pointerEvents ="none";
+page = 1;
+break;
+}
+}
+function backpage(){
+switch (page) {
+case 1:
+page4.style.opacity="1";
+page4.style.pointerEvents ="auto";
+page3.style.opacity="0";
+page2.style.opacity="0";
+page1.style.opacity="0";
+page3.style.pointerEvents ="none";
+page2.style.pointerEvents ="none";
+page1.style.pointerEvents ="none";
+page = 4;
+break;
+case 2:
+page1.style.opacity="1";
+page1.style.pointerEvents ="auto";
+page2.style.opacity="0";
+page3.style.opacity="0";
+page4.style.opacity="0";
+page2.style.pointerEvents ="none";
+page3.style.pointerEvents ="none";
+page4.style.pointerEvents ="none";
+page = 1;
+break;
+case 3:
+page2.style.opacity="1";
+page2.style.pointerEvents ="auto";
+page1.style.opacity="0";
+page3.style.opacity="0";
+page4.style.opacity="0";
+page1.style.pointerEvents ="none";
+page3.style.pointerEvents ="none";
+page4.style.pointerEvents ="none";
+page = 2;
+break;
+case 4:
+page3.style.opacity="1";
+page3.style.pointerEvents ="auto";
+page1.style.opacity="0";
+page2.style.opacity="0";
+page4.style.opacity="0";
+page1.style.pointerEvents ="none";
+page2.style.pointerEvents ="none";
+page4.style.pointerEvents ="none";
+page = 3;
+break;
+}
+}
+
+</script>
+</body>

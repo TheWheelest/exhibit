@@ -1,0 +1,652 @@
+<style type="text/css">
+
+@import url('https://fonts.googleapis.com/css?family=Exo');
+@import url('https://fonts.googleapis.com/css?family=Stalinist+One');
+@import url('https://fonts.googleapis.com/css?family=Ruthie');
+
+
+::selection {color: grey; background-color:none; }
+::-moz-selection {color: #ce938f; background-color:grey; }
+ 
+::-webkit-scrollbar { width: 5px; height:0px; }
+::-webkit-scrollbar-thumb:vertical {
+background-color: #BDBDBD; border: none; }
+
+body {
+background-color: #746137;
+background-image: url('https://i.imgur.com/QVFbAyU.png');
+background-repeat: repeat;
+cursor: url(http://31.media.tumblr.com/tumblr_lqs4idHqTZ1qfoi4t.png), progress !important; }
+
+a:active, a:link, a:visited {
+color: #FFF;
+text-decoration: none;
+-webkit-transition: all 0.4s ease-in;
+-moz-transition: all 0.4s ease-in;
+-ms-transition: all 0.4s ease-in;
+-o-transition: all 0.4s ease-in;
+transition: all 0.4s ease-in;
+cursor: url('http://31.media.tumblr.com/tumblr_lqs4idHqTZ1qfoi4t.png'), progress; }
+
+a:hover {
+color: #929296;
+-moz-transition-duration:0.5s;
+-webkit-transition-duration:0.5s;
+-o-transition-duration:0.5s;
+transition-duration:0.5s;
+cursor: url('http://31.media.tumblr.com/tumblr_lqs4idHqTZ1qfoi4t.png'), progress; }
+
+
+.content {
+background-color: transparent;
+height:200px;
+left:0px;
+opacity:0;
+position:fixed;
+top: 0px;
+width: 1px; }
+ 
+.content:target {
+opacity:1;
+z-index:5;
+left: 1px; }
+
+.contentbox {
+ position:fixed;
+ margin:0 auto;
+top: 211px;
+left: 427px;
+height: 250px;
+width: 516px;
+background-color: rgba(0, 0, 0, .7);
+border: 0px solid #fff;
+ overflow: auto;
+ z-index: 2;
+-moz-transition: all 1.0s ease-out;
+-ms-transition: all 1.0s ease-out;
+-o-transition: all 1.0s ease-out;
+transition: all 1.0s ease-out; }
+
+.contentbox div {
+ position: absolute;
+ top: 11%;
+ color: #fff;
+ margin:0 auto;
+ font-size: 12px;
+ background-color: rgba(142, 133, 135, .8);
+ background-image:url(https://i.imgur.com/LkyhZ4S.png);
+font-family: trebuchet ms;
+ font-weight: none;
+ text-align: justify;
+ width: 500px;
+ height: 175px;
+line-height: 14px;
+ padding: 10px;
+ overflow: auto;
+ z-index: 99; }
+
+#main-bg {
+position: fixed;
+top: 200px;
+left: 410px;
+height: 274px;
+width: 550px;
+border: none;
+background:url("") center; 
+background-size: cover;
+overflow: auto;
+z-index: 0; 
+box-shadow: 0px 00px 25px #000;}
+
+.main {
+position:absolute;
+top: 211px;
+left: 425px;
+height: 248px;
+width: 516px;
+background-image:url(https://imgur.com/ttYKi6D);
+background-position: top; 
+background-repeat:no-repeat; 
+background-size: 100% 100%;
+border:2px solid #000000; }
+
+.elk {
+height: 250px;
+width: 516px;
+background-color: transparent;
+filter: alpha(opacity=0);
+opacity: 0;
+overflow:hidden;
+-webkit-transition: all 0.6s ease-out;
+-moz-transition: all 0.6s ease-out; }
+ 
+.elk:hover {
+filter: alpha(opacity=100);
+opacity: 1;
+overflow:auto; }
+
+h2 {
+color: #ffffff;
+height:20px;
+font-family: 'Exo', sans-serif;
+font-size:25px;
+box-shadow: 0 0 2px white;
+font-weight:normal;
+text-shadow: 0 0 1px white;
+padding:0px;
+padding-bottom:2px;
+margin-top:4px;
+margin-bottom:4px;
+margin-left:1px;
+line-height:25px;
+letter-spacing:0px;
+text-transform:uppercase;
+text-align: right;
+background:#a17c50;}
+
+
+ 
+.zoom {
+width: 100%;
+height: 100%;
+-webkit-transition: all 0.8s ease-in-out;
+-moz-transition: all 0.8s ease-in-out;
+-o-transition: all 0.8s ease-in-out;
+-ms-transition: all 0.8s ease-in-out;
+transition: all 0.8s ease-in-out;}
+ 
+.zoom img {
+width: 100%;
+height: 100%;}
+ 
+.topright:hover .zoom {
+width: 150%;
+height: 150%;
+margin: -20px;}
+ 
+.sitting:hover .zoom {
+width: 140%;
+height: 140%;
+transform-origin: center;
+transform: translate(-80px, -20px);
+}
+ 
+.standing:hover .zoom {
+width: 140%;
+height: 140%;
+transform-origin: center;
+transform: translate(-80px, -20px);
+}
+ 
+.cut {
+width: 100%;
+height: 100%;
+background: rgba(255,255,255,0.8);
+position: absolute;
+right: 0px;
+top: 0px;
+opacity: 0;
+-webkit-transition: all 0.8s ease-in-out;
+-moz-transition: all 0.8s ease-in-out;
+-o-transition: all 0.8s ease-in-out;
+-ms-transition: all 0.8s ease-in-out;
+transition: all 0.8s ease-in-out;}
+
+.portrait {
+width: 260px;
+height: 109px;
+position: absolute;
+overflow: hidden;
+left: 415px;
+top: 505px;
+z-index: 1; 
+}
+
+#portraitshadow{
+position:absolute;
+height: 119px;
+width: 270px;
+left: 410px;
+top: 500px;
+box-shadow: 0px 00px 25px #000;
+z-index:0;
+}
+
+.portrait:hover .zoom {
+width: 150%;
+height: 150%;
+margin: -20px;
+transform-origin: center;
+transform: translate(-80px, -20px);
+}
+ 
+.cut {
+width: 100%;
+height: 100%;
+background: rgba(255,255,255,0.8);
+position: absolute;
+right: 0px;
+top: 0px;
+opacity: 0;
+-webkit-transition: all 0.8s ease-in-out;
+-moz-transition: all 0.8s ease-in-out;
+-o-transition: all 0.8s ease-in-out;
+-ms-transition: all 0.8s ease-in-out;
+transition: all 0.8s ease-in-out;}
+ 
+.portrait:hover .cut {
+opacity: 1;}
+
+.sword {
+position:fixed; 
+left: 415px; 
+top: 60px;
+width: 260px;
+height: 109px;
+position: absolute;
+overflow: hidden;
+z-index: 1;}
+
+.sword:hover .zoom {
+width: 130%;
+height: 130%;
+margin: -20px;
+transform-origin: center;
+transform: translate(-60px, 20px);}
+
+.sword2:hover .zoom {
+width: 130%;
+height: 130%;
+margin: -20px;
+transform-origin: center;
+transform: translate(-40px, 20px);}
+
+#animation-bg {
+position: fixed;
+top: 55px;
+left: 410px;
+height: 119px;
+width: 270px;
+border: none;
+background-color: #82787a;
+background:url("https://i.imgur.com/rJcBOi1.png") center; 
+background-attachment: fixed;
+background-repeat: repeat;
+overflow: auto;
+z-index: 1; }
+
+
+#swordshadow{
+position:fixed; 
+left: 690px; 
+top: 55px;
+height: 119px;
+width: 270px;
+box-shadow: 0px 00px 25px #000;
+z-index:0;
+}
+
+
+.topright {
+width: 260px;
+height: 109px;
+position: absolute;
+overflow: hidden;
+left: 695px;
+top: 60px;
+z-index: 1; }
+
+
+#sword-bg {
+position: fixed;
+left: 690px; 
+top: 55px;
+height: 119px;
+width: 270px;
+border: none;
+background-color: #82787a;
+background:url("https://i.imgur.com/HbmQyDF.png") center; 
+background-attachment: fixed;
+background-repeat: repeat;
+overflow: auto;
+z-index: 1; }
+	
+.sword2 {
+left: 695px;
+top: 505px;
+width: 260px;
+height: 109px;
+position: absolute;
+overflow: hidden;
+left: 695px;
+z-index: 1;}
+
+#swordshadow2{
+position:fixed; 
+left: 615px; 
+top: 500px;
+left: 690px;
+height: 119px;
+width: 270px;
+box-shadow: 0px 00px 25px #000;
+z-index:0;
+}
+
+
+#topleftshadow{
+position:fixed; 
+left: 410px; 
+top: 55px;
+width: 270px;
+height: 119px;
+box-shadow: 0px 00px 25px #000;
+z-index:0;
+}
+
+
+#animation-bg2 {
+position: fixed;
+top: 500px;
+left: 690px;
+height: 119px;
+width: 270px;
+border: none;
+background-color: #82787a;
+background:url("https://i.imgur.com/oB7cZZ9.png") center; 
+background-attachment: fixed;
+background-repeat: repeat;
+overflow: auto;
+z-index: 0; }
+
+
+#sword-bg2 {
+position: fixed;
+top: 500px;
+left: 410px;
+height: 119px;
+width: 270px;
+border: none;
+background-color: #82787a;
+background:url("https://i.imgur.com/KX3SFQQ.png") center; 
+background-attachment: fixed;
+background-repeat: repeat;
+overflow: auto;
+z-index: 0; 
+}
+
+.sitting{
+position: absolute;
+top: 60px;
+left: 105px;
+height: 554px;
+width: 260px;
+border: none;
+background-color: #82787a;
+background-attachment: fixed;
+background-repeat: repeat;
+overflow: hidden;
+z-index: 0; }
+
+#sittingbackground{
+position: absolute;
+top: 55px;
+left: 100px;
+height: 564px;
+width: 270px;
+border: none;
+background-color: #82787a;
+background:url("https://i.imgur.com/xCkZMvP.png") center; 
+background-attachment: fixed;
+background-repeat: repeat;
+overflow: auto;
+z-index: 0; }
+
+#sittingshadow{
+position:absolute;
+top: 55px;
+left: 100px;
+height: 564px;
+width: 270px;
+box-shadow: 0px 00px 25px #000;
+z-index:0;
+}
+
+.standing{
+position: absolute;
+top: 60px;
+left: 1005px;
+height: 554px;
+width: 260px;
+border: none;
+background-color: #82787a;
+background-attachment: fixed;
+background-repeat: repeat;
+overflow: hidden;
+z-index: 0; }
+
+#standingbackground{
+position: absolute;
+top: 55px;
+left: 1000px;
+height: 564px;
+width: 270px;
+border: none;
+background-color: #82787a;
+background:url("https://i.imgur.com/yZCA9dd.png") center; 
+background-attachment: fixed;
+background-repeat: repeat;
+overflow: auto;
+z-index: 0; }
+
+#standingshadow{
+position:absolute;
+top: 55px;
+left: 1000px;
+height: 564px;
+width: 270px;
+box-shadow: 0px 00px 25px #000;
+z-index:0;
+}
+
+
+
+#linetop{
+position: absolute;
+top: 20px;
+left: 100px;
+height: 10px;
+width: 1170px;
+border: none;
+background-color: #82787a;
+background:url("https://i.imgur.com/yZCA9dd.png") center; 
+background-attachment: fixed;
+background-repeat: repeat;
+box-shadow: 0px 00px 15px #000;
+z-index: 0; }
+
+
+#linebottom{
+position: absolute;
+top: 644px;
+left: 100px;
+height: 10px;
+width: 1170px;
+border: none;
+background-color: #82787a;
+background:url("https://i.imgur.com/yZCA9dd.png") center; 
+background-attachment: fixed;
+background-repeat: repeat;
+box-shadow: 0px 00px 15px #000;
+z-index: 0; }
+
+#lineleft{
+position: absolute;
+top: 20px;
+left: 65px;
+height: 635px;
+width: 10px;
+border: none;
+background-color: #82787a;
+background:url("https://i.imgur.com/yZCA9dd.png") center; 
+background-attachment: fixed;
+background-repeat: repeat;
+box-shadow: 0px 00px 15px #000;
+z-index: 0; }
+
+
+#lineright{
+position: absolute;
+top: 20px;
+left: 1295px;
+height: 635px;
+width: 10px;
+border: none;
+background-color: #82787a;
+background:url("https://i.imgur.com/yZCA9dd.png") center; 
+background-attachment: fixed;
+background-repeat: repeat;
+box-shadow: 0px 00px 15px #000;
+z-index: 0; }
+
+</style>
+
+
+<div id="03" class="content">
+<div class="contentbox"><div>
+<h2>I stand strong.</h2>
+ "The Wardens: members of an ancient order...fallen into dust. Sworn to defend the weak, masters of the longsword. Their origins lost to history; still they fight for what is right. Driven by duty, devoted to their people... but only a few may join their order."
+ <br><br>
+Stag is a courageous and talented young knight from the lands of the Iron Legion. Wardens are expected to be noble and brave - living embodiments of virtue – and this one has the potential to be that and more. But after years of fighting endless battles for no worthy cause, Stag has begun wandering, seeking a purpose that is equal to their talent and genuinely worth fighting for.
+
+
+</div></div>
+</div>
+
+<div id="01" class="content">
+<div class="contentbox"><div>
+<h2>Duty is my shield.</h2>
+Born to two fiefs, Stag was lucky to grow up without the typical malnourishment of the middle ages. Because of this, he was taken as a squire. In return, his family was able to keep more of thier crop as food rather than being taxed heavily.
+After being knighted, his family was able to live a relatively comfortable life because of Stag's status. Sadly, it also meant that Stag was no longer able to return to his family and was now a vassal of a baron.
+<br><br>
+This ended up being lethal to his lord, as one day due to unknown circumstances, the noble was slain by Stag's sword. Since then, it is unknown what had happened to his family, and the Knight had vowed never to return
+to his home and face the consequences.
+</div></div>
+</div>
+
+<div id="02" class="content">
+<div class="contentbox"><div>
+<h2>When I defend the weak,</h2>
+
+</div></div>
+</div>
+
+<div id="04" class="content">
+<div class="contentbox"><div>
+<h2>I am immortal!</h2>
+ 
+♘ Stag was recruited while he was young to be a Warden. His parents were farmers and him eventually becoming a knight gave them a better life. Though he can no longer go home. <br>
+ <br>
+♘ He is of Scottish descent and fought for the English army as a moderately ranking knight due to his loyalty and to a lesser extent, his conduct. <br>
+ <br>
+♘ A little dense in the head, blame it on Chivalry and his code of honor. Speaking of Chivalry, he follows the code the best he can, but he knows other knights may not be as strict to adhere. He holds no grudges. <br>
+ <br>
+♘ Stag has a special helmet that has been adorned with actual antlers. This was a gift from his family once they were able to secure a plot of land back home. He wears it to battle and prefers it over his own. The interior is lined with fur. <br>
+
+
+</div></div>
+</div>
+
+<div id="05" class="content">
+<div class="contentbox"><div>
+<h2>OOC.</h2>
+ 
+IC not OOC<br><br>
+Friendly.<br><br>
+The other usual OOC stuff.<br><br>
+Yep, For Honor FC + GoT. Based more around For Honor.<br><br>
+
+</div></div>
+</div>
+
+<div id="main-bg"></div>
+<div class="main">
+<div class="elk">
+<div class="contentbox"><div>
+<h2>The Warden</h2>
+
+<b><font style=float:left>Name:</font></b> <font style=float:right> Stag.</span></font><br>
+<b><font style=float:left>Gender:</font></b> <font style=float:right> Male.</span></font><br>
+<b><font style=float:left>Date Of Birth:</font></b> <font style=float:right> Mar 18th.</span></font><br>
+<b><font style=float:left>Hair Color:</font></b> <font style=float:right> Auburn.</span></font><br>
+<b><font style=float:left>Eye Color:</font></b> <font style=float:right> Green.</span></font><br>
+<b><font style=float:left>Height:</font></b> <font style=float:right> 6'2.</span></font><br>
+<b><font style=float:left>Weight:</font></b> <font style=float:right> 175 lbs.</span></font><br>
+<b><font style=float:left>Occupation:</font></b> <font style=float:right> Knight.</span></font><br>
+<b><font style=float:left>Sexual Orientation:</font></b> <font style=float:right> Straight.</span></font><br>
+<b><font style=float:left>Martial Status:</font></b> <font style=float:right> Single, not looking.</span></font>
+
+
+</div></div></div></div>
+
+<div id="animation-bg"></div>
+<div id="sword-bg"></div>
+<div id="animation-bg2"></div>
+<div id="sword-bg2"></div>
+
+<a href="#01">
+<div id="topleftshadow"></div>
+<div class="topright">
+<div class="zoom"><img src="https://i.imgur.com/fUNrwZ1.gif"/></div></div></a>
+
+<a href="#02">
+<div class="portrait">
+<div class="zoom"><img src="https://dl.dropboxusercontent.com/s/ifh5tculonc2lov/xdslgSMJ_o.gif"/></div></div></a>
+
+
+<a href="#03">
+<div class="sword">
+<div class="zoom"><img src="https://dl.dropboxusercontent.com/s/vh88meb7e9hydxt/sxKNoNaT_o.gif"></div></div></a>
+
+<a href="#04">
+<div class="sword2">
+<div class="zoom"><img src="https://dl.dropboxusercontent.com/s/fosc9ulqjnfgpn9/746GaZ8s_o.giff"/></div></div></a>
+
+<div id="sword2"></div>
+<div id="swordshadow"></div>
+<div id="swordshadow2"></div>
+<div id="portraitshadow"></div>
+
+<div id="sittingbackground"></div>
+<div id="sittingshadow"></div>
+
+<a href="#00">
+<div class="sitting" id="player" onclick="music()">
+<div class="zoom"><img src="https://i.imgur.com/OPllaxV.png"/><audio id="music" src="https://dl.dropboxusercontent.com/s/ru7gmfkdc422976/The%20Witcher%203%20Wild%20Hunt%20OST%20-Steel%20For%20Humans%20HQ%20Extended%20Lyrics-VCAnW11ZmwM.m4a" loop autoloop ></div></div></a>
+
+<div id="standingbackground"></div>
+<div id="standingshadow"></div>
+
+<a href="#05">
+<div class="standing">
+<div class="zoom"><img src="https://i.imgur.com/kTYtJKE.png"/></div></div></a>
+
+<div id="linetop"></div>
+<div id="linebottom"></div>
+<div id="lineleft"></div>
+<div id="lineright"></div>
+
+<script>
+
+var playingmusic = false;
+function music(){
+ var audio = document.getElementById("music");
+ if(playingmusic === false){
+ audio.play();
+ playingmusic = true;
+ }else{
+ audio.pause();
+ playingmusic = false;
+ }
+audio.volume = 0.03;
+}
+</script>

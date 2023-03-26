@@ -1,0 +1,391 @@
+<head>
+</head>
+<style>
+body{
+width:100%;
+height:100%;
+margin:0;
+overflow:hidden;}
+
+@font-face {font-family: Caviar; src: url(https://dl.dropboxusercontent.com/s/348kbbuapao26e4/CaviarDreams.ttf) }
+
+#container{
+width:100vw;
+height:100vh;
+top:0vh;
+left:0vh;
+position:absolute;
+background-position:center;
+background-size:cover;
+background-image:url(https://i.imgur.com/A4G2DZP.jpg);
+background-position:bottom left;
+filter: blur(8px);
+background-attachment:fixed;
+z-index:0;
+transition-timing-function: ease-in-out;
+}
+
+
+
+#reveal{
+width:50vh;
+height:50vh;
+margin:0;
+top:50%;
+left:50%;
+margin-top:-25vh;
+margin-left:-25vh;
+position:absolute;
+background-size:cover;
+background-image:url(https://i.imgur.com/A4G2DZP.jpg);
+background-position:bottom left;
+background-attachment:fixed;
+transition:2s;
+z-index:2;
+transition-timing-function: ease-in-out;
+box-shadow: 0vh 0vh 2vh 1vh #84d1bd;
+border-radius:2vh;
+overflow:hidden;
+}
+
+#contentwrapper{
+width:100%;
+height:100%;
+margin:0;
+transition:2s;
+display:inline-block;
+opacity:0;
+font-family:lemon;
+font-size:1.4vh;
+background-color:rgb(222, 222, 222, 0.7);
+border-radius:2vh;
+transition-timing-function: ease-in-out;
+font-family:caviar;
+font-weight:bold;
+
+}
+
+#ventea{
+width:50vh;
+height:50vh;
+top:50%;
+left:50%;
+margin-top:-25vh;
+margin-left:-25vh;
+position:absolute;
+background-image:url(https://i.imgur.com/q8OpphL.jpg);
+background-size:cover;
+transition:2s;
+transition-timing-function: ease-in-out;
+z-index:3;
+border-radius:2vh;
+}
+
+h{
+font-size:3vh;
+}
+h2{
+line-height:0vh;
+font-weight:normal;
+font-size:4vh;
+}
+
+::-webkit-scrollbar {
+ width: 1vh;
+}
+
+
+::-webkit-scrollbar-thumb {
+ background: #2f9b7b;
+}
+
+#img1container {
+ position:absolute;
+ height:15vh;
+ width:15vh;
+ border:.1vh solid black;
+ 
+}
+
+#img1 {
+ position:relative;
+ top:-.5vh;
+ left:-.5vh;
+ height:16vh;
+ width:16vh;
+ background-image:url(https://i.imgur.com/A4G2DZP.jpg);
+background-position:bottom left;
+background-attachment:fixed;
+background-size:cover;
+ border-radius: 4vh;
+ overflow:hidden;
+}
+
+#img1true{
+ height:15.3vh;
+ width:15.2vh;
+background-image:url(https://i.ibb.co/6HLG1kt/ezgif-2-68a83d178d50.gif);
+background-position:center;
+z-index:5;
+ border-radius: 5vh;
+position:absolute;
+cursor: pointer;	
+}
+
+#img2container {
+ top:63vh;
+ left:67.8vh;
+ position:absolute;
+ height:15vh;
+ width:30vh;
+ border:.1vh solid black;
+ 
+}
+
+#img2 {
+ position:relative;
+ top:-.5vh;
+ left:-.5vh;
+ height:16vh;
+ width:31vh;
+ background-image:url(https://i.imgur.com/A4G2DZP.jpg);
+background-position:bottom left;
+background-attachment:fixed;
+background-size:cover;
+ border-radius: 4vh;
+ overflow:hidden;
+}
+
+#img2true{
+ top:63vh;
+ left:67.8vh;
+ height:15.3vh;
+ width:30.2vh;
+background-image:url(https://i.imgur.com/3lFVoQ3.gif);
+background-position:center;
+background-size:cover;
+z-index:5;
+ border-radius: 5vh;
+position:absolute;
+cursor: pointer;	
+}
+
+#content0{
+width:40vh;
+height:15vh;
+position:absolute;
+top:2vh;
+left:19vh;
+overflow:auto;
+}
+#content1{
+ top:63vh;
+ left:30vh;
+ position:absolute;
+ width:36vh;
+ height:15vh;
+overflow:auto;
+}
+#content2{
+top:19vh;
+left:2vh;
+position:absolute;
+width:57vh;
+height:42vh;
+overflow:auto;
+}
+
+#content3{
+top:27vh;
+left:61vh;
+position:absolute;
+width:37vh;
+height:34vh;
+overflow:auto;
+}
+#content4{
+ top:63vh;
+ left:2vh;
+ position:absolute;
+ width:26vh;
+ height:15vh;
+overflow:auto;
+}
+
+#content5{
+
+left:61vh;
+top:2vh;
+position:absolute;
+width:37vh;
+height:23vh;
+overflow:auto;
+}
+
+a{
+color:#2f9b7b;
+}
+</style>
+
+<body>
+
+<div id="container"></div>
+<div id="reveal">
+<div id="contentwrapper"><div style="padding:2vh;"><div id="img1container"><div id="img1"><div style="background-color:rgb(222, 222, 222, 0.6); width:100%;height:100%;"></div></div></div><div id="img1true" onclick="playmusic()"></div>
+<div id="content0"><div style="width:38vh">
+<h>Venti</h><br>
+Name<font style="float:right;">
+Venti</font><br>
+Age<font style="float:right;">
+Young adult</font><br>
+Gender<font style="float:right;">
+Male</font><br>
+Height<font style="float:right;">
+Short</font><br>
+Element<font style="float:right;">
+Anemo</font><br>
+Hair Color<font style="float:right;">
+Dark, accented braids</font><br>
+Eye Color<font style="float:right;">
+Teal</font><br>
+Orientation<font style="float:right;">
+Pansexual</font><br>
+Marital<font style="float:right;">
+<a href="" target="_blank">Single</a></font><br>
+
+
+</div></div>
+<div id="content1"><div style="width:35vh;">
+<h>Gallery</h><br><div style="line-height:3vh;letter-spacing:1vh;margin-top:.5vh;margin-left:1vh;">
+<a target="_blank" href="https://i.imgur.com/rQ7BhkV.jpg" target="_blank"><img src="https://i.imgur.com/N5T0zBr.jpg" style="width:5vh;height:5vh;object-fit:cover;border-radius:1vh;"></a>
+<a target="_blank" href="https://i.imgur.com/paXidl8.jpg" target="_blank"><img src="https://i.imgur.com/Qhp94nP.jpg" style="width:5vh;height:5vh;object-fit:cover;border-radius:1vh;"></a>
+<a target="_blank" href="https://i.imgur.com/mAErSDN.jpg" target="_blank"><img src="https://i.imgur.com/mogLCEW.jpg" style="width:5vh;height:5vh;object-fit:cover;border-radius:1vh;"></a>
+<a target="_blank" href="https://i.imgur.com/DIpdQ7B.jpg" target="_blank"><img src="https://i.imgur.com/IRs8xMq.jpg" style="width:5vh;height:5vh;object-fit:cover;border-radius:1vh;"></a>
+<a target="_blank" href="https://i.imgur.com/STS9WU9.jpg" target="_blank"><img src="https://i.imgur.com/VukFUqg.jpg" style="width:5vh;height:5vh;object-fit:cover;border-radius:1vh;"></a>
+<a target="_blank" href="https://i.imgur.com/FGi99ut.jpg" target="_blank"><img src="https://i.imgur.com/dQC57fy.jpg" style="width:5vh;height:5vh;object-fit:cover;border-radius:1vh;"></a>
+<a target="_blank" href="https://i.imgur.com/kERCG7q.jpg" target="_blank"><img src="https://i.imgur.com/t7ogwRj.jpg" style="width:5vh;height:5vh;object-fit:cover;border-radius:1vh;"></a>
+<a target="_blank" href="https://i.imgur.com/Jm0Q0R5.jpg" target="_blank"><img src="https://i.imgur.com/aUDG7Xl.jpg" style="width:5vh;height:5vh;object-fit:cover;border-radius:1vh;"></a>
+<a target="_blank" href="https://i.imgur.com/amAOLxW.jpg" target="_blank"><img src="https://i.imgur.com/tZGkh8a.jpg" style="width:5vh;height:5vh;object-fit:cover;border-radius:1vh;"></a>
+<a target="_blank" href="https://i.imgur.com/rbUazOU.jpg" target="_blank"><img src="https://i.imgur.com/B5YPGIx.jpg" style="width:5vh;height:5vh;object-fit:cover;border-radius:1vh;"></a>
+<a target="_blank" href="https://i.imgur.com/hmICN9W.jpg" target="_blank"><img src="https://i.imgur.com/NqRJpWy.jpg" style="width:5vh;height:5vh;object-fit:cover;border-radius:1vh;"></a>
+<a target="_blank" href="https://i.imgur.com/0POrQPg.png" target="_blank"><img src="https://i.imgur.com/f4G0pt4.jpg" style="width:5vh;height:5vh;object-fit:cover;border-radius:1vh;"></a>
+<a target="_blank" href="https://i.imgur.com/UpPXNyq.png" target="_blank"><img src="https://i.imgur.com/9EM01hE.jpg" style="width:5vh;height:5vh;object-fit:cover;border-radius:1vh;"></a>
+<a target="_blank" href="https://i.imgur.com/m4OAeKU.png" target="_blank"><img src="https://i.imgur.com/ZPbnJrQ.jpg" style="width:5vh;height:5vh;object-fit:cover;border-radius:1vh;"></a>
+<a target="_blank" href="https://i.imgur.com/65vPSKN.jpg" target="_blank"><img src="https://i.imgur.com/KkGfwin.jpg" style="width:5vh;height:5vh;object-fit:cover;border-radius:1vh;"></a>
+<a target="_blank" href="https://i.imgur.com/TlDC7Gl.jpg" target="_blank"><img src="https://i.imgur.com/WMTfnJO.jpg" style="width:5vh;height:5vh;object-fit:cover;border-radius:1vh;"></a>
+<a target="_blank" href="https://i.imgur.com/67bjtqz.jpg" target="_blank"><img src="https://i.imgur.com/IVvR8Pl.jpg" style="width:5vh;height:5vh;object-fit:cover;border-radius:1vh;"></a>
+<a target="_blank" href="https://i.imgur.com/Ot2wAef.jpg" target="_blank"><img src="https://i.imgur.com/opFkrrW.jpg" style="width:5vh;height:5vh;object-fit:cover;border-radius:1vh;"></a>
+<a target="_blank" href="https://i.imgur.com/gTwcyIn.jpg" target="_blank"><img src="https://i.imgur.com/4M4aK2s.jpg" style="width:5vh;height:5vh;object-fit:cover;border-radius:1vh;"></a>
+<a target="_blank" href="https://i.imgur.com/dI0VBJF.jpg" target="_blank"><img src="https://i.imgur.com/03Pa2Dz.jpg" style="width:5vh;height:5vh;object-fit:cover;border-radius:1vh;"></a>
+<a target="_blank" href="https://i.imgur.com/xwWpGjD.png" target="_blank"><img src="https://i.imgur.com/Rz7E2Vq.jpg" style="width:5vh;height:5vh;object-fit:cover;border-radius:1vh;"></a>
+<a target="_blank" href="https://i.imgur.com/2yNn2Fe.gif" target="_blank"><img src="https://i.imgur.com/iokgOu0.jpg" style="width:5vh;height:5vh;object-fit:cover;border-radius:1vh;"></a>
+<a target="_blank" href="https://s3.gifyu.com/images/tumblr_71a5a70267d863a6023cdeb22c5666c1_bb5721d7_540.gif" target="_blank"><img src="https://i.imgur.com/OcxaRMr.jpg" style="width:5vh;height:5vh;object-fit:cover;border-radius:1vh;"></a>
+<a target="_blank" href="https://s3.gifyu.com/images/static-assets-upload14285630053113565906.gif" target="_blank"><img src="https://i.imgur.com/drcXR7c.jpg" style="width:5vh;height:5vh;object-fit:cover;border-radius:1vh;"></a>
+<a target="_blank" href="https://i.imgur.com/0DGGQFG.png" target="_blank"><img src="https://i.imgur.com/oVlJFOU.jpg" style="width:5vh;height:5vh;object-fit:cover;border-radius:1vh;filter:blur(5px)"></a>
+<a target="_blank" href="https://i.imgur.com/A1JdFD7.jpg" target="_blank"><img src="https://i.imgur.com/pHoTWnE.jpg" style="width:5vh;height:5vh;object-fit:cover;border-radius:1vh;filter:blur(5px)"></a>
+<a target="_blank" href="https://i.imgur.com/pf3EEbO.jpg" target="_blank"><img src="https://i.imgur.com/TCKftRm.jpg" style="width:5vh;height:5vh;object-fit:cover;border-radius:1vh;filter:blur(5px)"></a>
+<a target="_blank" href="https://i.imgur.com/1w2X9nX.jpg" target="_blank"><img src="https://i.imgur.com/Bewb3d3.jpg" style="width:5vh;height:5vh;object-fit:cover;border-radius:1vh;filter:blur(5px)"></a>
+<a target="_blank" href="https://i.imgur.com/JvffFQE.jpg" target="_blank"><img src="https://i.imgur.com/WJXZheO.jpg" style="width:5vh;height:5vh;object-fit:cover;border-radius:1vh;filter:blur(5px)"></a>
+<a target="_blank" href="https://i.imgur.com/5xweSJi.jpg" target="_blank"><img src="https://i.imgur.com/WOQxWSK.jpg" style="width:5vh;height:5vh;object-fit:cover;border-radius:1vh;filter:blur(5px)"></a>
+<a target="_blank" href="https://i.imgur.com/pVKKqIb.png" target="_blank"><img src="https://i.imgur.com/CG12P1x.jpg" style="width:5vh;height:5vh;object-fit:cover;border-radius:1vh;filter:blur(5px)"></a>
+
+</div></div></div>
+<div id="content2"><div style="width:55vh">
+<h>History</h><br>
+Venti has a somewhat recalcitrant, carefree, and playful attitude and a liking to rhyming in his speech. He sees a particular worth in music to the point where he names his lyre, saying, "every being deserves a name to be called upon, and woven into a song." He is also quite bold, shown many times in both the manga and the game, not fearing to insult or ignore those who are supposedly powerful. In the game, he responds to Paimon's comments and nicknaming by parroting her.
+<br><br>
+Venti enjoys roaming around Mondstadt playing songs to his people, most of whom are unaware of his true identity as Barbatos. He is very well-liked due to his musical talent, having won the title "Most Popular Bard of Mondstadt" three times. Venti is also an avid drinker of alcoholic beverages, such as Dandelion Wine and has a high tolerance to alcohol. He is also fine with apple cider. To his disdain, the form he takes causes most bartenders to see him as a minor, but he gets around this by telling people to get drinks for him in return for his performances. For reasons unknown, he is deathly allergic to cats and will not perform unless he is certain none are nearby. In his story quest, it is implied that his constant alcoholism is his way of coping with the loss of a dear friend.
+<br><br>
+He also enjoys apples, considering it to be the fruit of the gods, jokingly stating that he would refuse to go to Celestia even if he was invited because their apples are bland and the water foul, which would make bad cider. He dislikes cheese, claiming it to be a smelly, sticky and slimy mess.
+<br><br>
+Despite his normally playful personality as the bard Venti, he speaks wisely and somewhat philosophically whenever he assumes his true identity due to the many experiences he had being one of the original members of The Seven. Compared to Zhongli, the mortal vessel of Morax, Venti does not mind revealing his identity and using his powers if it means helping his people.
+
+
+
+</div></div>
+<div id="content3"><div style="width:35vh">
+<h>Headcanons</h><br><font style="font-size:1.9vh">
+High functioning alcoholic.<br><br>
+</font>
+More to be announced/earned!
+</div></div>
+<div id="content4"><div style="width:26vh">
+<h>OOC</h><br><font style="font-size:1.9vh">
+PM friendly<br>
+Serious or silly<br>
+<a title="*As long as it's interesting">Story/Smut friendly*</a><br>
+My code<br>
+Catch me on EU<br>
+</font></div></div>
+
+
+<div id="content5"><div style="width:35vh">
+<h>Friends</h><br>
+<center>
+<a target="_blank" href="https://roleplay.chat/profile.php?user=" target="_blank"><img src="https://i.imgur.com/LNlkNaB.png" style="width:6vh;height:6vh;"></a>
+<a target="_blank" href="https://roleplay.chat/profile.php?user=" target="_blank"><img src="https://i.imgur.com/LNlkNaB.png" style="width:6vh;height:6vh;"></a>
+<a target="_blank" href="https://roleplay.chat/profile.php?user=" target="_blank"><img src="https://i.imgur.com/LNlkNaB.png" style="width:6vh;height:6vh;"></a>
+<a target="_blank" href="https://roleplay.chat/profile.php?user=" target="_blank"><img src="https://i.imgur.com/LNlkNaB.png" style="width:6vh;height:6vh;"></a>
+<a target="_blank" href="https://roleplay.chat/profile.php?user=" target="_blank"><img src="https://i.imgur.com/LNlkNaB.png" style="width:6vh;height:6vh;"></a>
+<a target="_blank" href="https://roleplay.chat/profile.php?user=" target="_blank"><img src="https://i.imgur.com/LNlkNaB.png" style="width:6vh;height:6vh;"></a>
+<a target="_blank" href="https://roleplay.chat/profile.php?user=" target="_blank"><img src="https://i.imgur.com/LNlkNaB.png" style="width:6vh;height:6vh;"></a>
+<a target="_blank" href="https://roleplay.chat/profile.php?user=" target="_blank"><img src="https://i.imgur.com/LNlkNaB.png" style="width:6vh;height:6vh;"></a>
+<a target="_blank" href="https://roleplay.chat/profile.php?user=" target="_blank"><img src="https://i.imgur.com/LNlkNaB.png" style="width:6vh;height:6vh;"></a>
+<a target="_blank" href="https://roleplay.chat/profile.php?user=" target="_blank"><img src="https://i.imgur.com/LNlkNaB.png" style="width:6vh;height:6vh;"></a>
+<a target="_blank" href="https://roleplay.chat/profile.php?user=" target="_blank"><img src="https://i.imgur.com/LNlkNaB.png" style="width:6vh;height:6vh;"></a>
+<a target="_blank" href="https://roleplay.chat/profile.php?user=" target="_blank"><img src="https://i.imgur.com/LNlkNaB.png" style="width:6vh;height:6vh;"></a>
+<a target="_blank" href="https://roleplay.chat/profile.php?user=" target="_blank"><img src="https://i.imgur.com/LNlkNaB.png" style="width:6vh;height:6vh;"></a>
+<a target="_blank" href="https://roleplay.chat/profile.php?user=" target="_blank"><img src="https://i.imgur.com/LNlkNaB.png" style="width:6vh;height:6vh;"></a>
+<a target="_blank" href="https://roleplay.chat/profile.php?user=" target="_blank"><img src="https://i.imgur.com/LNlkNaB.png" style="width:6vh;height:6vh;"></a>
+</center>
+</div>
+</div>
+
+
+<div id="img2container"><div id="img2"><div style="background-color:rgb(222, 222, 222, 0.6); width:100%;height:100%;"></div></div></div><div id="img2true" onclick="playquote()"></div>
+</div>
+</div></div>
+<div id="ventea" onclick="action()"></div>
+
+<audio id="audio" src="https://dl.dropbox.com/s/aleil1kwynplhpk/Genshin%20Impact%20Original%20Soundtrack%20-%20Bustling%20Afternoon%20of%20Mondstadt-ztT-J7TXspQ.opus" loop autoloop ></audio>
+<audio id="audio2" src="https://dl.dropbox.com/s/emqkcigcqnhwod4/apple%20%281%29.mp3" ></audio>
+</div>
+
+
+
+<script>
+var playing = false;
+function playmusic(){
+ var audio = document.getElementById("audio");
+ if(playing === false){
+ audio.play();
+ playing = true;
+ }else{
+ audio.pause();
+ playing = false;
+ }
+audio.volume = 0.2;
+}
+function playquote(){
+ audio2.play();
+audio2.volume = 0.2;
+}
+
+var ventea = document.getElementById("ventea");
+var contentcontainer = document.getElementById("reveal")
+var contentwrapper = document.getElementById("contentwrapper")
+function action(){
+ventea.style.opacity = "0";
+contentwrapper.style.opacity ="1";
+contentcontainer.style.width = "100vh";
+contentcontainer.style.height = "80vh";
+contentcontainer.style.marginTop = "-40vh";
+contentcontainer.style.marginLeft = "-50vh";
+ventea.style.width = "100vh";
+ventea.style.height = "80vh";
+ventea.style.marginTop = "-40vh";
+ventea.style.marginLeft = "-50vh";
+ventea.style.pointerEvents = "none";
+}
+</script>
+</body>

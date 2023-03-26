@@ -1,0 +1,275 @@
+<head>
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+</head>
+<style>
+@font-face { font-family: Roboto; src: url(https://dl.dropboxusercontent.com/s/ykcpapqed85hqm6/Roboto-Light.ttf?dl=0) }
+@font-face { font-family: Aaargh; src: url(https://dl.dropboxusercontent.com/s/8iobdrwvx7nhu0q/Aaargh.ttf); }
+
+::-webkit-scrollbar { width: .5vh; height:0px; }
+::-webkit-scrollbar-thumb:vertical {background-color: #fff; border: none;}
+
+
+body{
+background-color:#cbaea0;
+overflow: hidden;
+repeat-x:repeat;
+repeat-y:repeat;
+padding: 0; 
+margin: 0;
+}
+
+
+	*{cursor: url('http://31.media.tumblr.com/tumblr_lqs4idHqTZ1qfoi4t.png'), default;
+	}
+
+
+ 
+ .textbox{
+ height:30vh;
+ bottom:30vh;
+ width:30vh;
+ right:80vh;
+ background-color:#dec9b6;
+ position:fixed;
+ border:1vh #fff;
+ border-style:solid;
+ z-index:1;
+ overflow:hidden;
+ display:inline-block;
+ transform: rotate(-45deg);
+ }
+ 
+ .spear1{
+ position:absolute;
+ right:102.35vh;
+ bottom:53vh;
+ height:30vh;
+ width:30vh;
+ background-color:#transparent;
+ z-index:0;
+ transform: rotate(-45deg);
+ border-width:1vh;
+border-style: solid;
+border-width: 1vh 1vh 0vh 0vh;
+border-color: #fff;
+ }
+ 
+ .spear2{ position:absolute;
+ right:57.9vh;
+ bottom:52.4vh;
+ height:30vh;
+ width:30vh;
+ background-color:#transparent;
+ z-index:0;
+ transform: rotate(-315deg);
+ border-width:1vh;
+border-style: solid;
+border-width: 1vh 1vh 0vh 0vh;
+border-color: #fff;
+
+}
+
+ .spear3{ position:absolute;
+ position:absolute;
+ right:103vh;
+ bottom:8.6vh;
+ height:30vh;
+ width:30vh;
+ background-color:#transparent;
+ z-index:0;
+ transform: rotate(-135deg);
+ border-width:1vh;
+border-style: solid;
+border-width: 1vh 1vh 0vh 0vh;
+border-color: #fff;
+
+ }
+ 
+ .spear4{ position:absolute;
+ right:58.7vh;
+ bottom:7.9vh;
+ height:30vh;
+ width:30vh;
+ background-color:#transparent;
+ z-index:0;
+ transform: rotate(-225deg);
+ border-width:1vh;
+border-style: solid;
+border-width: 1vh 1vh 0vh 0vh;
+border-color: #fff;
+
+ }
+ 
+ 
+ .dot1{
+ height: 15vh;
+ width: 15vh;
+ background-color: #c93c28;
+ border-radius:50%;
+ position:absolute;
+ bottom:60vh;
+ right:110vh;
+ }
+ 
+ .dot2{
+ height: 15vh;
+ width: 15vh;
+ background-color: #c93c28;
+ border-radius: 50%;
+ position:absolute;
+ bottom:60vh;
+ right:67vh;
+ }
+ 
+ .dot3{ 
+ height: 15vh;
+ width: 15vh;
+ background-color: #c93c28;
+ border-radius:50%;
+ position:absolute;
+ bottom:15.4vh;
+ right:67vh;
+ }
+ 
+ .dot4{
+ height: 15vh;
+ width: 15vh;
+ background-color: #c93c28;
+ border-radius:50%;
+ position:absolute;
+ right:110vh;
+ bottom:15.4vh;
+ }
+ 
+ 
+ .text{
+ height:30vh;
+ width:30vh;
+ right:80vh;
+ bottom:30vh;
+ background-color:#dec9b6;
+ position:fixed;
+ border:1vh #fff;
+ border-style:solid;
+ z-index:1;
+ overflow:hidden;
+ display:inline-block;
+ transform: rotate(-45deg) translateZ(0px);
+ opacity:0;
+ text-align: center;
+ z-index:3;
+ font-family:Aaargh;
+}
+ 
+ 
+ .text:target{
+ opacity:1;
+ transition:2s;
+ z-index:4;
+ }
+ 
+ 
+ .p{
+ transform: rotate(45deg);
+ height:30vh;
+ width:30vh;
+ }
+ p1{
+font-size: 2.4vh
+}
+p2{
+font-size: 1.8vh;
+}
+p3{
+font-size: 1.6vh;
+}
+.enso{
+ background-image:url(https://i.imgur.com/5Ydjvn0.png);
+ background-size:cover;
+ height:25vh;
+ width:25vh;
+ bottom:35vh;
+ right:83.5vh;
+ position:absolute;
+ z-index:1;
+ }
+
+b{
+font-size: 3vh;
+}
+
+</style>
+<body>
+<div class="textbox"></div>
+<div class="enso"></div>
+<div id="one" class="text"><div class="p">
+<b>Ando</b><br><p1>
+Male<br>
+Monk<br>
+Optimist<br>
+Fists & Rope<br>
+Physically blind<br>
+Twenty-five<br>
+Non-lethal<br>
+Nepali<br>
+Single<br></p1>
+</div></div>
+<div id="two" class="text"><div class="p">
+<b>Zen</b><br>
+<p3>A Nepali child who<br> 
+was taken to a Monastery<br>
+ at a young age where he was raised to become a monk. Trained in nonlethal martial arts, when Ando became of age
+he left his home in the search for Nirvana. Though, as time passed conflicting rumors spread about the male's blindness.
+If <br>
+he was born sightless<br>
+or if the monks<br>
+took their<br>
+due.
+</p3></div></div>
+<div id="three" class="text"><div class="p">
+<b>Dharma</b><br>
+<p2>This is where I'd put<br>
+something about friends<br> or skills. Read up on what a <a target="_blank" href="https://www.d20pfsrd.com/classes/core-classes/monk/archetypes/paizo-monk-archetypes/softstrike-monk-monk-and-unchained-monk-archetype/" target="blank_" style="text-decoration:none; font-weight:bold; color:#cb3f28"> softstrike monk</a> is. That's Ando.<br><br>No friends yet.</div></div>
+<div id="four" class="text"><div class="p">
+<b>Nirvana</b><br>
+<p1>My code<br>
+Friendly</p1></div></div>
+
+<div class="spear1"></div>
+<div class="spear2"></div>
+<div class="spear3"></div>
+<div class="spear4"></div>
+<a href="#one" onclick="button(one)"><div class="dot1"></div></a>
+<a href="#two" onclick="button(two)"><div class="dot2"></div></a>
+<a href="#three" onclick="button(three)"><div class="dot3"></div></a>
+<a href="#four" onclick="button(four)"><div class="dot4"></div></a>
+</body>
+
+<script>
+
+var playing = false;
+function action(){
+ var audio = document.getElementById("audio");
+ if(playing === false){
+ audio.play();
+ playing = true;
+ }else{
+ audio.pause();
+ playing = false;
+ }
+audio.volume = 0.2;
+}
+
+var content = 0;
+
+function button(selection){
+if (content == 0){
+ $(".enso").fadeOut(1000, "swing");
+	content = 1;
+	}
+}
+</script>
+
+ <img id="player" onclick="action();" src="https://i.imgur.com/vqQiV83.png" style="; position: absolute; width: auto; height: 100%; bottom: 0px; right: 00px; z-index: 0;" >
+ <audio id="audio" src="https://dl.dropboxusercontent.com/s/l17ckq61byzdypx/Ao%20no%20Exorcist%20-%20Exorcist%20Concerto%20Third%20Movement%20U%20%26%20Cloud%20%28Hiroyuki%20Sawano%29-mCxMjXoSgv0.opus" loop autoloop ></audio>
+

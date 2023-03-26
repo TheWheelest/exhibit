@@ -1,0 +1,282 @@
+<head>
+</head>
+<style>
+@font-face { font-family: Delinquent; src: url(https://dl.dropboxusercontent.com/s/ykcpapqed85hqm6/Roboto-Light.ttf?dl=0) }
+
+
+body{
+background-color:#fff;
+background-size: 100% 100%;
+overflow: hidden;
+}
+
+
+	*{cursor: url('http://31.media.tumblr.com/tumblr_lqs4idHqTZ1qfoi4t.png'), default;
+	}
+
+ .img{
+ background-image:url(https://i.imgur.com/QBVM5RS.png);
+ background-size:cover;
+ height:950px;
+ width:800px;
+ position:absolute;
+ bottom:0px;
+ z-index:5;
+ pointer-events: none;
+ right:-55px}
+ 
+.transparency{border:2px solid #000; position:absolute; bottom:415px; right:590px; height:305px; z-index:1; background-color:rgba(255, 255, 255, 0.7); width:565px; font-size:30px; color:#484241; line-height:40px; padding:5px 90px 5px 15px; 
+box-shadow: 0px 0px 10px #000;}
+
+.chains{position:absolute; top: 0px; left: 0px; height:305px; width:565px; display:inline-block; opacity: 0.3; background-image:url(); border-radius: 50px; background-repeat:repeat; z-index:-2;}
+
+a,a:visited{ text-decoration:none; color:#cacaca;display: block;}
+
+a:hover{ text-decoration:none; background-color:#000; }
+
+a.a2 {-webkit-transition: all .5s ease-out;
+ -moz-transition: all .5s ease-out;
+ -o-transition: all .5s ease-out;
+ -ms-transition: all .5s ease-out;
+ transition: all .5s ease-out;
+border-radius:15px;
+
+}
+a.a2:hover {
+border-radius:15px;
+ width:100%;
+ height:100%;
+ background-color:#000;
+ opacity:0.5;
+-webkit-transition: all .5s ease-out;
+ -moz-transition: all .5s ease-out;
+ -o-transition: all .5s ease-out;
+ -ms-transition: all .5s ease-out;
+ transition: all .5s ease-out;}	
+ 
+a.a3, a.a3:visited{
+opacity:.5;
+background-color:#000;
+-webkit-transition: all .5s ease-out;
+ -moz-transition: all .5s ease-out;
+ -o-transition: all .5s ease-out;
+ -ms-transition: all .5s ease-out;
+ transition: all .5s ease-out;
+}
+
+a.a3:hover{
+opacity:1;
+background-color:transparent;
+-webkit-transition: all .5s ease-out;
+ -moz-transition: all .5s ease-out;
+ -o-transition: all .5s ease-out;
+ -ms-transition: all .5s ease-out;
+ transition: all .5s ease-out;
+}
+
+.tester {background: none;
+ width: 16px;
+ height: 16px;
+ background-color: #fff;
+position:relative;
+display:inline-block;
+ border: solid #000;
+border-width: 8px;
+ border-radius:15px;
+ border-style:double;
+ z-index: 10;} 
+ 
+.tester:hover > .overlay {
+ width:100%;
+ height:100%;
+ opacity: 1;}	
+
+.tester1 {background: none;
+ width: 16px;
+ height: 16px;
+ background-color: #fff;
+position:relative;
+display:inline-block;
+ border: solid #000;
+border-width: 8px;
+ border-radius:15px;
+ border-style:double;
+ z-index: 10;} 
+ 
+.tester1:hover > .overlay {
+ width:100%;
+ height:100%;
+ opacity:1;}		
+	
+.tester2 {background: none;
+ width: 16px;
+ height: 16px;
+ background-color: #fff;
+position:relative;
+display:inline-block;
+ border: solid #000;
+border-width: 8px;
+ border-radius:15px;
+ border-style:double;
+ z-index: 10;} 
+ 
+.tester2:hover > .overlay {
+ width:100%;
+ height:100%;
+ opacity:1;}	
+ 
+ 
+.tester3 {background: none;
+ width: 16px;
+ height: 16px;
+ background-color: #fff;
+position:relative;
+display:inline-block;
+ border: solid #000;
+border-width: 8px;
+ border-radius:15px;
+ border-style:double;
+ z-index: 10;} 
+ 
+.tester3:hover > .overlay {
+ width:100%;
+ height:100%;
+ opacity:1;}	
+
+.tester4 {background: none;
+ width: 16px;
+ height: 16px;
+ background-color: #fff;
+position:relative;
+display:inline-block;
+ border: solid #000;
+border-width: 8px;
+ border-radius:15px;
+ border-style:double;
+ z-index: 10;} 
+ 
+.tester4:hover > .overlay {
+ width:100%;
+ height:100%;
+ opacity:1;}	
+
+
+ .navibox{
+ background: #transparent; width: 565px; height: 1200px; text-align:left; overflow-y: hidden; overflow-x: hidden; position:relative; opacity:.2; font-size:28px; -webkit-transition: all 1s ease-out;
+ line-height:26px;
+font-family:Delinquent;
+ -moz-transition: all 1s ease-out
+ -o-transition: all 1s ease-out;
+ -ms-transition: all 1s ease-out;
+ transition: all 1s ease-out;}
+ 
+.navibox:hover{
+opacity:1;
+ -webkit-transition: all 1s ease-out;
+ -moz-transition: all 1s ease-out;
+ -o-transition: all 1s ease-out;
+ -ms-transition: all 1s ease-out;
+ transition: all 1s ease-out;
+}
+
+#line1{
+position: fixed;
+left: 0px;
+height: 140px;
+width: 100%;
+bottom: 277px;
+background-color: #000;
+box-shadow: 0px 0px 5px #000;
+z-index: -3;}
+
+h2 {
+ font-size:25px;
+ text-align: center;
+ display: block;
+font-family:Delinquent;
+line-height:10px;
+}
+.marquee {
+ width: auto;
+ margin: 0 auto;
+ white-space: nowrap;
+ overflow: hidden;
+ box-sizing: border-box;
+}
+
+.marquee span {
+ display: inline-block;
+ padding-left: 100%;
+ /* show the marquee just outside the paragraph */
+ animation: marquee 15s linear infinite;
+}
+
+
+@keyframes marquee {
+ 0% {
+ transform: translate(0, 0);
+ }
+ 100% {
+ transform: translate(-100%, 0);
+ }
+
+</style>
+<div id=line1></div>
+<div class="img"></div>
+
+<div style="position:absolute; bottom:350px;right:640; width:625px; height:62px; border:1px solid #000;">
+<div class="tester"><div class="overlay"><a href="#one"><div style="height:100%;width:100% "></div></a></div></div>
+<div class="tester1"><div class="overlay"><a href="#two"><div style="height:100%;width:100%"></div></a></div></div>
+<div class="tester2"><div class="overlay"><a href="#three"><div style="height:100%;width:100%"></div></a></div></div>
+<div class="tester3"><div class="overlay"><a href="#four"><div style="height:100%;width:100"></div></a></div></div>
+<div class="tester4"><div class="overlay"><a href="#five"><div style="height:100%;width:100"></div></a></div></div>
+
+</div>
+
+<div class="transparency"><div class="chains"></div><div style="width:620px;height:305px; overflow:hidden; position:fixed;">
+
+<a name="one"></a><div class="navibox">
+<center><h2>Stats</h2></center>
+<font style="font-family:Delinquent; font-size:28px; line-height:39px;" <b>Name</b></font><font style="float:right; font-family:Delinquent;font-size:28px;">
+AUG</font><br> 
+<font style="font-family:Delinquent; font-size:28px; line-height:39px;" <b>Sex</b></font><font style="float:right; font-size:28px; font-family:Delinquent;">
+Futa</font><br>
+<font style="font-family:Delinquent; font-size:28px; line-height:39px;" <b>Position</b></font><font style="float:right; font-size:28px; font-family:Delinquent;">
+Switch</font><br>
+<font style="font-family:Delinquent; font-size:28px; line-height:39px;" <b>Age</b></font><font style="float:right; font-family:Delinquent;font-size:28px;">
+Old</font><br> 
+<font style="font-family:Delinquent; font-size:28px; line-height:39px;" <b>Height</b></font><font style="float:right; font-size:28px; font-family:Delinquent;">
+6'2"</font><br> 
+<font style="font-family:Delinquent; font-size:28px; line-height:39px;" <b>Marital</b></font><font style="float:right; font-size:28px; font-family:Delinquent;">
+<a target="_blank" href="https://roleplay.chat/profile.php?user=">Single</a></font><br> 
+</div>
+
+<a name="two"></a><div class="navibox">
+<center><h2>Background</h2></center><font style="line-height:26px; font-size:20px;">
+Designed by Steyr-Daimler-Puch to be the standard service rifle of Austrian Army, the final product was given the name AUG (Armee-Universal-Gewehr—"universal army rifle"). Because the design finished in 1977, AUG entered service the following year under the designation StG77 (SturmGewehr 77). AUG and developed variants continues to serve Austrian military and law enforcement units today. Apart from domestic use, AUG is also widely exported to many nations across the globe, including countries inside and outside of NATO. 
+
+
+</div><a name="three"></a><div class="navibox">
+</font>
+<center><h2>Friends</h2></center>
+<a class="a3" style=" height:100px; width:100px; border-radius:20px;" href="https://roleplay.chat/profile.php?user=" title="T-Doll."><img src="https://i.imgur.com/hH0CKt0.png" style="border-radius:20px; height:100px; width:100px; background-size: 100px 100px;"></a>
+</font>
+</div><
+
+<a name="four"></a><div class="navibox">
+
+<center><h2>Info</h2></center>
+More Info
+</p></div>
+
+
+<a name="five"></a><div class="navibox" style=line-height:46px;">
+<center><h2>OOC</h2></center>
+🖤 PM/Post friendly<br>
+🖤 Single to multi-para<br>
+🖤 IC not OOC<br>
+🖤 Discord available<br>
+🖤 Don't be weird.
+</font>
+
+</div></div></div>

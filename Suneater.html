@@ -1,0 +1,115 @@
+<style>
+body{
+margin:0;
+overflow:hidden;
+}
+@font-face { font-family: ghibli; src: url(https://dl.dropboxusercontent.com/s/u950c1ypqokl4ld/ITC%20Avant%20Garde%20Gothic%20Medium.otf?dl=0) }
+@font-face { font-family: bebas; src: url(https://dl.dropboxusercontent.com/s/nd7dk2020h5i6ag/BebasNeue-Regular.ttf) }
+@font-face { font-family: Lemon; src: url(https://dl.dropboxusercontent.com/s/8ov9l70d702t7oa/LemonMilklight.otf) }
+@font-face { font-family: breath; src: url(https://dl.dropboxusercontent.com/s/dcwiv2jdt9bhv9f/FOTRodin%20Pro%20M.woff?) }
+@font-face { font-family: Motion; src: url("https://dl.dropboxusercontent.com/s/iqvywne4gqivkat/MotionControl-BoldItalic.ttf");}
+#backgroundimage{
+width:100%;
+height:100%;
+background-image:url(https://www.transparenttextures.com/patterns/skeletal-weave.png);
+}
+
+#comic{
+background-image:url(https://media.discordapp.net/attachments/898474723778904078/900664493774893126/084c2a77-231e-412e-a2d2-44ada209e514.png);
+background-size:cover;
+width:80vh;
+height:40vh;
+left:50%;
+top:50%;
+margin-left:-40vh;
+margin-top:-20vh;
+position:absolute;
+border:solid .2vh black;
+transition:2s;
+cursor:pointer;
+z-index:1;
+}
+
+
+#contentbox{
+width:80vh;
+height:40vh;
+left:50%;
+top:50%;
+margin-left:-40vh;
+margin-top:-20vh;
+position:absolute;
+border:solid .2vh black;
+z-index:0;
+background-color:rgb(255,255,255,0.4);
+line-height:4vh;
+}
+
+#contentscroller{
+width:42vh;
+height:25vh;
+position:absolute;
+bottom:0vh;
+left:0vh;
+overflow:auto;
+font-family:ghibli;
+font-size:2vh;
+padding-left:1vh;
+line-height:2.2vh;
+}
+h{
+font-family:motion;
+font-size:4vh;
+background-color:rgb(0,0,0,0.2);
+margin-left:1vh;
+padding-left:.25vh;
+padding-right:.5vh;
+display:inline-block;
+line-height:4vh;
+box-shadow:.3vh .3vh rgb(0,0,0,0.4);
+}
+
+::-webkit-scrollbar {
+ width: 1vh;
+ scroller:none;
+}
+
+::-webkit-scrollbar-thumb {
+ background-color:black;
+}
+</style>
+<body>
+<div id="backgroundimage"></div>
+<div id="comic" onclick="start()"></div>
+<div id="contentbox" ><div style="padding:1vh">
+<div style="width:44vh;text-align:center;">
+<h>Tamaki Amajiki</h> <h>Suneater</h> <h>18</h> <h>Hero</h> <h>5'10</h> <h>Single</h> <h>Uninterested</h> <h>Manifestation</h>
+</div>
+<div id="contentscroller">
+Tamaki is a tall young man with rather pale skin. His ears are longer than most, their tips pointy and somewhat elf-like. He has messy, indigo hair, which sticks out behind his head, and thin, tired-looking eyes, partially covered by his bangs despite the fact that they're supposed to be split as to not impair his vision. His shoulders are usually hunched, and he avoids making eye-contact with people.
+<br><br>
+Despite his timid heart, Tamaki is fully capable of showing flashes of bravery. Even though he's always been a shy and reserved boy, Tamaki was able to hone his skills and climb the ranks into one of U.A.'s Big 3. Mirio Togata is a big inspiration for Tamaki, and their cooperation throughout their lives has lead Tamaki to establish his own set of stern beliefs which he will uphold and vocalize.
+<br>
+<h2>Headcanons</h2>
+The Big 3 live together.<br>
+Used to stress-eat for powers.<br>
+Quirk only works on organics.<br>
+Definitely 'talks' more through texts.<br>
+Grows succulents in his windowsill.<br>
+His room is very utilitarian.<br>
+He has smart speakers to practice talking.<br>
+Enjoys the idea of social interaction, not the actual interaction.<br>
+</div>
+</div>
+<img src="https://media.discordapp.net/attachments/898474723778904078/900663453696557066/tumblr_pd69r8aNYM1wq79v7o2_1280.png" style="pointer-events:none;position:absolute;right:0vh;top:0vh;height:100%;">
+</div>
+<script>
+var comic = document.getElementById('comic');
+
+function start(){
+comic.style.filter ="blur(4px)";
+comic.style.opacity = "0";
+comic.style.pointerEvents="none";
+}
+</script>
+</body>
