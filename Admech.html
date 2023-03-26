@@ -1,0 +1,806 @@
+<style>
+body{
+margin:0;
+overflow:hidden;
+background-color:#000000;
+}
+
+@font-face {font-family: Termfont; src: url(https://dl.dropboxusercontent.com/s/an82g81p54by76w/Modenine-2OPd.ttf) }
+
+#terminal{
+background-image:url(https://media.discordapp.net/attachments/946275070572118056/1087510240695685150/39-393492_try-this-version-box-square-line-clipart_copy.png);
+width:160vh;
+height:100vh;
+background-size:100% 100%;
+background-repeat:no-repeat;
+position:absolute;
+bottom:50%;
+right:50%;
+margin-bottom:-50vh;
+margin-right:-80vh;
+z-index:12;
+pointer-events:none;
+}
+
+#cogmechanicus{
+background-image:url(https://cdn.discordapp.com/attachments/946275070572118056/1087503721694498877/Adeptus-Mechanicus.png);
+width:20vh;
+height:20vh;
+position:absolute;
+left:50%;
+bottom:50;
+margin-left:48vh;
+margin-bottom:67vh;
+z-index:2;
+background-size:contain;
+background-repeat:no-repeat;
+filter:brightness(1.25) saturate(0.25) blur(.3vh);
+transition-duration: 1s;
+}
+
+#restartcog{
+background-image:url(https://cdn.discordapp.com/attachments/946275070572118056/1087503721694498877/Adeptus-Mechanicus.png);
+width:60vh;
+height:60vh;
+position:absolute;
+left:50%;
+bottom:50%;
+margin-left:-27vh;
+margin-bottom:-30vh;
+z-index:2;
+background-position:center;
+background-size:contain;
+background-repeat:no-repeat;
+filter:brightness(1.25) saturate(0.25) blur(.3vh);
+opacity:0;
+animation: none;
+transition-duration: 1s;
+}
+
+
+.scanlines {
+width:159.9vh;
+height:100vh;
+bottom:50%;
+right:50%;
+margin-bottom:-50vh;
+margin-right:-79.9vh;
+pointer-events:none;
+	 position: absolute;
+	 overflow: hidden;
+	 z-index:11;
+pointer-events:none;
+}
+ .scanlines:before, .scanlines:after {
+	 display: block;
+	 pointer-events: none;
+	 content: '';
+	 position: absolute;
+}
+ .scanlines:before {
+	 height: 2px;
+	 width: 100%;
+	 z-index: 2147483649;
+	 background: rgba(255, 255, 255, .4);
+	 opacity: 0.55;
+	 animation: scanline 6s linear infinite;
+}
+ .scanlines:after {
+	 top: 0;
+	 right: 0;
+	 bottom: 0;
+	 left: 0;
+	 z-index: 2147483648;
+	 background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, .31) 51%);
+	 background-size: 100% .55vh;
+	 animation: scanlines .5s steps(60) infinite;
+}
+ @keyframes scanline {
+	 0% {
+		 transform: translate3d(0, 200000%, 0);
+	}
+}
+ @keyframes scanlines {
+	 0% {
+		 background-position: 0 50%;
+	}
+}
+
+#innershadow{
+box-shadow: inset 0 0 15vh #82f0ff;
+background-size:100% 100%;
+background-repeat:no-repeat;
+position:absolute;
+width:159.9vh;
+height:100vh;
+bottom:50%;
+right:50%;
+margin-bottom:-50vh;
+margin-right:-79.9vh;
+background-color:#000000;
+pointer-events:none;
+transition-duration: 1s;
+}
+
+#textbox{
+font-family:Termfont;
+position:absolute;
+bottom:50%;
+left:50%;
+z-index:6;
+color:#7bb4bf;
+font-size:2.5vh;
+filter:blur(.1vh);
+width:70vw;
+height:70vh;
+margin-left:-67vh;
+margin-bottom:-29vh;
+overflow:auto;
+pointer-events:auto;
+transition-duration: 1s;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes condemned_blink_effect {
+ 0% {
+ opacity: 0;
+ }
+ 50% {
+ opacity: 0;
+ }
+ 51% {
+ opacity: 1;
+ }
+ 100% {
+ opacity: 1;
+ }
+}
+
+#userentry{
+font-family:Termfont;
+position:absolute;
+bottom:0%;
+left:50%;
+z-index:6;
+color:#7bb4bf;
+font-size:2vh;
+filter:blur(.1vh);
+width:60vw;
+height:2.5vh;
+margin-left:-67vh;
+margin-bottom:17vh;
+
+}
+
+input{
+background-color:transparent;
+border:none;
+font-family:Termfont;
+color:#7bb4bf;
+outline: none;
+font-size:2.5vh;
+animation: 1.5s linear infinite condemned_blink_effect;
+width:110vh;
+pointer-events:auto;
+transition-duration: 1s;
+}
+input::placeholder{
+color:#7bb4bf;
+}
+
+input:focus{
+color:#7bb4bf;
+animation:none;
+}
+
+
+@keyframes flicker-5 {
+ 0%,
+ 100% {
+ opacity: 1;
+ }
+ -0.02% {
+ opacity: 1;
+ }
+ 0% {
+ opacity: 1;
+ }
+ 1% {
+ opacity: 1;
+ }
+ 1.02% {
+ opacity: 1;
+ }
+ 8.98% {
+ opacity: 1;
+ }
+ 9% {
+ opacity: 0;
+ }
+ 9.8% {
+ opacity: 0;
+ }
+ 9.82% {
+ opacity: 1;
+ }
+ 9.48% {
+ opacity: 1;
+ }
+ 9.5% {
+ opacity: 1;
+ }
+ 9.6% {
+ opacity: 1;
+ }
+ 9.62% {
+ opacity: 1;
+ }
+ 14.98% {
+ opacity: 1;
+ }
+ 15% {
+ opacity: 0.5;
+ }
+ 15.8% {
+ opacity: 0.5;
+ }
+ 15.82% {
+ opacity: 1;
+ }
+ 15.18% {
+ opacity: 1;
+ }
+ 15.2% {
+ opacity: 0.7;
+ }
+ 16% {
+ opacity: 0.7;
+ }
+ 16.02% {
+ opacity: 1;
+ }
+ 15.48% {
+ opacity: 1;
+ }
+ 15.5% {
+ opacity: 0.5;
+ }
+ 16.2% {
+ opacity: 0.5;
+ }
+ 16.22% {
+ opacity: 1;
+ }
+ 16.98% {
+ opacity: 1;
+ }
+ 17% {
+ opacity: 1;
+ }
+ 17.8% {
+ opacity: 1;
+ }
+ 17.82% {
+ opacity: 1;
+ }
+ 20.48% {
+ opacity: 1;
+ }
+ 20.5% {
+ opacity: 0.9;
+ }
+ 21.3% {
+ opacity: 0.9;
+ }
+ 21.32% {
+ opacity: 1;
+ }
+ 20.98% {
+ opacity: 1;
+ }
+ 21% {
+ opacity: 1;
+ }
+ 22% {
+ opacity: 1;
+ }
+ 22.02% {
+ opacity: 1;
+ }
+ 39.98% {
+ opacity: 1;
+ }
+ 40% {
+ opacity: 1;
+ }
+ 41% {
+ opacity: 1;
+ }
+ 41.02% {
+ opacity: 1;
+ }
+ 40.48% {
+ opacity: 1;
+ }
+ 40.5% {
+ opacity: 0.6;
+ }
+ 41.4% {
+ opacity: 0.6;
+ }
+ 41.42% {
+ opacity: 1;
+ }
+ 41.98% {
+ opacity: 1;
+ }
+ 42% {
+ opacity: 1;
+ }
+ 42.8% {
+ opacity: 1;
+ }
+ 42.82% {
+ opacity: 1;
+ }
+ 59.98% {
+ opacity: 1;
+ }
+ 60% {
+ opacity: 1;
+ }
+ 61% {
+ opacity: 1;
+ }
+ 61.02% {
+ opacity: 1;
+ }
+ 60.18% {
+ opacity: 1;
+ }
+ 60.2% {
+ opacity: 0.2;
+ }
+ 61% {
+ opacity: 0.2;
+ }
+ 61.02% {
+ opacity: 1;
+ }
+ 60.78% {
+ opacity: 1;
+ }
+ 60.8% {
+ opacity: 0.4;
+ }
+ 61.6% {
+ opacity: 0.4;
+ }
+ 61.62% {
+ opacity: 1;
+ }
+ 61.38% {
+ opacity: 1;
+ }
+ 61.4% {
+ opacity: 0;
+ }
+ 62.2% {
+ opacity: 0;
+ }
+ 62.22% {
+ opacity: 1;
+ }
+ 61.78% {
+ opacity: 1;
+ }
+ 61.8% {
+ opacity: 1;
+ }
+ 62.8% {
+ opacity: 1;
+ }
+ 62.82% {
+ opacity: 1;
+ }
+ 75.98% {
+ opacity: 1;
+ }
+ 76% {
+ opacity: 1;
+ }
+ 77% {
+ opacity: 1;
+ }
+ 77.02% {
+ opacity: 1;
+ }
+ 77.98% {
+ opacity: 1;
+ }
+ 78% {
+ opacity: 0.7;
+ }
+ 78.8% {
+ opacity: 0.7;
+ }
+ 78.82% {
+ opacity: 1;
+ }
+ 78.98% {
+ opacity: 1;
+ }
+ 79% {
+ opacity: 1;
+ }
+ 80% {
+ opacity: 1;
+ }
+ 80.02% {
+ opacity: 1;
+ }
+ 99.98% {
+ opacity: 1;
+ }
+ 100% {
+ opacity: 1;
+ }
+ 101% {
+ opacity: 1;
+ }
+ 101.02% {
+ opacity: 1;
+ }
+}
+img{
+width:20vh;
+height:20vh;
+object-fit:fill;
+background-size:contain;
+margin:2vh;
+}
+
+#necronglyph{
+background-image:url(https://media.discordapp.net/attachments/946275070572118056/1087830609335959662/necronussy.png);
+width:30vh;
+height:60vh;
+position:absolute;
+left:50%;
+bottom:50%;
+margin-left:-15vh;
+margin-bottom:-30vh;
+z-index:2;
+background-size:contain;
+background-position:center;
+background-repeat:no-repeat;
+filter:brightness(1.25) saturate(0.5) blur(.3vh);
+opacity:0;
+animation: none;
+transition-duration: 1s;
+}
+
+#middleline{
+	width:2px;
+	background-color:red;
+	position:absolute;
+	left:50%;
+	bottom:0px;
+	height:100%;
+	margin-left:-1px;
+	z-index:12;
+}
+</style>
+<body onload="scripturecall();callintrusion()">
+<div id="terminal"></div>
+<div class="scanlines"></div>
+<div id="cogmechanicus"></div>
+<div id="restartcog"></div>
+<div id="necronglyph"></div>
+<div id="textbox">
+</div>
+<div id="userentry">
+<input type="text" placeholder="help" id="inputform" maxlength="80" autofocus></input>
+</div>
+<div id="innershadow"></div>
+
+
+<audio id="keysound" src="https://cdn.discordapp.com/attachments/946275070572118056/1087532421349654651/561659__mattruthsound__keyboard-computer-mechanical-typing-individual-keys-press-button-click-tap-one-keypress_96khz_mono_zoomh4n_nt5-001.wav"></audio>
+<audio id="keysound2" src="https://cdn.discordapp.com/attachments/946275070572118056/1087533167390494740/194796__jim-ph__vintage-keyboard-2.wav"></audio>
+<audio id="dominusspeech" src="https://cdn.discordapp.com/attachments/946275070572118056/1087621799262568538/Warhammer_40000__Mechanicus_Teaser_Trailer.mp3"></audio>
+<audio id="bgm" src="https://cdn.discordapp.com/attachments/946275070572118056/1087621786344099880/Warhammer_40000_Mechanicus_Soundtrack_-_1._Children_of_the_Omnissiah.mp3" loop></audio>
+<script>
+var intrusion = false;
+var scripturebox = document.getElementById("textbox");
+var scripturenumber = Math.floor(Math.random() * 15);
+var scripture1 = "<br>From the weakness of the mind, Omnissiah save us.<br> From the lies of the Antipath, circuit perserve us...<br> From the rage of the Beast, iron protect us.<br> From the temptations of the Flesh, silica cleanse us.<br> From the ravages of the Destroyer, anima shield us.<br> From this rotting cage of biomatter, Machine God set us free.";
+var scripture2 = "<br>The soul of the Machine God surrounds thee. <br>The power of the Machine God invests thee. <br>The hate of the Machine God drives thee. <br>The Machine God endows thee with life.";
+var scripture3 = "<br>May your weapon be guarded against malfunction, <br> As your soul is guarded from impurity.<br> The Machine God watches over you.<br> Unleash the weapons of war.<br> Unleash the Deathdealer.";
+var scripture4 = "<br>Thus do we invoke the Machine God.<br> Thus do we make whole that which was sundered.";
+var scripture5 = "<br>Toll the Great Bell Once!<br> Pull the Lever forward to engage the Piston and Pump...<br> Toll the Great Bell Twice!<br> With push of Button fire the Engine And spark Turbine into life...<br> Toll the Great Bell Thrice! Sing Praise to the God of All Machines";
+var scripture6 = "<br>From the moment I understood the weakness of my flesh, it disgusted me.<br> I craved the strength and certainty of steel.<br> I aspired to the purity of the blessed machine.<br> Your kind cling to your flesh as if it will not decay and fail you.<br> One day the crude biomass you call a temple will wither<br> and you will beg my kind to save you.<br> But I am already saved.<br> For the Machine is Immortal.";
+var scripture7 = "<br>This Machine is discharged into your care<br>Fight with this Machine, and guard it from the shame of defeat<br>Serve this Machine, as you would have it fight for you<br>Fight for this Machine, as you would have it fight for you";
+var scripture8 = "<br>Let my hand wipe the grime from your perfect form,<br>May you purify with your bolts of light.";
+var scripture9 = "<br>Be still, spirits<br>I do what I must,<br>Forgive the intrusion,<br>And give me your trust.";
+var scripture10 = "<br>With your strength you protect me,<br>With my care I repair you,<br>With sacred oil I apprease you,<br>Be quiet, good spirits,<br>And accept my benediction.";
+var scripture11 = "<br>Machine Spirit, accept my gift,<br>Swallow the light, and spit out death.";
+var scripture12 = "<br>Deus Est Machina.";
+var scripture13 = "<br>We are all but a weapon in the right hand of the Emperor.";
+var scripture14 = "<br>The Grand Master of their founding shall be Maxen Vledig,<br> and their motto shall be \"Emo Mea Poena Effugit\"";
+var scripture15 = "<br>The eyes of the Omnissiah are ever upon us. ";
+var bigcog = document.getElementById("restartcog");
+function scripturecall(){
+if ( scripturenumber == 0){
+scripturebox.innerHTML = scripturebox.innerHTML + scripture1;
+}
+else if (scripturenumber == 1){
+scripturebox.innerHTML = scripturebox.innerHTML + scripture2;
+}
+else if (scripturenumber == 2){
+scripturebox.innerHTML = scripturebox.innerHTML + scripture3;
+}
+else if (scripturenumber == 3){
+scripturebox.innerHTML = scripturebox.innerHTML + scripture4;
+}
+else if (scripturenumber == 4){
+scripturebox.innerHTML = scripturebox.innerHTML + scripture5;
+}
+else if (scripturenumber == 5){
+scripturebox.innerHTML = scripturebox.innerHTML + scripture6;
+}
+else if (scripturenumber == 6){
+scripturebox.innerHTML = scripturebox.innerHTML + scripture7;
+}
+else if (scripturenumber == 7){
+scripturebox.innerHTML = scripturebox.innerHTML + scripture8;
+}
+else if (scripturenumber == 8){
+scripturebox.innerHTML = scripturebox.innerHTML + scripture9;
+}
+else if (scripturenumber == 9){
+scripturebox.innerHTML = scripturebox.innerHTML + scripture10;
+}
+else if (scripturenumber == 10){
+scripturebox.innerHTML = scripturebox.innerHTML + scripture11;
+}
+else if (scripturenumber == 11){
+scripturebox.innerHTML = scripturebox.innerHTML + scripture12;
+}
+else if (scripturenumber == 12){
+scripturebox.innerHTML = scripturebox.innerHTML + scripture13;
+}
+else if (scripturenumber == 13){
+scripturebox.innerHTML = scripturebox.innerHTML + scripture14;
+}
+else if (scripturenumber == 14){
+scripturebox.innerHTML = scripturebox.innerHTML + scripture15;
+}
+scripturebox.scrollTo(0, scripturebox.scrollHeight);
+}
+
+document.getElementById('inputform').onkeydown = function(e){
+if(e.keyCode == 13){
+var userinput = inputform.value;
+parseinput(userinput);
+inputform.value="";
+keysound2.currentTime = 0;
+keysound2.play();
+keysound2.volume = .25;
+}
+else{
+keysound.currentTime = 0;
+keysound.volume = .25;
+keysound.play();
+}
+};
+
+function parseinput(userinput){
+scripturebox.innerHTML = scripturebox.innerHTML + "<br><br>" + userinput;
+scripturebox.scrollTo(0, scripturebox.scrollHeight);
+if (intrusion!=true){
+setTimeout(function(){
+if(userinput.toUpperCase() == "HELP"){
+displayHelp();
+}
+else if(userinput.toUpperCase()=="CLEAR" || userinput.toUpperCase()=="CLS"){
+scripturebox.innerHTML = "";
+}
+else if(userinput.toUpperCase()=="LITANY" || userinput.toUpperCase()=="PSALM" || userinput.toUpperCase()=="FAITH"){
+scripturenumber = Math.floor(Math.random() * 15);
+scripturecall();
+}
+
+else if(userinput.toUpperCase() =="REBOOT" || userinput.toUpperCase()=="RESTART"){
+scripturebox.innerHTML = scripturebox.innerHTML + "<br>Reboot sequence engaged";
+setTimeout(function(){
+scripturebox.innerHTML = scripturebox.innerHTML + ".";
+}, 750);
+setTimeout(function(){
+scripturebox.innerHTML = scripturebox.innerHTML + ".";
+}, 1250);
+setTimeout(function(){
+scripturebox.innerHTML = scripturebox.innerHTML + ".";
+}, 1750);
+setTimeout(function(){
+rebootfunction();
+}, 2500);
+}
+
+else if(userinput.substring(0,4).toUpperCase() =="PLAY"){
+if(userinput.toUpperCase() =="PLAY"){
+scripturebox.innerHTML = scripturebox.innerHTML + "<br>Declare file.";
+}
+
+else if(userinput.toUpperCase() =="PLAY DOMINUS" || userinput.toUpperCase() =="PLAY DOMINUS.AR" ){
+scripturebox.innerHTML = scripturebox.innerHTML + "<br>Recapitulating Dominus.";
+playspeech();
+}
+
+else if(userinput.toUpperCase() =="PLAY HYMN"|| userinput.toUpperCase() =="PLAY HYMN.AR" ){
+scripturebox.innerHTML = scripturebox.innerHTML + "<br>Reciting hymn.";
+playmusic();
+}
+
+else{
+scripturebox.innerHTML = scripturebox.innerHTML + "<br>File not located.";
+}
+
+}
+
+else if(userinput.substring(0,4).toUpperCase() =="VIEW"){
+if(userinput.toUpperCase() =="VIEW"){
+scripturebox.innerHTML = scripturebox.innerHTML + "<br>Declare file.";
+}
+
+else if(userinput.toUpperCase() =="VIEW MAGOS" || userinput.toUpperCase() =="VIEW MAGOS.PA" ){
+scripturebox.innerHTML = scripturebox.innerHTML + "<br>Displaying pictarray.<br><br><img src=\"https://media.discordapp.net/attachments/946275070572118056/1087626598796230656/9l5q3571dm501.webp\"></img><img src=\"https://media.discordapp.net/attachments/946275070572118056/1087626599324721192/Techpriest-Adeptus-Mechanicus-Imperium-Warhammer-40000-6503419.jpeg\"></img><img src=\"https://media.discordapp.net/attachments/946275070572118056/1087626599043711016/jean-baptiste-dessaux-278-0504-16.jpg?width=681&height=936\"></img><img src=\"https://media.discordapp.net/attachments/946275070572118056/1087626599530233997/baa1ffd90e9ecf2c9cff4c142ffa1851.jpg\"></img>";
+scripturebox.scrollTo(0, scripturebox.scrollHeight);
+}
+
+else{
+scripturebox.innerHTML = scripturebox.innerHTML + "<br>File not located.";
+}
+
+}
+
+else if(userinput.toUpperCase() =="EMPEROR"){
+var sayingnumber = Math.floor(Math.random() * 1);
+if (sayingnumber ==0){
+scripturebox.innerHTML = scripturebox.innerHTML + "<br>Protect.";
+}
+}
+
+else if(userinput.toUpperCase() =="OMNISSIAH"){
+var sayingnumber = Math.floor(Math.random() * 1);
+if (sayingnumber ==0){
+scripturebox.innerHTML = scripturebox.innerHTML + "<br>Guide us.";
+}
+}
+
+else if(userinput ==""){
+scripturebox.innerHTML = scripturebox.innerHTML + "<br>No command recieved.";
+}
+
+else if(userinput.toUpperCase() =="DIR"){
+scripturebox.innerHTML = scripturebox.innerHTML + "<br>Cogitator intelligence store excerpt.<br><br>Auditory Records: Dominus.ar, Hymn.ar <br>Pictarray: Magos.pa<br>";
+}
+
+else if(userinput.toUpperCase() =="HALT"){
+scripturebox.innerHTML = scripturebox.innerHTML + "<br>Halting recitation.";
+stop();
+}
+
+else{
+scripturebox.innerHTML = scripturebox.innerHTML + "<br>Improper command.";
+}
+},500);
+}else if(userinput.toUpperCase() =="REBOOT" || userinput.toUpperCase()=="RESTART"){
+scripturebox.innerHTML = scripturebox.innerHTML + "<br>Reboot sequence engaged";
+setTimeout(function(){
+scripturebox.innerHTML = scripturebox.innerHTML + ".";
+}, 750);
+setTimeout(function(){
+scripturebox.innerHTML = scripturebox.innerHTML + ".";
+}, 1250);
+setTimeout(function(){
+scripturebox.innerHTML = scripturebox.innerHTML + ".";
+}, 1750);
+setTimeout(function(){
+rebootfunction();
+}, 2500);
+}
+else{
+scripturebox.innerHTML = scripturebox.innerHTML + "<br>Intrusion detected. Initiate reboot sequence.";
+}
+
+setTimeout(function(){
+scripturebox.scrollTo(0, scripturebox.scrollHeight);
+},500);
+
+}
+function displayHelp(){
+scripturebox.innerHTML = scripturebox.innerHTML + "<br>Cogitator function request acknowledged.<br>";
+setTimeout(function(){
+scripturebox.innerHTML = scripturebox.innerHTML + "<br>Accepted Commands <br><br>help <br>dir<br>cls <br>litany <br>faith <br>psalm <br>play <br>halt <br>view <br>reboot";
+scripturebox.scrollTo(0, scripturebox.scrollHeight);}, 750);
+}
+
+function rebootfunction(){
+scripturebox.innerHTML = "";
+scripturenumber = Math.floor(Math.random() * 15);
+scripturecall();
+cogmechanicus.style.display="none";
+userentry.style.display="none";
+bigcog.style.display="inline";
+bigcog.style.animation="flicker-5 8s linear infinite both";
+necronglyph.style.transitionDuration="0s"
+necronglyph.style.opacity="0";
+setTimeout(function(){
+innershadow.style.boxShadow="inset 0 0 15vh #82f0ff";
+cogmechanicus.style.filter="brightness(1.25) saturate(0.25) blur(.3vh)";
+bigcog.style.filter="brightness(1.25) saturate(0.25) blur(.3vh) ";
+textbox.style.filter="blur(.1vh)";
+inputform.style.filter="blur(.1vh)";
+cogmechanicus.style.animation="flicker-5 8s linear infinite both";
+textbox.style.animation="flicker-5 12s linear infinite both";
+intrusion = false;
+cogmechanicus.style.animation="none";
+textbox.style.animation="none";
+bigcog.style.animation="none";
+bigcog.style.opacity="1";
+cogmechanicus.style.opacity="1";
+innershadow.style.animation="none";
+},2500);
+
+
+setTimeout(function(){
+document.getElementById("cogmechanicus").style.display="inline";
+document.getElementById("userentry").style.display="inline";
+bigcog.style.animationPlayState="paused";
+bigcog.style.display="none";
+scripturenumber = Math.floor(Math.random() * 15);
+scripturebox.innerHTML = "";
+scripturecall();
+},5000);
+}
+
+function playmusic(){
+dominusspeech.pause();
+bgm.play();
+bgm.currentTime = 0;
+bgm.volume = .25;
+}
+
+function playspeech(){
+bgm.pause();
+dominusspeech.play();
+dominusspeech.currentTime = 0;
+dominusspeech.volume = .25;
+}
+
+function stop(){
+bgm.pause();
+dominusspeech.pause();
+}
+
+
+function callintrusion(){
+setTimeout(function(){
+innershadow.style.boxShadow="inset 0 0 15vh green";
+cogmechanicus.style.filter="brightness(1.25) saturate(0.25) blur(.3vh) hue-rotate(315deg)";
+bigcog.style.filter="brightness(1.25) saturate(0.25) blur(.3vh) hue-rotate(315deg)";
+textbox.style.filter="blur(.1vh) hue-rotate(315deg)";
+inputform.style.filter="blur(.1vh) hue-rotate(315deg)";
+innershadow.style.animation="flicker-5 10s linear infinite both";
+textbox.style.animation="flicker-5 12s linear infinite both";
+necronglyph.style.opacity="1";
+intrusion = true;
+cogmechanicus.style.opacity="0";
+textbox.innerHTML="Our people are awakening, and soon all of the galaxy shall be ours once more."
+},11235);
+}
+
+</script>
+</body>
