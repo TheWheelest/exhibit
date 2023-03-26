@@ -1,0 +1,260 @@
+
+<style>
+
+@font-face { font-family: ghibli; src: url(https://dl.dropboxusercontent.com/s/u950c1ypqokl4ld/ITC%20Avant%20Garde%20Gothic%20Medium.otf) }
+@font-face { font-family: bebas; src: url(https://dl.dropboxusercontent.com/s/nd7dk2020h5i6ag/BebasNeue-Regular.ttf) }
+@font-face { font-family: Lemon; src: url(https://dl.dropboxusercontent.com/s/8ov9l70d702t7oa/LemonMilklight.otf) }
+body{
+margin:0;
+background-color:#20202c;
+}
+#kittysplash{
+
+}
+
+.pagecontainer{
+width:100%;
+height:100%;
+display:flex;
+justify-content:center; 
+}
+
+.line{
+width:100%;
+height:1vh;
+position:absolute;
+background-color:#6096c3;
+box-shadow:0vh 0vh 5vh 2.5vh #000;
+z-index:2;
+}
+
+#particlecontainer{
+position:absolute;
+top:50%;
+height:69vh;
+margin-top:-34vh;
+width:100%;
+background-color:#20202c;
+background-image:url(https://www.transparenttextures.com/patterns/simple-dashed.png);
+z-index:5;
+}
+
+.backgroundbars{
+position:absolute;
+height:25vh;
+width:100%;
+background-image:url(https://www.transparenttextures.com/patterns/axiom-pattern.png);
+}
+#particles-js{ position:absolute; width: 100%; height: 100%; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; } /* ---- stats.js ---- */ .count-particles{ background: #000022; position: absolute; top: 48px; left: 0; width: 80px; color: #13E8E9; font-size: .8em; text-align: left; text-indent: 4px; line-height: 14px; padding-bottom: 2px; font-family: Helvetica, Arial, sans-serif; font-weight: bold; } .js-count-particles{ font-size: 1.1em; } #stats, .count-particles{ -webkit-user-select: none; margin-top: 5px; margin-left: 5px; } #stats{ border-radius: 3px 3px 0 0; overflow: hidden; } .count-particles{ border-radius: 0 0 3px 3px; }
+
+#capriline{
+position:absolute;
+width:60vh;
+height:1vh;
+top:50%;
+margin-left:30vh;
+margin-top:-10vh;
+z-index:6;
+background-color:#6096c3;
+box-shadow:.35vh .35vh black;
+}
+
+#capritext{
+position:absolute;
+font-family:lemon;
+font-size:6vh;
+-webkit-text-stroke:.1vh #6096c3;
+text-shadow: .25vh .25vh black;
+position:absolute;
+top:50%;
+z-index:8;
+color:#20202c;
+margin-top:-17vh;
+margin-left:15vh;
+
+}
+
+#capribox{
+position:absolute;
+width:60vh;
+height:38vh;
+top:50%;
+margin-top:-8vh;
+margin-left:30vh;
+z-index:7;
+background-color:rgb(53,58,90,0.2);
+box-shadow:.5vh .5vh #6096c3;
+overflow:hidden;
+font-family:lemon;
+font-size:2.2vh;
+color:#6096c3;
+text-shadow: .25vh .25vh black;
+}
+#capribox img{
+
+width:10.8vh;
+height:10.8vh;
+box-shadow:.5vh .5vh black;
+margin-top:.5vh;
+}
+.capricontainer{
+width:100%;
+height:100%;
+transition:1s;
+}
+
+#caprisplash{
+position:absolute;
+top:50%;
+height:60vh;
+width:40.1vh;
+background-size:cover;
+margin-top:-30vh;
+margin-left:-80vh;
+background-image:url(https://i.imgur.com/M1YpDN4.png);
+z-index:7;
+}
+#caprioutline{
+position:absolute;
+top:50%;
+height:60vh;
+width:40.1vh;
+background-color:rgb(53,58,90,0.2);
+z-index:6;
+margin-top:-30vh;
+margin-left:-80vh;
+box-shadow:.75vh .75vh rgb(65,64,98,0.2);
+}
+
+#forwardbutton{
+background-image:url(https://i.imgur.com/Ri5ZXFb.png);
+width:3vh;
+height:4vh;
+background-size:cover;
+position;absolute;
+top:50%;
+z-index:11;
+margin-left:85vh;
+margin-top:75vh;
+cursor:pointer;
+}
+
+h{
+font-family:lemon;
+color:#6096c3;
+font-size:3vh;
+text-shadow: .25vh .25vh black;
+display:inline;
+}
+::-webkit-scrollbar {
+ width: 1vh;
+ scroller:none;
+}
+
+::-webkit-scrollbar-thumb {
+ background: #6096c3;
+}
+a.class1{
+color:#6fe2ff;
+transition:1s;
+text-decoration:none;
+}
+
+
+a.class1:hover{
+color:#3651dc;
+}
+
+ canvas{ display: block; vertical-align: bottom; width:100vw; position:absolute; pointer-events:none;} 
+ #particles-js{ position:absolute; width: 100%; height: 100%; z-index:0;background-color: TRANSPARENT; background-image: url(""); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%;pointer-events:none;}
+ 
+</style>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" type="31dc2a1d0f3df0b72d7380c8-text/javascript">
+</script>
+<body>
+<div class="backgroundbars">
+</div>
+<div class="backgroundbars" style="bottom:0vh;">
+</div>
+<div class="pagecontainer">
+
+<div id="forwardbutton" onclick="if (!window.__cfRLUnblockHandlers) return false; nextpage()" data-cf-modified-31dc2a1d0f3df0b72d7380c8-=""></div>
+<div id="capritext">Shady Kitty.</div>
+<div id="caprisplash"></div>
+<div id="caprioutline"></div>
+<div id="capriline"></div>
+<div id="capribox">
+<div class="capricontainer" id="one" ><div style="padding:1vh;overflow:auto;">
+<h>Stats</h>
+<br>Name<font style="float:right;">
+Capri</font><br>
+Age<font style="float:right;">
+--</font><br>
+Gender<font style="float:right;">
+Female</font><br>
+Height<font style="float:right;">
+5'11</font><br>
+Occupation<font style="float:right;">
+Security Systems Specialist</font><br>
+Likes<font style="float:right;">
+Anything with red meat, pies</font><br>
+Orientation<font style="float:right;">
+Pansexual</font><br>
+Marital<font style="float:right;">
+<a class="class1" href="https://roleplay.chat/profile.php?user=" target="_blank">Single</a></font>
+</div></div>
+<div class="capricontainer" id="two" ><div style="padding:1vh;overflow:auto;">
+<h>History</h><br>
+HIstory to come someday.
+</div></div>
+<div class="capricontainer" id="three" ><div style="padding:1vh;overflow:auto;">
+<h>Contacts</h><br>
+<a target="_blank" href="https://roleplay.chat/profile.php?user=" target="_blank" ><img src="https://i.imgur.com/1JIQSZC.png"></img></a>
+</div></div>
+<div class="capricontainer" id="four" ><div style="padding:1vh;overflow:auto;">
+<h>OOC</h><br>
+DM Friendly.<br>
+Smut + Story > Story > Smut > OOC<br>
+Profile was made for me, image is not mine; character idea is.<br>
+Character's a degenerate, but the typist is not. Please don't mess with the typist.<br>
+I'm not a drama queen.
+</div></div>
+
+</div>
+<div class="line" style="top:50%;margin-top:35vh;"></div>
+<div class="line" style="top:50%;margin-top:-35vh;"></div>
+
+
+<div id="particlecontainer">
+<div id="particles-js"></div>
+</div>
+</div>
+<script type="31dc2a1d0f3df0b72d7380c8-text/javascript">
+var one = document.getElementById('one');
+var two = document.getElementById('two');
+var three = document.getElementById('three');
+var four = document.getElementById('four');
+var page = 1;
+function nextpage(){
+switch (page) {
+ case 1:
+one.style.marginTop = "-38vh";
+page = 2;
+ break;
+ case 2:
+one.style.marginTop = "-76vh";
+page = 3;
+ break;
+ case 3:
+one.style.marginTop = "-114vh";
+page = 4;
+ break;
+ case 4:
+one.style.marginTop = "0";
+page = 1;
+ break;
+ default:
+ break;
+}
+}
+particlesJS("particles-js", {"particles":{"number":{"value":118,"density":{"enable":true,"value_area":946.9771699587272}},"color":{"value":"#6ee4fe"},"shape":{"type":"circle","stroke":{"width":0,"color":"#000000"},"polygon":{"nb_sides":3},"image":{"src":"img/github.svg","width":100,"height":100}},"opacity":{"value":1,"random":true,"anim":{"enable":false,"speed":1,"opacity_min":0.1,"sync":false}},"size":{"value":3,"random":true,"anim":{"enable":false,"speed":40,"size_min":0.1,"sync":false}},"line_linked":{"enable":true,"distance":94.69771699587272,"color":"#ffffff","opacity":0.2367442924896818,"width":1.4204657549380908},"move":{"enable":true,"speed":1.5782952832645452,"direction":"bottom","random":true,"straight":false,"out_mode":"out","bounce":false,"attract":{"enable":false,"rotateX":0,"rotateY":0}}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":true,"mode":"grab"},"onclick":{"enable":false,"mode":"repulse"},"resize":true},"modes":{"grab":{"distance":107.8921078921079,"line_linked":{"opacity":1}},"bubble":{"distance":119.88011988011988,"size":27.972027972027973,"duration":2,"opacity":0.11188811188811189,"speed":3},"repulse":{"distance":71.92807192807193,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":true});</script>
