@@ -1,18 +1,23 @@
 <head>
 <title>Recursion Codes</title>
-<link rel="icon" href="https://media.discordapp.net/attachments/946275070572118056/1089677981598875708/logoicon.png" type="image/icon type">
+<link rel="icon" href="assets/logoicon.png" type="image/icon type">
 </head>
 <style>
+
+@font-face {
+	font-family: "modenine";
+	src: url(assets/modenine.ttf);
+} 
+
 body{
+	font-family:arial;
 margin:0;
 overflow:hidden;
 background-color:#000000;
 }
 
-@font-face {font-family: Termfont; src: url(https://dl.dropboxusercontent.com/s/an82g81p54by76w/Modenine-2OPd.ttf) }
-
 #terminal{
-background-image:url(https://media.discordapp.net/attachments/946275070572118056/1087510240695685150/39-393492_try-this-version-box-square-line-clipart_copy.png);
+background-image:url(assets/terminaloverlay.png);
 width:160vh;
 height:100vh;
 background-size:100% 100%;
@@ -27,7 +32,7 @@ pointer-events:none;
 }
 
 #cogmechanicus{
-background-image:url(https://cdn.discordapp.com/attachments/946275070572118056/1087503721694498877/Adeptus-Mechanicus.png);
+background-image:url(assets/adeptuscog.png);
 width:20vh;
 height:20vh;
 position:absolute;
@@ -43,7 +48,7 @@ transition-duration: 1s;
 }
 
 #restartcog{
-background-image:url(https://cdn.discordapp.com/attachments/946275070572118056/1087503721694498877/Adeptus-Mechanicus.png);
+background-image:url(assets/adeptuscog.png);
 width:60vh;
 height:60vh;
 position:absolute;
@@ -127,7 +132,7 @@ transition-duration: 1s;
 }
 
 #textbox{
-font-family:Termfont;
+font-family:modenine;
 position:absolute;
 bottom:50%;
 left:50%;
@@ -164,7 +169,7 @@ transition-duration: 1s;
 }
 
 #userentry{
-font-family:Termfont;
+font-family:modenine;
 position:absolute;
 bottom:0%;
 left:50%;
@@ -182,7 +187,7 @@ margin-bottom:17vh;
 input{
 background-color:transparent;
 border:none;
-font-family:Termfont;
+font-family:modenine;
 color:#7bb4bf;
 outline: none;
 font-size:2.5vh;
@@ -468,7 +473,7 @@ margin:2vh;
 }
 
 #necronglyph{
-background-image:url(https://media.discordapp.net/attachments/946275070572118056/1087830609335959662/necronussy.png);
+background-image:url(assets/necronglyph.png);
 width:30vh;
 height:60vh;
 position:absolute;
@@ -511,10 +516,10 @@ transition-duration: 1s;
 <div id="innershadow"></div>
 
 
-<audio id="keysound" src="https://cdn.discordapp.com/attachments/946275070572118056/1087532421349654651/561659__mattruthsound__keyboard-computer-mechanical-typing-individual-keys-press-button-click-tap-one-keypress_96khz_mono_zoomh4n_nt5-001.wav"></audio>
-<audio id="keysound2" src="https://cdn.discordapp.com/attachments/946275070572118056/1087533167390494740/194796__jim-ph__vintage-keyboard-2.wav"></audio>
-<audio id="dominusspeech" src="https://cdn.discordapp.com/attachments/946275070572118056/1087621799262568538/Warhammer_40000__Mechanicus_Teaser_Trailer.mp3"></audio>
-<audio id="bgm" src="https://cdn.discordapp.com/attachments/946275070572118056/1087621786344099880/Warhammer_40000_Mechanicus_Soundtrack_-_1._Children_of_the_Omnissiah.mp3" loop></audio>
+<audio id="keysound" src="assets/keysound1.wav"></audio>
+<audio id="keysound2" src="assets/keysound2.wav"></audio>
+<audio id="dominusspeech" src="assets/dominusspeech.mp3"></audio>
+<audio id="bgm" src="assets/mechanicusbgm.mp3" loop></audio>
 <script>
 var intrusion = false;
 var scripturebox = document.getElementById("textbox");
