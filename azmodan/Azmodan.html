@@ -1,19 +1,29 @@
 <html>
 <head>
 <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/montserrat" type="text/css"/>
+
 <style>
 
- ::-webkit-scrollbar{
- width:0vh;
- }
+
+::-webkit-scrollbar {
+	progress; 
+	width: 4px;
+	}
+
+::-webkit-scrollbar-thumb:vertical {
+	background-color: #000;}
+	
+::-webkit-scrollbar-thumb:vertical:hover, ::-webkit-scrollbar-button:start:decrement:hover, ::-webkit-scrollbar-button:end:increment:hover {
+	border-color:transparent;
+	box-shadow: 0 0 2px transparent, inset 0 0 2px transparent;
+}
+
 
 body { background-color: #1a1a1a;}
 
 @font-face { font-family: Lato; src: url(https://dl.dropboxusercontent.com/s/s8dtgpnyzraggxy/Lato-Regular.ttf) }
 
-b{
-color: white;
-text-shadow: 0vh 0vh .5vh black;
+b{color:#000;
 }
 
 a{
@@ -25,24 +35,18 @@ h {
  text-align: center; 
  font-weight: bold;
  display: block;
-color: white;
-text-shadow: 0vh 0vh .5vh black;
 }
 
 h2 {
  font-size:24px;
  text-align: center;
  display: block;
-color: white;
-text-shadow: 0vh 0vh .5vh black;
 }
 
 h3 {
  font-size:18px;
  text-align: center;
  display: block;
-color: white;
-text-shadow: 0vh 0vh .5vh black;
 }
  
 
@@ -77,8 +81,7 @@ left: 0%;
 height: 29.3vh;
 width: 100%;
 bottom: 36vh;
-background-color: black;
-opacity:0.6;
+background-color: #6d6d6d;
 box-shadow: 0px 0px 5vh 2vh #000;
 z-index: 1;}
 
@@ -88,8 +91,7 @@ bottom:36vh;
 left: 65vh;
 width: 90vh;
 height: 25.3vh;
-color: white;
-text-shadow: 0vh 0vh .5vh black;
+color: #000;
 font-family: Lato;
 font-variant: small-caps;
 font-weight:bold;
@@ -107,13 +109,10 @@ transition: all 1.2s ease-in-out;
 overflow:auto;
 padding-right:4vh;
 padding-bottom:4vh;
-scrollbar-width: none;
 }
 
 
 .box:target {
-color: white;
-text-shadow: 0vh 0vh .5vh black;
 opacity: 1;
 z-index: 2;
 transition: all 1.2s ease-in-out;
@@ -122,7 +121,6 @@ transition: all 1.2s ease-in-out;
 -o-transition: all 1.2s ease-in-out;
 -ms-transition: all 1.2s ease-in-out;
 overflow:auto;
-scrollbar-width: none;
 }
 
 
@@ -217,7 +215,7 @@ Nowadays, the Eternal Conflict is usually forgotten, and the Lord of Sin has tak
 
 </div>
 
- <img id="player" onclick="music();" style="cursor:pointer;outline:0; position: absolute; width: auto; height: 100%; bottom: 0px; left: 0px; z-index: 1;" src="https://i.imgur.com/pTTTwBm.png" >
+ <img id="player" onclick="music();" style="outline:0; position: absolute; width: auto; height: 100%; bottom: 0px; left: 0px; z-index: 1;" src="https://i.imgur.com/pTTTwBm.png" >
  <audio id="music" src="https://dl.dropboxusercontent.com/s/5g9otsnqvu0gtio/Iwamizu%20-%20%E4%BF%97%E4%B8%96%EF%BC%8FZokuse-RTCX_usVeuw.opus" loop autoloop ></audio>
 
 
