@@ -1,0 +1,296 @@
+<head>
+    <title>Recursion Codes</title>
+    <link rel="icon" href="https://media.discordapp.net/attachments/946275070572118056/1089677981598875708/logoicon.png" type="image/icon type">
+    </head>
+<body><style type="text/css">
+@import url('https://fonts.googleapis.com/css?family=Exo');
+.pfor {display: none;}
+
+body, a:hover {cursor: url(http://cur.cursors-4u.net/cursors/cur-9/cur817.cur), progress !important; }
+
+@font-face { font-family: Whitey; src: url(https://dl.dropboxusercontent.com/s/8iobdrwvx7nhu0q/Aaargh.ttf) }
+
+::-webkit-scrollbar {progress; width: 2px;}
+::-webkit-scrollbar-thumb:vertical {
+ background-color: transparent;
+ border: 1px solid transparent;
+ -webkit-border-radius: 0px;
+ box-shadow: 0 0 3px transparent, inset 0 0 6px transparent;
+ -moz-transition:all 0.3s ease-in-out;
+ -webkit-transition:all 0.3s ease-in-out;}
+
+::-webkit-scrollbar-thumb:vertical:hover, ::-webkit-scrollbar-button:start:decrement:hover, ::-webkit-scrollbar-button:end:increment:hover {border-color:transparent;box-shadow: 0 0 2px transparent, inset 0 0 2px transparent;}
+
+body {background-repeat: repeat; background-color: #ede6d6 ;
+ margin: 0;
+ padding: 0;}
+
+.image-container {
+ display: flex;
+ justify-content: center;
+ height:100%;
+}
+
+.corner{
+background-image:url(https://i.imgur.com/kwSEQEU.png);
+background-size:cover;
+background-repeat:no-repeat;
+width:140px;
+height:140px;
+position:absolute;
+}
+
+img.mainimg { height:100%; width:auto; 
+}
+
+
+ 
+a {color:#D63B2A; 
+text-decoration: none;
+font-weight:bold;	
+transition: 1.5s;
+} 
+	
+h1 { 
+font-family:georgia;
+font-size: 23px;
+color:#f2e3cc;
+display:block;
+text-align:center;
+background-color: #c13a30;
+letter-spacing:1px;
+border-style: solid;
+border-width: 5px;
+border-color: #c9574f;
+border-left-style: none;
+border-right-style: none;
+border-top-style: inset;
+border-bottom-style: outset;
+text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; 
+}
+
+h2 { 
+font-family:georgia;
+font-size: 23px;
+color:#f2e3cc;
+display:block;
+text-align:center;
+background-color: #cac03b;
+letter-spacing:1px;
+border-style: solid;
+border-width: 5px;
+border-color: #a69c14;
+border-left-style: none;
+border-right-style: none;
+border-top-style: inset;
+border-bottom-style: outset;
+text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; 
+}
+
+ 
+.box {background: none;
+ position: absolute;
+ background-size: 600px 436px;
+ bottom: 250px;
+ width: 600px;
+ height: 436px;
+ left: 660px;} 
+
+p {background: none;
+ font-size:18px;
+ font-family: Exo;
+ color:#000;
+ margin: 0;
+ text-align: justify;
+ word-wrap:break-word;
+ margin-top:-5px;
+ padding: 8px 8px 8px 8px;}
+
+#textleft {position: absolute;
+ width: 300px;
+ height: 396px;
+ top: 280px;
+ left: 12%;
+ font-family: Exo;
+ color: #000;
+ overflow-y: hidden;
+ line-height: 19px;
+ background-color:#EEEDED;
+ border: 1px solid #45214f;
+}
+
+#textright {position: absolute;
+ width: 300px;
+ height: 396px;
+ top: 280px;
+ right: 12%;
+ font-family: Exo;
+ color: #000 ;
+ float: right;
+ overflow-y: hidden;
+ line-height: 19px;
+ background-color:#EEEDED;
+ border: 1px solid #45214f;
+ }
+
+a.class1 {color:#000;}
+
+a.navia, a.navia:visited, a.navia:hover {
+ letter-spacing: 50px;
+ width: 50px; height: 20px; border: 1px solid #45214f;
+ border-radius:50px;
+ display:inline-block;
+ background-color:#D63B2A ;
+}
+a.navia2, a.navia2:visited, a.navia2:hover {
+ letter-spacing: 50px;
+ width: 50px; height: 20px; border: 1px solid #45214f;
+ border-radius:50px;
+ display:inline-block;
+ background-color:#D1C834 ;
+}
+
+.navigationcontainer{
+width:300px;
+height:21px;
+top:240px;
+position:absolute;
+letter-spacing:50px;
+text-align:center;
+}
+
+.navigationcontainer2{
+width:300px;
+height:21px;
+top:240px;
+position:absolute;
+letter-spacing:50px;
+text-align:center;
+}
+
+.contentbox{
+width: 300px;
+ height: 396px;
+ overflow: auto;
+ left:360px;
+}
+
+.navi { display:inline-block; }
+
+.navi2 { display:inline-block; }
+
+</style>
+<div class="corner" style="left:0px; top: 0px;"></div>
+<div class="corner" style="right:0px; top: 0px;transform: rotate(90deg)"></div>
+<div class="corner" style="right:0px; bottom: 0px; transform: rotate(180deg)"></div>
+<div class="corner" style="left:0px; bottom:0px; transform: rotate(270deg)"></div>
+<div class="image-container"><img class="mainimg"id="player" onclick="action()" src="https://i.imgur.com/TwmshGu.png"></img></div>
+
+<div class="navigationcontainer" style="left:12%;">
+<div class="navi"><a href="#one" class="navia"></a>
+</div>
+<div class="navi"><a href="#two" class="navia"></a> 
+</div>
+<div class="navi"><a href="#three" class="navia"></a>
+</div>
+</div>
+
+<div id="textleft">
+<a name="one"></a><div class="contentbox">
+<h1>Haku</h1><p>
+Name<font style="float:right;">
+Haku Daigo</font><br> 
+Age<font style="float:right;">
+19</font><br> 
+Height<font style="float:right;">
+5'9"</font><br> 
+Marital<font style="float:right;">
+<a target="_blank" href="https://roleplay.chat/profile.php?user=">Single</a></font><br> 
+Occupation<font style="float:right">
+Demon Slayer</font><br><br>
+A blind youth with prosthetic eyes who is missing his arms and one leg. He has long black hair that is tied up to a ponytail and bangs that pass his chin, 
+often covering parts of his emotionless face.
+<br><br>
+Who knows what he could be looking for?
+
+</p>
+</div>
+<a name="two"></a><div class="contentbox">
+<h1>History</h1>
+<p>Haku's father made a pact with demons who devoured Haku's body while allowing Haku to gain demonic powers as side-effects of the curse.<br><br>
+ Haku was abandoned by his father, later adopted and in sword fighting before getting prosthetics as well as his own name. <br><br>
+ Once Haku was old enough, he headed out on his journey to kill all 12 demons and regain his body.</p>
+</div>
+<a name="three"></a><div class="contentbox">
+<h1>Encounters</h1>
+<p>None yet.</p>
+</div>
+</div>
+<div class="navigationcontainer2" style="right:12%;">
+<div class="navi2"><a href="#four" class="navia2"></a>
+</div>
+<div class="navi2"><a href="#five" class="navia2"></a> 
+</div>
+<div class="navi2"><a href="#six" class="navia2"></a>
+</div>
+</div>
+
+
+<div id="textright">
+<a name="four"></a><div class="contentbox">
+<h2>Headcanons</h2>
+<p>
+Likes being read to.<br><br>
+Disoriented by surprising noises.<br><br>
+Bad with technology.<br><br>
+Emotionally vulnerable.<br><br>
+Sympathetic to Tahomaru but they still fight.<br><br>
+Can use his 'sight' to vaguely lie detect.<br><br>
+Daddy Issues™.<br><br>
+</p>
+</div>
+<a name="five"></a><div class="contentbox">
+<h2>Body</h2>
+<p style="text-align:center;">Obtained</p><p style="line-height:25px;"> Skin<br>Touch<br>Leg(R)<br>Hearing<br> Voice<br> Smell<br> Pain<br>
+<p style="text-align:center;">Missing</p><p style="line-height:25px;"> Leg(L)<br> Arms<br> Eyes<br><br></p>
+
+</p>
+</div>
+<a name="six"></a><div class="contentbox">
+<h2>OOC</h2>
+<p>Thank you for reading.<br><br>
+
+Click on Haku for music.<br><br>
+
+Feedback appreciated in any way.<br><br>
+
+I'm a friendly person.<br><br>
+
+I made this code.<br><br>
+
+I am a <a target="_blank" href="https://roleplay.chat/profile.php?user=wheel" style="color:pink;">Wheel</a>.<br><br>
+</p>
+</div>
+</div>
+
+<script>
+var playing = false;
+function action(){
+ var audio = document.getElementById("audio");
+ if(playing === false){
+ audio.play();
+ playing = true;
+ }else{
+ audio.pause();
+ playing = false;
+ }
+audio.volume = 0.2;
+}
+</script>
+
+
+ <audio id="audio" src="https://dl.dropboxusercontent.com/s/rznoxdpabqijfqf/Vanilla%20-%20Fuji%20Pt%20II%20%28Battlecry%29-pIM9D_gIWlQ.opus" loop autoloop ></audio>
+
+
+</body>
+

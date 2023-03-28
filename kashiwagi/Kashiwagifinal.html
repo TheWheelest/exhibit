@@ -1,0 +1,1357 @@
+<head>
+    <title>Recursion Codes</title>
+    <link rel="icon" href="https://media.discordapp.net/attachments/946275070572118056/1089677981598875708/logoicon.png" type="image/icon type">
+    </head>
+<style>
+body{
+margin:0;
+overflow:hidden;
+background-color:black;
+}
+@font-face { font-family: datafont; src: url(https://dl.dropboxusercontent.com/s/qeszoyui1s76eob/Perfect_DOS_VGA_437.ttf) }
+@font-face { font-family: datafont2; src: url(https://dl.dropboxusercontent.com/s/oxkvlwfpl9an5lx/UnscreenMK.ttf?dl=0) }
+#phone{
+width: 4.8vw;
+height: 2vw;
+position: absolute;
+bottom: 6vw;
+left: 50%;
+margin-left: -18vw;
+ 
+z-index: 5;
+cursor:pointer;
+}
+#pizza{
+width: 5.8vw;
+height: 2.7vw;
+position: absolute;
+bottom: 3vw;
+left: 50%;
+margin-left: -25.5vw;
+ 
+z-index: 5;
+cursor: pointer;
+}
+#modem {
+width: 18.8vw;
+height: 6.7vw;
+position: absolute;
+bottom: 3vw;
+left: 50%;
+margin-left: 20.5vw;
+ 
+z-index: 5;
+cursor: pointer;
+}
+#pc{
+width: 1.5vw;
+height: 1.7vw;
+position: absolute;
+bottom: 14vw;
+left: 50%;
+margin-left: -17.5vw;
+ 
+z-index: 5;
+cursor: pointer;
+}
+#dial{
+width: 1.8vw;
+height: 2.1vw;
+position: absolute;
+bottom: 26vw;
+left: 50%;
+margin-left: 7.5vw;
+ 
+z-index: 5;
+cursor: pointer;
+}
+#buttonrow{
+width: 4.5vw;
+height: 0.9vw;
+transform: rotate(-5deg);
+position: absolute;
+bottom: 24.1vw;
+left: 50%;
+margin-left: 3vw;
+ 
+z-index: 5;
+cursor: pointer;
+}
+#screen{
+    width: 11.2vw;
+    height: 10.5vw;
+    position: absolute;
+    bottom: 11.5vw;
+    left: 50%;
+    margin-left: -13.4vw;
+     
+    z-index: 4;
+    cursor: pointer;
+}
+#monitorpower{
+    width: 7.6vh;
+    height: 9vh;
+    opacity: 1;
+    position: absolute;
+	pointer-events:none;
+    left: 50%;
+    margin-left: 30.2vh;
+    z-index: 7;
+    bottom: 8vh;
+     
+cursor:pointer;
+}
+.scanlines {border-radius: 2vh;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 99;
+    position: absolute;
+    width: 66.1vh;
+    height: 44vh;
+    left: 50%;
+    bottom: 18.2vw;
+    margin-left: -47vw;
+}
+
+ .scanlines:before, .scanlines:after {
+	 display: block;
+	 pointer-events: none;
+	 content: '';
+	 position: absolute;
+}
+
+ .scanlines:before, .scanlines:after {
+	 display: block;
+	 pointer-events: none;
+	 content: '';
+	 position: absolute;
+}
+ .scanlines:before {
+	 height: 2px;
+	 width: 100%;
+	 z-index: 2147483649;
+	 background: rgba(0, 0, 0, .3);
+	 opacity: 0.75;
+	 animation: scanline 6s linear infinite;
+}
+ .scanlines:after {
+	 top: 0;
+	 right: 0;
+	 bottom: 0;
+	 left: 0;
+	 z-index: 2147483648;
+	 background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, .3) 51%);
+	 background-size: 100% 4px;
+	 animation: scanlines 1s steps(60) infinite;
+}
+ @keyframes scanline {
+	 0% {
+		 transform: translate3d(0, 200000%, 0);
+	}
+}
+ @keyframes scanlines {
+	 0% {
+		 background-position: 0 50%;
+	}
+}
+
+.scanlines2 {
+border-radius: 2vh;
+pointer-events: none;
+overflow: hidden;
+z-index: 99;
+position: absolute;
+width:72.1vh;
+height:48vh;
+right:18vw;
+bottom:48vh;
+transform:scaleX(.9) scaleY(.89);
+}
+ .scanlines2:before, .scanlines2:after {
+	 display: block;
+	 pointer-events: none;
+	 content: '';
+	 position: absolute;
+}
+ .scanlines2:before {
+	 height: 2px;
+	 width: 100%;
+	 z-index: 2147483649;
+	 background: rgba(123, 123, 123, .3);
+	 opacity: 0.75;
+	 animation: scanline 6s linear infinite;
+}
+ .scanlines2:after {
+	 top: 0;
+	 right: 0;
+	 bottom: 0;
+	 left: 0;
+	 z-index: 2147483648;
+	 background: linear-gradient(to bottom, transparent 50%, rgba(66, 66, 66, .3) 51%);
+	 background-size: 100% 4px;
+	 animation: scanlines 1s steps(60) infinite;
+}
+ @keyframes scanline2 {
+	 0% {
+		 transform: translate3d(0, 200000%, 0);
+	}
+}
+ @keyframes scanlines2 {
+	 0% {
+		 background-position: 0 50%;
+	}
+}
+
+@keyframes flicker {
+ 0%,
+ 100% {
+ opacity: 1;
+ }
+ -0.02% {
+ opacity: 1;
+ }
+ 0% {
+ opacity: 1;
+ }
+ 1% {
+ opacity: 1;
+ }
+ 1.02% {
+ opacity: 1;
+ }
+ 8.98% {
+ opacity: 1;
+ }
+ 9% {
+ opacity: 0;
+ }
+ 9.8% {
+ opacity: 0;
+ }
+ 9.82% {
+ opacity: 1;
+ }
+ 9.48% {
+ opacity: 1;
+ }
+ 9.5% {
+ opacity: 1;
+ }
+ 9.6% {
+ opacity: 1;
+ }
+ 9.62% {
+ opacity: 1;
+ }
+ 14.98% {
+ opacity: 1;
+ }
+ 15% {
+ opacity: 0.5;
+ }
+ 15.8% {
+ opacity: 0.5;
+ }
+ 15.82% {
+ opacity: 1;
+ }
+ 15.18% {
+ opacity: 1;
+ }
+ 15.2% {
+ opacity: 0.7;
+ }
+ 16% {
+ opacity: 0.7;
+ }
+ 16.02% {
+ opacity: 1;
+ }
+ 15.48% {
+ opacity: 1;
+ }
+ 15.5% {
+ opacity: 0.5;
+ }
+ 16.2% {
+ opacity: 0.5;
+ }
+ 16.22% {
+ opacity: 1;
+ }
+ 16.98% {
+ opacity: 1;
+ }
+ 17% {
+ opacity: 1;
+ }
+ 17.8% {
+ opacity: 1;
+ }
+ 17.82% {
+ opacity: 1;
+ }
+ 20.48% {
+ opacity: 1;
+ }
+ 20.5% {
+ opacity: 0.9;
+ }
+ 21.3% {
+ opacity: 0.9;
+ }
+ 21.32% {
+ opacity: 1;
+ }
+ 20.98% {
+ opacity: 1;
+ }
+ 21% {
+ opacity: 1;
+ }
+ 22% {
+ opacity: 1;
+ }
+ 22.02% {
+ opacity: 1;
+ }
+ 39.98% {
+ opacity: 1;
+ }
+ 40% {
+ opacity: 1;
+ }
+ 41% {
+ opacity: 1;
+ }
+ 41.02% {
+ opacity: 1;
+ }
+ 40.48% {
+ opacity: 1;
+ }
+ 40.5% {
+ opacity: 0.6;
+ }
+ 41.4% {
+ opacity: 0.6;
+ }
+ 41.42% {
+ opacity: 1;
+ }
+ 41.98% {
+ opacity: 1;
+ }
+ 42% {
+ opacity: 1;
+ }
+ 42.8% {
+ opacity: 1;
+ }
+ 42.82% {
+ opacity: 1;
+ }
+ 59.98% {
+ opacity: 1;
+ }
+ 60% {
+ opacity: 1;
+ }
+ 61% {
+ opacity: 1;
+ }
+ 61.02% {
+ opacity: 1;
+ }
+ 60.18% {
+ opacity: 1;
+ }
+ 60.2% {
+ opacity: 0.2;
+ }
+ 61% {
+ opacity: 0.2;
+ }
+ 61.02% {
+ opacity: 1;
+ }
+ 60.78% {
+ opacity: 1;
+ }
+ 60.8% {
+ opacity: 0.4;
+ }
+ 61.6% {
+ opacity: 0.4;
+ }
+ 61.62% {
+ opacity: 1;
+ }
+ 61.38% {
+ opacity: 1;
+ }
+ 61.4% {
+ opacity: 0;
+ }
+ 62.2% {
+ opacity: 0;
+ }
+ 62.22% {
+ opacity: 1;
+ }
+ 61.78% {
+ opacity: 1;
+ }
+ 61.8% {
+ opacity: 1;
+ }
+ 62.8% {
+ opacity: 1;
+ }
+ 62.82% {
+ opacity: 1;
+ }
+ 75.98% {
+ opacity: 1;
+ }
+ 76% {
+ opacity: 1;
+ }
+ 77% {
+ opacity: 1;
+ }
+ 77.02% {
+ opacity: 1;
+ }
+ 77.98% {
+ opacity: 1;
+ }
+ 78% {
+ opacity: 0.7;
+ }
+ 78.8% {
+ opacity: 0.7;
+ }
+ 78.82% {
+ opacity: 1;
+ }
+ 78.98% {
+ opacity: 1;
+ }
+ 79% {
+ opacity: 1;
+ }
+ 80% {
+ opacity: 1;
+ }
+ 80.02% {
+ opacity: 1;
+ }
+ 99.98% {
+ opacity: 1;
+ }
+ 100% {
+ opacity: 1;
+ }
+ 101% {
+ opacity: 1;
+ }
+ 101.02% {
+ opacity: 1;
+ }
+}
+#profilediv{
+width:107.6vh;
+height:100vh;
+opacity:1;
+position:absolute;
+left:50%;
+margin-left:-58.8vh;
+background-image:url(https://media.discordapp.net/attachments/898474723778904078/942785837689626734/kindpng_2254315_copy.png);
+z-index:6;
+bottom:-2vh;
+background-size:cover;
+pointer-events:none;
+opacity:0;
+transition:.5s;
+}
+#scanlinesdiv{
+    width: 91.6vh;
+    height: 70vh;
+    opacity: 1;
+    position: absolute;
+    left: 50%;
+    margin-left: -50.8vh;
+    z-index: 5;
+    bottom: 20vh;
+    background-color: black;
+	color:rgb(179,255,179);
+	text-shadow: 0vh 0vh 2vh rgb(173,255,158);
+	pointer-events:none;
+	font-size:2vh;
+opacity:0;
+transition:.5s;
+}
+
+p2{
+font-family:datafont2;
+}
+h{
+font-size:3.8vh;
+}
+#kashiwagi{
+    background-image: url(https://media.discordapp.net/attachments/456137750434021376/942821561545666610/Untitled-4.png);
+    position: absolute;
+    right: 1vh;
+    bottom: 0vh;
+    background-size: contain;
+    background-position: top;
+    background-repeat: no-repeat;
+    height: 59vh;
+    width: 38.1vh;
+}
+
+#textbox{
+width:45vh;
+height:29vh;
+overflow:auto;
+padding:2vh;
+margin-left:-2vh;
+margin-top:2vh;
+justify-content:center;
+display:flex;
+}
+::-webkit-scrollbar { 
+width:1vh;}
+::-webkit-scrollbar-thumb{
+background: rgb(155,255,155);}
+p{
+color:rgb(151,181,255);
+text-shadow: 0vh 0vh 1vh rgb(151,221,255);
+line-height:0vh;
+display: inline;
+}
+
+
+
+
+h2{
+font-size:5.9vh;
+}
+
+
+
+.projection{
+background-image:url(https://media.discordapp.net/attachments/898474723778904078/940626008250413166/Untitled-5.png);
+width:72vh;
+height:48vh;
+position:absolute;
+left: 50%;
+margin-left: -48.2vw;
+bottom: 17.4vw;
+z-index:4;
+background-size:cover;
+overflow:hidden;
+animation:flicker 32s;
+pointer-events:none;
+}
+img{
+width:8vh;
+height:8vh;
+cursor:pointer;
+opacity:0.75;
+}
+.line-break {
+ width: 100%;
+}
+#lockscreen{
+    bottom: 1.5vw;
+    margin-left: 2vw;
+    width: 24vh;
+    height: 40vh;
+    position: absolute;
+    left: 50%;
+    z-index: 12;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    animation: flicker 32s;
+}
+
+#dialscreen{
+    bottom: 2.5vw;
+    width: 33vh;
+    height: 40vh;
+    position: absolute;
+    left: 3vw;
+    z-index: 12;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    animation: flicker 32s;
+    color: rgb(255,255,255,0.8);
+    font-family: title;
+	
+}
+@font-face { font-family: title; src: url(https://dl.dropboxusercontent.com/s/p1o6m69dpaagzm4/hemi%20head%20bd%20it.ttf) }
+
+#beam{
+background-image: url(https://media.discordapp.net/attachments/898474723778904078/940581037732429824/beam.png);
+position: absolute;
+height: 40vw;
+width: 20vw;
+background-size: contain;
+background-position: center;
+background-repeat: no-repeat;
+left: 50%;
+margin-left: -28.5vw;
+bottom: -2.1vw;
+z-index: 5;
+pointer-events: none;
+opacity: 1;
+transition: 0.15s;
+transform: rotate(-25deg);
+opacity:0;
+pointer-events:none;
+}
+#projectionscreen{
+opacity:0;
+pointer-events:auto;
+transition:0.75s;
+}
+</style>
+<script></script><script async src='/cdn-cgi/bm/cv/669835187/api.js'></script><script async src='/cdn-cgi/bm/cv/669835187/api.js'></script><body>
+<div id="beam" ></div>
+<div id="phone" onclick="playphone()"></div>
+<div id="pizza" onclick="playpizza()"></div>
+<div id="modem" onclick="playmodem()"></div>
+<div id="pc" onclick="playpc()"></div>
+<div id="dial" onclick="playdial()"></div>
+<div id="buttonrow" onclick="playbutton()"></div>
+<div id="profilediv"></div>
+<div id="scanlinesdiv" class="scanlines2"><div style="margin-left: 4vh;width: 83.2vh;margin-top: 3vh;font-family: datafont;">
+<h>Data-Tel<p2>&trade;</p2> Net-Skim<p2>&trade;</p2> Edition T-2042<p2>&trade;</p2></h><br>
+Resident Age : <p>Test</p><br>
+Resident Name : <p>Test</p><br>
+Resident Gender : <p>Test</p><br>
+Resident Height : <p>Test</p><br>
+Resident Weight : <p>Test</p><br>
+Resident Family : <p>Test</p><br>
+Resident Address : <p>Test</p><br>
+Resident Cyberware : <p>Test</p><br>
+Resident Occupation : <p>Test</p><br>
+Resident Phone Number : <p style="color:rgb(66,255,66);text-shadow: 0vh 0vh 2vh rgb(173,255,158);">Test</p><br>
+Resident Significant Other : <p style="color:rgb(255,66,66);text-shadow:0vh 0vh 1vh rgb(255,221,151)">Test</p><br>
+Resident Registered Weapons : <p>Test</p><br>
+Resident Registered Vehicle : <p>Test</p><br>
+<div id="textbox"><div style="width:45vh;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+</div>
+</div>
+<div id="kashiwagi"></div>
+</div></div>
+<div id="monitorpower" onclick="powertoggle()"></div>
+<div id="screen" onclick="powertoggle()"></div>
+<video id="backgroundthing" preload="auto" style="height:100vh;width:100vw;object-fit:cover;object-position:bottom;opacity:.4;transition:2s;pointer-events:none;" muted loop autoplay id="backgroundvideo">
+ <source type="video/mp4" src="https://cdn.discordapp.com/attachments/456137750434021376/942817465002520616/kamen-nikolov-fin-1-8-photo-f-2_3.mp4"></video>
+ <audio id="pizzatime" src="https://cdn.discordapp.com/attachments/456137750434021376/942876774512091176/PIZZA_TIME_Sound_Effect_Peter_Parker_2Hru6IECn2E_1.mp3" ></audio>
+ <audio id="wind" src="https://cdn.discordapp.com/attachments/456137750434021376/942825767157522432/237689__kernowrules__whistling-wind-in-the-tower-duke-of-cornwall-hotel-plymouth.mp3" loop autoloop></audio>
+ <audio id="rain" src="https://cdn.discordapp.com/attachments/456137750434021376/942819818032230480/360756__dnlburnett__rain-drops-against-window.mp3" loop autoloop></audio>
+ <audio id="hum" src="https://cdn.discordapp.com/attachments/456137750434021376/942823544570667008/187931__mrauralization__electric-humming-sound.wav" loop autoloop></audio>
+ <audio id="switchsound" src="https://cdn.discordapp.com/attachments/456137750434021376/942824724231254086/139970__jessepash__switch-big-power.mp3" ></audio>
+ <audio id="mailsound" src="https://cdn.discordapp.com/attachments/456137750434021376/942850242896867348/AOl_-_You_Got_Mail_gFBLiHpkcOk.opus" ></audio>
+ <audio id="modemsound" src="https://cdn.discordapp.com/attachments/456137750434021376/942849988331962438/16475__jlew__dialup.mp3" ></audio>
+ <audio id="keyboardsound" src="https://cdn.discordapp.com/attachments/456137750434021376/942852631112605736/245716__feedbackdesignz__keyboard-click.wav" ></audio>
+ <audio id="song0" src="https://cdn.discordapp.com/attachments/456137750434021376/942853712450302052/Cyberpunk_2077_Never_Fade_Away_by_SAMURAI_Refused_AN1RJF55NXI.opus"></audio>
+ <audio id="song1" src="https://cdn.discordapp.com/attachments/456137750434021376/942854110594629693/Safe_Haven_1h39vfoLb_4.opus"></audio>
+ <audio id="song2" src="https://cdn.discordapp.com/attachments/456137750434021376/942858117278998548/Daft_Punk_-_Veridis_Quo_Official_Audio_TCd6PfxOy0Y.opus"></audio>
+ <audio id="song3" src="https://cdn.discordapp.com/attachments/456137750434021376/942858117941714954/Vicky_Vale_-_Dancing_gzY8VH7eb8Y.opus"></audio>
+ <audio id="song4" src="https://cdn.discordapp.com/attachments/456137750434021376/942858118705086564/CYBERPUNK_2077_SOUNDTRACK_-_MAJOR_CRIMES_by_HEALTH__Window_Weather_Official_Video_Eo4flxOo5Ew.opus"></audio>
+ <audio id="song5" src="https://cdn.discordapp.com/attachments/456137750434021376/942859285489147985/Ryu_ga_Gotoku_2_Yakuza_2_Theme_Song_-_Crazy_Ken_Band_-_Kuroi_Kizuato_No_Buruusu_jT0r_UnT6bU.opus"></audio>
+ <audio id="pizzasong" src="https://cdn.discordapp.com/attachments/456137750434021376/942876113787580426/Spider-Man_2_-_The_Game_Pizza_Theme_czTksCF6X8Y.opus"></audio>
+ <audio id="ringtone" src="https://cdn.discordapp.com/attachments/456137750434021376/943193994261827644/Cyberpunk_2077_-_Hyper_-_Spoiler_8-bit_remix_Trailer_Theme_PTk5S0GQXmw.mp3"></audio>
+ <audio id="vibrate" src="https://cdn.discordapp.com/attachments/456137750434021376/942880673969090610/179012__smartwentcody__cell-phone-vibrate.wav"></audio>
+ <audio id="1tone" src="https://dl.dropboxusercontent.com/s/1z15aguw073h2s7/Dtmf1.ogg?" ></audio>
+ <audio id="2tone" src="https://dl.dropboxusercontent.com/s/yof1hxkbyhmpk7b/Dtmf2.ogg?" ></audio>
+ <audio id="3tone" src="https://dl.dropboxusercontent.com/s/pjg0dyuxkepxpex/Dtmf3.ogg?" ></audio>
+ <audio id="4tone" src="https://dl.dropboxusercontent.com/s/jd24wc0h8ugxzfs/Dtmf4.ogg?" ></audio>
+ <audio id="5tone" src="https://dl.dropboxusercontent.com/s/2ckp4xto8xrapnb/Dtmf5.ogg?" ></audio>
+ <audio id="6tone" src="https://dl.dropboxusercontent.com/s/6th3sf8u44eu53y/Dtmf6.ogg?" ></audio>
+ <audio id="7tone" src="https://dl.dropboxusercontent.com/s/k6obzg8mrx165x1/Dtmf7.ogg?" ></audio>
+ <audio id="8tone" src="https://dl.dropboxusercontent.com/s/o94f0vtkjsc50x5/Dtmf8.ogg?" ></audio>
+ <audio id="9tone" src="https://dl.dropboxusercontent.com/s/1y9988lxz47uiv1/Dtmf9.ogg?" ></audio>
+ <audio id="0tone" src="https://dl.dropboxusercontent.com/s/ighjxdt5konwo28/Dtmf0.ogg?" ></audio>
+ <audio id="poundtone" src="https://dl.dropboxusercontent.com/s/jpgpqfrdw1ruv9b/Dtmf-.ogg?" ></audio>
+ <audio id="startone" src="https://dl.dropboxusercontent.com/s/k9co3o4c2q5b5ef/DtmfStar.ogg?" ></audio>
+ <audio id="failtone" src="https://cdn.discordapp.com/attachments/456137750434021376/940718285228503130/249300__suntemple__access-denied.wav?" ></audio>
+ <audio id="successtone" src="https://cdn.discordapp.com/attachments/456137750434021376/940718297089974282/50565__broumbroum__sf3-sfx-menu-validate.wav" ></audio>
+ <audio id="911sound" src="https://cdn.discordapp.com/attachments/898474723778904078/940689252050690058/Police_dispatch_female_American_says_phone_911_Whats_Your_Emergency_Sound_FX_33bj-t8rDJc.opus" ></audio>
+ <audio id="boobies" src="https://cdn.discordapp.com/attachments/456137750434021376/940730221081010206/oh_these_G_A04leIN2o.opus" ></audio>
+ <audio id="sixtynine" src="https://cdn.discordapp.com/attachments/456137750434021376/940730221265555496/Michael_Rosen_Nice_CYqq9Ovz_9c.opus" ></audio>
+ <audio id="neverfadeaway" src="https://cdn.discordapp.com/attachments/456137750434021376/940770967607726080/Never_Fade_Away_6IdMp-H9vhA.mp3" ></audio>
+ <audio id="vmgs" src="https://cdn.discordapp.com/attachments/456137750434021376/940770967859372122/MGS5-_V_has_come_to_98WjhsBJiRI.mp3" ></audio>
+ <audio id="punisher" src="https://cdn.discordapp.com/attachments/456137750434021376/940771810247589968/No_no_no_no_no_no_no_wait_wait_wait_wait_meme_VM3uXu1Dq4c.opus" ></audio>
+ <audio id="birthdaysong" src="https://cdn.discordapp.com/attachments/456137750434021376/940811879285153872/Portal_2_-_Cara_Mia_Addio_full_HQ_audio_tL_TFXbSnLY.mp3" ></audio>
+ <audio id="brand" src="https://cdn.discordapp.com/attachments/456137750434021376/940813867234242600/MY_BRAND_V-fRuoMIfpw.opus" ></audio>
+ <audio id="congratulations" src="https://cdn.discordapp.com/attachments/456137750434021376/940815589000237056/Congratulations_oyFQVZ2h0V8.mp3" ></audio>
+ <audio id="discordsound" src="https://cdn.discordapp.com/attachments/456137750434021376/940836874589712464/Discord_Call_-_Sound_Effect_HD_pWzvA4DOSDg.opus" ></audio>
+ <audio id="samuraisound" src="https://cdn.discordapp.com/attachments/456137750434021376/941813301858430996/Wake_the_fuck_upSamurai_We_have_a_city_to_burn._OedtF92igxs.mp3" ></audio>
+
+<video preload="auto" style="height:100vh;width:100%;object-fit:contain;object-position:bottom;opacity:1;transition:1s;pointer-events:auto;z-index:999;position:absolute; left:0vh;bottom:0vh;background-color:black;cursor:pointer;" onclick="startprofile()" id="doorvideo">
+ <source type="video/mp4" src="https://cdn.discordapp.com/attachments/456137750434021376/942843935196319804/doorfinal.mp4"></video>
+
+
+<div id="projectionscreen">
+<div class="scanlines" style="z-index:5;"></div>
+<div class="projection">
+<div id="dialscreen">
+<h2>Datatel Inc.</h2>
+<p2 style="font-size:4.5vh; color:rgb(255,255,255,0.8);font-family:title;display:inline;">You have (1) remaining call.<br></p2><p3 id="phonenumber" style="font-size:4vh">(XXX)XXX-XXXX</p3>
+</div>
+<div id="lockscreen">
+<img id="num1" src="https://cdn.discordapp.com/attachments/898474723778904078/940629087892930600/one.png" onclick="play1()">
+<img id="num2" src="https://cdn.discordapp.com/attachments/898474723778904078/940629088102678559/two.png" onclick="play2()">
+<img id="num3" src="https://cdn.discordapp.com/attachments/898474723778904078/940629088308187147/three.png" onclick="play3()">
+<div class="line-break"></div>
+<img id="num4" src="https://cdn.discordapp.com/attachments/898474723778904078/940629088509517824/four.png" onclick="play4()">
+<img id="num5" src="https://cdn.discordapp.com/attachments/898474723778904078/940629088715026432/five.png" onclick="play5()">
+<img id="num6" src="https://cdn.discordapp.com/attachments/898474723778904078/940629088958283876/six.png" onclick="play6()">
+<div class="line-break"></div>
+<img id="num7" src="https://cdn.discordapp.com/attachments/898474723778904078/940629089159630858/seven.png" onclick="play7()">
+<img id="num8" src="https://cdn.discordapp.com/attachments/898474723778904078/940629089612623932/eight.png" onclick="play8()">
+<img id="num9" src="https://cdn.discordapp.com/attachments/898474723778904078/940629089960722462/nine.png" onclick="play9()">
+<div class="line-break"></div>
+<img id="numstar" src="https://cdn.discordapp.com/attachments/898474723778904078/940629090266939472/star.png" onclick="playstar()">
+<img id="num0" src="https://cdn.discordapp.com/attachments/898474723778904078/940629104980545556/zero.png" onclick="play0()">
+<img id="numpound" src="https://cdn.discordapp.com/attachments/898474723778904078/940629105186078720/pound.png" onclick="playpound()">
+</div>
+
+</div>
+</div></div>
+
+<script type="text/javascript">(function(){window['__CF$cv$params']={r:'6dd9d1c40d657ed7',m:'fgMHjetZ_QO_Oi6n8VDwO.4NYF9NDiOqnj1u9PEBJ4E-1644878648-0-AetoCZL7egWFGswEC1qPVy2zyye+26wVgjV8d4pdQuBkzSJjivSHvcZ5ipU3lPmIyDKlyI/yVPrALIun9R5BV9fXw+EBwv0NWtsk5U7JDAYmz7itViubH0QiJ80hDTWP0w+qX/zEv2pvyegVvlki6u8kEZm7pVDYtoaSD7UqaMlpq/g9+WyBenkOIaI1NmpaW+o5AWxCz9a4Z93UViE8P6c=',s:[0xdae13532d4,0x9135e5d42e],}})();</script><script type="text/javascript">(function(){window['__CF$cv$params']={r:'6de0208d2a5e7d27',m:'vj2BLhsfM251qK2zZin94js8KQylYSrKIHOYfeuk.ew-1644944790-0-AfM6uryXqfLkqn6uRQn83t/E68SbLl7mTHfkAG+pGu2Ay1FKeanEjv7vFAW+Ldrjz+40ORPvKWTEmEeGYFCwf3ZDOzxIZ9RGuN07qVZzfjWywrSD7XtESOnCQJ4S6Q0AQWplfRCTQnNAuZsIKeKrZgyKwdMDWaDKkndFlG8g+ugqIpvWlHcwtZpdHEfL6/9LGH6eO5AAoL5PN7AKBHKzAkg=',s:[0xeb78cf8128,0xd1d49afed4],}})();</script><script type="text/javascript">(function(){window['__CF$cv$params']={r:'6de165185e4b75d1',m:'1xBOqXO_dPt_oX9SDRnJhM4nEFkucFL0Iysa.yZqMq0-1644958083-0-AfoM7W3aj4BXKz8aX/cyryjCifY1qxtcEay/ItFvDobKc+41SnewQCFyOpZdcUt0bt+Gy/dxXNcRGJbaVZ8ucnzFKD4wAFSpy4zftnFe65K74F2Crw5s2ZXK/By9Ep24srurvzHku3tSJabBjbWyFGZPihzLCtjfAK8/HfkRtYXT5WYOqeAKGkIK8VyWFw+wJW38TKmJtUczxRDaG/FINa4=',s:[0xd24e285c87,0xc8485ee76d],}})();</script></body>
+<script>
+var pizzaint = 0;
+var background = document.getElementById("backgroundthing");
+pizzatime.volume="0.3";
+rain.volume="0.7";
+hum.volume="0.3";
+wind.volume="0.7";
+switchsound.volume="0.1";
+mailsound.volume="0.1";
+modemsound.volume="0.1";
+keyboardsound.volume="1";
+song0.volume="0.05";
+song1.volume="0.15";
+song2.volume="0.11";
+song3.volume="0.07";
+song4.volume="0.12";
+song5.volume="0.05";
+pizzasong.volume="0.15";
+ringtone.volume="0.08";
+vibrate.volume="0.25";
+var oldsong = null;
+var randomint = Math.floor(Math.random() * 6);
+var ringing = false;
+
+function startprofile(){
+background.play();
+doorvideo.play();
+doorvideo.style.transition="1s";
+doorvideo.style.pointerEvents="none";
+setTimeout(function(){doorvideo.style.opacity="0";opacity();wind.play();hum.play();rain.play();},2000);
+}
+
+
+function playmodem(){
+modemsound.play();
+}
+function opacity(){
+background.style.opacity = "1";
+}
+function playpizza(){
+pizzaint++;
+pizzatime.currentTime="0";
+pizzatime.play();
+if (pizzaint==5){
+pizzasong.play();
+}
+}
+var powered = false
+function powertoggle(){
+if (powered){
+profilediv.style.opacity="0";
+scanlinesdiv.style.opacity="0"
+scanlinesdiv.style.pointerEvents ="none";
+monitorpower.style.pointerEvents ="none";
+switchsound.play();
+powered=false;
+}
+else{
+profilediv.style.opacity="1";
+scanlinesdiv.style.opacity="1"
+scanlinesdiv.style.pointerEvents ="auto";
+monitorpower.style.pointerEvents ="auto";
+powered=true;
+setTimeout(function(){mailsound.play()},1000);
+keyboardsound.play();
+}
+}
+var dark = false;
+var playing=false;
+var songplaying = null;
+function playpc(){
+switchsound.currentTime="0";
+switchsound.play();
+background.style.transition=".5s";
+background.style.transitionTimingFunction="ease-in-out";
+if (!dark){
+background.style.opacity="0.4";
+dark = true;
+hum.pause();
+}else{
+background.style.opacity="1";
+dark = false;
+hum.play();
+}
+}
+function playbutton(){
+console.log(randomint);
+song0.pause();
+song1.pause();
+song2.pause();
+song3.pause();
+song4.pause();
+song5.pause();
+song0.currentTime="0";
+song1.currentTime="0";
+song2.currentTime="0";
+song3.currentTime="0";
+song4.currentTime="0";
+song5.currentTime="0";
+oldsong = randomint;
+chooseNewSong();
+switchsound.play();
+}
+function playdial(){
+if (!playing){
+playSong();
+}else{
+pauseSong();
+}
+}
+
+function chooseNewSong(){
+randomint = Math.floor(Math.random() * 6);
+while(oldsong==randomint){
+chooseNewSong();
+
+console.log(randomint);
+}
+if(oldsong!=randomint){
+playSong();
+}
+playing=true;
+}
+
+function playSong()
+{
+switch(randomint){
+case 0:
+song0.play();
+break;
+case 1:
+song1.play();
+break;
+case 2:
+song2.play();
+break;
+case 3:
+song3.play();
+break;
+case 4:
+song4.play();
+break;
+case 5:
+song5.play();
+break;
+}
+playing=true;
+}
+function pauseSong(){
+song0.pause();
+song1.pause();
+song2.pause();
+song3.pause();
+song4.pause();
+song5.pause();
+playing=false;
+}
+
+
+function playphone(){
+if (ringing){
+vibrate.play();
+ringtone.pause();
+ringtone.currentTime="0";
+ringing=false;
+beam.style.opacity = "0"
+projectionscreen.style.opacity = "0"
+projectionscreen.style.pointerEvents= "none";
+lockscreen.style.pointerEvents="none";
+}else{
+setTimeout(function(){ringtone.play()},500);
+vibrate.play();
+beam.style.opacity = "1"
+projectionscreen.style.opacity = "1"
+projectionscreen.style.pointerEvents= "auto";
+lockscreen.style.pointerEvents="auto";
+ringing=true;
+}
+}
+
+
+function playpound(){
+clearTimeout(window.myTimer);
+window.myTimer = setInterval(playsamurai,15000);
+numpound.currentTime = 0;
+numpound.playbackRate=4.0;
+numpound.play();
+phoneString = ""
+document.getElementById("phonenumber").innerHTML = "(XXX)XXX-XXXX"
+phonenumber.style.color = "rgb(255,255,255,0.8)";
+connected = false;
+}
+function addPhone(newNumber){
+if (phoneString.length<10 & connected==false){
+phoneString += newNumber;
+document.getElementById("phonenumber").innerHTML = "("+phoneString.substring(0,3)+")"+phoneString.substring(3,6) + "-" +phoneString.substring(6,10);
+if (phoneString.length==10 & connected==false){
+phonenumber.style.color= "rgb(255,60,120,0.8)";
+}
+if (phoneString == "911"){
+setTimeout(function() {emergencysound.play();}, 1000);
+document.getElementById("phonenumber").innerHTML = "911";
+phonenumber.style.color = "rgb(144,238,144,.8)";
+connected = true;
+}
+if (phoneString == "0811"){
+setTimeout(function() {discord.play();}, 1000);
+document.getElementById("phonenumber").innerHTML = "0811";
+phonenumber.style.color = "rgb(144,238,144,.8)";
+connected = true;
+
+}
+if (phoneString == "8084206971"){
+phonenumber.style.color = "rgb(144,238,144,.8)";
+successtone.play();
+connected = true;
+yestone.play();
+terminal.style.pointerEvents="none";
+setTimeout(function() {projection.style.opacity = "0";}, 2000);
+setTimeout(function() {profile.style.opacity = "1";}, 3000);
+}
+if(phoneString == "8008135"){
+phonenumber.style.color = "rgb(144,238,144,.8)";
+connected = true;
+document.getElementById("phonenumber").innerHTML = "8008135";
+setTimeout(function() {boobiessound.play();}, 1000);
+}
+if(phoneString == "69696969"){
+phonenumber.style.color = "rgb(144,238,144,.8)";
+connected = true;
+document.getElementById("phonenumber").innerHTML = "69696969";
+setTimeout(function() {sixtyninesound.play();}, 500);
+}
+if(phoneString == "08202023"){
+phonenumber.style.color = "rgb(144,238,144,.8)";
+connected = true;
+document.getElementById("phonenumber").innerHTML = "08/20/2023";
+setTimeout(function() {neverfade.play();}, 500);
+}
+if(phoneString == "8202023"){
+phonenumber.style.color = "rgb(144,238,144,.8)";
+connected = true;
+document.getElementById("phonenumber").innerHTML = "08/20/2023";
+setTimeout(function() {neverfade.play();}, 500);
+}
+if(phoneString == "14180"){
+phonenumber.style.color = "rgb(144,238,144,.8)";
+connected = true;
+document.getElementById("phonenumber").innerHTML = "14180";
+setTimeout(function() {vcometo.play();}, 500);
+}
+if(phoneString == "177013"){
+phonenumber.style.color = "rgb(144,238,144,.8)";
+connected = true;
+document.getElementById("phonenumber").innerHTML = "177013";
+setTimeout(function() {nonononono.play();}, 500);
+}
+if(phoneString == "10122054"){
+phonenumber.style.color = "rgb(144,238,144,.8)";
+connected = true;
+document.getElementById("phonenumber").innerHTML = "10/12/2054";
+setTimeout(function() {birthday.play();}, 500);
+}
+if(phoneString == "8002668228"){
+phonenumber.style.color = "rgb(144,238,144,.8)";
+connected = true;
+document.getElementById("phonenumber").innerHTML = "1-(800)Contacts";
+setTimeout(function() {brand.play();}, 500);
+}
+if(phoneString == "6127211080"){
+phonenumber.style.color = "rgb(144,238,144,.8)";
+connected = true;
+setTimeout(function() {congrats.play();}, 500);
+}
+}
+}
+
+
+
+
+function play1(){
+clearTimeout(window.myTimer);
+window.myTimer = setInterval(playsamurai,15000);
+num1.currentTime = 0;
+num1.playbackRate=4.0;
+num1.volume=.15;
+num1.play();
+addPhone("1");
+}
+function play2(){
+clearTimeout(window.myTimer);
+window.myTimer = setInterval(playsamurai,15000);
+num2.currentTime = 0;
+num2.playbackRate=4.0;
+num2.volume=.15;
+num2.play();
+addPhone("2");
+}
+function play3(){
+clearTimeout(window.myTimer);
+window.myTimer = setInterval(playsamurai,15000);
+num3.currentTime = 0;
+num3.playbackRate=4.0;
+num3.volume=.15;
+num3.play();
+addPhone("3");
+}
+function play4(){
+clearTimeout(window.myTimer);
+window.myTimer = setInterval(playsamurai,15000);
+num4.currentTime = 0;
+num4.playbackRate=4.0;
+num4.volume=.15;
+num4.play();
+addPhone("4");
+}
+function play5(){
+clearTimeout(window.myTimer);
+window.myTimer = setInterval(playsamurai,15000);
+num5.currentTime = 0;
+num5.playbackRate=4.0;
+num5.volume=.15;
+num5.play();
+addPhone("5");
+}
+function play6(){
+clearTimeout(window.myTimer);
+window.myTimer = setInterval(playsamurai,15000);
+num6.currentTime = 0;
+num6.playbackRate=4.0;
+num6.volume=.15;
+num6.play();
+addPhone("6");
+}
+function play7(){
+clearTimeout(window.myTimer);
+window.myTimer = setInterval(playsamurai,15000);
+num7.currentTime = 0;
+num7.playbackRate=4.0;
+num7.volume=.15;
+num7.play();
+addPhone("7");
+}
+function play8(){
+clearTimeout(window.myTimer);
+window.myTimer = setInterval(playsamurai,15000);
+num8.currentTime = 0;
+num8.playbackRate=4.0;
+num8.volume=.15;
+num8.play();
+addPhone("8");
+}
+function play9(){
+clearTimeout(window.myTimer);
+window.myTimer = setInterval(playsamurai,15000);
+num9.currentTime = 0;
+num9.playbackRate=4.0;
+num9.volume=.15;
+num9.play();
+addPhone("9");
+}
+function play0(){
+clearTimeout(window.myTimer);
+window.myTimer = setInterval(playsamurai,15000);
+num0.currentTime = 0;
+num0.playbackRate=4.0;
+num0.volume=.15;
+num0.play();
+addPhone("0");
+}
+function playstar(){
+clearTimeout(window.myTimer);
+window.myTimer = setInterval(playsamurai,15000);
+numstar.currentTime = 0;
+numstar.playbackRate=4.0;
+numstar.volume=.8;
+numstar.play();
+}
+var emergencysound = document.getElementById("911sound");
+var num1 = document.getElementById("1tone");
+var num2 = document.getElementById("2tone");
+var num3 = document.getElementById("3tone");
+var num4 = document.getElementById("4tone");
+var num5 = document.getElementById("5tone");
+var num6 = document.getElementById("6tone");
+var num7 = document.getElementById("7tone");
+var num8 = document.getElementById("8tone");
+var num9 = document.getElementById("9tone");
+var num0 = document.getElementById("0tone");
+var numpound = document.getElementById("poundtone");
+var numstar = document.getElementById("startone");
+var yestone = document.getElementById("successtone");
+var notone = document.getElementById("failtone");
+var beam1 = document.getElementById("beam1");
+var beam2 = document.getElementById("beam2");
+var boobiessound = document.getElementById("boobies");
+var sixtyninesound = document.getElementById("sixtynine");
+var terminal = document.getElementById("terminal");
+var neverfade = document.getElementById("neverfadeaway");
+var vcometo = document.getElementById("vmgs");
+var nonononono = document.getElementById("punisher");
+var birthday = document.getElementById("birthdaysong");
+var mybrand = document.getElementById("brand");
+mybrand.volume=0.4;
+var discord = document.getElementById("discordsound");
+discord.volume=0.25;
+var samurai = document.getElementById("samuraisound");
+samurai.volume=0.3;
+var congrats = document.getElementById("congratulations");
+congrats.volume=0.3;
+boobiessound.volume=0.8;
+birthday.volume=0.4;
+sixtyninesound.volume=1;
+vcometo.volume=1;
+nonononono.volume=.5;
+neverfade.volume=.3;
+var phoneString = "";
+var connected = false;
+yestone.volume =0.5;
+notone.volume=0.3;
+
+
+
+function play1(){
+clearTimeout(window.myTimer);
+window.myTimer = setInterval(playsamurai,15000);
+num1.currentTime = 0;
+num1.playbackRate=4.0;
+num1.volume=.15;
+num1.play();
+addPhone("1");
+}
+function play2(){
+clearTimeout(window.myTimer);
+window.myTimer = setInterval(playsamurai,15000);
+num2.currentTime = 0;
+num2.playbackRate=4.0;
+num2.volume=.15;
+num2.play();
+addPhone("2");
+}
+function play3(){
+clearTimeout(window.myTimer);
+window.myTimer = setInterval(playsamurai,15000);
+num3.currentTime = 0;
+num3.playbackRate=4.0;
+num3.volume=.15;
+num3.play();
+addPhone("3");
+}
+function play4(){
+clearTimeout(window.myTimer);
+window.myTimer = setInterval(playsamurai,15000);
+num4.currentTime = 0;
+num4.playbackRate=4.0;
+num4.volume=.15;
+num4.play();
+addPhone("4");
+}
+function play5(){
+clearTimeout(window.myTimer);
+window.myTimer = setInterval(playsamurai,15000);
+num5.currentTime = 0;
+num5.playbackRate=4.0;
+num5.volume=.15;
+num5.play();
+addPhone("5");
+}
+function play6(){
+clearTimeout(window.myTimer);
+window.myTimer = setInterval(playsamurai,15000);
+num6.currentTime = 0;
+num6.playbackRate=4.0;
+num6.volume=.15;
+num6.play();
+addPhone("6");
+}
+function play7(){
+clearTimeout(window.myTimer);
+window.myTimer = setInterval(playsamurai,15000);
+num7.currentTime = 0;
+num7.playbackRate=4.0;
+num7.volume=.15;
+num7.play();
+addPhone("7");
+}
+function play8(){
+clearTimeout(window.myTimer);
+window.myTimer = setInterval(playsamurai,15000);
+num8.currentTime = 0;
+num8.playbackRate=4.0;
+num8.volume=.15;
+num8.play();
+addPhone("8");
+}
+function play9(){
+clearTimeout(window.myTimer);
+window.myTimer = setInterval(playsamurai,15000);
+num9.currentTime = 0;
+num9.playbackRate=4.0;
+num9.volume=.15;
+num9.play();
+addPhone("9");
+}
+function play0(){
+clearTimeout(window.myTimer);
+window.myTimer = setInterval(playsamurai,15000);
+num0.currentTime = 0;
+num0.playbackRate=4.0;
+num0.volume=.15;
+num0.play();
+addPhone("0");
+}
+function playstar(){
+clearTimeout(window.myTimer);
+window.myTimer = setInterval(playsamurai,15000);
+numstar.currentTime = 0;
+numstar.playbackRate=4.0;
+numstar.volume=.8;
+numstar.play();
+}
+function playpound(){
+clearTimeout(window.myTimer);
+window.myTimer = setInterval(playsamurai,15000);
+numpound.currentTime = 0;
+numpound.playbackRate=4.0;
+numpound.play();
+phoneString = ""
+document.getElementById("phonenumber").innerHTML = "(XXX)XXX-XXXX"
+phonenumber.style.color = "rgb(255,255,255,0.8)";
+connected = false;
+}
+function addPhone(newNumber){
+if (phoneString.length<10 & connected==false){
+phoneString += newNumber;
+document.getElementById("phonenumber").innerHTML = "("+phoneString.substring(0,3)+")"+phoneString.substring(3,6) + "-" +phoneString.substring(6,10);
+if (phoneString.length==10 & connected==false){
+phonenumber.style.color= "rgb(255,60,120,0.8)";
+notone.currentTime = 0;
+notone.play();
+}
+if (phoneString == "911"){
+setTimeout(function() {emergencysound.play();}, 1000);
+document.getElementById("phonenumber").innerHTML = "911";
+phonenumber.style.color = "rgb(144,238,144,.8)";
+connected = true;
+}
+if (phoneString == "0811"){
+setTimeout(function() {discord.play();}, 1000);
+document.getElementById("phonenumber").innerHTML = "0811";
+phonenumber.style.color = "rgb(144,238,144,.8)";
+connected = true;
+
+}
+if (phoneString == "8084206971"){
+phonenumber.style.color = "rgb(144,238,144,.8)";
+successtone.play();
+connected = true;
+yestone.play();
+terminal.style.pointerEvents="none";
+setTimeout(function() {projection.style.opacity = "0";}, 2000);
+setTimeout(function() {profile.style.opacity = "1";}, 3000);
+}
+if(phoneString == "8008135"){
+phonenumber.style.color = "rgb(144,238,144,.8)";
+connected = true;
+document.getElementById("phonenumber").innerHTML = "8008135";
+setTimeout(function() {boobiessound.play();}, 1000);
+}
+if(phoneString == "69696969"){
+phonenumber.style.color = "rgb(144,238,144,.8)";
+connected = true;
+document.getElementById("phonenumber").innerHTML = "69696969";
+setTimeout(function() {sixtyninesound.play();}, 500);
+}
+if(phoneString == "08202023"){
+phonenumber.style.color = "rgb(144,238,144,.8)";
+connected = true;
+document.getElementById("phonenumber").innerHTML = "08/20/2023";
+setTimeout(function() {neverfade.play();}, 500);
+}
+if(phoneString == "8202023"){
+phonenumber.style.color = "rgb(144,238,144,.8)";
+connected = true;
+document.getElementById("phonenumber").innerHTML = "08/20/2023";
+setTimeout(function() {neverfade.play();}, 500);
+}
+if(phoneString == "14180"){
+phonenumber.style.color = "rgb(144,238,144,.8)";
+connected = true;
+document.getElementById("phonenumber").innerHTML = "14180";
+setTimeout(function() {vcometo.play();}, 500);
+}
+if(phoneString == "177013"){
+phonenumber.style.color = "rgb(144,238,144,.8)";
+connected = true;
+document.getElementById("phonenumber").innerHTML = "177013";
+setTimeout(function() {nonononono.play();}, 500);
+}
+if(phoneString == "10122054"){
+phonenumber.style.color = "rgb(144,238,144,.8)";
+connected = true;
+document.getElementById("phonenumber").innerHTML = "10/12/2054";
+setTimeout(function() {birthday.play();}, 500);
+}
+if(phoneString == "8002668228"){
+phonenumber.style.color = "rgb(144,238,144,.8)";
+connected = true;
+document.getElementById("phonenumber").innerHTML = "1-(800)Contacts";
+setTimeout(function() {brand.play();}, 500);
+}
+if(phoneString == "6127211080"){
+phonenumber.style.color = "rgb(144,238,144,.8)";
+connected = true;
+setTimeout(function() {congrats.play();}, 500);
+}
+
+}
+}
+
+
+function playsamurai(){
+}
+</script>

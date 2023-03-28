@@ -1,0 +1,889 @@
+<head>
+	<title>Recursion Codes</title>
+	<link rel="icon" href="https://media.discordapp.net/attachments/946275070572118056/1089677981598875708/logoicon.png" type="image/icon type">
+	</head>
+<style>
+body{
+margin:0;
+overflow:hidden;
+background-color:black;
+}
+
+@font-face { font-family: title; src: url(https://dl.dropboxusercontent.com/s/p1o6m69dpaagzm4/hemi%20head%20bd%20it.ttf) }
+
+#terminal{
+transition:0.5s;
+background-image:url(https://media.discordapp.net/attachments/456137750434021376/940732982535278643/awg.png);
+position:absolute;
+right:20vw;
+bottom:-15vh;
+height:63vh;
+width:60vh;
+z-index:3;
+background-size:cover;
+background-position:top;
+cursor:pointer;
+}
+
+
+.beam{
+background-image:url(https://media.discordapp.net/attachments/898474723778904078/940581037732429824/beam.png);
+position:absolute;
+height:60vh;
+width:40vh;
+background-size:contain;
+background-position:center;
+background-repeat:no-repeat;
+right:22.7vw;
+bottom:38vh;
+z-index:7;
+pointer-events:none;
+opacity:0;
+transition:0.25s;
+}
+
+.projection{
+background-image:url(https://media.discordapp.net/attachments/898474723778904078/940626008250413166/Untitled-5.png);
+width:72vh;
+height:48vh;
+position:absolute;
+right:18vw;
+bottom:48vh;
+z-index:4;
+background-size:cover;
+overflow:hidden;
+animation:flicker 32s;
+pointer-events:none;
+}
+img{
+width:8vh;
+height:8vh;
+cursor:pointer;
+opacity:0.75;
+}
+.line-break {
+ width: 100%;
+}
+#lockscreen{
+width: 72vh;
+height: 40vh;
+position: absolute;
+right: 18vw;
+bottom: 51vh;
+z-index:12;
+display:flex;
+flex-wrap:wrap;
+animation:flicker 32s;
+justify-content:flex-end;
+margin-right:6vh;
+}
+.scanlines {
+border-radius: 2vh;
+pointer-events: none;
+overflow: hidden;
+z-index: 99;
+position: absolute;
+width:72.1vh;
+height:48vh;
+right:18vw;
+bottom:48vh;
+transform:scaleX(.9) scaleY(.89);
+}
+ .scanlines:before, .scanlines:after {
+	 display: block;
+	 pointer-events: none;
+	 content: '';
+	 position: absolute;
+}
+ .scanlines:before {
+	 height: 2px;
+	 width: 100%;
+	 z-index: 2147483649;
+	 background: rgba(0, 0, 0, .3);
+	 opacity: 0.75;
+	 animation: scanline 6s linear infinite;
+}
+ .scanlines:after {
+	 top: 0;
+	 right: 0;
+	 bottom: 0;
+	 left: 0;
+	 z-index: 2147483648;
+	 background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, .3) 51%);
+	 background-size: 100% 4px;
+	 animation: scanlines 1s steps(60) infinite;
+}
+ @keyframes scanline {
+	 0% {
+		 transform: translate3d(0, 200000%, 0);
+	}
+}
+ @keyframes scanlines {
+	 0% {
+		 background-position: 0 50%;
+	}
+}
+
+@keyframes flicker {
+ 0%,
+ 100% {
+ opacity: 1;
+ }
+ -0.02% {
+ opacity: 1;
+ }
+ 0% {
+ opacity: 1;
+ }
+ 1% {
+ opacity: 1;
+ }
+ 1.02% {
+ opacity: 1;
+ }
+ 8.98% {
+ opacity: 1;
+ }
+ 9% {
+ opacity: 0;
+ }
+ 9.8% {
+ opacity: 0;
+ }
+ 9.82% {
+ opacity: 1;
+ }
+ 9.48% {
+ opacity: 1;
+ }
+ 9.5% {
+ opacity: 1;
+ }
+ 9.6% {
+ opacity: 1;
+ }
+ 9.62% {
+ opacity: 1;
+ }
+ 14.98% {
+ opacity: 1;
+ }
+ 15% {
+ opacity: 0.5;
+ }
+ 15.8% {
+ opacity: 0.5;
+ }
+ 15.82% {
+ opacity: 1;
+ }
+ 15.18% {
+ opacity: 1;
+ }
+ 15.2% {
+ opacity: 0.7;
+ }
+ 16% {
+ opacity: 0.7;
+ }
+ 16.02% {
+ opacity: 1;
+ }
+ 15.48% {
+ opacity: 1;
+ }
+ 15.5% {
+ opacity: 0.5;
+ }
+ 16.2% {
+ opacity: 0.5;
+ }
+ 16.22% {
+ opacity: 1;
+ }
+ 16.98% {
+ opacity: 1;
+ }
+ 17% {
+ opacity: 1;
+ }
+ 17.8% {
+ opacity: 1;
+ }
+ 17.82% {
+ opacity: 1;
+ }
+ 20.48% {
+ opacity: 1;
+ }
+ 20.5% {
+ opacity: 0.9;
+ }
+ 21.3% {
+ opacity: 0.9;
+ }
+ 21.32% {
+ opacity: 1;
+ }
+ 20.98% {
+ opacity: 1;
+ }
+ 21% {
+ opacity: 1;
+ }
+ 22% {
+ opacity: 1;
+ }
+ 22.02% {
+ opacity: 1;
+ }
+ 39.98% {
+ opacity: 1;
+ }
+ 40% {
+ opacity: 1;
+ }
+ 41% {
+ opacity: 1;
+ }
+ 41.02% {
+ opacity: 1;
+ }
+ 40.48% {
+ opacity: 1;
+ }
+ 40.5% {
+ opacity: 0.6;
+ }
+ 41.4% {
+ opacity: 0.6;
+ }
+ 41.42% {
+ opacity: 1;
+ }
+ 41.98% {
+ opacity: 1;
+ }
+ 42% {
+ opacity: 1;
+ }
+ 42.8% {
+ opacity: 1;
+ }
+ 42.82% {
+ opacity: 1;
+ }
+ 59.98% {
+ opacity: 1;
+ }
+ 60% {
+ opacity: 1;
+ }
+ 61% {
+ opacity: 1;
+ }
+ 61.02% {
+ opacity: 1;
+ }
+ 60.18% {
+ opacity: 1;
+ }
+ 60.2% {
+ opacity: 0.2;
+ }
+ 61% {
+ opacity: 0.2;
+ }
+ 61.02% {
+ opacity: 1;
+ }
+ 60.78% {
+ opacity: 1;
+ }
+ 60.8% {
+ opacity: 0.4;
+ }
+ 61.6% {
+ opacity: 0.4;
+ }
+ 61.62% {
+ opacity: 1;
+ }
+ 61.38% {
+ opacity: 1;
+ }
+ 61.4% {
+ opacity: 0;
+ }
+ 62.2% {
+ opacity: 0;
+ }
+ 62.22% {
+ opacity: 1;
+ }
+ 61.78% {
+ opacity: 1;
+ }
+ 61.8% {
+ opacity: 1;
+ }
+ 62.8% {
+ opacity: 1;
+ }
+ 62.82% {
+ opacity: 1;
+ }
+ 75.98% {
+ opacity: 1;
+ }
+ 76% {
+ opacity: 1;
+ }
+ 77% {
+ opacity: 1;
+ }
+ 77.02% {
+ opacity: 1;
+ }
+ 77.98% {
+ opacity: 1;
+ }
+ 78% {
+ opacity: 0.7;
+ }
+ 78.8% {
+ opacity: 0.7;
+ }
+ 78.82% {
+ opacity: 1;
+ }
+ 78.98% {
+ opacity: 1;
+ }
+ 79% {
+ opacity: 1;
+ }
+ 80% {
+ opacity: 1;
+ }
+ 80.02% {
+ opacity: 1;
+ }
+ 99.98% {
+ opacity: 1;
+ }
+ 100% {
+ opacity: 1;
+ }
+ 101% {
+ opacity: 1;
+ }
+ 101.02% {
+ opacity: 1;
+ }
+}
+
+#dialscreen{
+width: 72vh;
+height: 40vh;
+position: absolute;
+right: 18vw;
+bottom: 51vh;
+z-index:8;
+animation:flicker 32s;
+margin-right:-3vw;
+font-size:5vh;
+color:rgb(255,255,255,0.8);
+text-align:center;
+font-family:title;
+}
+h{
+font-size:5.9vh;
+}
+
+
+
+.rain {
+pointer-events:none;
+ position: absolute;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ z-index: 12;
+}
+
+.rain.back-row {
+pointer-events:none;
+ display: none;
+ z-index: 1;
+ bottom: 60px;
+ opacity: 0.5;
+}
+
+body.back-row-toggle .rain.back-row {
+pointer-events:none;
+ display: block;
+}
+
+.drop {
+ position: absolute;
+ bottom: 100%;
+ width: 15px;
+ height: 120px;
+ pointer-events: none;
+ animation: drop 0.5s linear infinite;
+}
+
+@keyframes drop {
+ 0% {
+ transform: translateY(0vh);
+ }
+ 75% {
+ transform: translateY(115vh);
+ }
+ 100% {
+ transform: translateY(115vh);
+ }
+}
+
+.stem {
+ width: 1px;
+ height: 60%;
+ margin-left: 7px;
+ background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75));
+ animation: stem 0.5s linear infinite;
+}
+
+@keyframes stem {
+ 0% {
+ opacity: 1;
+ }
+ 65% {
+ opacity: 1;
+ }
+ 75% {
+ opacity: 0;
+ }
+ 100% {
+ opacity: 0;
+ }
+}
+#profilescreen{
+opacity:0;
+transition:1s;
+}
+#projectionscreen{
+opacity:0;
+transition:1s;
+}
+.profilewrapper{
+position: absolute;
+width:72.1vh;
+height:48vh;
+right:21vw;
+bottom:48vh;
+transform:scaleX(.9) scaleY(.89);
+z-index:8;
+animation:flicker 32s;
+margin-right:-3vw;
+}
+a{
+text-decoration:none;
+color:inherit;
+}
+</style>
+<body>
+ <div class="rain front-row"></div>
+ <div class="rain back-row"></div>
+<div id="terminal" onclick="showprojection()"></div>
+<div class="beam" id="beam1"></div>
+<div id="projectionscreen">
+<div class="scanlines"></div>
+<div class="projection"></div>
+<div id="lockscreen">
+<img id="num1" src="https://cdn.discordapp.com/attachments/898474723778904078/940629087892930600/one.png" onclick="play1()">
+<img id="num2" src="https://cdn.discordapp.com/attachments/898474723778904078/940629088102678559/two.png" onclick="play2()">
+<img id="num3" src="https://cdn.discordapp.com/attachments/898474723778904078/940629088308187147/three.png" onclick="play3()">
+<div class="line-break"></div>
+<img id="num4" src="https://cdn.discordapp.com/attachments/898474723778904078/940629088509517824/four.png" onclick="play4()">
+<img id="num5" src="https://cdn.discordapp.com/attachments/898474723778904078/940629088715026432/five.png" onclick="play5()">
+<img id="num6" src="https://cdn.discordapp.com/attachments/898474723778904078/940629088958283876/six.png" onclick="play6()">
+<div class="line-break"></div>
+<img id="num7" src="https://cdn.discordapp.com/attachments/898474723778904078/940629089159630858/seven.png" onclick="play7()">
+<img id="num8" src="https://cdn.discordapp.com/attachments/898474723778904078/940629089612623932/eight.png" onclick="play8()">
+<img id="num9" src="https://cdn.discordapp.com/attachments/898474723778904078/940629089960722462/nine.png" onclick="play9()">
+<div class="line-break"></div>
+<img id="numstar" src="https://cdn.discordapp.com/attachments/898474723778904078/940629090266939472/star.png" onclick="playstar()">
+<img id="num0" src="https://cdn.discordapp.com/attachments/898474723778904078/940629104980545556/zero.png" onclick="play0()">
+<img id="numpound" src="https://cdn.discordapp.com/attachments/898474723778904078/940629105186078720/pound.png" onclick="playpound()">
+</div>
+<div id="dialscreen"><div style="width:45%;">
+<h>Datatel Inc.</h>
+<p style="font-size:4.5vh;">You have (1) remaining call.<br></p><p id="phonenumber" style="margin-top:-2vh;font-size:4vh">(XXX)XXX-XXXX</p>
+</div>
+</div></div>
+<div id="profilescreen">
+<div class="beam" id="beam2"></div>
+<div class="scanlines"></div>
+<div class="projection"></div>
+<div class="profilewrapper">
+<div style="background-image:url(https://media.discordapp.net/attachments/898474723778904078/940697574866825296/143JAjv.jpg);width:40vh;height:100%;background-size:cover;opacity:0.6;border-top-left-radius: 2vh;border-bottom-left-radius: 2vh;"></div>
+<div style="position:absolute;top:0vh;right:0vh;text-align:center;width:32vh;height:48vh;border-top-right-radius: 2vh;border-bottom-right-radius:2vh;font-size:5.5vh;color:rgb(255,0,60,.7);opacity:1;font-family:title;">
+HEADLINER<br><span style="font-size:3vh">
+ADULT,</a> <a target="_blank" href="https://i.imgur.com/7t8VtXb.jpg" target="blank_">FEMALE</a><br>
+AM-JAPANESE</a><br>
+LITHE BUILD</a><br>
+CYBERWARE</a><br><br>
+</span>
+<div style="font-size:2vh;margin-top:-2.5vh;">
+Paint Girl. ELSUR difficult. <br>No contacts found in jacket. <br>No previous busts. <br><br></div><span style="font-size:6vh;line-height:5vh;">REWARD<br></span><div style="font-size:4vh;line-height:3.5vh;margin-top:1.5vh;">
+A : 10,000<br>
+F : 5,000</div></div>
+</div>
+<div style="">
+
+</div>
+</div>
+</div>
+<video preload="auto" style="height:100vh;width:100vw;object-fit:cover;object-position:bottom;opacity:.4;transition:.25s;" muted loop id="backgroundvideo">
+ <source type="video/mp4" src="https://dl.dropboxusercontent.com/s/77yjp8vtt1w50mk/Fermi-1.m4v?dl=0">
+ </video>
+ <audio id="1tone" src="https://dl.dropboxusercontent.com/s/1z15aguw073h2s7/Dtmf1.ogg?" ></audio>
+ <audio id="2tone" src="https://dl.dropboxusercontent.com/s/yof1hxkbyhmpk7b/Dtmf2.ogg?" ></audio>
+ <audio id="3tone" src="https://dl.dropboxusercontent.com/s/pjg0dyuxkepxpex/Dtmf3.ogg?" ></audio>
+ <audio id="4tone" src="https://dl.dropboxusercontent.com/s/jd24wc0h8ugxzfs/Dtmf4.ogg?" ></audio>
+ <audio id="5tone" src="https://dl.dropboxusercontent.com/s/2ckp4xto8xrapnb/Dtmf5.ogg?" ></audio>
+ <audio id="6tone" src="https://dl.dropboxusercontent.com/s/6th3sf8u44eu53y/Dtmf6.ogg?" ></audio>
+ <audio id="7tone" src="https://dl.dropboxusercontent.com/s/k6obzg8mrx165x1/Dtmf7.ogg?" ></audio>
+ <audio id="8tone" src="https://dl.dropboxusercontent.com/s/o94f0vtkjsc50x5/Dtmf8.ogg?" ></audio>
+ <audio id="9tone" src="https://dl.dropboxusercontent.com/s/1y9988lxz47uiv1/Dtmf9.ogg?" ></audio>
+ <audio id="0tone" src="https://dl.dropboxusercontent.com/s/ighjxdt5konwo28/Dtmf0.ogg?" ></audio>
+ <audio id="poundtone" src="https://dl.dropboxusercontent.com/s/jpgpqfrdw1ruv9b/Dtmf-.ogg?" ></audio>
+ <audio id="startone" src="https://dl.dropboxusercontent.com/s/k9co3o4c2q5b5ef/DtmfStar.ogg?" ></audio>
+ <audio id="failtone" src="https://cdn.discordapp.com/attachments/456137750434021376/940718285228503130/249300__suntemple__access-denied.wav?" ></audio>
+ <audio id="successtone" src="https://cdn.discordapp.com/attachments/456137750434021376/940718297089974282/50565__broumbroum__sf3-sfx-menu-validate.wav" ></audio>
+ <audio id="911sound" src="https://cdn.discordapp.com/attachments/898474723778904078/940689252050690058/Police_dispatch_female_American_says_phone_911_Whats_Your_Emergency_Sound_FX_33bj-t8rDJc.opus" ></audio>
+ <audio id="ambiencerain" src="https://cdn.discordapp.com/attachments/898474723778904078/940685717179346995/5_Minutes_of_Rain_and_Thunderstorm_Sounds_For_Focus_Relaxing_and_Sleep_Epidemic_ASMR_vw8WxcIoixY.opus" loop ></audio>
+ <audio id="ambiencepeople" src="https://cdn.discordapp.com/attachments/898474723778904078/940686416415965214/4K_Street_Corner_Japan_-_Nishi_Dori_TENJIN_-FUKUOKA___Outdoor_Ambience_Japan_-_Coffee_Break_Japan_7VRNmdfl-YI.opus" loop ></audio>
+ <audio id="boobies" src="https://cdn.discordapp.com/attachments/456137750434021376/940730221081010206/oh_these_G_A04leIN2o.opus" ></audio>
+ <audio id="sixtynine" src="https://cdn.discordapp.com/attachments/456137750434021376/940730221265555496/Michael_Rosen_Nice_CYqq9Ovz_9c.opus" ></audio>
+ <audio id="neverfadeaway" src="https://cdn.discordapp.com/attachments/456137750434021376/940770967607726080/Never_Fade_Away_6IdMp-H9vhA.mp3" ></audio>
+ <audio id="vmgs" src="https://cdn.discordapp.com/attachments/456137750434021376/940770967859372122/MGS5-_V_has_come_to_98WjhsBJiRI.mp3" ></audio>
+ <audio id="punisher" src="https://cdn.discordapp.com/attachments/456137750434021376/940771810247589968/No_no_no_no_no_no_no_wait_wait_wait_wait_meme_VM3uXu1Dq4c.opus" ></audio>
+ <audio id="birthdaysong" src="https://cdn.discordapp.com/attachments/456137750434021376/940811879285153872/Portal_2_-_Cara_Mia_Addio_full_HQ_audio_tL_TFXbSnLY.mp3" ></audio>
+ <audio id="brand" src="https://cdn.discordapp.com/attachments/456137750434021376/940813867234242600/MY_BRAND_V-fRuoMIfpw.opus" ></audio>
+ <audio id="congratulations" src="https://cdn.discordapp.com/attachments/456137750434021376/940815589000237056/Congratulations_oyFQVZ2h0V8.mp3" ></audio>
+ <audio id="discordsound" src="https://cdn.discordapp.com/attachments/456137750434021376/940836874589712464/Discord_Call_-_Sound_Effect_HD_pWzvA4DOSDg.opus" ></audio>
+ <audio id="samuraisound" src="https://cdn.discordapp.com/attachments/456137750434021376/941813301858430996/Wake_the_fuck_upSamurai_We_have_a_city_to_burn._OedtF92igxs.mp3" ></audio>
+
+<script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+<script>
+var ambiencerain = document.getElementById("ambiencerain");
+var ambiencepeople = document.getElementById("ambiencepeople");
+var emergencysound = document.getElementById("911sound");
+var num1 = document.getElementById("1tone");
+var num2 = document.getElementById("2tone");
+var num3 = document.getElementById("3tone");
+var num4 = document.getElementById("4tone");
+var num5 = document.getElementById("5tone");
+var num6 = document.getElementById("6tone");
+var num7 = document.getElementById("7tone");
+var num8 = document.getElementById("8tone");
+var num9 = document.getElementById("9tone");
+var num0 = document.getElementById("0tone");
+var numpound = document.getElementById("poundtone");
+var numstar = document.getElementById("startone");
+var yestone = document.getElementById("successtone");
+var notone = document.getElementById("failtone");
+var beam1 = document.getElementById("beam1");
+var beam2 = document.getElementById("beam2");
+var boobiessound = document.getElementById("boobies");
+var sixtyninesound = document.getElementById("sixtynine");
+var terminal = document.getElementById("terminal");
+var neverfade = document.getElementById("neverfadeaway");
+var vcometo = document.getElementById("vmgs");
+var nonononono = document.getElementById("punisher");
+var birthday = document.getElementById("birthdaysong");
+var mybrand = document.getElementById("brand");
+mybrand.volume=0.4;
+var discord = document.getElementById("discordsound");
+discord.volume=0.25;
+var samurai = document.getElementById("samuraisound");
+samurai.volume=0.3;
+var congrats = document.getElementById("congratulations");
+congrats.volume=0.3;
+boobiessound.volume=0.8;
+birthday.volume=0.4;
+sixtyninesound.volume=1;
+vcometo.volume=1;
+nonononono.volume=.5;
+neverfade.volume=.3;
+var phoneString = "";
+var ambience = false;
+var connected = false;
+yestone.volume =0.5;
+var projection = document.getElementById("projectionscreen");
+var backgroundvid = document.getElementById("backgroundvideo");
+var profile = document.getElementById("profilescreen");
+notone.volume=0.3;
+ambiencepeople.currentTime = 8;
+ambiencepeople.volume=0.15;
+ambiencerain.volume=0.3;
+var projected = false;
+
+function playsamurai(){
+samurai.play()
+}
+function showprojection(){
+backgroundvideo.style.opacity="1";
+makeItRain();
+terminal.style.backgroundImage="url(https://media.discordapp.net/attachments/898474723778904078/940580209151864882/termf2.png)";
+projection.style.opacity ="1";
+beam1.style.opacity = "1";
+successtone.play();
+ambiencerain.play();
+ambiencepeople.play();
+ambience = true;
+backgroundvid.play();
+projected = true;
+window.myTimer = setInterval(playsamurai,15000);
+}
+
+function play1(){
+clearTimeout(window.myTimer);
+window.myTimer = setInterval(playsamurai,15000);
+num1.currentTime = 0;
+num1.playbackRate=4.0;
+num1.volume=.15;
+num1.play();
+addPhone("1");
+}
+function play2(){
+clearTimeout(window.myTimer);
+window.myTimer = setInterval(playsamurai,15000);
+num2.currentTime = 0;
+num2.playbackRate=4.0;
+num2.volume=.15;
+num2.play();
+addPhone("2");
+}
+function play3(){
+clearTimeout(window.myTimer);
+window.myTimer = setInterval(playsamurai,15000);
+num3.currentTime = 0;
+num3.playbackRate=4.0;
+num3.volume=.15;
+num3.play();
+addPhone("3");
+}
+function play4(){
+clearTimeout(window.myTimer);
+window.myTimer = setInterval(playsamurai,15000);
+num4.currentTime = 0;
+num4.playbackRate=4.0;
+num4.volume=.15;
+num4.play();
+addPhone("4");
+}
+function play5(){
+clearTimeout(window.myTimer);
+window.myTimer = setInterval(playsamurai,15000);
+num5.currentTime = 0;
+num5.playbackRate=4.0;
+num5.volume=.15;
+num5.play();
+addPhone("5");
+}
+function play6(){
+clearTimeout(window.myTimer);
+window.myTimer = setInterval(playsamurai,15000);
+num6.currentTime = 0;
+num6.playbackRate=4.0;
+num6.volume=.15;
+num6.play();
+addPhone("6");
+}
+function play7(){
+clearTimeout(window.myTimer);
+window.myTimer = setInterval(playsamurai,15000);
+num7.currentTime = 0;
+num7.playbackRate=4.0;
+num7.volume=.15;
+num7.play();
+addPhone("7");
+}
+function play8(){
+clearTimeout(window.myTimer);
+window.myTimer = setInterval(playsamurai,15000);
+num8.currentTime = 0;
+num8.playbackRate=4.0;
+num8.volume=.15;
+num8.play();
+addPhone("8");
+}
+function play9(){
+clearTimeout(window.myTimer);
+window.myTimer = setInterval(playsamurai,15000);
+num9.currentTime = 0;
+num9.playbackRate=4.0;
+num9.volume=.15;
+num9.play();
+addPhone("9");
+}
+function play0(){
+clearTimeout(window.myTimer);
+window.myTimer = setInterval(playsamurai,15000);
+num0.currentTime = 0;
+num0.playbackRate=4.0;
+num0.volume=.15;
+num0.play();
+addPhone("0");
+}
+function playstar(){
+clearTimeout(window.myTimer);
+window.myTimer = setInterval(playsamurai,15000);
+numstar.currentTime = 0;
+numstar.playbackRate=4.0;
+numstar.volume=.8;
+numstar.play();
+if (ambience == false){
+ambiencerain.play();
+ambiencepeople.play();
+ambience = true;
+}
+else{
+ambiencerain.pause();
+ambiencepeople.pause();
+ambience = false;
+}
+}
+function playpound(){
+clearTimeout(window.myTimer);
+window.myTimer = setInterval(playsamurai,15000);
+numpound.currentTime = 0;
+numpound.playbackRate=4.0;
+numpound.play();
+phoneString = ""
+document.getElementById("phonenumber").innerHTML = "(XXX)XXX-XXXX"
+phonenumber.style.color = "rgb(255,255,255,0.8)";
+connected = false;
+}
+function addPhone(newNumber){
+if (phoneString.length<10 & connected==false){
+phoneString += newNumber;
+document.getElementById("phonenumber").innerHTML = "("+phoneString.substring(0,3)+")"+phoneString.substring(3,6) + "-" +phoneString.substring(6,10);
+if (phoneString.length==10 & connected==false){
+phonenumber.style.color= "rgb(255,60,120,0.8)";
+notone.currentTime = 0;
+notone.play();
+}
+if (phoneString == "911"){
+setTimeout(function() {emergencysound.play();}, 1000);
+document.getElementById("phonenumber").innerHTML = "911";
+phonenumber.style.color = "rgb(144,238,144,.8)";
+connected = true;
+}
+if (phoneString == "0811"){
+setTimeout(function() {discord.play();}, 1000);
+document.getElementById("phonenumber").innerHTML = "0811";
+phonenumber.style.color = "rgb(144,238,144,.8)";
+connected = true;
+
+}
+if (phoneString == "8084206971"){
+phonenumber.style.color = "rgb(144,238,144,.8)";
+successtone.play();
+connected = true;
+yestone.play();
+terminal.style.pointerEvents="none";
+setTimeout(function() {projection.style.opacity = "0";}, 2000);
+setTimeout(function() {profile.style.opacity = "1";}, 3000);
+}
+if(phoneString == "8008135"){
+phonenumber.style.color = "rgb(144,238,144,.8)";
+connected = true;
+document.getElementById("phonenumber").innerHTML = "8008135";
+setTimeout(function() {boobiessound.play();}, 1000);
+}
+if(phoneString == "69696969"){
+phonenumber.style.color = "rgb(144,238,144,.8)";
+connected = true;
+document.getElementById("phonenumber").innerHTML = "69696969";
+setTimeout(function() {sixtyninesound.play();}, 500);
+}
+if(phoneString == "08202023"){
+phonenumber.style.color = "rgb(144,238,144,.8)";
+connected = true;
+document.getElementById("phonenumber").innerHTML = "08/20/2023";
+setTimeout(function() {neverfade.play();}, 500);
+}
+if(phoneString == "8202023"){
+phonenumber.style.color = "rgb(144,238,144,.8)";
+connected = true;
+document.getElementById("phonenumber").innerHTML = "08/20/2023";
+setTimeout(function() {neverfade.play();}, 500);
+}
+if(phoneString == "14180"){
+phonenumber.style.color = "rgb(144,238,144,.8)";
+connected = true;
+document.getElementById("phonenumber").innerHTML = "14180";
+setTimeout(function() {vcometo.play();}, 500);
+}
+if(phoneString == "177013"){
+phonenumber.style.color = "rgb(144,238,144,.8)";
+connected = true;
+document.getElementById("phonenumber").innerHTML = "177013";
+setTimeout(function() {nonononono.play();}, 500);
+}
+if(phoneString == "10122054"){
+phonenumber.style.color = "rgb(144,238,144,.8)";
+connected = true;
+document.getElementById("phonenumber").innerHTML = "10/12/2054";
+setTimeout(function() {birthday.play();}, 500);
+}
+if(phoneString == "8002668228"){
+phonenumber.style.color = "rgb(144,238,144,.8)";
+connected = true;
+document.getElementById("phonenumber").innerHTML = "1-(800)Contacts";
+setTimeout(function() {brand.play();}, 500);
+}
+if(phoneString == "6127211080"){
+phonenumber.style.color = "rgb(144,238,144,.8)";
+connected = true;
+setTimeout(function() {congrats.play();}, 500);
+}
+
+}
+}
+
+
+</script>
+<script>
+var makeItRain = function() {
+ //clear out everything
+ $('.rain').empty();
+
+ var increment = 0;
+ var drops = "";
+ var backDrops = "";
+
+ while (increment < 100) {
+ //couple random numbers to use for various randomizations
+ //random number between 98 and 1
+ var randoHundo = (Math.floor(Math.random() * (98 - 1 + 1) + 1));
+ //random number between 5 and 2
+ var randoFiver = (Math.floor(Math.random() * (5 - 2 + 1) + 2));
+ //increment
+ increment += randoFiver;
+ //add in a new raindrop with various randomizations to certain CSS properties
+ drops += '<div class="drop" style="left: ' + increment + '%; bottom: ' + (randoFiver + randoFiver - 1 + 100) + '%; animation-delay: 0.' + randoHundo + 's; animation-duration: 0.5' + randoHundo + 's;"><div class="stem" style="animation-delay: 0.' + randoHundo + 's; animation-duration: 0.5' + randoHundo + 's;"></div><div class="splat" style="animation-delay: 0.' + randoHundo + 's; animation-duration: 0.5' + randoHundo + 's;"></div></div>';
+ backDrops += '<div class="drop" style="right: ' + increment + '%; bottom: ' + (randoFiver + randoFiver - 1 + 100) + '%; animation-delay: 0.' + randoHundo + 's; animation-duration: 0.5' + randoHundo + 's;"><div class="stem" style="animation-delay: 0.' + randoHundo + 's; animation-duration: 0.5' + randoHundo + 's;"></div><div class="splat" style="animation-delay: 0.' + randoHundo + 's; animation-duration: 0.5' + randoHundo + 's;"></div></div>';
+ }
+
+ $('.rain.front-row').append(drops);
+ $('.rain.back-row').append(backDrops);
+}
+
+
+</script>
+</body>

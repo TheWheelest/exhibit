@@ -1,0 +1,466 @@
+<head>
+	<title>Recursion Codes</title>
+	<link rel="icon" href="assets/logoicon.png" type="image/icon type">
+	</head>
+<style>
+body{
+margin:0;
+overflow:hidden;
+background-color:black;
+}
+
+
+@font-face { font-family: avantgarde; src: url(assets/avantgarde.otf) }
+@font-face { font-family: bebas; src: url(assets/Bebas.ttf) }
+
+#ghibliwrapper{
+width:100vw;
+height:100vh;
+display:flex;
+justify-content:center;
+transition:1s;
+background-color:#00adef;
+}
+
+
+#page1{
+width:100%;
+height:100%;
+background-color:#304352;
+opacity:0;
+z-index:3;
+position:absolute;
+top:0vh;
+left:0vh;
+pointer-events:none;
+transition:1s;
+background-image:url("assets/batthern.png");
+transition:1s;
+}
+
+#page2{
+width:100%;
+height:100%;
+background-color:#2a2c3b;
+opacity:0;
+z-index:3;
+position:absolute;
+top:0vh;
+left:0vh;
+pointer-events:none;
+transition:1s;
+background-image:url("assets/batthern.png");
+}
+
+#page3{
+width:100%;
+height:100%;
+background-color:#e6e3d2;
+opacity:0;
+z-index:3;
+position:absolute;
+top:0vh;
+left:0vh;
+pointer-events:none;
+transition:1s;
+background-image:url("assets/batthern.png");
+}
+
+
+#ashitakasplash{
+width:35vh;
+height:50vh;
+background-color:red;
+position:absolute;
+left:50vh;
+top:30vh;
+background-size:cover;
+background-position:center;
+box-shadow: 1vh 1vh rgb(0,0,0,0.4);
+background-image:url(assets/ashitaka.jpg);
+}
+
+#ashitakacontainer1{
+width:45vh;
+height:20vh;
+background-color:red;
+position:absolute;
+left:80vh;
+top:18vh;
+z-index:5;
+background-color:rgb(152, 22, 27, .6);
+box-shadow: 1vh 1vh rgb(0,0,0,0.5);
+font-size:2vh;
+font-family:avantgarde;
+overflow:auto;
+color:#77a7cd;
+}
+
+#ashitakacontainer2{
+width:55vh;
+height:30vh;
+background-color:red;
+position:absolute;
+left:80vh;
+top:55vh;
+z-index:0;
+background-color:rgb(152, 22, 27, .6);
+box-shadow: 1vh 1vh rgb(0,0,0,0.5);
+color:#77a7cd;
+}
+#eboshisplash{
+width:35vh;
+height:50vh;
+position:absolute;
+left:100vh;
+top:30vh;
+background-image:url(assets/eboshi.jpg);
+background-size:cover;
+background-position:center;
+box-shadow: -1vh 1vh rgb(0,0,0,0.4);
+z-index:3;
+}
+
+#sansplash{
+width:35vh;
+height:50vh;
+position:absolute;
+left:50vh;
+top:30vh;
+z-index:1;
+background-size:cover;
+background-position:center;
+box-shadow: -1vh 1vh rgb(0,0,0,0.4);
+background-image:url(assets/san.jpg);
+}
+
+#videowrapper{
+width:100%;
+height:100%;
+opacity:0;
+position:absolute;
+top:0vh;
+left:0vh;
+pointer-events:none;
+transition:4s;
+}
+h{
+font-family:ghibli;
+}
+#stats{
+position:absolute;
+left:76vh;
+top:10vh;
+z-index:7;
+font-size:8vh;
+color:transparent;
+-webkit-text-stroke:.2vh #6c7983;
+
+}
+#history{
+position:absolute;
+left:115vh;
+top:47vh;
+z-index:7;
+font-size:8vh;
+color:transparent;
+-webkit-text-stroke:.2vh #6c7983;
+font-family:ghibli;
+}
+
+
+::-webkit-scrollbar {
+ width: 5px;
+}
+::-webkit-scrollbar-track {
+ background: transparent;
+}
+::-webkit-scrollbar-thumb {
+background-color:white;
+}
+a{
+text-decoration:none;
+color:#eca647;
+transition:1s;
+}
+a:hover{
+color:#f2d0b4;
+}
+#kodama{
+background-image:url(assets/kodama.png;
+width:6vh;
+height:10.9vh;
+background-size:contain;
+position:absolute;
+z-index:6;
+cursor:pointer;
+}
+
+#encounters{
+position:absolute;
+left:56vh;
+top:70vh;
+z-index:7;
+font-size:8vh;
+color:transparent;
+-webkit-text-stroke:.2vh #72717f;
+}
+
+#headcanons{
+position:absolute;
+left:47vh;
+top:37vh;
+z-index:7;
+font-size:8vh;
+color:transparent;
+-webkit-text-stroke:.2vh #72717f;
+}
+
+#eboshicontainer1{
+width:45vh;
+height:20vh;
+background-color:red;
+position:absolute;
+left:58vh;
+top:20vh;
+z-index:5;
+background-color:rgb(74, 22, 27, .6);
+box-shadow: -1vh 1vh rgb(0,0,0,0.5);
+font-size:2vh;
+font-family:ghibli;
+overflow:auto;
+color:#74688f;
+}
+
+#eboshicontainer2{
+width:55vh;
+height:30vh;
+position:absolute;
+left:50vh;
+top:45vh;
+z-index:0;
+background-color:rgb(74, 22, 27, .6);
+box-shadow: -1vh 1vh rgb(0,0,0,0.5);
+color:#223051;
+display:flex;
+justify-content:center;
+}
+
+#sancontainer{
+width:45vh;
+height:20vh;
+position:absolute;
+left:83vh;
+top:54vh;
+z-index:0;
+background-color:rgb(84, 67, 57, .6);
+box-shadow: 1vh 1vh rgb(0,0,0,0.5);;
+font-size:2vh;
+font-family:ghibli;
+overflow:auto;
+color:gray;
+}
+#ooc{
+position:absolute;
+left:114vh;
+top:46vh;
+z-index:7;
+font-size:8vh;
+color:transparent;
+font-family:ghibli;
+-webkit-text-stroke:.2vh #a98e61;
+}
+</style>
+<body>
+<div id="ghibliwrapper" onclick="fadetitle()">
+<img src="assets/ghibliscreen.png" style="height:60vh;position:absolute;width:auto;top:50%;margin-top:-30vh;"></img>
+</div>
+<div id="videowrapper">
+<video preload="auto" id="startvideo" onloadstart="this.volume=0.3" style="width:100%;height:100%;background-color:black;" >
+ <source type="video/mp4" src="assets/MononokeVideo.mp4">
+</video>
+</div>
+<div id="skipbutton" style="position:absolute;top:0vh;left:1vh;z-index:8;font-family:ghibli;font-size:8vh;color:white;letter-spacing:-.5vh;cursor:pointer;transition:1s;" onclick="skip()">Skip</div>
+<div id="musicbutton" style="opacity:0;pointer-events:none;color:rgb(152, 22, 27, .8);left:45vh;top:77vh;font-size:4vh;z-index:9;position:absolute;cursor:pointer;transition:1s;"onclick="finalmusicfunction()">♫</div>
+<div id="page1">
+<div id="stats"><h>Stats</h></div>
+<div id="history"><h>History</h></div>
+<div id="ashitakacontainer1">
+<div style="padding:1vh;">
+Name<font style="float:right;">
+Ashitaka</font><br>
+Age<font style="float:right;">
+18</font><br>
+Gender<font style="float:right;">
+Male</font><br>
+Occupation<font style="float:right;">
+Wanderer</font><br>
+Companion<font style="float:right;">
+Yakul</font><br>
+Weapon<font style="float:right;">
+Bow, tanto</font><br>
+Marital<font style="float:right;">
+<a class="class1" href="https://roleplay.chat/profile.php?user=" target="_blank">Single</a></font></div>
+</div>
+<div id="kodama"onclick="nextpage()" style="left:87vh;top:44.7vh;"></div>
+<div id="ashitakacontainer2">
+<div style="padding:1vh;width:47vh;height:27.5vh;right:0vh;position:absolute;font-family:ghibli;overflow:auto;">
+Ashitaka (アシタカ Ashitaka) is a 18 year old boy and the last prince of the Emishi tribe. He was cursed when defending his village from the demon boar Nago. After the battle, he is banished and heads West in search of a cure.
+<br><br>
+Heading west, Ashitaka meets Jigo, an opportunistic monk who tells Ashitaka he may find help from the Great Forest Spirit, a deer-like animal god by day and a giant Night Walker by night. Nearby, men on a cliffside herd oxen to their home of Iron Town, led by Lady Eboshi, and repel an attack by a wolf pack led by the wolf goddess Moro, whom Eboshi wounds with a gun shot. Riding one of the wolves is San, a human girl. Down below, Ashitaka encounters San and the wolves, who rebuff his greeting. He then manages to rescue two of the men fallen from the cliff and transports them back through the forest, where he briefly glimpses the Great Forest Spirit.
+<br><br>
+Ashitaka and the survivors arrive at Iron Town, where he is greeted with fascination. Iron Town is a refuge for outcasts and lepers employed to process iron and create firearms, such as hand cannons and matchlock rifles. Ashitaka learns that Eboshi built the town by clearcutting forests to produce iron, leading to conflicts with Asano, a local daimyō, and a giant boar god named Nago. Eboshi explains that San, dubbed Princess Mononoke, was raised by the wolves and resents humankind. She also admits that she shot Nago, incidentally turning him into the demon that attacked Ashitaka's village.
+<br><br>
+Suddenly, San infiltrates Iron Town to kill Eboshi. Ashitaka intervenes and quickly subdues Eboshi and San while they are locked in combat. Amidst the hysteria, he is shot by a villager but the curse gives him strength to carry San out of the village. San awakens and prepares to kill the weakened Ashitaka, but hesitates when he tells her that she is beautiful. She decides to trust him after the Forest Spirit heals his bullet wound that night. The next day, a boar clan led by the blind god Okkoto plans to attack Iron Town to save the forest. Eboshi sets out to kill the Forest Spirit with Jigo; Eboshi intends to give the god's head to the Emperor (who believes it will grant him immortality) in return for protection from Lord Asano, while Jigo desires the large reward being offered.
+<br><br>
+Ashitaka recovers and finds Iron Town besieged by Asano's samurai. The boar clan has also been annihilated in battle, and Okkoto is badly wounded. Jigo's men then trick Okkoto into leading them to the Forest Spirit. San tries to stop Okkoto but is swept up as his pain corrupts him into a demon. As everyone clashes at the pool of the Forest Spirit, Ashitaka saves San while the Forest Spirit kills Moro and Okkoto. As it begins to transform into the Night Walker, Eboshi decapitates it. Jigo steals the head, while the Forest Spirit's body bleeds ooze that spreads over the land and kills anything it touches. The forest and kodama begin to die; Moro's head comes alive and bites off Eboshi's right arm, but she survives.
+<br><br>
+After Iron Town is evacuated, Ashitaka and San pursue Jigo and retrieve the head, returning it to the Forest Spirit. The Spirit dies but its form washes over the land, healing it and lifting Ashitaka's curse. Ashitaka stays to help rebuild Iron Town, but promises San he will visit her in the forest. Eboshi vows to build a better town. The forest begins to regrow as one kodama emerges within the forest.
+</div></div>
+<div id="ashitakasplash"></div>
+</div>
+<div id="page2">
+<div id="kodama"onclick="nextpage()" style="left:104vh;top:19.7vh;"></div>
+<div id="eboshisplash"></div>
+<div id="headcanons"><h>Headcanons</h></div>
+<div id="Encounters"><h>Encounters</h></div>
+<div id="eboshicontainer1">
+<div style="padding:1vh">
+Never completely cured of his curse.<br><br>
+Amicable with Iron Town, strained with Eboshi.<br><br>
+Resides in a small woodlot a ride away from Iron Town.
+</div></div>
+<div id="eboshicontainer2">
+<div id="padding:1vh"><br>
+<a target="_blank" href="https://roleplay.chat/profile.php?user=" target="_blank"><img src="assets/mononokefriendicon.webp" style="border-radius:2vh; object-fit:cover;width:9vh;height:9vh;"></img></a>
+<a target="_blank" href="https://roleplay.chat/profile.php?user=" target="_blank"><img src="assets/mononokefriendicon.webp" style="border-radius:2vh; object-fit:cover;width:9vh;height:9vh;"></img></a>
+<a target="_blank" href="https://roleplay.chat/profile.php?user=" target="_blank"><img src="assets/mononokefriendicon.webp" style="border-radius:2vh; object-fit:cover;width:9vh;height:9vh;"></img></a>
+</div></div>
+</div><div id="page3">
+<div id="sansplash"></div>
+<div id="sancontainer"><div style="padding:1vh;text-align:right;color:dbdbdb;">My code<br>Pm friendly<br>Discord OK</div></div>
+<div id="kodama"onclick="nextpage()" style="left:86vh;top:43.7vh;"></div>
+<div id="ooc">ooc</div>
+</div>
+<audio id="startaudio" src="assets/ashitakasong.mp3" ></audio>
+<audio id="kodamasound" src="assets/kodamasound.wav" ></audio>
+<audio id="music" src="assets/ashitakasonglong.mp3" ></audio>
+<script>
+var ghibliwrapper = document.getElementById("ghibliwrapper");
+var startvideo = document.getElementById("startvideo");
+var videowrapper = document.getElementById("videowrapper");
+var music = document.getElementById("startaudio");
+var finalmusic = document.getElementById("music");
+var page1 = document.getElementById("page1");
+var page2 = document.getElementById("page2");
+var page3 = document.getElementById("page3");
+var skipbutton = document.getElementById("skipbutton");
+var page = 1;
+finalmusic.volume = 0;
+var playing = false;
+
+function skip(){
+ghibliwrapper.style.opacity="0";
+videowrapper.style.opacity="0";
+skipbutton.style.opacity="0";
+skipbutton.style.pointerEvents="none";
+fadeoutintro();
+showprofile();
+}
+
+function finalmusicfunction(){
+ if(playing === false){
+ fadeinmusic();
+ playing = true;
+ }else{
+ fadeoutmusic();
+ playing = false;
+ }
+}
+
+function fadeoutmusic(){
+ if(finalmusic.volume > 0){
+ finalmusic.volume -= 0.025;
+ setTimeout(fadeoutmusic, 500);
+ }else{
+ finalmusic.pause();
+ }
+	
+}
+
+function fadeoutintro(){
+ if(music.volume > 0){
+ music.volume -= 0.025;
+ setTimeout(fadeoutintro, 500);
+ }else{
+ music.pause();
+ }
+	
+}
+
+function fadeinmusic(){
+ if(finalmusic.volume < 0.2){
+	finalmusic.play();
+ finalmusic.volume += 0.025;
+ setTimeout(fadeinmusic, 500);
+ }else{
+ 
+ }
+	
+}
+
+function fadetitle(){
+ghibliwrapper.style.opacity = "0";
+videowrapper.style.opacity = "1";
+startvideo.play();
+music.play();
+music.volume = 0.2;
+setTimeout(function(){
+ showprofile();
+ skipbutton.style.opacity = "0";
+ skipbutton.style.pointerEvents = "none";
+ 
+ }, 35000);
+}
+
+function showprofile(){
+page1.style.opacity="1";
+page1.style.pointerEvents="auto";
+page = 1;
+musicbutton.style.opacity = "1";
+musicbutton.style.pointerEvents = "auto";
+}
+
+function nextpage(){
+kodamasound.volume = 0.2;
+kodamasound.currentTime = 0;
+kodamasound.play();
+switch (page) {
+ case 1:
+ page1.style.opacity="0";
+ page1.style.pointerEvents="none";
+ page2.style.pointerEvents="auto";
+ page2.style.opacity="1";
+	page = 2;
+ break;
+ case 2:
+ page2.style.opacity="0";
+ page2.style.pointerEvents="none";
+ page3.style.pointerEvents="auto";
+ page3.style.opacity="1";
+	page = 3;
+	break;
+ case 3:
+ page3.style.opacity="0";
+ page3.style.pointerEvents="none";
+ page1.style.pointerEvents="auto";
+ page1.style.opacity="1";
+	page = 1;
+ break;
+ default:
+}
+
+}
+</script>
+
+</body>

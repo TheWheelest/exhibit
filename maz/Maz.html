@@ -1,0 +1,424 @@
+<head>
+    <title>Recursion Codes</title>
+    <link rel="icon" href="https://media.discordapp.net/attachments/946275070572118056/1089677981598875708/logoicon.png" type="image/icon type">
+    </head>
+<head>
+</head>
+<style>
+
+::-webkit-scrollbar {
+ width: 1vh;
+}
+::-webkit-scrollbar-track {
+ box-shadow: inset 0 0 1vh 1vh transparent;
+}
+
+::-webkit-scrollbar-thumb {
+ box-shadow: inset 0 0 1vh 1vh #dccfca;
+}
+
+@font-face { font-family: Roboto; src: url(https://dl.dropboxusercontent.com/s/ykcpapqed85hqm6/Roboto-Light.ttf?dl=0) }
+@media only screen and (orientation: landscape) {
+body{
+width:100%;
+height:100%;
+background-image:url(https://i.imgur.com/BEUS6SH.png);
+background-color:#7a736d;
+overflow:hidden;
+margin:0;
+transition:2s;
+}
+
+.panel{
+width:30vh;
+height:50vh;
+position:absolute;
+left:0vh;
+top:0vh;
+overflow:hidden;
+transition:2s;
+transition-timing-function:ease-in-out;
+border:solid .3vh black;
+background-color:rgb(255, 255, 255, 0.2);
+}
+
+.panelimage{
+width:49vh;
+height:50vh;
+position:absolute;
+left:-9.3vh;
+top:0vh;
+transform: skew(15deg, 0deg);
+z-index:1;
+}
+
+.panelcontent{
+width:74vh;
+height:46vh;
+position:absolute;
+left:37vh;
+top:0vh;
+transform: skew(15deg, 0deg);
+font-family:roboto;
+font-size:3vh;
+padding:2vh;
+overflow:auto;
+scrollbar-width:none;
+}
+
+
+#panelcontainer{
+width:121.5vh;
+height:50.6vh;
+position:absolute;
+transform: skew(-15deg, 0deg);
+bottom:5vh;
+right:47vh;
+margin-top:-15vh;
+overflow:hidden;
+}
+
+#maz{
+width:47.7vh;
+height:80vh;
+background-size:cover;
+background-image:url(https://i.imgur.com/uOWxs1i.png);
+position:absolute;
+bottom:0vh;
+right:-3vh;
+}
+
+.innerpanel{
+width:30vh;
+height:50vh;
+position:absolute;
+left:0vh;
+top:0vh;
+overflow:hidden;
+}
+
+.borderdiv{
+border:solid .3vh black;
+width:29.7vh;
+height:50vh;
+
+}
+
+.scroller {
+ overflow: scroll;
+ scrollbar-width: none;
+ width: 100%;
+ height: 100%;
+}
+
+#outerborderdiv{
+width:120.9vh;
+height:50vh;
+position:absolute;
+transform: skew(-15deg, 0deg);
+bottom:5vh;
+right:47vh;
+margin-top:-15vh;
+border:solid .3vh black;
+z-index:4;
+pointer-events:none;
+}
+
+#mobiletext{
+opacity:0;
+ }
+#mobileooc{
+opacity:0;
+ }
+#mobiletitle{
+opacity:0;
+ }
+#mobilemaz{
+opacity:0;
+ }
+}
+
+@media only screen and (orientation: portrait) {
+ body {
+width:100%;
+height:100%;
+background-image:url(https://i.imgur.com/BEUS6SH.png);
+background-color:#7a736d;
+overflow:hidden;
+margin:0;
+transition:2s;
+ }
+ 
+ 
+
+#mobilemaz{
+width:22.7vh;
+height:80vh;
+background-size:cover;
+background-image:url(https://i.imgur.com/uOWxs1i.png);
+position:absolute;
+bottom:0vh;
+right:0vh;
+}
+
+#mobilecontent{
+width:30vh;
+height:32vh;
+left:50%;
+top:50%;
+margin-left:-20vh;
+position:absolute;
+margin-top:-15vh;
+border:solid .3vh black;
+box-shadow: 0vh 0vh 4vh .5vh black;
+background-color:rgb(255, 255, 255, 0.2); 
+font-size:1.7vh; 
+font-family:Roboto;
+}
+
+#mobiletitle{
+width:30vh;
+height:10vh;
+left:50%;
+top:50%;
+margin-left:-20vh;
+position:absolute;
+margin-top:-24.8vh;
+text-align:center;
+font-size:10vh;
+font-family:Roboto;
+font-weight:bold;
+background: -webkit-linear-gradient(#b9ab9e, #fef8d8);
+ -webkit-background-clip: text;
+ -webkit-text-fill-color: transparent;
+
+}
+
+#mobileOOC{
+width:30vh;
+height:20vh;
+left:50%;
+top:50%;
+margin-left:-20vh;
+position:absolute;
+margin-top:19vh;
+text-align:center;
+font-size:2vh;
+font-family:Roboto;
+font-weight:bold;
+background: -webkit-linear-gradient(#b9ab9e, #fef8d8);
+ -webkit-background-clip: text;
+ -webkit-text-fill-color: transparent;
+}
+
+.panelcontent{
+opacity:0;
+}
+}
+
+</style>
+<body>
+<div id="outerborderdiv"></div>
+<div id="panelcontainer">
+
+<div class="panel" id="panel1" style="left:0vh">
+<div class="borderdiv" >
+<div class="innerpanel">
+<div class="panelimage" onclick="panel1toggle()" style="background-image:url(https://i.imgur.com/xwCvVUl.jpg);background-position: 0vh;background-size:cover;">
+</div></div></div><div class="panelcontent"><font style="color:#4b4642">
+"Freedom is paid for in blood."</font><br>
+<font style="float:right"></font>
+<br>
+Name:<font style="float:right;">Leonir</font><br>
+Nicknames:<font style="float:right;">Maz, Mazabelle</font><br>
+Title:<font style="float:right;">Daughter of the Snow</font><br>
+Age:<font style="float:right;">28</font><br>
+Gender:<font style="float:right;">Female</font><br>
+Marital:<font style="float:right;">Single</font><br>
+Sexuality:<font style="float:right;">Irrelevant</font><br>
+Strengths:<font style="float:right;"><a title="Trust in self and others.
+Decision making.
+Good judgement.
+Equitable.
+">Confidence*</a></font><br>
+Flaws:<font style="float:right;"><a title="Lacks empathy.
+Hypocritical.
+Vengeful.
+Zealous.">Stubborn*</a></font><br><br>
+<font style="float:right; color:#cb1313;">"But that does not warrant slaughter."</font>
+</div></div>
+<div class="panel" id="panel2" style="left:30.3vh;">
+<div class="borderdiv">
+<div class="innerpanel" >
+<div class="panelimage" onclick="panel2toggle()" style="background-image:url(https://i.imgur.com/Gygzs3z.jpg);background-position: -15vh;background-size:cover;">
+</div></div></div><div class="panelcontent">
+<font style="color:#4b4642;">
+"Valor in combat."</font><br><font style=" font-size:2vh;"><br>
+The fourth daughter of six girls, Mazabelle is the heir of a Sandanavian house in the year __62. Having spent most of her youth watching her father in the pursuits of
+politics. It was discovered that she had an aptitude for swift judgement and a strong stance on moral justice.<br><br>
+
+Thus, her father gave her the opportunity to follow after him, and she even learned to survive in the harsh tundras without aid. She became a familiar figure next to her father,
+wearing her family crest emblazoned on her coat and linked with a gold chain. Eventually it was decided that she would be the one to take the mantle after her father having proven
+her distinction and the lack of a son.
+<br><br>
+Tradition dictates men lead the house, she took the name Leonir after her father retired, becoming the first woman in centuries to lead in her home country. Though
+conflict stirs, as some of her siblings turn to modern ways of governance in senates rather than the houses of old.<br><br>
+
+</font>
+<font style="float:right; color:#cb1313;">"And duty to family."</font><br>
+</div></div>
+<div class="panel" id="panel3" style="left:60.6vh;">
+<div class="borderdiv">
+<div class="innerpanel">
+<div class="panelimage" onclick="panel3toggle()" style="background-image:url(https://i.imgur.com/3gomE1a.jpg);background-position: 1vh;background-size:80vh 54vh;">
+</div></div></div><div class="panelcontent">
+<font style="color:#4b4642">
+"Our bonds are thicker than blood."</font><br><br>
+<a target="_blank" href="https://roleplay.chat/profile.php?user=Leonir"><img src="https://pbs.twimg.com/media/ELS2oVgUYAADQZr?format=jpg&name=4096x4096" style="height:9.6vh;width:9.6vh; border-radius:1vh;object-fit:cover"></a>
+<a target="_blank" href="https://roleplay.chat/profile.php?user=Leonir"><img src="https://pbs.twimg.com/media/ELS2oVgUYAADQZr?format=jpg&name=4096x4096" style="height:9.6vh;width:9.6vh; border-radius:1vh;object-fit:cover"></a>
+<a target="_blank" href="https://roleplay.chat/profile.php?user=Leonir"><img src="https://pbs.twimg.com/media/ELS2oVgUYAADQZr?format=jpg&name=4096x4096" style="height:9.6vh;width:9.6vh; border-radius:1vh;object-fit:cover"></a>
+<a target="_blank" href="https://roleplay.chat/profile.php?user=Leonir"><img src="https://pbs.twimg.com/media/ELS2oVgUYAADQZr?format=jpg&name=4096x4096" style="height:9.6vh;width:9.6vh; border-radius:1vh;object-fit:cover"></a>
+<a target="_blank" href="https://roleplay.chat/profile.php?user=Leonir"><img src="https://pbs.twimg.com/media/ELS2oVgUYAADQZr?format=jpg&name=4096x4096" style="height:9.6vh;width:9.6vh; border-radius:1vh;object-fit:cover"></a>
+<a target="_blank" href="https://roleplay.chat/profile.php?user=Leonir"><img src="https://pbs.twimg.com/media/ELS2oVgUYAADQZr?format=jpg&name=4096x4096" style="height:9.6vh;width:9.6vh; border-radius:1vh;object-fit:cover"></a>
+<a target="_blank" href="https://roleplay.chat/profile.php?user=Leonir"><img src="https://pbs.twimg.com/media/ELS2oVgUYAADQZr?format=jpg&name=4096x4096" style="height:9.6vh;width:9.6vh; border-radius:1vh;object-fit:cover"></a>
+
+<br><br><font style="float:right; color:#cb1313;">"Only to be severed by steel."</font>
+
+
+
+
+</div></div>
+<div class="panel" id="panel4"style="left:90.9vh;">
+<div class="borderdiv"><div class="innerpanel">
+<div class="panelimage" onclick="panel4toggle()" style="background-image:url(https://i.imgur.com/ZzIn5OU.jpg);background-position: 1.4vh -17vh ;background-size:75vh 74vh">
+</div></div></div><div class="panelcontent">
+<font style="color:#4b4642">
+"And this voice that I hear?"</font><br><br>
+Thank you for reading!<br>
+Maz / Leonir works in any setting, even sci-fi. Just ask.<br>
+PM / DM Friendly.<br>
+Although I prefer you not start with a post.<br>
+Also don't be weird.<br>
+FnF room in mind when made.<br>
+OC / Art by Gogalking.<br>
+My code.<br>
+Discord available!
+
+<br><br><font style="float:right; color:#cb1313;">"Nothing, a figment of your imagination."</font>
+
+</div></div></div>
+<div id="maz"></div>
+
+
+
+
+
+
+
+<div id="mobilemaz"></div>
+<div id="mobilecontent"><div id="mobiletext" style="padding:1vh;">
+Name:<font style="float:right;">Leonir</font><br>
+Title:<font style="float:right;">Daughter of the Snow</font><br>
+Age:<font style="float:right;">28</font><br>
+Gender:<font style="float:right;">Female</font><br>
+Marital:<font style="float:right;">Single</font><br>
+Sexuality:<font style="float:right;">Irrelevant</font><br>
+Strengths:<font style="float:right;"><a title="Trust in self and others.
+Decision making.
+Good judgement.
+Equitable.
+">Confidence*</a></font><br>
+Flaws:<font style="float:right;"><a title="Lacks empathy.
+Hypocritical.
+Vengeful.
+Zealous.">Stubborn*</a></font><br><br>
+<center>Leonir, destined ruler of a snowy wasteland, driven to secure a future for her people.<br><br>
+Decent with a sword and parrying daggers.</center>
+</div></div>
+<div id="mobiletitle">Leonir</div>
+<div id="mobileOOC">Room or DM, Friendly<br>More code on PC<br>OC by Gogalking<br></div>
+</div>
+<script>
+var panel1 = document.getElementById("panel1");
+var panel2 = document.getElementById("panel2");
+var panel3 = document.getElementById("panel3");
+var panel4 = document.getElementById("panel4");
+var toggled = false;
+
+function panel1toggle(){
+switch (toggled) {
+ case false:
+ panel1.style.width = "120.8vh";
+panel2.style.left = "122vh";
+panel3.style.left = "122vh";
+panel4.style.left = "122vh";
+toggled=true;
+ break;
+ case true:
+ reset();
+toggled=false;
+ break;
+}
+}
+function panel2toggle(){
+switch (toggled) {
+ case false:
+panel1.style.left = "-30.4vh";
+panel2.style.left = "0vh";
+panel2.style.width = "120.8vh";
+panel3.style.left = "122vh";
+panel4.style.left = "122vh";
+toggled=true;
+ break;
+ case true:
+ reset();
+toggled=false;
+ break;
+}
+}
+function panel3toggle(){
+switch (toggled) {
+ case false:
+panel1.style.left = "-30.6vh";
+panel2.style.left = "-30.6vh";
+panel3.style.left = "0vh";
+panel3.style.width = "120.8vh";
+panel4.style.left = "121.2vh";
+toggled=true;
+ break;
+ case true:
+ reset();
+toggled=false;
+ break;
+}
+}
+function panel4toggle(){
+switch (toggled) {
+ case false:
+panel1.style.left = "-30.6vh";
+panel2.style.left = "-30.6vh";
+panel3.style.left = "-30.6vh";
+panel4.style.left = "0vh";
+panel4.style.width = "120.8vh";
+toggled=true;
+ break;
+ case true:
+ reset();
+toggled=false;
+ break;
+}
+}
+
+function reset(){
+panel1.style.left = "0vh";
+panel2.style.left = "30.2vh";
+panel3.style.left = "60.4vh";
+panel4.style.left = "90.6vh";
+panel1.style.width = "30vh";
+panel2.style.width = "30vh";
+panel3.style.width = "30vh";
+panel4.style.width = "30vh";
+
+}
+</script>
+</body>

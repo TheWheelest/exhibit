@@ -1,0 +1,769 @@
+<head>
+	<title>Recursion Codes</title>
+	<link rel="icon" href="https://media.discordapp.net/attachments/946275070572118056/1089677981598875708/logoicon.png" type="image/icon type">
+	</head>
+<style>
+ 
+@font-face { font-family: Lemon; src: url(https://dl.dropboxusercontent.com/s/8ov9l70d702t7oa/LemonMilklight.otf) }
+@font-face {font-family: Caviar; src: url(https://dl.dropboxusercontent.com/s/348kbbuapao26e4/CaviarDreams.ttf) }
+
+body{
+height:100vh;
+width:100vw;
+margin:0vh;
+padding:0vh;
+background-image:url(https://i.imgur.com/xt4iE04.png);
+background-color:#9fcff9;
+overflow:hidden;
+}
+
+#nunu{
+background-image:url(https://i.imgur.com/fXx5FjT.jpg);
+height:60vh;
+width:40vh;
+position:absolute;
+right:70vh;
+bottom:5vh;
+background-size:cover;
+box-shadow:1.5vh 1.5vh 0vh .1vh rgb(199, 242, 255, .8);
+}
+
+#nunutitle{
+width:65vh;
+height:10vh;
+font-family:lemon;
+color:#9fcff9;
+position:absolute;
+right:2vh;
+bottom:45vh;
+height:10vh;
+font-size:7vh;
+-webkit-text-stroke:.2vh white;
+z-index:3;
+}
+
+#titlebar{
+width:65vh;
+height:.75vh;
+border: solid .2vh white;
+background-color:#9fcff9;
+position:absolute;
+bottom:46vh;
+right:2vh;
+z-index:2;
+}
+
+#whitebackground{
+width:65.5vh;
+height:52vh;
+right:2vh;
+bottom:4vh;
+background-color:rgb(255,255,255,0.5);
+position:absolute;
+z-index:1;
+}
+
+
+@keyframes snowfall {
+	 0% {
+		 transform: translate3d(var(--left-ini), 0, 0);
+	}
+	 100% {
+		 transform: translate3d(var(--left-end), 110vh, 0);
+	}
+}
+ .snowflake:nth-child(1) {
+	 --size: 0.6vw;
+	 --left-ini: 5vw;
+	/* random initial translation */
+	 --left-end: -1vw;
+	/* random final translation */
+	 left: 19vw;
+	 animation: snowfall 15s linear infinite;
+	 animation-delay: -4s;
+}
+ .snowflake:nth-child(2) {
+	 --size: 0.2vw;
+	 --left-ini: -8vw;
+	/* random initial translation */
+	 --left-end: -5vw;
+	/* random final translation */
+	 left: 15vw;
+	 animation: snowfall 7s linear infinite;
+	 animation-delay: -3s;
+}
+ .snowflake:nth-child(3) {
+	 --size: 0.8vw;
+	 --left-ini: -5vw;
+	/* random initial translation */
+	 --left-end: -7vw;
+	/* random final translation */
+	 left: 16vw;
+	 animation: snowfall 13s linear infinite;
+	 animation-delay: -6s;
+}
+ .snowflake:nth-child(4) {
+	 --size: 0.2vw;
+	 --left-ini: 0vw;
+	/* random initial translation */
+	 --left-end: 4vw;
+	/* random final translation */
+	 left: 73vw;
+	 animation: snowfall 9s linear infinite;
+	 animation-delay: -3s;
+}
+ .snowflake:nth-child(5) {
+	 --size: 0.6vw;
+	 --left-ini: -1vw;
+	/* random initial translation */
+	 --left-end: 1vw;
+	/* random final translation */
+	 left: 62vw;
+	 animation: snowfall 12s linear infinite;
+	 animation-delay: -6s;
+}
+ .snowflake:nth-child(6) {
+	 --size: 0.6vw;
+	 --left-ini: 4vw;
+	/* random initial translation */
+	 --left-end: 3vw;
+	/* random final translation */
+	 left: 12vw;
+	 animation: snowfall 8s linear infinite;
+	 animation-delay: -5s;
+}
+ .snowflake:nth-child(7) {
+	 --size: 1vw;
+	 --left-ini: 7vw;
+	/* random initial translation */
+	 --left-end: 3vw;
+	/* random final translation */
+	 left: 27vw;
+	 animation: snowfall 8s linear infinite;
+	 animation-delay: -9s;
+}
+ .snowflake:nth-child(8) {
+	 --size: 1vw;
+	 --left-ini: -5vw;
+	/* random initial translation */
+	 --left-end: 8vw;
+	/* random final translation */
+	 left: 84vw;
+	 animation: snowfall 14s linear infinite;
+	 animation-delay: -7s;
+}
+ .snowflake:nth-child(9) {
+	 --size: 0.6vw;
+	 --left-ini: 3vw;
+	/* random initial translation */
+	 --left-end: 6vw;
+	/* random final translation */
+	 left: 89vw;
+	 animation: snowfall 13s linear infinite;
+	 animation-delay: -7s;
+}
+ .snowflake:nth-child(10) {
+	 --size: 0.2vw;
+	 --left-ini: -5vw;
+	/* random initial translation */
+	 --left-end: -7vw;
+	/* random final translation */
+	 left: 12vw;
+	 animation: snowfall 13s linear infinite;
+	 animation-delay: -7s;
+}
+ .snowflake:nth-child(11) {
+	 --size: 0.6vw;
+	 --left-ini: -1vw;
+	/* random initial translation */
+	 --left-end: -2vw;
+	/* random final translation */
+	 left: 81vw;
+	 animation: snowfall 14s linear infinite;
+	 animation-delay: -9s;
+}
+ .snowflake:nth-child(12) {
+	 --size: 0.6vw;
+	 --left-ini: -1vw;
+	/* random initial translation */
+	 --left-end: -9vw;
+	/* random final translation */
+	 left: 71vw;
+	 animation: snowfall 9s linear infinite;
+	 animation-delay: -1s;
+}
+ .snowflake:nth-child(13) {
+	 --size: 1vw;
+	 --left-ini: -7vw;
+	/* random initial translation */
+	 --left-end: 7vw;
+	/* random final translation */
+	 left: 58vw;
+	 animation: snowfall 8s linear infinite;
+	 animation-delay: -3s;
+}
+ .snowflake:nth-child(14) {
+	 --size: 0.6vw;
+	 --left-ini: 9vw;
+	/* random initial translation */
+	 --left-end: 0vw;
+	/* random final translation */
+	 left: 54vw;
+	 animation: snowfall 15s linear infinite;
+	 animation-delay: -4s;
+}
+ .snowflake:nth-child(15) {
+	 --size: 1vw;
+	 --left-ini: -8vw;
+	/* random initial translation */
+	 --left-end: -1vw;
+	/* random final translation */
+	 left: 23vw;
+	 animation: snowfall 9s linear infinite;
+	 animation-delay: -8s;
+}
+ .snowflake:nth-child(16) {
+	 --size: 0.6vw;
+	 --left-ini: 1vw;
+	/* random initial translation */
+	 --left-end: 1vw;
+	/* random final translation */
+	 left: 53vw;
+	 animation: snowfall 9s linear infinite;
+	 animation-delay: -10s;
+}
+ .snowflake:nth-child(17) {
+	 --size: 0.6vw;
+	 --left-ini: -9vw;
+	/* random initial translation */
+	 --left-end: -1vw;
+	/* random final translation */
+	 left: 32vw;
+	 animation: snowfall 9s linear infinite;
+	 animation-delay: -1s;
+}
+ .snowflake:nth-child(18) {
+	 --size: 0.6vw;
+	 --left-ini: 0vw;
+	/* random initial translation */
+	 --left-end: -8vw;
+	/* random final translation */
+	 left: 59vw;
+	 animation: snowfall 9s linear infinite;
+	 animation-delay: -8s;
+}
+ .snowflake:nth-child(19) {
+	 --size: 0.4vw;
+	 --left-ini: 6vw;
+	/* random initial translation */
+	 --left-end: 0vw;
+	/* random final translation */
+	 left: 66vw;
+	 animation: snowfall 8s linear infinite;
+	 animation-delay: -6s;
+}
+ .snowflake:nth-child(20) {
+	 --size: 1vw;
+	 --left-ini: -3vw;
+	/* random initial translation */
+	 --left-end: 9vw;
+	/* random final translation */
+	 left: 19vw;
+	 animation: snowfall 6s linear infinite;
+	 animation-delay: -8s;
+}
+ .snowflake:nth-child(21) {
+	 --size: 0.2vw;
+	 --left-ini: 10vw;
+	/* random initial translation */
+	 --left-end: -5vw;
+	/* random final translation */
+	 left: 24vw;
+	 animation: snowfall 15s linear infinite;
+	 animation-delay: -1s;
+}
+ .snowflake:nth-child(22) {
+	 --size: 1vw;
+	 --left-ini: -4vw;
+	/* random initial translation */
+	 --left-end: -4vw;
+	/* random final translation */
+	 left: 9vw;
+	 animation: snowfall 7s linear infinite;
+	 animation-delay: -7s;
+}
+ .snowflake:nth-child(23) {
+	 --size: 0.4vw;
+	 --left-ini: 5vw;
+	/* random initial translation */
+	 --left-end: -2vw;
+	/* random final translation */
+	 left: 13vw;
+	 animation: snowfall 8s linear infinite;
+	 animation-delay: -3s;
+}
+ .snowflake:nth-child(24) {
+	 --size: 0.6vw;
+	 --left-ini: -6vw;
+	/* random initial translation */
+	 --left-end: 0vw;
+	/* random final translation */
+	 left: 12vw;
+	 animation: snowfall 13s linear infinite;
+	 animation-delay: -10s;
+}
+ .snowflake:nth-child(25) {
+	 --size: 1vw;
+	 --left-ini: 3vw;
+	/* random initial translation */
+	 --left-end: -4vw;
+	/* random final translation */
+	 left: 84vw;
+	 animation: snowfall 13s linear infinite;
+	 animation-delay: -9s;
+}
+ .snowflake:nth-child(26) {
+	 --size: 0.8vw;
+	 --left-ini: -2vw;
+	/* random initial translation */
+	 --left-end: 7vw;
+	/* random final translation */
+	 left: 74vw;
+	 animation: snowfall 13s linear infinite;
+	 animation-delay: -7s;
+}
+ .snowflake:nth-child(27) {
+	 --size: 1vw;
+	 --left-ini: 10vw;
+	/* random initial translation */
+	 --left-end: -2vw;
+	/* random final translation */
+	 left: 66vw;
+	 animation: snowfall 8s linear infinite;
+	 animation-delay: -9s;
+}
+ .snowflake:nth-child(28) {
+	 --size: 1vw;
+	 --left-ini: 7vw;
+	/* random initial translation */
+	 --left-end: 9vw;
+	/* random final translation */
+	 left: 25vw;
+	 animation: snowfall 14s linear infinite;
+	 animation-delay: -10s;
+}
+ .snowflake:nth-child(29) {
+	 --size: 0.2vw;
+	 --left-ini: 6vw;
+	/* random initial translation */
+	 --left-end: 7vw;
+	/* random final translation */
+	 left: 15vw;
+	 animation: snowfall 14s linear infinite;
+	 animation-delay: -8s;
+}
+ .snowflake:nth-child(30) {
+	 --size: 0.4vw;
+	 --left-ini: 10vw;
+	/* random initial translation */
+	 --left-end: 10vw;
+	/* random final translation */
+	 left: 46vw;
+	 animation: snowfall 13s linear infinite;
+	 animation-delay: -6s;
+}
+ .snowflake:nth-child(31) {
+	 --size: 0.4vw;
+	 --left-ini: 8vw;
+	/* random initial translation */
+	 --left-end: -1vw;
+	/* random final translation */
+	 left: 49vw;
+	 animation: snowfall 7s linear infinite;
+	 animation-delay: -5s;
+}
+ .snowflake:nth-child(32) {
+	 --size: 0.2vw;
+	 --left-ini: 8vw;
+	/* random initial translation */
+	 --left-end: 7vw;
+	/* random final translation */
+	 left: 12vw;
+	 animation: snowfall 14s linear infinite;
+	 animation-delay: -8s;
+}
+ .snowflake:nth-child(33) {
+	 --size: 0.6vw;
+	 --left-ini: 3vw;
+	/* random initial translation */
+	 --left-end: -1vw;
+	/* random final translation */
+	 left: 47vw;
+	 animation: snowfall 11s linear infinite;
+	 animation-delay: -4s;
+}
+ .snowflake:nth-child(34) {
+	 --size: 0.6vw;
+	 --left-ini: 10vw;
+	/* random initial translation */
+	 --left-end: 1vw;
+	/* random final translation */
+	 left: 2vw;
+	 animation: snowfall 10s linear infinite;
+	 animation-delay: -1s;
+}
+ .snowflake:nth-child(35) {
+	 --size: 0.2vw;
+	 --left-ini: -3vw;
+	/* random initial translation */
+	 --left-end: 5vw;
+	/* random final translation */
+	 left: 31vw;
+	 animation: snowfall 14s linear infinite;
+	 animation-delay: -5s;
+}
+ .snowflake:nth-child(36) {
+	 --size: 0.6vw;
+	 --left-ini: -6vw;
+	/* random initial translation */
+	 --left-end: 10vw;
+	/* random final translation */
+	 left: 93vw;
+	 animation: snowfall 8s linear infinite;
+	 animation-delay: -6s;
+}
+ .snowflake:nth-child(37) {
+	 --size: 1vw;
+	 --left-ini: 2vw;
+	/* random initial translation */
+	 --left-end: 2vw;
+	/* random final translation */
+	 left: 4vw;
+	 animation: snowfall 8s linear infinite;
+	 animation-delay: -10s;
+}
+ .snowflake:nth-child(38) {
+	 --size: 1vw;
+	 --left-ini: 6vw;
+	/* random initial translation */
+	 --left-end: 10vw;
+	/* random final translation */
+	 left: 81vw;
+	 animation: snowfall 14s linear infinite;
+	 animation-delay: -2s;
+}
+ .snowflake:nth-child(39) {
+	 --size: 0.2vw;
+	 --left-ini: 4vw;
+	/* random initial translation */
+	 --left-end: 4vw;
+	/* random final translation */
+	 left: 19vw;
+	 animation: snowfall 9s linear infinite;
+	 animation-delay: -9s;
+}
+ .snowflake:nth-child(40) {
+	 --size: 1vw;
+	 --left-ini: 0vw;
+	/* random initial translation */
+	 --left-end: -8vw;
+	/* random final translation */
+	 left: 10vw;
+	 animation: snowfall 14s linear infinite;
+	 animation-delay: -4s;
+}
+ .snowflake:nth-child(41) {
+	 --size: 0.8vw;
+	 --left-ini: -5vw;
+	/* random initial translation */
+	 --left-end: 8vw;
+	/* random final translation */
+	 left: 22vw;
+	 animation: snowfall 14s linear infinite;
+	 animation-delay: -3s;
+}
+ .snowflake:nth-child(42) {
+	 --size: 0.8vw;
+	 --left-ini: -2vw;
+	/* random initial translation */
+	 --left-end: 6vw;
+	/* random final translation */
+	 left: 98vw;
+	 animation: snowfall 6s linear infinite;
+	 animation-delay: -5s;
+}
+ .snowflake:nth-child(43) {
+	 --size: 0.2vw;
+	 --left-ini: 3vw;
+	/* random initial translation */
+	 --left-end: -9vw;
+	/* random final translation */
+	 left: 88vw;
+	 animation: snowfall 12s linear infinite;
+	 animation-delay: -9s;
+}
+ .snowflake:nth-child(44) {
+	 --size: 0.2vw;
+	 --left-ini: -2vw;
+	/* random initial translation */
+	 --left-end: 5vw;
+	/* random final translation */
+	 left: 22vw;
+	 animation: snowfall 6s linear infinite;
+	 animation-delay: -1s;
+}
+ .snowflake:nth-child(45) {
+	 --size: 1vw;
+	 --left-ini: 9vw;
+	/* random initial translation */
+	 --left-end: 1vw;
+	/* random final translation */
+	 left: 20vw;
+	 animation: snowfall 14s linear infinite;
+	 animation-delay: -9s;
+}
+ .snowflake:nth-child(46) {
+	 --size: 0.2vw;
+	 --left-ini: -6vw;
+	/* random initial translation */
+	 --left-end: 10vw;
+	/* random final translation */
+	 left: 38vw;
+	 animation: snowfall 10s linear infinite;
+	 animation-delay: -8s;
+}
+ .snowflake:nth-child(47) {
+	 --size: 0.6vw;
+	 --left-ini: -7vw;
+	/* random initial translation */
+	 --left-end: -6vw;
+	/* random final translation */
+	 left: 69vw;
+	 animation: snowfall 7s linear infinite;
+	 animation-delay: -7s;
+}
+ .snowflake:nth-child(48) {
+	 --size: 1vw;
+	 --left-ini: 5vw;
+	/* random initial translation */
+	 --left-end: 9vw;
+	/* random final translation */
+	 left: 96vw;
+	 animation: snowfall 12s linear infinite;
+	 animation-delay: -8s;
+}
+ .snowflake:nth-child(49) {
+	 --size: 0.4vw;
+	 --left-ini: 4vw;
+	/* random initial translation */
+	 --left-end: -7vw;
+	/* random final translation */
+	 left: 68vw;
+	 animation: snowfall 14s linear infinite;
+	 animation-delay: -6s;
+}
+ .snowflake:nth-child(50) {
+	 --size: 0.6vw;
+	 --left-ini: -8vw;
+	/* random initial translation */
+	 --left-end: -7vw;
+	/* random final translation */
+	 left: 30vw;
+	 animation: snowfall 14s linear infinite;
+	 animation-delay: -8s;
+}
+ 
+
+.snowflake {
+ --size: .1vw;
+ width: var(--size);
+ height: var(--size);
+ background: white;
+ border-radius: 50%;
+ position: absolute;
+ top: -5vh;
+ animation: snowfall 5s linear infinite;
+ pointer-events:none;
+ box-shadow:0 0 1vh .1vh white;
+ overflow:hidden;
+}
+
+
+h{
+font-size:3vh;
+color:#39969b;
+font-family:lemon;
+}
+
+
+::-webkit-scrollbar {
+ width: 0vh;
+}
+
+#nunucontentcontainer{
+width:65.5vh;
+height:38vh;
+position:absolute;
+bottom:4vh;
+right:0vh;
+overflow:hidden;
+color:#39969b;
+font-family:caviar;
+font-size:2.5vh;
+}
+
+.nunucontentbox{
+width:63.5vh;
+height:38vh;
+overflow:auto;
+scrollbar-width: none;
+padding-left:1vh;
+}
+
+#ooccontent{
+height:4vh;
+width:65.5vh;
+bottom:0vh;
+right:0vh;
+position:absolute;
+text-align:center;
+font-family:caviar;
+font-size:2.1vh;
+}
+
+a{
+color:#9fcff9;
+-webkit-text-stroke:unset;
+text-decoration:none;
+}
+
+a:hover{
+color:#9fcff9;
+-webkit-text-stroke:unset;
+}
+
+a:visited{
+color:#9fcff9;
+-webkit-text-stroke:unset;
+}
+
+a:active{
+color:#a0a5de;
+}
+
+</style>
+<body>
+<div id="nunutitle"><a href="#one">Nunu</a> <a href="#two">and</a> <a href="#three">Willump</a></div>
+<div id="whitebackground">
+<div id="nunucontentcontainer">
+<div id="one" class="nunucontentbox"><h>Info</h><br>
+Name<font style="float:right;">
+Nunu</font><br>
+Age<font style="float:right;">
+13</font><br>
+Gender<font style="float:right;">
+Male</font><br>
+Height<font style="float:right;">
+4'6"</font><br>
+Hair Color<font style="float:right;">
+Brown</font><br>
+Eye Color<font style="float:right;">
+Cyan</font><br>
+Likes<font style="float:right;">
+Stories, snow, music.</font><br>
+Dislikes<font style="float:right;">
+Heat, sand, waiting.</font><br>
+Orientation<font style="float:right;">
+Straight</font><br>
+Marital<font style="float:right;">
+<a class="class1" href="https://roleplay.chat/profile.php?user=" target="_blank">Single</a></font><br><center><br>
+</div>
+<div id="two" class="nunucontentbox">
+<h>History</h><br>
+One of the Notai, a nomadic tribe that long traveled the Freljord Crest icon.png Freljord, Nunu Nunu learned from his mother, Layka, that behind every thing is a story. Together, they gathered tales that Layka turned into songs. For Nunu, nothing was better than journeying from village to village, hearing his mother sing of ancient heroes. With music and dance, the Notai brought one last celebration to everyone they met, as each winter’s chill set in.
+<br><br>
+Riding the wave of frost spilling from Anivia's Anivia's wings, his heart beating the rhythm of a jubilant song, Nunu’s world was full of possibility.
+<br><br>
+On his fifth nameday, Layka gave Nunu a special gift: a flute, so he could learn to play her melodies himself. In the safety of their cart, the two bundled together and followed the knotted string that served as Layka’s heart-song, recording everywhere they’d been together, as the years came and went.
+<br><br>
+When the caravan was attacked by raiders, Nunu was separated from his mother. Dragged to safety by a band of Frostguard, the surviving Notai children were taken to a village near their towering citadel. Nunu was left to wonder what happened to Layka, waiting to hear her songs on the wind.
+<br><br>
+Snow fell. Weeks passed.
+<br><br>
+Nunu missed his mother desperately, but the Frostguard assured him no child could safely search for her. They weren’t even impressed when he showed them the flute he now called Svellsongur—the name of a mighty blade existing only in his imagination.
+<br><br>
+Nunu spent more and more time alone, escaping into his mother’s songs—the legends and heroes of old. He yearned to be one of these heroes, a warrior like the Frostguard, who could have saved his mother. He even met their leader, Lissandra Lissandra, who asked countless questions about his mother’s stories, always seeking information about one particular song.
+<br><br>
+No one believed Nunu could be a hero, not even the other Notai children, who teased him for his flute when they now had daggers. But Nunu knew the songs in his heart, and one night, he realized how he could prove himself and earn the Frostguard’s help to find his mother.
+<br><br>
+From Lissandra, he’d learned of a fierce monster that killed all who sought its power, thwarting the Frostguard who were sent each year, never to return. There was a song that Nunu’s mother sang… could it be the one Lissandra would always ask about? Suddenly, Nunu understood. Lissandra wanted to know about the yeti.
+<br><br>
+Nunu could name the beast. It would answer his challenge, and feel the wrath of Svellsongur!
+<br><br>
+Using his flute to tame a herd of elkyr, Nunu snuck out into the snow. One lonely child traveled to face a monster, finally living out a legend that not even he could imagine.
+</div>
+<div id="three" class="nunucontentbox">
+<h>Friends</h><br>
+None Yet!
+</div>
+</div>
+<div id="ooccontent">❄️ Friendly ❄️ Crossovers Adored ❄️ Story Focus ❄️ My Code ❄️
+</div>
+</div>
+
+<div id="titlebar"></div>
+<div id="nunu"></div>
+
+<div style="width:100vw;height:100vh;overflow:hidden;position:absolute;">
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+</div>
+</body>

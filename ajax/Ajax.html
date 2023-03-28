@@ -1,0 +1,587 @@
+<head>
+    <title>Recursion Codes</title>
+    <link rel="icon" href="https://media.discordapp.net/attachments/946275070572118056/1089677981598875708/logoicon.png" type="image/icon type">
+    </head>
+<style>
+body { background-color: #455554; overflow:hidden; }
+
+@font-face {font-family: Aaargh; src: url(https://fontlibrary.org/assets/fonts/argh/5697e02c0fd4f166deadba43f9237694/6bf45693079092805e8126c9922eb4ff/AaarghNormal.ttf) }
+@font-face { font-family: Noir; src: url(https://dl.dropboxusercontent.com/s/grhqpawoxucibrw/Champagne%20%26%20Limousines.ttf}
+@font-face { font-family: Vogue; src: url(https://dl.dropboxusercontent.com/s/uhoeww8b96g4qg5/Vogue.ttf) }
+@font-face { font-family: caviar dreams; src: url(https://dl.dropboxusercontent.com/s/348kbbuapao26e4/CaviarDreams.ttf); }
+@font-face { font-family: typewriter; src: url(https://dl.dropboxusercontent.com/s/yp6p21kn2wxf1an/TravelingTypewriter.ttf); }
+@font-face { font-family: brushed; src: url(https://dl.dropboxusercontent.com/s/wkecgrknqz7hcs6/Grunge%20Strokes%2001.ttf); }
+
+h {
+ font-size:46px;
+ text-align: center; 
+ font-weight: bold;
+font-family: Vogue;
+ display: block;
+letter-spacing: 4px;
+}
+
+h2 {
+ font-size:18px;
+ text-align: center; 
+ font-weight: bold;
+font-family: Vogue;
+ display: block;
+letter-spacing: 4px;
+}
+
+b {
+}
+
+a {text-decoration: none;
+ color: #dcdac1;}
+
+p{
+display:inline;
+}
+
+.image2 {
+background-image:url(https://i.imgur.com/EG4X4Si.jpg);
+background-size:cover;
+height:688px;
+width:499px;
+bottom:0px;
+left:0px;
+position:absolute;
+z-index:0;
+background-repeat:no-repeat;
+}
+
+
+ #book {background: none;
+background:url('https://i.imgur.com/RMYDmph.png') center center no-repeat;
+ position: absolute;
+ width: 464px;
+ height: 600px;
+ bottom: 120px;
+box-shadow: -5px 5px 15px 5px #000;
+ left: 500px;
+ overflow-y: hidden;
+z-index:2;
+ overflow-x: hidden;
+border: 2px inset #dfdabc;}
+
+#booktext {position: absolute;
+ width: 380px;
+ height: 430px;
+ bottom: 0px;
+ left: 45px;
+ font-family: Noir;
+ color: #dcdac1;
+ float: right;
+ overflow-y: hidden;
+ overflow-x: hidden;
+letter-spacing: 2px;
+ line-height: 22px;
+transition-duration: 1s;}
+
+.Link1{
+background-image:url(https://i.imgur.com/kcWhDPo.png);
+height:89px;
+width:240px;
+position:absolute;
+bottom:553px;
+left:860px;
+z-index:1;
+background-repeat:no-repeat;
+transform: rotate(90deg);
+border: 2px inset #dfdabc;
+transition-duration: 1s;
+}
+
+.Link2{
+background-image:url(https://i.imgur.com/xLtEsZd.png);
+height:89px;
+width:240px;
+left:860px;
+bottom:385px;
+position:absolute;
+z-index:1;
+background-repeat:no-repeat;
+transform: rotate(90deg);
+border: 2px inset #dfdabc;
+transition-duration: 1s;
+}
+
+.Link3{
+background-image:url(https://i.imgur.com/1X4wkh6.png);
+height:89px;
+width:240px;
+position:absolute;
+z-index:1;
+left:860px;
+bottom:198px;
+background-repeat:no-repeat;
+transform: rotate(90deg);
+border: 2px inset #dfdabc;
+transition-duration: 1s;
+}
+
+.link1:hover{
+transform: translateX(15px) rotate(90deg);
+transition-duration: 1s;
+}
+
+.link2:hover{
+transform: translateX(15px) rotate(90deg);
+transition-duration: 1s;
+
+}
+
+.link3:hover{
+transform: translateX(15px) rotate(90deg);
+transition-duration: 1s;
+
+}
+
+.linkshadow{
+width:89px;
+height:600px;
+box-shadow: 50px 5px 15px #000;
+position:absolute;
+z-index:0;
+bottom:122px;
+left:900px;
+}
+
+.ribbon{
+background-image:url(https://i.imgur.com/BDhX8hm.png);
+background-size: 50px 147px;
+width:50px;
+height: 147px;
+position:absolute;
+z-index:0;
+left:540px;
+bottom:50px;
+transition-duration: 1s;
+filter: drop-shadow(-2px 15px 3px #000) drop-shadow(1px 0px 0px #000);
+}
+.ribbon:hover{
+transform: translateY(15px);
+transition-duration: 1s;
+}
+
+.folder{
+background-image:url(https://images2.imgbox.com/c3/7e/H4SjOcrY_o.png);
+width:1000px;
+height:678px;
+position:absolute;
+left:390px;
+bottom:99px;
+z-index:3;
+filter: drop-shadow(-1px 0px 0px #000) drop-shadow(3px 0px 0px #000);
+visibility:hidden;
+transition-duration: 1s;
+opacity:0;
+}
+
+.foldervisible{
+background-image:url(https://images2.imgbox.com/c3/7e/H4SjOcrY_o.png);
+width:1000px;
+height:678px;
+position:absolute;
+left:390px;
+bottom:99px;
+z-index:3;
+filter: drop-shadow(-1px 0px 0px #000) drop-shadow(3px 0px 0px #000);
+visibility:visible;
+transition-duration: 1s;
+opacity:1;
+}
+.foldervisible2{
+background-image:url(https://i.imgur.com/4BV4i3E.png);
+width:1000px;
+height:678px;
+position:absolute;
+left:390px;
+bottom:99px;
+z-index:3;
+filter: drop-shadow(-1px 0px 0px #000) drop-shadow(3px 0px 0px #000);
+visibility:visible;
+transition-duration: 1s;
+opacity:1;
+}
+.foldervisible3{
+background-image:url(https://i.imgur.com/m1ScVo1.png);
+width:1000px;
+height:678px;
+position:absolute;
+left:390px;
+bottom:99px;
+z-index:3;
+filter: drop-shadow(-1px 0px 0px #000) drop-shadow(3px 0px 0px #000);
+visibility:visible;
+transition-duration: 1s;
+opacity:1;
+}
+
+.navbuttonright{
+background-image:url(https://i.imgur.com/HRkyrUT.png);
+width:50px;
+height:50px;
+background-size:cover;
+left:1280px;
+bottom:140px;
+z-index:4;
+position:absolute;
+opacity:0;
+transition-duration: 1s;
+visibility:hidden;
+}
+
+.navbuttonrightvisible{
+background-image:url(https://i.imgur.com/MXTmDuN.png);
+width:50px;
+height:50px;
+background-size:cover;
+left:1280px;
+bottom:140px;
+z-index:4;
+position:absolute;
+opacity:1;
+transition-duration: 1s;
+visibility:visible;
+}
+.navbuttonleft{
+background-image:url(https://i.imgur.com/KFLQJKZ.png);
+width:50px;
+height:50px;
+background-size:cover;
+left:455px;
+bottom:140px;
+z-index:4;
+position:absolute;
+transform: rotate(180deg);
+transition-duration: 1s;
+opacity:0;
+visibility:hidden;
+}
+.navbuttonleftvisible{
+background-image:url(https://i.imgur.com/drzKygi.png);
+width:50px;
+height:50px;
+background-size:cover;
+left:455px;
+bottom:140px;
+z-index:4;
+position:absolute;
+transform: rotate(180deg);
+transition-duration: 1s;
+opacity:1;
+visibility:visible;
+}
+
+.page1left{position:absolute;
+left:75px;
+top:55px;
+transition-duration: 1s;
+opacity:1;
+visibility:visible;
+font-family:typewriter;
+width:400px;
+height:540px;
+font-size:16px;
+line-height:18px;
+}
+
+.page1right{position:absolute;
+left:540px;
+top:55px;
+width:400px;
+transition-duration: 1s;
+opacity:1;
+visibility:visible;
+font-family:typewriter;
+font-size:16px;
+line-height:18px;}
+
+.page2left{position:absolute;
+left:75px;
+top:55px;
+transition-duration: 1s;
+opacity:1;
+visibility:visible;
+font-family:typewriter;
+width:400px;
+height:540px;
+font-size:16px;
+line-height:18px;}
+
+.page2right{position:absolute;
+left:540px;
+top:55px;
+transition-duration: 1s;
+opacity:1;
+width:400px;
+visibility:visible;
+font-family:typewriter;
+font-size:16px;
+line-height:18px;
+}
+.page3left{position:absolute;
+left:75px;
+top:55px;
+transition-duration: 1s;
+opacity:1;
+visibility:visible;
+font-family:typewriter;
+width:400px;
+height:540px;
+font-size:16px;
+line-height:18px;
+}
+.page3right{position:absolute;
+left:540px;
+top:55px;
+width:400px;
+transition-duration: 1s;
+opacity:1;
+visibility:visible;
+font-family:typewriter;
+font-size:16px;
+line-height:18px;
+}
+
+.nocontent{
+opacity:0;
+visibility:hidden;
+}
+
+.box{
+position:fixed;
+bottom:160px;
+left:538px;
+width: 393px; 
+height: 385px; 
+overflow: hidden;
+opacity:0;
+transition-duration: 1s;
+color:#dcdac1;
+z-index:3;
+}
+
+.box:target {
+opacity: 1;
+overflow: hidden;
+transition-duration: 1s;}
+
+</style>
+<body>
+<div class="image2"></div>
+<div id="book"><div id="booktext">
+
+</div>
+</div>
+
+<div id="one" class="box">
+<br><h>Food</h><br>
+<center>
+<p2>
+<h2>Sandwiches</h2><center>
+Made daily with farm fresh cheese and ham.
+</center>
+<h2>Crossiants</h2><center>
+Baked and delivered in the morning and afternoon for freshness. Goes well with butter and fillings.
+</center><br><br>All food is donated at end of day.<br>
+
+</center>
+</b></div>
+
+<div id="two" class="box">
+<br><h>Drinks</h>
+<br>
+<h2>Macchiato</h2><center>
+Espresso with a dash of frothy steamed milk.</center>
+<h2>Cappucino</h2><center>
+Made with whole, organic milk and foam.</center>
+<h2>Espresso</h2><center>
+Roasted in-house, the purest of coffee.</center>
+
+</div>
+<div id="three" class="box">
+<br><h>Desserts</h><br>
+<h2>Crepe Cake</h2><center>
+Luxuriously airy and creamy with at least fifteen layers per slice.
+</center><h2>Cream Puffs</h2><center>
+Large cream puffs filled with fresh cream and dusted with powdered sugar.
+</center><h2>Tarts</h2><center>From egg tarts to fruit, all our delicate tarts are made with care.
+</center>
+</div>
+</div>
+</div>
+
+
+<a class="link1" href="#one"></a><br><br>
+<a class="link2" href="#two"></a><br><br>
+<a class="link3" href="#three"></a><br><br>
+<div class="linkshadow"></div>
+<a class="ribbon" href="#" onclick="folderopen()"></a>
+<div id="foldermain" class="folder">
+<div id="page1leftid" class="page1left"><div style="padding-left:185px;">
+Name:<font style="float:right; font-family:brushed; font-size:150px; left:320px; top:-36px; display:block; position:absolute;">L</font>
+<br>Alias:<font style="float:right;">Ajax</font>
+<br>Sex:<font style="float:right;">Male</font>
+<br>Age:<font style="float:right;">28</font>
+<br>Hair Color:<font style="float:right;">Blonde-Green</font>
+<br>Eye Color:<font style="float:right;">Yellow</font>
+<br>Height:<font style="float:right;">6'4"</font>
+<br>Weight:<font style="float:right;">178 lb</font>
+<br>Cover:<font style="float:right;">Barista</font>
+<br>Partner: <font style="float:right;">None</font>
+</div><br><br>
+We told <b>Ajax</b> to stop <p style="text-decoration: line-through;">smoking</p> but he keeps telling us it's a hard habit to quit. Either way we've been keeping tabs on him whether he likes it or not to make sure he's not blowing his cover. At least he never smells like it, according to
+what <b>Helen</b> says. Anyway, the order to change his post to <b>managing an upscale coffee shop</b> went through. The <b>Director</b> didn't object to it and we're all pretty sure he fits right in with the crowd. Hopefully this time nobody will ask questions, he
+looked a little too fancy to be working at a pizza shop anyway. Mistake on our part for that. We'll make sure to give him some input next time we change his location. Currently, we've observed him doing deliveries and serve customers. Everything's fine.
+
+
+</div>
+
+<div id="page1rightid" class="page1right">Background
+<br>
+So the <b>rumor</b> goes that <b>Ajax</b> was an <b>MI6</b> import. <b>Records</b> say that he's a <b>Director's kid</b> and they shipped him over to <b>England</b> for some formal training when he was younger before he got flown back. Don't know what happened there 
+but when he came back they sent a bunch of ties with him. Since then he's been <b>spotless</b> on nearly everything he does. Not sure if <b>London</b> really has a one-up on us or if he was just <b>talented</b> from the start. But that's besides
+the point. He's been <b>training since he was a teen</b>. Even when he's on vacation it's hard to get a hold of him unless you get the <b>Director</b> on the phone. Where does he even go anyway? Since he started back in <b style="font-family:brushed">LLLL</b>
+we've been getting more and more intel. He can be a real <b>workaholic</b> when he wants to be. He's a little too <b>confident</b> in his abilities sometimes. But it always worked out. I'd say we tell the guy life isn't some kind of movie but
+by now he's old enough to understand that. Funny that everybody thinks he's a few years younger when they meet him though. We've gone through some of the older files from last year and we figured out that he has been keeping one thing constant
+between all the <b>different names</b> we've given him. That dumbass keeps dragging that <b>cat</b> everytime he changes post. Even when we offer to keep it in the office for him.
+</div>
+<div id="page2leftid" class="page2left">Analysis<br>
+We couldn't figure out exactly what he knows but we've broken it down to what we've seen.<br><br>
+Definitely <b>multilingual</b>, he spoke fluently in <b>four</b> other languages before. Not amazing, but certainly not the worst. <br><br>
+He has some <b>expertise</b> with firearms to say the least. But we've noticed a preference for bullpup style rifles and pistols the most. <br><br>
+Not to mention he's beaten four other agents at <b>hand to hand</b> so he's definitely strong underneath those fancy clothes.<br><br>
+Though all that pales in comparison to the <b>charisma</b> he has. We're not sure on if we should chalk it to charm or intelligence, a bit of both most likely.<br><br>
+Having to go over his <b>weak points</b>, he's still human after all, and he gets a little <b>aggressive</b> at certain types of people. It's easier for people to <b>get in his head</b>. <br><br>
+<b>Worst</b> of all he doesn't seem to always stick to protocol. Even if we give him a <b>fake name</b> he still insists by going as <b>Ajax</b>.<br><br>
+</div>
+
+<div id="page2rightid"class="page2right">Interactions<br>
+Haven't gotten any new intel yet. This will be updated.</div>
+<div id="page3leftid" class="page3left">Current Events<br>
+Going to watch him for the next few weeks. Nothing happened so far and he's been shut-in. Probably cause of the Coronavirus thing. Need more masks.</div>
+<div id="page3rightid"class="page3right"><center><b style="font-size:30px;">AGENCY EYES ONLY</b></center>
+<br>Thanks for reading.
+<br>My code.
+<br>DM/Post Friendly</div>
+</div>
+<div id="foldernavbuttonleft" class="navbuttonleft" onclick="left()"></div>
+<div id="foldernavbuttonright" class="navbuttonright" onclick="right()"></div>
+
+
+
+<script>
+var opened = false;
+var page = 1;
+page1leftid.className= "nocontent";
+page1rightid.className= "nocontent";
+page2leftid.className= "nocontent";
+page2rightid.className= "nocontent";
+page3leftid.className= "nocontent";
+page3rightid.className= "nocontent";
+foldernavbuttonleft.className= "nocontent";
+foldernavbuttonright.className= "nocontent";
+function folderopen(){
+if (opened == false){
+page1leftid.className= "page1left";
+page1rightid.className= "page1right";
+foldermain.className = "foldervisible";
+foldernavbuttonleft.className = "navbuttonleftvisible";
+foldernavbuttonright.className = "navbuttonrightvisible";
+opened = true
+}
+else if (opened == true){
+foldermain.className = "folder";
+foldernavbuttonleft.className = "navbuttonleft";
+foldernavbuttonright.className = "navbuttonright";
+page1leftid.className= "nocontent";
+page1rightid.className= "nocontent";
+page2leftid.className= "nocontent";
+page2rightid.className= "nocontent";
+page3leftid.className= "nocontent";
+page3rightid.className= "nocontent";
+opened = false
+}
+}
+function left(){
+switch(page){
+case 1:
+foldernavbuttonleft.className = "navbuttonleft";
+foldernavbuttonright.className = "navbuttonright";
+foldermain.className = "foldervisible3";
+page1leftid.className= "nocontent";
+page1rightid.className= "nocontent";
+page3leftid.className= "page3left";
+page3rightid.className= "page3right";
+setTimeout(function(){foldernavbuttonleft.className = "navbuttonleftvisible";}, 1000);
+setTimeout(function(){foldernavbuttonright.className = "navbuttonrightvisible";}, 1000);
+page = 3;
+break;
+case 2:foldermain.className = "foldervisible";
+foldernavbuttonleft.className = "navbuttonleft";
+foldernavbuttonright.className = "navbuttonright";
+page2leftid.className= "nocontent";
+page2rightid.className= "nocontent";
+page1leftid.className= "page1left";
+page1rightid.className= "page1right";
+setTimeout(function(){foldernavbuttonleft.className = "navbuttonleftvisible";}, 1000);
+setTimeout(function(){foldernavbuttonright.className = "navbuttonrightvisible";}, 1000);
+page = 1;
+break;
+case 3:foldermain.className = "foldervisible2";
+foldernavbuttonleft.className = "navbuttonleft";
+foldernavbuttonright.className = "navbuttonright";
+page3leftid.className= "nocontent";
+page3rightid.className= "nocontent";
+page2leftid.className= "page2left";
+page2rightid.className= "page2right";
+setTimeout(function(){foldernavbuttonleft.className = "navbuttonleftvisible";}, 1000);
+setTimeout(function(){foldernavbuttonright.className = "navbuttonrightvisible";}, 1000);
+page = 2;
+break;
+}
+}
+function right(){
+switch(page){
+case 1:foldermain.className = "foldervisible2";
+foldernavbuttonleft.className = "navbuttonleft";
+foldernavbuttonright.className = "navbuttonright";
+page1leftid.className= "nocontent";
+page1rightid.className= "nocontent";
+page2leftid.className= "page2left";
+page2rightid.className= "page2right";
+setTimeout(function(){foldernavbuttonleft.className = "navbuttonleftvisible";}, 1000);
+setTimeout(function(){foldernavbuttonright.className = "navbuttonrightvisible";}, 1000);
+page = 2;
+break;
+case 2:foldermain.className = "foldervisible3";
+foldernavbuttonleft.className = "navbuttonleft";
+foldernavbuttonright.className = "navbuttonright";
+page2leftid.className= "nocontent";
+page2rightid.className= "nocontent";
+page3leftid.className= "page3left";
+page3rightid.className= "page3right";
+setTimeout(function(){foldernavbuttonleft.className = "navbuttonleftvisible";}, 1000);
+setTimeout(function(){foldernavbuttonright.className = "navbuttonrightvisible";}, 1000);
+page = 3;
+break;
+case 3:foldermain.className = "foldervisible";
+foldernavbuttonleft.className = "navbuttonleft";
+foldernavbuttonright.className = "navbuttonright";
+page3leftid.className= "nocontent";
+page3rightid.className= "nocontent";
+page1leftid.className= "page1left";
+page1rightid.className= "page1right";
+setTimeout(function(){foldernavbuttonleft.className = "navbuttonleftvisible";}, 1000);
+setTimeout(function(){foldernavbuttonright.className = "navbuttonrightvisible";}, 1000);
+page = 1;
+break;
+}
+}
+
+</script>
+</body>

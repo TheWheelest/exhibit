@@ -1,0 +1,606 @@
+<head>
+    <title>Recursion Codes</title>
+    <link rel="icon" href="https://media.discordapp.net/attachments/946275070572118056/1089677981598875708/logoicon.png" type="image/icon type">
+    </head>
+<style>
+@import url("https://dl.dropboxusercontent.com/s/9vswduiydvt35da/jquery-sakura.min.css");
+body{
+margin:0;
+overflow:hidden;
+}
+
+@font-face { font-family: breath; src: url(https://dl.dropboxusercontent.com/s/dcwiv2jdt9bhv9f/FOTRodin%20Pro%20M.woff?) }
+@font-face { font-family: ghibli; src: url(https://dl.dropboxusercontent.com/s/u950c1ypqokl4ld/ITC%20Avant%20Garde%20Gothic%20Medium.otf?dl=0) }
+@font-face {font-family: Caviar; src: url(https://dl.dropboxusercontent.com/s/348kbbuapao26e4/CaviarDreams.ttf) }
+@keyframes fall {
+ 0% {
+ opacity: 0.9;
+ top: 0
+ }
+ 100% {
+ opacity: 0.2;
+ top: 100%
+ }
+}
+
+@keyframes blow-soft-left {
+ 0% {
+ margin-left: 0
+ }
+ 100% {
+ margin-left: -50%
+ }
+}
+
+@keyframes blow-medium-left {
+ 0% {
+ margin-left: 0
+ }
+ 100% {
+ margin-left: -100%
+ }
+}
+
+@keyframes blow-soft-right {
+ 0% {
+ margin-left: 0
+ }
+ 100% {
+ margin-left: 50%
+ }
+}
+
+@keyframes blow-medium-right {
+ 0% {
+ margin-left: 0
+ }
+ 100% {
+ margin-left: 100%
+ }
+}
+
+@keyframes sway-0 {
+ 0% {
+ transform: rotate(-5deg)
+ }
+ 40% {
+ transform: rotate(28deg)
+ }
+ 100% {
+ transform: rotate(3deg)
+ }
+}
+
+@keyframes sway-1 {
+ 0% {
+ transform: rotate(10deg)
+ }
+ 40% {
+ transform: rotate(43deg)
+ }
+ 100% {
+ transform: rotate(15deg)
+ }
+}
+
+@keyframes sway-2 {
+ 0% {
+ transform: rotate(15deg)
+ }
+ 40% {
+ transform: rotate(56deg)
+ }
+ 100% {
+ transform: rotate(22deg)
+ }
+}
+
+@keyframes sway-3 {
+ 0% {
+ transform: rotate(25deg)
+ }
+ 40% {
+ transform: rotate(74deg)
+ }
+ 100% {
+ transform: rotate(37deg)
+ }
+}
+
+@keyframes sway-4 {
+ 0% {
+ transform: rotate(40deg)
+ }
+ 40% {
+ transform: rotate(68deg)
+ }
+ 100% {
+ transform: rotate(25deg)
+ }
+}
+
+@keyframes sway-5 {
+ 0% {
+ transform: rotate(50deg)
+ }
+ 40% {
+ transform: rotate(78deg)
+ }
+ 100% {
+ transform: rotate(40deg)
+ }
+}
+
+@keyframes sway-6 {
+ 0% {
+ transform: rotate(65deg)
+ }
+ 40% {
+ transform: rotate(92deg)
+ }
+ 100% {
+ transform: rotate(58deg)
+ }
+}
+
+@keyframes sway-7 {
+ 0% {
+ transform: rotate(72deg)
+ }
+ 40% {
+ transform: rotate(118deg)
+ }
+ 100% {
+ transform: rotate(68deg)
+ }
+}
+
+@keyframes sway-8 {
+ 0% {
+ transform: rotate(94deg)
+ }
+ 40% {
+ transform: rotate(136deg)
+ }
+ 100% {
+ transform: rotate(82deg)
+ }
+}
+
+.sakura {
+ pointer-events: none;
+ position: absolute;
+ z-index:1;
+}
+
+#topbar{
+background-color:#9b94a8;
+height:15vh;
+width:100%;
+position:absolute;
+z-index:2;
+background-image:url(https://www.transparenttextures.com/patterns/diamond-upholstery.png);
+box-shadow:0vh .5vh 2vh 1vh #aaa4b2;
+}
+
+#bottombar{
+background-color:#9b94a8;
+height:15vh;
+width:100%;
+bottom:0vh;
+position:absolute;
+z-index:2;
+background-image:url(https://www.transparenttextures.com/patterns/diamond-upholstery.png);
+background-attachment:fixed;
+background-position:left;
+box-shadow:0vh -.5vh 2vh 1vh #aaa4b2;
+}
+
+#centercontainer{
+height:70vh;
+width:100%;
+position:absolute;
+top:50%;
+margin-top:-35vh;
+background-color:#dfbebf;
+background-position:left;
+background-attachment:fixed;
+background-image:url(https://www.transparenttextures.com/patterns/vichy.png);
+}
+
+#splash{
+position:absolute;
+top:50%;
+left:50%;
+margin-left:-60vh;
+margin-top:-15vh;
+background-size:contain;
+background-repeat:no-repeat;
+filter:saturate(.8);
+background-image:url(https://64.media.tumblr.com/1c6539c19292246b80e631f3354c81e8/039bfe6b2ad9d262-c1/s400x600/0d07f6e5d1570c3f1e17cab06630ea4655192533.gifv);
+width:30vh;
+height:30vh;
+background-size:cover;
+box-shadow:-1vh 1vh rgb(255,100,100,0.4);
+z-index:3;
+cursor:pointer;
+}
+
+#contentbar{
+top:50%;
+left:50%;
+margin-left:-30vh;
+margin-top:-12vh;
+background-size:contain;
+background-repeat:no-repeat;
+width:60vh;
+height:24vh;
+background-color:rgb(255,255,255,0.2);
+box-shadow:-1vh 1vh rgb(255,100,100,0.4);
+z-index:2;
+position:absolute;
+overflow:hidden;
+}
+
+.contentbox{
+margin-top:0vh;
+position:relative;
+left:0vh;
+top:0vh;
+width:60vh;
+height:24vh;
+font-family:caviar;
+font-size:3vh;
+overflow:auto;
+transition:1s;
+}
+
+.navigation{
+position:absolute;
+top:50%;
+left:50%;
+margin-left:35vh;
+margin-top:5vh;
+width:8vh;
+height:8vh;
+box-shadow:.5vh .5vh rgb(255,100,100,0.4);
+transition:.25s;
+filter:saturate(.3);
+object-fit:cover;
+cursor:pointer;
+}
+
+.navigation:hover{
+filter:saturate(1);
+
+}
+#title{
+font-size:4vh;
+position:absolute;
+top:50%;
+left:50%;
+margin-left:-29vh;
+margin-top:-17vh;
+font-family:caviar;
+text-shadow:.1vh .1vh #rgb(255,100,100,0.4);;
+}
+#title2{
+font-size:4vh;
+position:absolute;
+top:50%;
+left:50%;
+margin-left:-23vh;
+margin-top:13vh;
+font-family:caviar;
+text-shadow:.1vh .1vh #rgb(255,100,100,0.4);;
+}
+#topimg{
+background-image:url(https://media.discordapp.net/attachments/898474723778904078/899265897699622962/8a5.gif);
+background-size:cover;
+}
+#middleimg{
+background-image:url(https://media.discordapp.net/attachments/898474723778904078/899265890036625428/original.gif);
+background-size:cover;
+
+}
+
+#bottomimg{
+background-image:url(https://media.discordapp.net/attachments/898474723778904078/899265892351901736/f9581078815c8a717247e89806f8475a.gif);
+background-size:cover;
+}
+
+
+::-webkit-scrollbar {
+ width: 1vh;
+ scroller:none;
+ right:1vh;
+}
+
+::-webkit-scrollbar-thumb {
+ background-color: rgb(255,100,100,0.4);
+}
+a{
+text-decoration:none;
+color:#8091c9;
+transition:.25s;
+}
+a:hover{
+color:rgb(255,100,100,0.4);
+}
+</style>
+<body>
+<Div id="topbar"></div>
+<div id="bottombar"></div>
+<div id="centercontainer"></div></div>
+<div id="splash" onclick="playmusic()"></div>
+<div id="title">don't be afraid . . .</div>
+<div id="title2">to open your hearts to others.</div>
+<div id="topimg" class="navigation" onclick="showone()" style="margin-top:-13vh"></div>
+<div id="middleimg" class="navigation" onclick="showtwo()" style="margin-top:-4vh"></div>
+<div id="bottomimg" class="navigation" onclick="showthree()"><img src=""></div>
+<div id="contentbar">
+
+<div id="one" class="contentbox"><div style="padding:1vh">
+Name<font style="float:right;">
+Tamaki Suoh</font><br>
+Gender<font style="float:right;">
+Male</font><br>
+Height<font style="float:right;">
+183cm</font><br>
+Orientation<font style="float:right;">
+Straight</font><br>
+Marital<font style="float:right;">
+<a class="fancy" href="https://roleplay.chat/profile.php?user=" target="_blank">Single</a></font><br>
+Likes<font style="float:right;">
+Haruhi, Hosting, Friends</font><br>
+
+</div></div>
+<div class="contentbox"><div style="padding:1vh">
+Projects rather often.<br>
+Musically talented.<br>
+Does not have a daddy kink.<br>
+Blasts the Hosts' group chat.<br>
+Kyoya has been cried to.<br>
+Romantic, in all definitions.<br>
+Smart at times, chalk it up to luck.<br>
+Family problems, obviously.
+</div></div>
+<div class="contentbox"><div style="padding:1vh">
+Don't be weird.<br>
+My code.<br>
+Friendly.<br>
+Discord OK.<br>
+</div>
+
+</div>
+</div>
+<audio id="music" src="https://dl.dropboxusercontent.com/s/fm4ou799btln4dw/Shissou%20With%20Guitar%20Riff%20%28Japanese%20Version%29.mp3"></audio>
+</body>
+<script>
+var playingmusic=false;
+ var audio = document.getElementById("music");
+ audio.volume="0.2"
+function playmusic(){
+ if(playingmusic === false){
+ audio.play();
+ playingmusic = true;
+ }else{
+ audio.pause();
+ playingmusic = false;
+ }
+ }
+ 
+var one = document.getElementById('one');
+function showone(){
+one.style.marginTop="0vh";
+}
+function showtwo(){
+one.style.marginTop="-24vh";
+}
+function showthree(){
+one.style.marginTop="-48vh";
+}
+const Sakura = function(selector, options) {
+ if (typeof selector === 'undefined') {
+ throw new Error('No selector present. Define an element.');
+ }
+
+ this.el = document.querySelector(selector);
+
+ // Defaults for the option object, which gets extended below.
+ const defaults = {
+ className: 'sakura', // Classname of the petal. This corresponds with the css.
+ fallSpeed: 1, // Speed factor in which the petal falls (higher is slower).
+ maxSize: 34, // The maximum size of the petal.
+ minSize: 24, // The minimum size of the petal.
+ delay: 300, // Delay between petals.
+ colors: [
+ {
+ // You can add multiple colors (chosen randomly) by adding elements to the array.
+ gradientColorStart: 'rgba(182, 44, 51, 1)', // Gradient color start (rgba).
+ gradientColorEnd: 'rgba(200, 51, 46, 1)', // Gradient color end (rgba).
+ gradientColorDegree: 120, // Gradient degree angle.
+ },
+ ],
+ };
+
+ // Merge defaults with user options.
+ const extend = function(originalObj, newObj) {
+ Object.keys(originalObj).forEach(key => {
+ if (newObj && Object.prototype.hasOwnProperty.call(newObj, key)) {
+ const origin = originalObj;
+ origin[key] = newObj[key];
+ }
+ });
+
+ return originalObj;
+ };
+
+ this.settings = extend(defaults, options);
+
+ // Hide horizontal scrollbars on the target element.
+ this.el.style.overflowX = 'hidden';
+
+ // Random array element
+ function randomArrayElem(arr) {
+ return arr[Math.floor(Math.random() * arr.length)];
+ }
+
+ // Random integer
+ function randomInt(min, max) {
+ return Math.floor(Math.random() * (max - min + 1)) + min;
+ }
+
+ // Check for animation events.
+ const prefixes = ['webkit', 'moz', 'MS', 'o', ''];
+ function PrefixedEvent(element, type, callback) {
+ for (let p = 0; p < prefixes.length; p += 1) {
+ let animType = type;
+
+ if (!prefixes[p]) {
+ animType = type.toLowerCase();
+ }
+
+ element.addEventListener(prefixes[p] + animType, callback, false);
+ }
+ }
+
+ // Check if the element is in the viewport.
+ function elementInViewport(el) {
+ const rect = el.getBoundingClientRect();
+
+ return (
+ rect.top >= 0 &&
+ rect.left >= 0 &&
+ rect.bottom <=
+ (window.innerHeight || document.documentElement.clientHeight) &&
+ rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+ );
+ }
+
+ this.createPetal = () => {
+ if (this.el.dataset.sakuraAnimId) {
+ setTimeout(() => {
+ window.requestAnimationFrame(this.createPetal);
+ }, this.settings.delay);
+ }
+
+ // Name the animations. These have to match the animations in the CSS file.
+ const animationNames = {
+ blowAnimations: [
+ 'blow-soft-left',
+ 'blow-medium-left',
+ 'blow-soft-right',
+ 'blow-medium-right',
+ ],
+ swayAnimations: [
+ 'sway-0',
+ 'sway-1',
+ 'sway-2',
+ 'sway-3',
+ 'sway-4',
+ 'sway-5',
+ 'sway-6',
+ 'sway-7',
+ 'sway-8',
+ ],
+ };
+
+ // Get one random animation of each type and randomize fall time of the petals
+ const blowAnimation = randomArrayElem(animationNames.blowAnimations);
+ const swayAnimation = randomArrayElem(animationNames.swayAnimations);
+ const fallTime =
+ (document.documentElement.clientHeight * 0.007 +
+ Math.round(Math.random() * 5)) *
+ this.settings.fallSpeed;
+
+ // Create animations
+ const animationsArr = [
+ `fall ${fallTime}s linear 0s 1`,
+ `${blowAnimation} ${(fallTime > 30 ? fallTime : 30) -
+ 20 +
+ randomInt(0, 20)}s linear 0s infinite`,
+ `${swayAnimation} ${randomInt(2, 4)}s linear 0s infinite`,
+ ];
+ const animations = animationsArr.join(', ');
+
+ // Create petal and give it a random size.
+ const petal = document.createElement('div');
+ petal.classList.add(this.settings.className);
+ const height = randomInt(this.settings.minSize, this.settings.maxSize);
+ const width = height - Math.floor(randomInt(0, this.settings.minSize) / 3);
+
+ // Get a random color.
+ const color = randomArrayElem(this.settings.colors);
+
+ petal.style.background = `linear-gradient(${color.gradientColorDegree}deg, ${color.gradientColorStart}, ${color.gradientColorEnd})`;
+ petal.style.webkitAnimation = animations;
+ petal.style.animation = animations;
+ petal.style.borderRadius = `${randomInt(
+ this.settings.maxSize,
+ this.settings.maxSize + Math.floor(Math.random() * 10),
+ )}px ${randomInt(1, Math.floor(width / 4))}px`;
+ petal.style.height = `${height}px`;
+ petal.style.left = `${Math.random() * document.documentElement.clientWidth -
+ 100}px`;
+ petal.style.marginTop = `${-(Math.floor(Math.random() * 20) + 15)}px`;
+ petal.style.width = `${width}px`;
+
+ // Remove petals of which the animation ended.
+ PrefixedEvent(petal, 'AnimationEnd', () => {
+ if (!elementInViewport(petal)) {
+ petal.remove();
+ }
+ });
+
+ // Remove petals that float out of the viewport.
+ PrefixedEvent(petal, 'AnimationIteration', () => {
+ if (!elementInViewport(petal)) {
+ petal.remove();
+ }
+ });
+
+ // Add the petal to the target element.
+ this.el.appendChild(petal);
+ };
+
+ this.el.setAttribute(
+ 'data-sakura-anim-id',
+ window.requestAnimationFrame(this.createPetal),
+ );
+};
+
+Sakura.prototype.start = function() {
+ const animId = this.el.dataset.sakuraAnimId;
+ if (!animId) {
+ this.el.setAttribute(
+ 'data-sakura-anim-id',
+ window.requestAnimationFrame(this.createPetal),
+ );
+ } else {
+ throw new Error('Sakura is already running.');
+ }
+};
+
+Sakura.prototype.stop = function(graceful = false) {
+ const animId = this.el.dataset.sakuraAnimId;
+ if (animId) {
+ window.cancelAnimationFrame(animId);
+ this.el.setAttribute('data-sakura-anim-id', '');
+ }
+
+ // Remove all current blossoms at once.
+ // You can also set 'graceful' to true to stop new petals from being created.
+ // This way the petals won't be removed abruptly.
+ if (!graceful) {
+ setTimeout(() => {
+ const petals = document.getElementsByClassName(this.settings.className);
+ while (petals.length > 0) {
+ petals[0].parentNode.removeChild(petals[0]);
+ }
+ }, this.settings.delay + 50);
+ }
+};
+
+ var sakura = new Sakura('body');
+</script>

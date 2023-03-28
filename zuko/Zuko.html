@@ -1,0 +1,241 @@
+<head>
+    <title>Recursion Codes</title>
+    <link rel="icon" href="assets/logoicon.png" type="image/icon type">
+    </head>
+<style>
+body{
+margin:0;
+background-color:#e8b98b;
+}
+
+@font-face { font-family: bebas; src: url(assets/Bebas.ttf) }
+@font-face { font-family: avantegarde; src: url(assets/avantgarde.otf) }
+@font-face { font-family: Lemon; src: url(assets/LemonMilklight.otf) }
+
+#splash{
+background-image:url(assets/zukosplash.png);
+width:48.6vh;
+height:60vh;
+background-size:contain;
+position:absolute;
+right:0vh;
+bottom:0vh;
+}
+
+#splash2{
+background-image:url(assets/irohsplash.png);
+width:48.6vh;
+height:60vh;
+background-size:contain;
+position:absolute;
+left:0vh;
+bottom:0vh;
+}
+
+#zukoquote{
+position:absolute;
+font-family:bebas;
+bottom:65vh;
+font-size:5vh;
+width:100vh;
+left:50%;
+margin-left:-50vh;
+color:#ba5529;
+text-shadow:.25vh .25vh #4b0c03;
+text-align:right;
+}
+#irohquote{
+position:absolute;
+font-family:bebas;
+bottom:5vh;
+font-size:5vh;
+left:50%;
+text-align:left;
+width:100vh;
+margin-left:-50vh;
+color:white;
+text-shadow:.25vh .25vh #a9a9a9;
+}
+
+
+#menu{
+position:absolute;
+font-family:avantegarde;
+z-index:12;
+opacity:1;
+transition:1s;
+font-size:4.5vh;
+width:100vh;
+bottom:19vh;
+position:absolute;
+left:50%;
+margin-left:-50vh;
+object-align:center;
+text-align:center;
+
+}
+
+.menulink{
+color:rgb(255,255,255,0.3);
+text-shadow: .25vh .25vh rgb(0,0,0,0.3);
+cursor:pointer;
+display:inline-block;
+}
+
+.menulink:hover{
+color:white;
+}
+
+#profilecontainer{
+width:100vh;
+height:38vh;
+position:absolute;
+bottom:50%;
+left:50%;
+margin-left:-50vh;
+margin-bottom:-24vh;
+overflow:hidden;
+opacity:1;
+z-index:12;
+background-color:rgb(255,255,255,0.4);
+transition:1s;
+box-shadow:1.25vh 1.25vh rgb(0,0,0,0.3);
+font-size:4vh;
+font-family:arial;
+color:#ba5529;
+text-shadow:.1vh .1vh #4b0c03;
+display:inline;
+}
+
+.profilecontent{
+width:100vh;
+height:38vh;
+transition:2s;
+overflow:auto;
+position:absolute;
+top:0vh;
+left:0vh;
+display:inline;
+transition-timing-function:ease-out;
+}
+a{
+text-decoration:none;
+color:inherit;
+}
+
+
+::-webkit-scrollbar {
+ width: 1vh;
+ scroller:none;
+ right:1vh;
+}
+
+::-webkit-scrollbar-thumb {
+ background-image:linear-gradient(#ba5529, #ffffff);
+}
+
+.profilecontent img{
+width:15vh;
+height:15vh;
+box-shadow:.5vh .5vh rgb(182,39,9,0.7);
+margin-top:.25vh;
+}
+
+</style>
+<body>
+<div id="splash"></div>
+<div id="splash2"></div>
+<div id="zukoquote">How could you forgive me so easily? I thought you would be furious with me.</div>
+<div id="irohquote">I was never angry with you, I was sad. Because I thought you'd lost your way.</div>
+<div id="menu">
+<div class="menulink" onclick="showstats()">Stats</div> 
+<div class="menulink" onclick="showhistory()">History</div> 
+<div class="menulink" onclick="showgallery()">Headcanons</div> 
+<div class="menulink" onclick="showencounters()">Encounters</div> 
+<div class="menulink" onclick="showooc()">OOC</div>
+</div>
+
+
+<div id="profilecontainer">
+<div id="one" class="profilecontent" style="font-family:lemon;"><div style="padding:1vh;height:36vh;">
+Name<font style="float:right;">
+Zuko </font><br>
+Age<font style="float:right;">
+18</font><br>
+Gender<font style="float:right;">
+Male</font><br>
+Height<font style="float:right;">
+5'9"</font><br>
+Orientation<font style="float:right;">
+Straight</font><br>
+Marital<font style="float:right;">
+<a class="fancy" href="https://roleplay.chat/profile.php?user=" target="_blank">Single</a></font>
+
+</div></div>
+<div id="two" class="profilecontent" style="left:100vh;font-size:3vh;font-family:arial;"><div style="padding:1vh;height:36vh;">
+ Born as a prince in the Fire Nation Royal Family. Originally 
+ the primary enemy of Team Avatar, Zuko devoted three years to trying to capture 
+ the long-lost Avatar to end his banishment and regain his honor as Crown Prince of the Fire Nation.
+ He is recognizable by the distinctive burn scar on the left side of his face from his eyebrow to his cheek,
+ which was given to him by his father, Fire Lord Ozai, shortly before his banishment as a result of an incident
+ in which he unintentionally disrespected his father by speaking out of turn and refusing to duel him.
+ With support from his paternal uncle, General Iroh, and after much internal struggle and turmoil, Zuko rejected
+ Ozai and his model of the Fire Nation.
+</div></div>
+
+<div id="three" class="profilecontent" style="left:200vh;"><div style="padding:1vh;height:36vh;">
+Filled soon.
+
+</div></div>
+<div id="four" class="profilecontent" style="left:300vh;"><div style="padding:1vh;height:36vh;">
+<a target="_blank" href="https://roleplay.chat/profile.php?user=knife+thrower" class="img" target="_blank"><img src="assets/maiicon.jpg"></a>
+</div></div>
+<div id="five" class="profilecontent" style="left:400vh;"><div style="padding:1vh;height:36vh;">
+Don't be weird.<br>
+My code.<br>
+Friendly.<br>
+Discord OK.<br>
+
+</div></div>
+</div>
+
+
+</body>
+<script>
+
+function showstats(){
+one.style.left="0vh";
+two.style.left="100vh";
+three.style.left="200vh";
+four.style.left="300vh";
+five.style.left="400vh";
+}
+function showhistory(){
+one.style.left="-100vh";
+two.style.left="0vh";
+three.style.left="100vh";
+four.style.left="200vh";
+five.style.left="300vh";
+}
+function showgallery(){
+one.style.left="-200vh";
+two.style.left="-100vh";
+three.style.left="0vh";
+four.style.left="100vh";
+five.style.left="200vh";
+}
+function showencounters(){
+one.style.left="-300vh";
+two.style.left="-200vh";
+three.style.left="-100vh";
+four.style.left="0vh";
+five.style.left="100vh";
+}
+function showooc(){
+one.style.left="-400vh";
+two.style.left="-300vh";
+three.style.left="-200vh";
+four.style.left="-100vh";
+five.style.left="0vh";
+}
+</script>

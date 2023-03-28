@@ -1,0 +1,301 @@
+<head>
+    <title>Recursion Codes</title>
+    <link rel="icon" href="assets/logoicon" type="image/icon type">
+    </head>
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+<style>
+body{
+margin:0;
+background-color:#f67071;
+overflow:hidden;
+}
+
+@font-face { font-family: avantgarde; src: url(assets/avantgarde.otf) }
+@font-face { font-family: bebas; src: url(assets/Bebas.ttf) }
+@font-face { font-family: Lemon; src: url(assets/LemonMilklight.otf) }
+
+#musicbutton{
+cursor:pointer;
+position:absolute;
+width:4vh;
+height:4vh;
+background-image:url(assets/wheelmusicbutton.png);
+background-size:contain;
+border-radius:5vh;
+right:21vh;
+bottom:60.5vh;
+z-index:15;
+}
+#wheelsplash{
+position:absolute;
+background-image:url(assets/wheelsplash.png);
+width:60vh;
+height:60vh;
+background-size:cover;
+right:-5vh;
+bottom:-3vh;
+z-index:5;
+pointer-events:none;
+}
+
+#wheelcontainer1{
+position:absolute;
+width:60vh;
+height:15vh;
+right:20vh;
+bottom:60vh;
+background-color:rgb(129,182,238,1);
+box-shadow:.5vh .5vh #0f2132;
+z-index:1;
+font-family:avantgarde;
+overflow:auto;
+font-size:1.4vh;
+}
+
+#wheelcontainer2{
+position:absolute;
+width:60vh;
+height:30vh;
+right:20vh;
+bottom:28vh;
+background-color:rgb(129,182,238,1);
+box-shadow:.5vh .5vh #0f2132;
+z-index:1;
+font-family:avantgarde;
+overflow:auto;
+}
+
+#wheelcontainer3{
+position:absolute;
+width:60vh;
+height:15vh;
+right:20vh;
+bottom:11vh;
+background-color:rgb(129,182,238,1);
+box-shadow:.5vh .5vh #0f2132;
+z-index:1;
+font-family:avantgarde;
+overflow:auto;
+}
+#wheeltext{
+position:absolute;
+right:19.7vh;
+bottom:74.6vh;
+font-size:2.9vh;
+color:rgb(129,182,238,1);
+text-shadow:.4vh .4vh #0f2132;
+z-index:12;
+font-family:lemon;
+}
+
+h{
+font-size:2vh;
+}
+
+.tooltip {
+ position:relative;
+}
+.tooltip:before {
+ content: attr(data-text);
+ position:absolute;
+ top:2vh;
+ transform:translateY(-50%);
+ left:100%;
+ margin-left:1vh;
+ width:18vh;
+ padding:.5vh;
+ border-radius:1vh;
+ background:#0f2132;
+ color: rgb(129,182,238,1);
+ text-align:center;
+ display:none;
+}
+.tooltip:hover:before {
+ display:block;
+}
+.tooltip2 {
+ position:relative;
+}
+.tooltip2:before {
+ content: attr(data-text);
+ position:absolute;
+ top:1.75vh;
+ left:-.25vw;
+ transform:translateY(-50%);
+ bottom:-10vh;
+ width:18vh;
+ height:5.5vh;
+ padding:.5vh;
+ border-radius:1vh;
+ background:#0f2132;
+ color: rgb(129,182,238,1);
+ text-align:center;
+ display:none;
+}
+.tooltip2:hover:before {
+ display:block;
+}
+
+
+::-webkit-scrollbar {
+ width: 5px;
+}
+::-webkit-scrollbar-track {
+ background: transparent;
+}
+::-webkit-scrollbar-thumb {
+background-color:white;
+}
+a{
+text-decoration:none;
+color:#c5ebff;
+transition:1s;
+}
+a:hover{
+color:#ffc5db;
+}
+
+.tooltip3 {
+ position:relative;
+}
+.tooltip3:before {
+ content: attr(data-text);
+ position:absolute;
+ top:.5vh;
+ transform:translateY(-50%);
+ left:100%;
+ margin-left:1vh;
+ width:18vh;
+ padding:.5vh;
+ border-radius:1vh;
+ background:#0f2132;
+ color: rgb(129,182,238,1);
+ text-align:center;
+ display:none;
+}
+.tooltip3:hover:before {
+ display:block;
+}
+.box {
+width:23vh;
+height:40vh;
+background-image:url(wheelchair.png);
+background-size:contain;
+position:absolute;
+right:102.6vh;
+bottom:9.5vh;;
+z-index:20;
+background-repeat:no-repeat;
+cursor:pointer;
+}
+.transform {
+ -webkit-transition: all 2s ease; 
+ -moz-transition: all 2s ease; 
+ -o-transition: all 2s ease; 
+ -ms-transition: all 2s ease; 
+ transition: all 2s ease;
+}
+
+.transform-active {
+transform:rotate(180deg);
+}
+img{
+object-fit:cover;
+}
+</style>
+<body>
+<div id="pattern"></div>
+<div id="wheeltext">The Wheelest, the Wheel Deal</div>
+<div id="musicbutton" onclick="music2();"></div>
+<div id="wheelsplash"></div>
+<div id="wheelcontainer1"><div style="padding:1vh;"><h>Info</h>
+<br>Hi I'm Wheel. 24/M/PST. I write and code. <br>
+I play videogames. Mostly with my friends. Lots of variety.<br>
+Also going to school. CS major turned IT major. <s>Calculus sucks, fuck you Newton.</s><br>
+Warhammer 40K is cool. No miniatures though, just TTRPG.<br><br>
+<h>RP</h><br>
+Feel free to DM me to RP or to get my attention on a name.<br>
+I prefer fluff and anime mostly. Smut is mood / pairing dependent.<br>
+Discord is OK once we RP once or twice.<br><br>
+<h>Codes</h><br>
+See <a target="_blank" href="https://roleplay.chat/profile.php?user=recursion">Recursion.</a><br><br>
+<h>Misc</h><br>
+Yes I chose a girl as my mascot.<br></div></div>
+<div id="wheelcontainer2"><div style="padding:1vh;"><span data-text="A few are private, or their codes aren't updated. Ask for them." class="tooltip"><h>Alts*</h></span></a><br><div style="letter-spacing:1vh;line-height:3vh;">
+<a target="_blank" href="https://roleplay.chat/profile.php?user=gon%20fishing" target="_blank"><img src="assets/gonprofileicon.jpg" style="box-shadow:.5vh .5vh #0f2132;Width:8vh;height:8vh;"></a>
+<a target="_blank" href="https://roleplay.chat/profile.php?user=major%20key" target="_blank"><img src="assets/soraprofileicon.png" style="box-shadow:.5vh .5vh #0f2132;Width:8vh;height:8vh;"></a>
+<a target="_blank" href="https://roleplay.chat/profile.php?user=wild%20heart" target="_blank"><img src="assets/linkprofileicon.png" style="box-shadow:.5vh .5vh #0f2132;Width:8vh;height:8vh;"></a>
+<a target="_blank" href="https://roleplay.chat/profile.php?user=emishi" target="_blank"><img src="assets/ashitakaprofileicon.jpg" style="box-shadow:.5vh .5vh #0f2132;Width:8vh;height:8vh;"></a>
+<a target="_blank" href="https://roleplay.chat/profile.php?user=gooruh" target="_blank"><img src="assets/gooruhprofileicon.jpg" style="box-shadow:.5vh .5vh #0f2132;Width:8vh;height:8vh;"></a>
+<a target="_blank" href="https://roleplay.chat/profile.php?user=orange%20boy" target="_blank"><img src="assets/naranciaprofileicon.jpg" style="box-shadow:.5vh .5vh #0f2132;Width:8vh;height:8vh;"></a>
+<a target="_blank" href="https://roleplay.chat/profile.php?user=prodigal%20son" target="_blank"><img src="assets/zukoprofileicon.png" style="box-shadow:.5vh .5vh #0f2132;Width:8vh;height:8vh;background-color:#e8b98b;" ></a>
+<a target="_blank" href="https://roleplay.chat/profile.php?user=milf%20hunter" target="_blank"><img src="assets/halcyonprofileicon.png" style="box-shadow:.5vh .5vh #0f2132;Width:8vh;height:8vh;"></a>
+<a target="_blank" href="https://roleplay.chat/profile.php?user=somme" target="_blank"><img src="assets/sommeprofileicon.jpg" style="box-shadow:.5vh .5vh #0f2132;Width:8vh;height:8vh;"></a>
+<a target="_blank" href="https://roleplay.chat/profile.php?user=princely" target="_blank"><img src="assets/tamakiprofileicon.jpg" style="box-shadow:.5vh .5vh #0f2132;Width:8vh;height:8vh;"></a>
+<a target="_blank" href="https://roleplay.chat/profile.php?user=twenty%20ounce%20twink" target="_blank"><img src="assets/ventiprofileicon.jpg" style="box-shadow:.5vh .5vh #0f2132;Width:8vh;height:8vh;"></a>
+<a target="_blank" href="https://roleplay.chat/profile.php?user=leonir" target="_blank"><img src="assets/mazprofileicon.jpg" style="box-shadow:.5vh .5vh #0f2132;Width:8vh;height:8vh;"></a>
+<a target="_blank" href="https://roleplay.chat/profile.php?user=return%20to%20monke" target="_blank"><img src="assets/andoprofileicon.jpg" style="box-shadow:.5vh .5vh #0f2132;Width:8vh;height:8vh;"></a>
+<a target="_blank" href="https://roleplay.chat/profile.php?user=moe" target="_blank"><img src="assets/moeprofileicon.jpg" style="box-shadow:.5vh .5vh #0f2132;Width:8vh;height:8vh;"></a>
+<a target="_blank" href="https://roleplay.chat/profile.php?user=designer" target="_blank"><img src="assets/designerprofileicon.jpg" style="box-shadow:.5vh .5vh #0f2132;Width:8vh;height:8vh;"></a>
+<a target="_blank" href="https://roleplay.chat/profile.php?user=triforce%20area" target="_blank"><img src="assets/linkauprofileicon.jpg" style="box-shadow:.5vh .5vh #0f2132;Width:8vh;height:8vh;"></a>
+<a target="_blank" href="https://roleplay.chat/profile.php?user=d%20o%20g" target="_blank"><img src="assets/dogprofileicon.jpg" style="box-shadow:.5vh .5vh #0f2132;Width:8vh;height:8vh;"></a>
+<a target="_blank" href="https://roleplay.chat/profile.php?user=lucia%20lucerne" target="_blank"><img src="assets/luciaprofileicon.jpg" style="box-shadow:.5vh .5vh #0f2132;Width:8vh;height:8vh;"></a>
+<a target="_blank" href="https://roleplay.chat/profile.php?user=kamado%20dragon" target="_blank"><img src="assets/tanjiroprofileicon.jpg" style="box-shadow:.5vh .5vh #0f2132;Width:8vh;height:8vh;"></a>
+<a target="_blank" href="https://roleplay.chat/profile.php?user=Nunu" target="_blank"><img src="assets/nunuprofileicon.jpg" style="box-shadow:.5vh .5vh #0f2132;Width:8vh;height:8vh;"></a>
+<a target="_blank" href="https://roleplay.chat/profile.php?user=ajax" target="_blank"><img src="assets/ajaxprofileicon.jpg" style="box-shadow:.5vh .5vh #0f2132;Width:8vh;height:8vh;"></a>
+<a target="_blank" href="https://roleplay.chat/profile.php?user=weeb" target="_blank"><img src="assets/weebprofileicon.jpg" style="box-shadow:.5vh .5vh #0f2132;Width:8vh;height:8vh;"></a>
+<a target="_blank" href="https://roleplay.chat/profile.php?user=miserum" target="_blank"><img src="assets/stagprofileicon.jpg" style="box-shadow:.5vh .5vh #0f2132;Width:8vh;height:8vh;"></a>
+<a target="_blank" href="https://roleplay.chat/profile.php?user=gone%20fishing" target="_blank"><img src="assets/pykeprofileicon.jpg" style="box-shadow:.5vh .5vh #0f2132;Width:8vh;height:8vh;"></a>
+<a target="_blank" href="https://roleplay.chat/profile.php?user=cam" target="_blank"><img src="assets/camprofileicon.jpg" style="box-shadow:.5vh .5vh #0f2132;Width:8vh;height:8vh;"></a>
+<a target="_blank" href="https://roleplay.chat/profile.php?user=hyakkimaru" target="_blank"><img src="assets/hyakkimaruprofileicon.jpg" style="box-shadow:.5vh .5vh #0f2132;Width:8vh;height:8vh;"></a>
+<a target="_blank" href="https://roleplay.chat/profile.php?user=whitey" target="_blank"><img src="assets/esamirprofileicon.jpg" style="box-shadow:.5vh .5vh #0f2132;Width:8vh;height:8vh;"></a>
+<a target="_blank" href="https://roleplay.chat/profile.php?user=octoson" target="_blank"><img src="assets/amajikiprofileicon.jpg" style="box-shadow:.5vh .5vh #0f2132;Width:8vh;height:8vh;"></a>
+<a target="_blank" href="https://roleplay.chat/profile.php?user=azmodan" target="_blank"><img src="assets/azmodanprofileicon.jpg" style="box-shadow:.5vh .5vh #0f2132;Width:8vh;height:8vh;"></a>
+<a target="_blank" href="https://roleplay.chat/profile.php?user=bussy%20gang" target="_blank"><img src="assets/kanameprofileicon.jpg" style="box-shadow:.5vh .5vh #0f2132;Width:8vh;height:8vh;"></a>
+<a target="_blank" href="https://roleplay.chat/profile.php?user=future%20funk" target="_blank"><img src="assets/futurefunkprofileicon.jpg" style="box-shadow:.5vh .5vh #0f2132;Width:8vh;height:8vh;"></a>
+<a target="_blank" href="https://roleplay.chat/profile.php?user=vaporware" target="_blank"><img src="assets/vaporwareprofileicon.png" style="box-shadow:.5vh .5vh #0f2132;Width:8vh;height:8vh;"></a>
+<a target="_blank" href="https://roleplay.chat/profile.php?user=dream+bbq" target="_blank"><img src="assets/enaprofileicon.png" alt="https://art.pixilart.com/thumb/9a39c810427f4de.png" style="box-shadow:.5vh .5vh #0f2132;Width:8vh;height:8vh;"></a>
+<a target="_blank" href="https://www.instagram.com/wheeltheweeb/" target="_blank"><img src="assets/instagramicon.png" style="box-shadow:.5vh .5vh #0f2132;Width:8vh;height:8vh;background-color:#ffb3e8;"></a>
+</div></div></div>
+<div id="wheelcontainer3"><div style="padding:1vh;"><h>Friends</h><br>
+<a target="_blank" href="https://roleplay.chat/profile.php?user=tweets"><span data-text="You're so pog 💖 " class="tooltip3"><h>Tweets</h></span></a><br>
+<a target="_blank" href="https://roleplay.chat/profile.php?user=Mym"><span data-text="You're sorta pog. " class="tooltip3"><h>Mym</h></span></a><br>
+<a target="_blank" href="https://roleplay.chat/profile.php?user=Mokou"><span data-text="You're a pogette. " class="tooltip3"><h>Mokou</h></span></a><br>
+
+</div></div>
+
+<div class="box transform" id="player" onclick="music();">
+ <audio id="music" src="assets/chairsound.m4a" loop autoloop ></audio>
+</div>
+ <audio id="music2" src="assets/plasticlove.m4a" loop autoloop ></audio>
+
+<script>
+$(".box").click(function() {
+ $('.transform').toggleClass('transform-active');
+});
+var playingmusic = false;
+var playingmusic2 = false;
+function music(){
+ var audio = document.getElementById("music");
+ if(playingmusic === false){
+ audio.play();
+ playingmusic = true;
+ }else{
+ audio.pause();
+ playingmusic = false;
+ }
+audio.volume = 0.15;
+}
+function music2(){
+ var audio2 = document.getElementById("music2");
+ if(playingmusic2 === false){
+ audio2.play();
+ playingmusic2 = true;
+ }else{
+ audio2.pause();
+ playingmusic2 = false;
+ }
+audio2.volume = 0.25;
+}
+</script>
+</body>

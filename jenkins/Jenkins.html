@@ -1,0 +1,233 @@
+<head>
+	<title>Recursion Codes</title>
+	<link rel="icon" href="assets/logoicon.png" type="image/icon type">
+	</head>
+<style>
+body{
+background-color:#d8c6ba;
+transition:1.5s;
+margin:0;
+}
+
+#howlhuman{
+background-image:url(assets/howlnormal.jpg);
+width:57.6vh;
+height:35.625vh;
+position:absolute;
+bottom:30vh;
+left:10vh;
+z-index:2;
+box-shadow:1vh 1vh rgb(90,90,100,0.7);
+cursor:pointer;
+background-size:cover;
+}
+
+#howlnonhuman{
+background-image:url(assets/howlcurse.jpg);
+width:57.6vh;
+height:35.625vh;
+position:absolute;
+bottom:25vh;
+left:15vh;
+z-index:1;
+box-shadow:1vh 1vh rgb(103,167,168,0.6);
+cursor:pointer;
+background-size:cover;
+}
+
+@keyframes fronttobackhuman{
+0%{opacity:1;z-index:2;margin-left:0vh;margin-top:0vh;}
+49%{opacity:0;z-index:2;}
+50%{opacity:0;z-index:1;margin-left:-5vh;margin-bottom:5vh;}
+100%{opacity:1;z-index:1;margin-left:0vh;margin-top:0vh;}
+}
+@keyframes backtofrontnonhuman{
+0%{opacity:1;z-index:1;margin-left:0vh;margin-top:0vh;}
+49%{opacity:0;z-index:1;}
+50%{opacity:0;z-index:2;margin-left:5vh;margin-bottom:-5vh;}
+100%{opacity:1;z-index:2;margin-left:0vh;margin-top:0vh;}
+}
+@keyframes backtofronthuman{
+0%{opacity:1;z-index:1;margin-left:0vh;margin-top:0vh;}
+49%{opacity:0;z-index:1;}
+50%{opacity:0;z-index:2;margin-left:-5vh;margin-bottom:5vh;}
+100%{opacity:1;z-index:2;margin-left:0vh;margin-top:0vh;}
+}
+@keyframes fronttobacknonhuman{
+0%{opacity:1;z-index:2;margin-left:0vh;margin-top:0vh;}
+49%{opacity:0;z-index:2;}
+50%{opacity:0;z-index:1;margin-left:5vh;margin-bottom:-5vh;}
+100%{opacity:1;z-index:1;margin-left:0vh;margin-top:0vh;}
+}
+#lightbackground{
+width:100%;
+height:100%;
+background-image:url(assets/whitediamond.png);
+position:absolute;
+}
+#darkbackground{
+width:100%;
+height:100%;
+background-image:url(assets/whitediamonddark.png);
+position:absolute;
+}
+
+#lightcontentbox{ 
+	width: 80vh;
+ height: 46vh;
+ position: absolute;
+ left: 76vh;
+ bottom: 28vh;
+transition:.75s;
+}
+#darkcontentbox{
+	width: 80vh;
+ height: 46vh;
+ position: absolute;
+ left: 76vh;
+ bottom: 28vh;
+transition:.75s;
+opacity:0;
+pointer-events:none;
+}
+#lightitle{
+top:0vh;
+left:0vh;
+font-weight:bold;
+font-size:8vh;
+font-family:title;
+color:#566272;
+text-shadow:.25vh .25vh rgb(66,66,66,.6);
+transition:1.5s;
+white-space:nowrap;
+}
+
+#darktitle{
+position:absolute;
+bottom:-10vh;
+right:0vh;
+font-weight:bold;
+font-size:8vh;
+font-family:title;
+color:#d7c6bc;
+text-shadow:.25vh .25vh rgb(86,98,114,.6);
+text-align:right;
+opacity:0;
+transition:1.5s;
+z-index:3;
+white-space:nowrap;
+}
+@font-face { font-family: title; src: url(assets/CaviarDreams.ttf) }
+.content{
+background-color:rgb(255,255,255,0.3);
+color:#566272;
+width:76vh;
+height:36vh;
+display:block;
+position:absolute;
+top:10vh;
+font-family:title;
+font-size:2.5vh;
+padding:2vh;
+font-weight:bold;
+overflow:auto;
+}
+
+::-webkit-scrollbar{
+width:0;
+}
+img{
+width:10vh;
+height:10vh;
+border-radius:6vh;
+}
+h{
+font-size:3.5vh;
+}
+h2{
+text-align:left;
+}
+</style>
+<body>
+<div id="lightbackground"></div>
+<div id="darkbackground"></div>
+<div id="lightcontentbox"><div id="lightitle">I brought it on myself,</div>
+<div class="content">
+Name : <span style="float:right">Howl Jenkins Pendragon</span><br>
+Age : <span style="float:right">26</span><br>
+Gender : <span style="float:right">Male</span><br>
+Occupation : <span style="float:right">Wizard</span><br>
+Bereavement : <span style="float:right">Hearts</span><br>
+Marital : <span style="float:right">Answer</span><br>
+<br>
+Howl Jenkins was born to an ordinary family in modern-day Wales. However, he himself was anything but ordinary. Gifted with a natural talent for magic, he began studying it. Even in college, he wrote his thesis on magical spells and charms, and joined a group of other gifted magicians on Earth.</div>
+</div>
+
+
+<div id="darkcontentbox"><div id="darktitle">a bargain years ago.</div>
+<div class="content" style="color:#d7c6bc;"><div style="width:38vh;height:36vh;;display:flex;flex-wrap: wrap; align-items: center; ">
+<a href=""><img src="assets/onionhead.jpg"></a>
+<a href=""><img src="assets/onionhead.jpg"></a>
+<a href=""><img src="assets/onionhead.jpg"></a>
+<a href=""><img src="assets/onionhead.jpg"></a>
+<a href=""><img src="assets/onionhead.jpg"></a>
+<a href=""><img src="assets/onionhead.jpg"></a>
+<a href=""><img src="assets/onionhead.jpg"></a>
+<a href=""><img src="assets/onionhead.jpg"></a>
+<a href=""><img src="assets/onionhead.jpg"></a><br>
+</div>
+<div style="width:50%;right:2vh;position:absolute;top:2vh;text-align:right;"><div style="height:16vh;">
+<h>Headcanon</h><br>
+To be filled.</div><div style="height:16vh;text-align:left;">
+<h2 style="display:inline;">OOC</h2><br>
+My Code.<br>
+<a title="Room, DM, start with posts, etc.">X-Friendly*.</a><br>
+Smut reserved.<br>
+Don't be weird.<br>
+Ghibli-Preferred.
+</div>
+</div>
+</div>
+</div>
+<div id="howlhuman" onclick="swap()"></div>
+<div id="howlnonhuman" onclick="swap()"></div>
+<script>
+var swapped = false;
+function swap(){
+switch (swapped){
+case false : 
+howlnonhuman.style.animationPlayState="running";
+howlnonhuman.style.animation="1.5s backtofrontnonhuman";
+howlnonhuman.style.animationFillMode="forwards";
+howlhuman.style.animationPlayState="running";
+howlhuman.style.animation="1.5s fronttobackhuman";
+howlhuman.style.animationFillMode="forwards";
+document.body.style.backgroundColor="#182033";
+lightcontentbox.style.opacity="0";
+darkcontentbox.style.opacity="1";
+lightcontentbox.style.pointerEvents="none";
+darkcontentbox.style.pointerEvents="auto";
+darktitle.style.opacity="1";
+lightitle.style.opacity="0";
+swapped=true;
+break;
+case true :
+howlhuman.style.animationPlayState="running";
+howlhuman.style.animation="1.5s backtofronthuman";
+howlhuman.style.animationFillMode="forwards";
+howlnonhuman.style.animationPlayState="running";
+howlnonhuman.style.animation="1.5s fronttobacknonhuman";
+howlnonhuman.style.animationFillMode="forwards";
+document.body.style.backgroundColor="#d8c6ba";
+lightcontentbox.style.opacity="1";
+darkcontentbox.style.opacity="0";
+darktitle.style.opacity="0";
+lightitle.style.opacity="1";
+lightcontentbox.style.pointerEvents="auto";
+darkcontentbox.style.pointerEvents="none";
+swapped=false;
+break;
+}
+}
+</script>
+</body>

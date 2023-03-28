@@ -1,0 +1,661 @@
+<head>
+<title>Recursion Codes</title>
+<link rel="icon" href="assets/logoicon.png" type="image/icon type">
+</head>
+<style>
+@media (orientation: portrait) {
+
+#portraitcontainer{
+display:inline;
+}
+
+#landscapecontainer{
+display:none;
+}
+
+#fullpagecontainer{
+display:none;
+}
+
+@font-face { font-family: Bebas; src: url(assets/Bebas.ttf) }
+@font-face { font-family: Lemon; src: url(assest/LemonMilklight) }
+body{
+margin:0;
+background-color:#5c4a6f;
+}
+#wraithsplash{
+width:40vh;
+height:65vh;
+background-size:contain;
+background-image:url(assets/wraithmobilesplash.png);
+position:absolute;
+right:0vh;
+bottom:0vh;
+background-repeat:no-repeat;
+background-position:bottom right;
+z-index:1;
+}
+#portraittext{
+writing-mode: vertical-rl;
+text-orientation: mixed;
+font-family:Bebas;
+font-size:32vh;
+position:absolute;
+top:0vh;
+left:-11.1vh;
+color:#c8e9ec;
+text-shadow: 1.5vh 0vh 0vh #423b49;
+z-index:0;
+pointer-events:none;
+}
+stat{
+float:right;
+display:inline;
+}
+#infotop{
+position:absolute;
+right:3vh;
+bottom:73vh;
+font-size:2vh;
+width:20vh;
+height:28vh;
+}
+h1{
+text-align:center;
+font-family:Lemon;
+color:#aea0aa;
+line-height:3.5vh;
+font-size:4vh;
+}
+p{
+color:#aea0aa;
+font-family:lemon;
+line-height:2.75vh;
+text-align:right;
+}
+#oocbottom{
+bottom:0vh;
+left:0vh;
+position:absolute;
+width:30vh;
+height:25vh;
+}
+}
+@media (max-width: 1079px) and (orientation:landscape) {
+
+#portraitcontainer{
+display:none;
+}
+
+#landscapecontainer{
+display:inline;
+}
+
+#fullpagecontainer{
+display:none;
+}
+@font-face { font-family: Bebas; src: url(assets/Bebas.ttf) }
+@font-face { font-family: Lemon; src: url(assets/LemonMilklight.otf) }
+body{
+margin:0;
+background-color:#5c4a6f;
+overflow:hidden;
+}
+#wraithsplash{
+width:40vh;
+height:100vh;
+background-size:contain;
+background-image:url(assets/wraithmobilesplash.png);
+position:absolute;
+right:0vh;
+bottom:0vh;
+background-repeat:no-repeat;
+background-position:bottom right;
+z-index:2;
+pointer-events:none;
+}
+#toptext{
+font-family:Bebas;
+font-size:42vh;
+color:#c8e9ec;
+text-shadow: 1.5vh 0vh 0vh #423b49;
+z-index:0;
+pointer-events:none;
+right:18vh;
+bottom:-13vh;
+position:absolute;
+}
+#mainbox{
+width:97vh;
+height:30vh;
+bottom:30vh;
+right:19vh;
+background-color:#aea0aa;
+z-index:1;
+box-shadow: 1.5vh 1vh 0vh #423b49;
+color:#423b49;
+position:absolute;
+overflow:hidden;
+}
+.navspike{
+position:absolute;
+width:40vh;
+height:20vh;
+background-color:blue;
+bottom:55vh;
+right:0vh;
+z-index:0;
+transform:rotate(-45deg);
+background-size:contain;
+overflow:hidden;
+border:solid .2vh #c8e9ec;
+}
+.infobox{
+height:30vh;
+width:94vh;
+right:2vh;
+font-family:lemon;
+position:absolute;
+overflow:auto;
+}
+h1{
+line-height:0vh;
+font-size:6vh;
+display:inline;
+}
+p{
+font-family:arial;
+font-weight:bold;
+font-size:3vh;
+}
+b{
+color:#c8e9ec;
+font-size:3vh;
+}
+a{
+text-decoration:none;
+}
+#textcontainer{
+width:100%;
+height:100%;
+overflow:hidden;
+position:absolute;
+bottom:0vh;
+right:0vh;
+}
+br{
+line-height:3vh;
+}
+}
+@media (min-width: 1080px) and (orientation:landscape) {
+
+#portraitcontainer{
+visibility:hidden;
+}
+
+#landscapecontainer{
+visibility:hidden;
+}
+
+#fullpagecontainer{
+visibility:visible;
+}
+body {
+margin:0;
+overflow: hidden;
+font-family:"Segoe UI";
+background-color:gray;
+}
+
+.folders{
+background-image:url(assets/folder.png);
+height:4.5vh;
+width:7vh;
+background-size:cover;
+background-repeat: no-repeat;
+position:absolute;
+cursor:pointer
+}
+
+.draggable{}
+
+.scanlines {
+width:100vw;
+height:100vh;
+pointer-events:none;
+	 position: absolute;
+	 overflow: hidden;
+	 z-index:99;
+	 top:0vh;
+}
+ .scanlines:before, .scanlines:after {
+	 display: block;
+	 pointer-events: none;
+	 content: '';
+	 position: absolute;
+}
+ .scanlines:before {
+	 height: 2px;
+	 width: 100%;
+	 z-index: 2147483649;
+	 background: rgba(0, 0, 0, .1);
+	 opacity: 0.55;
+	 animation: scanline 6s linear infinite;
+}
+ .scanlines:after {
+	 top: 0;
+	 right: 0;
+	 bottom: 0;
+	 left: 0;
+	 z-index: 2147483648;
+	 background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, .1) 51%);
+	 background-size: 100% 4px;
+	 animation: scanlines 1s steps(60) infinite;
+}
+ @keyframes scanline {
+	 0% {
+		 transform: translate3d(0, 200000%, 0);
+	}
+}
+ @keyframes scanlines {
+	 0% {
+		 background-position: 0 50%;
+	}
+}
+
+#statfolder{
+cursor:pointer;
+top:2.5vh;
+left:2vh;
+}
+#infofolder{
+cursor:pointer;
+top:14vh;
+left:2vh;
+}
+#galleryfolder{
+cursor:pointer;
+top:24vh;
+left:2vh;
+}
+#recyclebin{
+cursor:pointer;
+top:34vh;
+left:2vh;
+}
+#wraithify{
+cursor:pointer;
+top:45vh;
+left:2vh;
+}
+.titlestuff{
+text-align:center;
+bottom:-2vh;
+left:1vh;
+position:absolute;
+font-size:1.5vh;
+color:#fff;
+text-shadow: #000 .1vh 0 .5vh;
+}
+#statsfull{
+width:40vh;
+height:40vh;
+position:absolute;
+left:16vh;
+top:15vh;
+background-color:#DCDCDC;
+display:none;
+border:solid .2vh white;
+box-sizing: border-box;
+}
+#debrief{
+width:40vh;
+height:40vh;
+position:absolute;
+left:53vh;
+top:40vh;
+background-color:#DCDCDC;
+display:none;
+border:solid .2vh white;
+box-sizing: border-box;
+}
+#gallery{
+width:40vh;
+height:40vh;
+position:absolute;
+left:88vh;
+top:16vh;
+background-color:#DCDCDC;
+display:none;
+border:solid .2vh white;
+box-sizing: border-box;
+}
+#oocfull{
+width:40vh;
+height:40vh;
+position:absolute;
+left:112vh;
+top:50vh;
+background-color:#DCDCDC;
+display:none;
+border:solid .2vh white;
+box-sizing: border-box;
+}
+.header{
+width:100%;
+border: 2px inset #000;
+box-sizing: border-box;
+height:2.5vh;
+font-size:1.5vh;
+cursor:pointer;
+border:solid .2vh black;
+box-sizing: border-box;
+}
+
+#imc{
+background-image:url(assets/imccorp.png);
+width:40vh;
+height:40vh;
+background-size:contain;
+position:absolute;
+left:50%;
+top:50%;
+margin-left:-20vh;
+margin-top:-20vh;
+}
+.closebutton{
+font-size:1.9vh;
+text-align:right;
+top:0vh;
+right:0vh;
+position:absolute;
+font-family:arial;
+margin-top:0vh;
+margin-right:0vh;
+border: .2vh solid #000
+}
+stat{
+float:right;
+display:inline;
+}
+img{
+width:12.01vh;
+height:12.01vh;
+display:inline;
+object-fit:cover;
+}
+}
+</style>
+<body>
+<div id="portraitcontainer">
+<div id="page1container"></div>
+<div id="wraithsplash"></div>
+<div id="portraittext">WRAITH</div>
+<div id="infotop">
+<h1>You know what I look like</h1>
+<p><s>Renee Hope Blasey</s>
+<br>
+<span>33</span>
+<br>
+5'4"<br>
+<span>143lbs</span><br>
+Unbiased<br>
+<span><a href=""style="color:#c8e9ec;text-decoration:none;">Ungrounded</a></span>
+</p></div>
+
+<div id="oocbottom">
+<h1>Come find me</h1><p style="text-align:left;font-size:2vh;margin-left:2vh;">
+Apex Legends Canon<br>
+PM Friendly<br>
+Headcanon Heavy<br>
+PS4<br>
+Code mine
+</p>
+</div>
+</div>
+
+<div id="landscapecontainer">
+<div id="wraithsplash"></div>
+<div id="textcontainer"><div id="toptext">WRAITH</div></div>
+<div id="mainbox">
+<div class="infobox" id="stats"style="top:0vh;"><h1 style="margin-top:3.5vh;position:absolute;">Info</h1>
+<p style="margin-top:6vh;position:absolute;">
+<b>Wraith</b> <s>Renee Hope Blasey</s> is a <b>33 year old female</b> with a <s>personable</s> distant demeanor.
+Currently at 5'4" and 143lbs she is described as a woman with raven colored hair and <s>brown</s> <b>luminescent eyes</b><br><br>
+Previously working as a scientist she is now a participant in the Apex Games. As of the moment there is<a href=""><b> no reported next of kin</b></a>.
+<br>
+</div>
+<div  class="infobox" style="top:30vh;"id="background"><h1 style="margin-top:3.5vh;position:absolute;">Background</h1><br>
+<p>In 2727, an interdimensional portal opened in Singh Labs and Blasey was visited by a warrior in white armor and a purple helmet, who sought vengeance against Singh. Revealing herself to be a version of Blasey from an alternate universe, she helped to free Blasey, giving her the technology required for phase shifting and interdimensional travel, as well as a kunai. Telling her to leave, the Voidwalker stayed behind to fight Singh and his contingent of IMC soldiers.
+<br><br>
+Entering the portal, Blasey found that the voices she had been hearing were more alternate versions of herself, all communicating through a place between realities. Leaving this in-between space, she found herself in the Voidwalker’s dimension, where Singh Labs were decrepit and abandoned. Exiting to the surface and taking a cloth as a scarf, she found her surroundings to be under construction for something called the Apex Games.
+<br><br>
+Blasey began to explore as much of Kings Canyon as she could, finding bewilderment at its differences from her home dimension. She initially believes that she is the only one alive on the island.
+<br><br>
+On her fifth day after emerging, Blasey heard a man on the island calling for someone named Natalie. She erroneously took this as a hint to her identity, believing that she is Natalie. Upon further investigation, she then believed that her name is Natalie Paquette, and that she was married to this man.
+<br><br>
+On her eighth day, Blasey found a young girl who entered Singh Labs in an attempt to take two bubble shields. Not knowing this to be a young Wattson attempting an experiment to produce the Ring for the Apex Games, she considered her an assassin sent to kill her “husband” and ordered her to leave. Later, when Wattson’s experiment went wrong and set fire to the area that would become the Shattered Forest, Blasey saved her life and carried her to the Paquette family’s cabin. Here she learned that she herself was not Natalie, but rather it was the name of the girl in her arms.
+<br><br>
+Blasey, humiliated, retreated to Singh Labs, where Luc Paquette offered her passage off of the island as thanks for saving his daughter’s life. She took a boat across the river to Solace City, where she swore to herself that she would somehow return to Kings Canyon and Singh Labs to find any clue about her past. Singh Labs was buried the next day, and Wattson referred to the person who saved her as “her ghost” from that day onwards.
+<br><br>
+Blasey spent the next several years training and entering into placement matches for the Apex Games, eventually being accepted as a Legend.
+</p>
+</div>
+<div  class="infobox" style="top:60vh;" id="ooc"><h1 style="margin-top:3.5vh;position:absolute;">OOC</h1><br><br>
+Apex Legends Canon<br>
+PM Friendly<br>
+Heavy Headcanons<br>
+PS4<br>
+</div>
+</div>
+<a href="#stats"><div class="navspike" style="right:74vh; "><div style="background-repeat:no-repeat;transform:rotate(45deg);
+position:absolute;left:-13vh;top:-5vh;width:70vh;height:60vh;background-size:contain;background-image:url(assets/wraithgif1.webp);"></div></div></a>
+<a href="#background"><div class="navspike" style="right:42vh; "><div style="background-repeat:no-repeat;transform:rotate(45deg);
+position:absolute;left:-24vh;top:-23vh;width:70vh;height:60vh;background-size:contain;background-size:contain;background-image:url(assets/wraithgif2.webp);"></div></div></a>
+<a href="#ooc"><div class="navspike" style="right:10vh; "><div style="background-repeat:no-repeat;transform:rotate(45deg);
+position:absolute;left:vh;top:-6vh;width:50vh;height:40vh;background-size:contain;background-image:url(assets/wraithgif3.webp);"></div></div></a>
+</div>
+<div id="fullpagecontainer">
+<div class="scanlines"></div>
+<div id="imc"></div>
+<div class="folders draggable" ondblclick="openstats()"  id="statfolder" style="background-size:contain;background-position:center;background-image:url(assets/notepad.png);"><div class="titlestuff" style="margin-left:-1vh;margin-bottom:-2vh;line-height:1.65vh;">Health Disclosure</div></div>
+<div class="folders draggable" ondblclick="openinfo()"  id="infofolder" style="background-size:contain;background-position:center;background-image:url(assets/notepad.png);"><div class="titlestuff" style="margin-left:0vh;margin-bottom:-.5vh;line-height:1.65vh;">Debrief</div></div>
+<div class="folders draggable" ondblclick="opengall()" id="galleryfolder"><div class="titlestuff" style="margin-bottom:-.5vh">Images</div></div>
+<div class="folders draggable" ondblclick="openbin()" id="recyclebin" style="background-size:contain;background-position:center;background-image:url(assets/recyclebin.png);"><div class="titlestuff" style="margin-bottom:-2.25vh;margin-left:-1.25vh;">Recycle Bin</div></div>
+<div class="folders draggable" ondblclick="playmusic()" id="wraithify" style="background-size:contain;background-position:center;background-image:url(assets/wraithify.png);"><div class="titlestuff" style="margin-bottom:0vh;margin-left:-.4vh;">Wraithify</div></div>
+
+<div class="draggable" id="statsfull"><div id="statsfullheader" class="header"><font style="margin-left:.5vh">Health Disclosure</font><div class="closebutton" id="statsclose" onclick="closestats()">&nbspX&nbsp</div></div>
+<p style="padding:1vh;overflow:auto;width:38vh;height:35.3vh;margin-top:0vh;margin-left:-.2vh">
+Name : <stat><s>Renee</s> Wraith <s>Hope Blasey</s></stat><br>
+Age : <stat>33</stat><br>
+Sex : <stat>Female</stat><br>
+Blood Type : <stat>O-</stat><br>
+Demeanor : <stat><s>Personable</s> Distant</stat><br>
+Height : <stat>5'4"</stat><br>
+Hair Color : <stat>Raven</stat><br>
+Eye Color : <stat><s>Brown</s> Luminescent</stat><br>
+Occupation : <stat><s>Scientist</s> Legend</stat><br>
+Next of Kin : <stat><a href="">None</a></stat><br>
+<br>
+The person above has agreed to waive all legal rights pertaining to Interstellar Manufacturing Corp© (IMC) voluntarily. In the case of bodily mutilation, mental distress, impairment, debilitation, loss of life, or stranding IMC will not be legally required to render assistance.<br><br>
+The following experiments regarding Phase Shift Technology™ are to be kept discreet between Dr.Amer Singh, <s>Dr Renee Blasey</s> and IMC. This disclosure also serves the purpose of a Non Disclosure Agreement and Noncompete for the aforementioned person to not disclose any information on experiments as they are considered 
+IMI trade secrets. Doing so will be subject to legal action.
+</p>
+ </div>
+<div class="draggable" id="debrief"><div id="debriefheader" class="header"><font style="margin-left:.5vh">Debrief.txt</font><div class="closebutton" id="debriefclose" onclick="closedebrief()">&nbspX&nbsp</div></div>
+<p style="padding:1vh;overflow:auto;width:38vh;height:35.3vh;margin-top:0vh;margin-left:-.2vh">
+In 2727, an interdimensional portal opened in Singh Labs and Blasey was visited by a warrior in white armor and a purple helmet, who sought vengeance against Singh. Revealing herself to be a version of Blasey from an alternate universe, she helped to free Blasey, giving her the technology required for phase shifting and interdimensional travel, as well as a kunai. Telling her to leave, the Voidwalker stayed behind to fight Singh and his contingent of IMC soldiers.
+<br><br>
+Entering the portal, Blasey found that the voices she had been hearing were more alternate versions of herself, all communicating through a place between realities. Leaving this in-between space, she found herself in the Voidwalker’s dimension, where Singh Labs were decrepit and abandoned. Exiting to the surface and taking a cloth as a scarf, she found her surroundings to be under construction for something called the Apex Games.
+<br><br>
+Blasey began to explore as much of Kings Canyon as she could, finding bewilderment at its differences from her home dimension. She initially believes that she is the only one alive on the island.
+<br><br>
+On her fifth day after emerging, Blasey heard a man on the island calling for someone named Natalie. She erroneously took this as a hint to her identity, believing that she is Natalie. Upon further investigation, she then believed that her name is Natalie Paquette, and that she was married to this man.
+<br><br>
+On her eighth day, Blasey found a young girl who entered Singh Labs in an attempt to take two bubble shields. Not knowing this to be a young Wattson attempting an experiment to produce the Ring for the Apex Games, she considered her an assassin sent to kill her “husband” and ordered her to leave. Later, when Wattson’s experiment went wrong and set fire to the area that would become the Shattered Forest, Blasey saved her life and carried her to the Paquette family’s cabin. Here she learned that she herself was not Natalie, but rather it was the name of the girl in her arms.
+<br><br>
+Blasey, humiliated, retreated to Singh Labs, where Luc Paquette offered her passage off of the island as thanks for saving his daughter’s life. She took a boat across the river to Solace City, where she swore to herself that she would somehow return to Kings Canyon and Singh Labs to find any clue about her past. Singh Labs was buried the next day, and Wattson referred to the person who saved her as “her ghost” from that day onwards.
+<br><br>
+Blasey spent the next several years training and entering into placement matches for the Apex Games, eventually being accepted as a Legend.
+
+
+ </p>
+ </div>
+<div class="draggable" id="gallery"><div id="galleryheader" class="header"><font style="margin-left:.5vh">Images</font><div class="closebutton" id="imagesclose" onclick="closeimages()">&nbspX&nbsp</div></div>
+<div style="display:flex;width:100%;height:37.2vh;flex-wrap:wrap; align-items:center;flex-direction: row;justify-content: space-around;margin-top:0vh; overflow:auto;">
+<div style="flex-basis: 100%;  height: 1vh;"></div>
+<div style="display:flex;"><a onclick="playclosesound()" target="_blank" href="assets/wraithgall1.jpg"><img src="assets/wraithgall1.jpg"></img></a></div>
+<div style="display:flex;"><a onclick="playclosesound()" target="_blank" href="assets/wraithgall2.jpg"><img src="assets/wraithgall2.jpg"></img></a></div>
+<div style="display:flex;"><a onclick="playclosesound()" target="_blank" href="assets/wraithgall3.jpg"><img src="assets/wraithgall3.jpg"></img></a></div>
+<div style="flex-basis: 100%;  height: 0;"></div>
+<div style="display:flex;">suit.jpg</div>
+<div style="display:flex;">mask.jpg</div>
+<div style="display:flex;">profile.jpg</div>
+<div style="flex-basis: 100%;  height: 0;"></div>
+<div style="display:flex;"><a onclick="playclosesound()" target="_blank" href="assets/wraithgall4.jpg"><img src="assets/wraithgall4.jpg"></img></a></div>
+<div style="display:flex;"><a onclick="playclosesound()" target="_blank" href="assets/wraithgall5.jpg"><img src="assets/wraithgall5.jpg"></img></a></div>
+<div style="display:flex;"><a onclick="playclosesound()" target="_blank" href="assets/wraithgall6.png"><img src="assets/wraithgall6.png"></img></a></div>
+<div style="flex-basis: 100%;  height: 0;"></div>
+<div style="display:flex;">profile2.jpg</div>
+<div style="display:flex;">profile3.jpg</div>
+<div style="display:flex;">profile4.jpg</div>
+<div style="flex-basis: 100%;  height: 0;"></div>
+<div style="display:flex;"><a onclick="playclosesound()" target="_blank" href="assets/wraithgall7"><img src="assets/wraithgall7"></img></a></div>
+<div style="display:flex;"><a onclick="playclosesound()" target="_blank" href="assets/wraithgall8.jpg"><img src="assets/wraithgall8.jpg"></img></a></div>
+<div style="display:flex;"><a onclick="playclosesound()" target="_blank" href="assets/wraithgall9.jpg"><img src="assets/wraithgall9.jpg"></img></a></div>
+<div style="flex-basis: 100%;  height: 0;"></div>
+<div style="display:flex;">profileeye5.jpg</div>
+<div style="display:flex;">suit2.jpg</div>
+<div style="display:flex;">profile6.jpg</div>
+</div></div>
+
+<div class="draggable" id="oocfull"><div id="oocfullheader" class="header"><font style="margin-left:.5vh">Recycle Bin</font><div class="closebutton" id="statsclose" onclick="closebin()">&nbspX&nbsp</div></div>
+<p style="padding:1vh;overflow:auto;width:38vh;height:35.3vh;margin-top:0vh;margin-left:-.2vh">
+Apex Legends Canon<br>
+PM Friendly<br>
+Heavy Headcanons<br>
+PS4<br>
+</p>
+ </div>
+<audio id="opensound" src="assets/snap.wav"></audio>
+<audio id="closesound" src="assets/snap2.mp3"></audio>
+<audio id="thememusic" src="assets/wraiththeme.mp3"></audio>
+
+<script>
+var draggableElements = document.getElementsByClassName("draggable");
+var gallery=document.getElementById("gallery");
+var debrief=document.getElementById("debrief");
+var stats=document.getElementById("statsfull");
+var bin=document.getElementById("oocfull");
+var debriefclose=document.getElementById("debriefclose");
+var imagesclose=document.getElementById("imagesclose");
+var statsclose=document.getElementById("statsclose");
+var binclose=document.getElementById("binclose");
+for(var i = 0; i < draggableElements.length; i++){
+    dragElement(draggableElements[i]);
+}
+
+function dragElement(elmnt) {
+    var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+    if (document.getElementById(elmnt.id + "header")) {
+        document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+    } else {
+        elmnt.onmousedown = dragMouseDown;
+    }
+    function dragMouseDown(e) {
+        e = e || window.event;
+        pos3 = parseInt(e.clientX);
+        pos4 = parseInt(e.clientY);
+        document.onmouseup = closeDragElement;
+        document.onmousemove = elementDrag;
+        return false;
+    }
+
+    function elementDrag(e) {
+        e = e || window.event;
+        pos1 = pos3 - parseInt(e.clientX);
+        pos2 = pos4 - parseInt(e.clientY);
+        pos3 = parseInt(e.clientX);
+        pos4 = parseInt(e.clientY);
+        elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+        console.log(elmnt.offsetTop)
+        elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+    }
+
+    function closeDragElement() {
+        document.onmouseup = null;
+        document.onmousemove = null;
+    }
+}
+function openstats(){
+stats.style.display = "inline";
+opensound.currentTime = 0;
+opensound.play();
+opensound.volume = .25;
+}
+function openinfo(){
+debrief.style.display = "inline";
+opensound.currentTime = 0;
+ opensound.play();
+opensound.volume = .25;
+}
+function opengall(){
+gallery.style.display = "inline";
+opensound.currentTime = 0;
+ opensound.play();
+opensound.volume = .25;
+}
+function openbin(){
+bin.style.display = "inline";
+opensound.currentTime = 0;
+ opensound.play();
+opensound.volume = .25;
+}
+function closestats(){
+stats.style.display = "none";
+closesound.currentTime = 0;
+ closesound.play();
+closesound.volume = .25;
+}
+function closeimages(){
+gallery.style.display = "none";
+closesound.currentTime = 0;
+ closesound.play();
+closesound.volume = .25;
+
+}
+function closedebrief(){
+debrief.style.display = "none";
+closesound.currentTime = 0;
+ closesound.play();
+closesound.volume = .25;
+}
+function closebin(){
+bin.style.display = "none";
+closesound.currentTime = 0;
+ closesound.play();
+closesound.volume = .25;
+}
+
+var playingmainsong = false;
+var musicsound = document.getElementById("thememusic");
+function playmusic(){
+ musicsound.currentTime = 0;
+ musicsound.play();
+ if(playingmainsong === false){
+ musicsound.play();
+ playingmainsong = true;
+ }else{
+ musicsound.pause();
+ playingmainsong = false;
+ }
+musicsound.volume = 0.15;
+}
+function playclosesound(){
+closesound.currentTime = 0;
+ closesound.play();
+closesound.volume = .25;
+}
+</script>
+</div>
+</body>
