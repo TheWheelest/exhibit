@@ -1,19 +1,16 @@
 <head>
     <title>Recursion Codes</title>
-    <link rel="icon" href="https://media.discordapp.net/attachments/946275070572118056/1089677981598875708/logoicon.png" type="image/icon type">
+    <link rel="icon" href="logoicon.png" type="image/icon type">
     </head>
 <style>
 
-@font-face { font-family: Motion; src: url("https://dl.dropboxusercontent.com/s/iqvywne4gqivkat/MotionControl-BoldItalic.ttf");}
+@font-face { font-family: Motion; src: url(Motioncontrol.ttf);}
 
 body {margin:0; overflow:hidden;}
 
-@font-face { font-family: ghibli; src: url(https://dl.dropboxusercontent.com/s/u950c1ypqokl4ld/ITC%20Avant%20Garde%20Gothic%20Medium.otf?dl=0) }
-@font-face { font-family: bebas; src: url(https://dl.dropboxusercontent.com/s/nd7dk2020h5i6ag/BebasNeue-Regular.ttf) }
-@font-face { font-family: Lemon; src: url(https://dl.dropboxusercontent.com/s/8ov9l70d702t7oa/LemonMilklight.otf) }
-@font-face { font-family: breath; src: url(https://dl.dropboxusercontent.com/s/dcwiv2jdt9bhv9f/FOTRodin%20Pro%20M.woff?) }
+@font-face { font-family: ghibli; src: url(avantgarde.otf) }
 #openingpictureleft{
-background-image:url("https://i.imgur.com/KEXd9SD.png");
+background-image:url(left.png);
 background-size:cover;
 background-position:center;
 width:50%;
@@ -28,7 +25,7 @@ cursor:pointer;
 }
 
 #openingpictureright{
-background-image:url("https://i.imgur.com/DUA1vUp.png");
+background-image:url(right.png);
 background-size:cover;
 background-position:center;
 width:50%;
@@ -56,7 +53,7 @@ right:8%;
 top:9%;
 margin-right:0px;
 margin-top:0px;
-background-image:url('https://i.imgur.com/GpfObYN.png');
+background-image:url(skip.png);
 cursor:pointer;
 transition:1s;
 }
@@ -78,7 +75,7 @@ transition:1s;
 #rabbit{
 height:50vh;
 width:37vh;
-background-image:url(https://media.discordapp.net/attachments/898863517250256927/898865353021612092/PieRc7Z.gif);
+background-image:url(leftsun.gif);
 position:absolute;
 background-size:contain;
 top:50%;
@@ -91,7 +88,7 @@ z-index:2;
 #samurai{
 height:50vh;
 width:37vh;
-background-image:url(https://media.discordapp.net/attachments/898863517250256927/898865354544123914/PqCaXN0.gif);
+background-image:url(rightsun.gif);
 position:absolute;
 background-size:contain;
 top:50%;
@@ -105,7 +102,7 @@ z-index:2;
 #onislayers{
 height:30vh;
 width:46.3vh;
-background-image:url(https://media.discordapp.net/attachments/898863517250256927/898863811182878730/aE8hLqk.png);
+background-image:url(logo.png);
 position:absolute;
 background-size:contain;
 top:50%;
@@ -171,7 +168,7 @@ overflow:auto;
 #title{
 width:87vh;
 height:8vh;
-background-image:url(https://media.discordapp.net/attachments/898863517250256927/898863573562953738/8UHE1so.png);
+background-image:url(title.png);
 background-size:contain;
 background-repeat:no-repeat;
 background-position:center bottom;
@@ -188,6 +185,11 @@ color:transparent;
  }
 a.img{
 display:inline-block;
+}
+img{
+
+    
+object-fit:cover;
 }
 a.fancy{
 font-family:Motion;
@@ -218,7 +220,7 @@ display:inline-block
 }
 
 #sun{
-background-image:url(https://media.discordapp.net/attachments/898863517250256927/898896191260098570/cc9e2d18777411.562d03eb4a4b2.gif);
+background-image:url(bgsun.gif);
 width:40vh;
 height:40vh;
 position:absolute;
@@ -236,10 +238,10 @@ background-size:contain;
 
 <div id="openingpictureleft" onclick="start()"></div>
 <div id="openingpictureright" onclick="start()"></div>
-<video preload="auto" id="introvideo" style="height:auto; width:100%;background-color:#000; top:-30%;position:absolute; z-index:1" src="https://dl.dropboxusercontent.com/s/pg6lzv4v1deesei/Videoforprofile.mp4"></video>
+<video preload="auto" id="introvideo" style="height:auto; width:100%;background-color:#000; top:-30%;position:absolute; z-index:1" src="Videoforprofile.mp4"></video>
 <div id ="skipbutton" onclick="skip()"></div>
 <div id="intermissionpage">
-<div style="position:absolute;z-index:3;opacity:1;width:100%;height:100%;background-image:url(https://www.transparenttextures.com/patterns/subtle-stripes.png)"></div>
+<div style="position:absolute;z-index:3;opacity:1;width:100%;height:100%;background-image:url(subtle-stripes.png)"></div>
 <div id="rabbit"></div>
 <div id="samurai"></div>
 <div id="onislayers" onclick="showprofile()"></div>
@@ -269,40 +271,27 @@ Oni Slayers is kind of a boyband that you haven't heard about in Japan. All the 
 
 <div class="profilecontent"><div style="padding:1vh">
 
-<a target="_blank" href="https://roleplay.chat/profile.php?user=" class="img" target="_blank"><img src="https://media.discordapp.net/attachments/898863517250256927/898892670880083968/PieRc7Z.png"></a>
-<a target="_blank" href="https://roleplay.chat/profile.php?user=" class="img" target="_blank"><img src="https://media.discordapp.net/attachments/898863517250256927/898892670880083968/PieRc7Z.png"></a>
-<a target="_blank" href="https://roleplay.chat/profile.php?user=" class="img" target="_blank"><img src="https://media.discordapp.net/attachments/898863517250256927/898892670880083968/PieRc7Z.png"></a>
-<a target="_blank" href="https://roleplay.chat/profile.php?user=" class="img" target="_blank"><img src="https://media.discordapp.net/attachments/898863517250256927/898892670880083968/PieRc7Z.png"></a>
-<a target="_blank" href="https://roleplay.chat/profile.php?user=" class="img" target="_blank"><img src="https://media.discordapp.net/attachments/898863517250256927/898892670880083968/PieRc7Z.png"></a>
-<a target="_blank" href="https://roleplay.chat/profile.php?user=" class="img" target="_blank"><img src="https://media.discordapp.net/attachments/898863517250256927/898892670880083968/PieRc7Z.png"></a>
-<a target="_blank" href="https://roleplay.chat/profile.php?user=" class="img" target="_blank"><img src="https://media.discordapp.net/attachments/898863517250256927/898892670880083968/PieRc7Z.png"></a>
-<a target="_blank" href="https://roleplay.chat/profile.php?user=" class="img" target="_blank"><img src="https://media.discordapp.net/attachments/898863517250256927/898892670880083968/PieRc7Z.png"></a>
-<a target="_blank" href="https://roleplay.chat/profile.php?user=" class="img" target="_blank"><img src="https://media.discordapp.net/attachments/898863517250256927/898892670880083968/PieRc7Z.png"></a>
-<a target="_blank" href="https://roleplay.chat/profile.php?user=" class="img" target="_blank"><img src="https://media.discordapp.net/attachments/898863517250256927/898892670880083968/PieRc7Z.png"></a>
-<a target="_blank" href="https://roleplay.chat/profile.php?user=" class="img" target="_blank"><img src="https://media.discordapp.net/attachments/898863517250256927/898892670880083968/PieRc7Z.png"></a>
-<a target="_blank" href="https://roleplay.chat/profile.php?user=" class="img" target="_blank"><img src="https://media.discordapp.net/attachments/898863517250256927/898892670880083968/PieRc7Z.png"></a>
-<a target="_blank" href="https://roleplay.chat/profile.php?user=" class="img" target="_blank"><img src="https://media.discordapp.net/attachments/898863517250256927/898892670880083968/PieRc7Z.png"></a>
-<a target="_blank" href="https://roleplay.chat/profile.php?user=" class="img" target="_blank"><img src="https://media.discordapp.net/attachments/898863517250256927/898892670880083968/PieRc7Z.png"></a>
-<a target="_blank" href="https://roleplay.chat/profile.php?user=" class="img" target="_blank"><img src="https://media.discordapp.net/attachments/898863517250256927/898892670880083968/PieRc7Z.png"></a>
+<a target="_blank" href="leftsun.gif" class="img" target="_blank"><img src="leftsun.gif"></a>
+<a target="_blank" href="harusplash.png" class="img" target="_blank"><img src="harusplash.png"></a>
 
 </div></div>
 <div class="profilecontent"><div style="padding:1vh">
 <div style="text-align:center;">
-<a target="_blank" href="https://roleplay.chat/profile.php?user=" class="img" target="_blank"><img src="https://media.discordapp.net/attachments/898863517250256927/898892670880083968/PieRc7Z.png"></a>
-<a target="_blank" href="https://roleplay.chat/profile.php?user=" class="img" target="_blank"><img src="https://media.discordapp.net/attachments/898863517250256927/898892670880083968/PieRc7Z.png"></a>
-<a target="_blank" href="https://roleplay.chat/profile.php?user=" class="img" target="_blank"><img src="https://media.discordapp.net/attachments/898863517250256927/898892670880083968/PieRc7Z.png"></a>
-<a target="_blank" href="https://roleplay.chat/profile.php?user=" class="img" target="_blank"><img src="https://media.discordapp.net/attachments/898863517250256927/898892670880083968/PieRc7Z.png"></a>
-<a target="_blank" href="https://roleplay.chat/profile.php?user=" class="img" target="_blank"><img src="https://media.discordapp.net/attachments/898863517250256927/898892670880083968/PieRc7Z.png"></a>
-<a target="_blank" href="https://roleplay.chat/profile.php?user=" class="img" target="_blank"><img src="https://media.discordapp.net/attachments/898863517250256927/898892670880083968/PieRc7Z.png"></a>
-<a target="_blank" href="https://roleplay.chat/profile.php?user=" class="img" target="_blank"><img src="https://media.discordapp.net/attachments/898863517250256927/898892670880083968/PieRc7Z.png"></a>
-<a target="_blank" href="https://roleplay.chat/profile.php?user=" class="img" target="_blank"><img src="https://media.discordapp.net/attachments/898863517250256927/898892670880083968/PieRc7Z.png"></a>
-<a target="_blank" href="https://roleplay.chat/profile.php?user=" class="img" target="_blank"><img src="https://media.discordapp.net/attachments/898863517250256927/898892670880083968/PieRc7Z.png"></a>
-<a target="_blank" href="https://roleplay.chat/profile.php?user=" class="img" target="_blank"><img src="https://media.discordapp.net/attachments/898863517250256927/898892670880083968/PieRc7Z.png"></a>
-<a target="_blank" href="https://roleplay.chat/profile.php?user=" class="img" target="_blank"><img src="https://media.discordapp.net/attachments/898863517250256927/898892670880083968/PieRc7Z.png"></a>
-<a target="_blank" href="https://roleplay.chat/profile.php?user=" class="img" target="_blank"><img src="https://media.discordapp.net/attachments/898863517250256927/898892670880083968/PieRc7Z.png"></a>
-<a target="_blank" href="https://roleplay.chat/profile.php?user=" class="img" target="_blank"><img src="https://media.discordapp.net/attachments/898863517250256927/898892670880083968/PieRc7Z.png"></a>
-<a target="_blank" href="https://roleplay.chat/profile.php?user=" class="img" target="_blank"><img src="https://media.discordapp.net/attachments/898863517250256927/898892670880083968/PieRc7Z.png"></a>
-<a target="_blank" href="https://roleplay.chat/profile.php?user=" class="img" target="_blank"><img src="https://media.discordapp.net/attachments/898863517250256927/898892670880083968/PieRc7Z.png"></a>
+    <a target="_blank" href="https://roleplay.chat/profile.php?user=" class="img" target="_blank"><img src="placeholdericon.png"></a>
+    <a target="_blank" href="https://roleplay.chat/profile.php?user=" class="img" target="_blank"><img src="placeholdericon.png"></a>
+    <a target="_blank" href="https://roleplay.chat/profile.php?user=" class="img" target="_blank"><img src="placeholdericon.png"></a>
+    <a target="_blank" href="https://roleplay.chat/profile.php?user=" class="img" target="_blank"><img src="placeholdericon.png"></a>
+    <a target="_blank" href="https://roleplay.chat/profile.php?user=" class="img" target="_blank"><img src="placeholdericon.png"></a>
+    <a target="_blank" href="https://roleplay.chat/profile.php?user=" class="img" target="_blank"><img src="placeholdericon.png"></a>
+    <a target="_blank" href="https://roleplay.chat/profile.php?user=" class="img" target="_blank"><img src="placeholdericon.png"></a>
+    <a target="_blank" href="https://roleplay.chat/profile.php?user=" class="img" target="_blank"><img src="placeholdericon.png"></a>
+    <a target="_blank" href="https://roleplay.chat/profile.php?user=" class="img" target="_blank"><img src="placeholdericon.png"></a>
+    <a target="_blank" href="https://roleplay.chat/profile.php?user=" class="img" target="_blank"><img src="placeholdericon.png"></a>
+    <a target="_blank" href="https://roleplay.chat/profile.php?user=" class="img" target="_blank"><img src="placeholdericon.png"></a>
+    <a target="_blank" href="https://roleplay.chat/profile.php?user=" class="img" target="_blank"><img src="placeholdericon.png"></a>
+    <a target="_blank" href="https://roleplay.chat/profile.php?user=" class="img" target="_blank"><img src="placeholdericon.png"></a>
+    <a target="_blank" href="https://roleplay.chat/profile.php?user=" class="img" target="_blank"><img src="placeholdericon.png"></a>
+    <a target="_blank" href="https://roleplay.chat/profile.php?user=" class="img" target="_blank"><img src="placeholdericon.png"></a>
 </div>
 </div></div>
 <div class="profilecontent"><div style="padding:1vh">
@@ -326,7 +315,7 @@ Discord OK.<br>
 </div>
 
 
-<audio id="music" src="https://dl.dropboxusercontent.com/s/lo8ne8kj3ma6wyg/Bleach%20Opening%201%20Raw%20HQ-EFNQhmDLjTk.opus" preload loop autoloop >
+<audio id="music" src="Opsong.opus" preload loop autoloop >
 
 
 

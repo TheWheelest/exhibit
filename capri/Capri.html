@@ -1,18 +1,13 @@
 <head>
     <title>Recursion Codes</title>
-    <link rel="icon" href="https://media.discordapp.net/attachments/946275070572118056/1089677981598875708/logoicon.png" type="image/icon type">
+    <link rel="icon" href="logoicon.png" type="image/icon type">
     </head>
 <style>
 
-@font-face { font-family: ghibli; src: url(https://dl.dropboxusercontent.com/s/u950c1ypqokl4ld/ITC%20Avant%20Garde%20Gothic%20Medium.otf) }
-@font-face { font-family: bebas; src: url(https://dl.dropboxusercontent.com/s/nd7dk2020h5i6ag/BebasNeue-Regular.ttf) }
-@font-face { font-family: Lemon; src: url(https://dl.dropboxusercontent.com/s/8ov9l70d702t7oa/LemonMilklight.otf) }
+@font-face { font-family: Lemon; src: url(LemonMilklight.otf) }
 body{
 margin:0;
 background-color:#20202c;
-}
-#kittysplash{
-
 }
 
 .pagecontainer{
@@ -38,7 +33,7 @@ height:69vh;
 margin-top:-34vh;
 width:100%;
 background-color:#20202c;
-background-image:url(https://www.transparenttextures.com/patterns/simple-dashed.png);
+background-image:url(simple-dashed.png);
 z-index:5;
 }
 
@@ -46,7 +41,7 @@ z-index:5;
 position:absolute;
 height:25vh;
 width:100%;
-background-image:url(https://www.transparenttextures.com/patterns/axiom-pattern.png);
+background-image:url(axiom-pattern.png);
 }
 #particles-js{ position:absolute; width: 100%; height: 100%; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; } /* ---- stats.js ---- */ .count-particles{ background: #000022; position: absolute; top: 48px; left: 0; width: 80px; color: #13E8E9; font-size: .8em; text-align: left; text-indent: 4px; line-height: 14px; padding-bottom: 2px; font-family: Helvetica, Arial, sans-serif; font-weight: bold; } .js-count-particles{ font-size: 1.1em; } #stats, .count-particles{ -webkit-user-select: none; margin-top: 5px; margin-left: 5px; } #stats{ border-radius: 3px 3px 0 0; overflow: hidden; } .count-particles{ border-radius: 0 0 3px 3px; }
 
@@ -114,7 +109,7 @@ width:40.1vh;
 background-size:cover;
 margin-top:-30vh;
 margin-left:-80vh;
-background-image:url(https://i.imgur.com/M1YpDN4.png);
+background-image:url(capri.png);
 z-index:7;
 }
 #caprioutline{
@@ -130,15 +125,15 @@ box-shadow:.75vh .75vh rgb(65,64,98,0.2);
 }
 
 #forwardbutton{
-background-image:url(https://i.imgur.com/Ri5ZXFb.png);
+background-image:url(playbutton.png);
 width:3vh;
 height:4vh;
 background-size:cover;
-position;absolute;
+position:absolute;
 top:50%;
 z-index:11;
 margin-left:85vh;
-margin-top:75vh;
+margin-top:25vh;
 cursor:pointer;
 }
 
@@ -172,7 +167,7 @@ color:#3651dc;
  #particles-js{ position:absolute; width: 100%; height: 100%; z-index:0;background-color: TRANSPARENT; background-image: url(""); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%;pointer-events:none;}
  
 </style>
-<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" type="31dc2a1d0f3df0b72d7380c8-text/javascript">
+<script src="particle.js">
 </script>
 <body>
 <div class="backgroundbars">
@@ -181,7 +176,7 @@ color:#3651dc;
 </div>
 <div class="pagecontainer">
 
-<div id="forwardbutton" onclick="if (!window.__cfRLUnblockHandlers) return false; nextpage()" data-cf-modified-31dc2a1d0f3df0b72d7380c8-=""></div>
+<div id="forwardbutton" onclick="nextpage()"></div>
 <div id="capritext">Shady Kitty.</div>
 <div id="caprisplash"></div>
 <div id="caprioutline"></div>
@@ -212,7 +207,7 @@ HIstory to come someday.
 </div></div>
 <div class="capricontainer" id="three" ><div style="padding:1vh;overflow:auto;">
 <h>Contacts</h><br>
-<a target="_blank" href="https://roleplay.chat/profile.php?user=" target="_blank" ><img src="https://i.imgur.com/1JIQSZC.png"></img></a>
+<a target="_blank" href="https://roleplay.chat/profile.php?user=" target="_blank" ><img src="capriicon.png"></img></a>
 </div></div>
 <div class="capricontainer" id="four" ><div style="padding:1vh;overflow:auto;">
 <h>OOC</h><br>
@@ -232,7 +227,7 @@ I'm not a drama queen.
 <div id="particles-js"></div>
 </div>
 </div>
-<script type="31dc2a1d0f3df0b72d7380c8-text/javascript">
+<script>
 var one = document.getElementById('one');
 var two = document.getElementById('two');
 var three = document.getElementById('three');
