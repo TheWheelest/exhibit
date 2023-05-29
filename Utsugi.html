@@ -1,0 +1,315 @@
+<!--This profile template was made by Recursion @ Recursion.codes if you need any help or want to commission me
+please send me a mail or a message. This code is free for personal use so feel free to tinker with it as much as you want.
+The code has been commented for your ease of use so you can make this profile your own without too much knowledge.
+That being said, feel free to remove any comments you don't need, including the credit. -->
+
+<style>
+    
+    /* Some fonts, feel free to import your own but these two are Dolve Vita Heavy Bold and Caviar Dreams respectively. */
+
+    @font-face { font-family: Dolce; src: url(https://dl.dropboxusercontent.com/s/gc9cdel6k3wo6mp/Dolce%20Vita%20Heavy%20Bold.ttf?dl=0) }
+    @font-face {font-family: Caviar; src: url(https://dl.dropboxusercontent.com/s/348kbbuapao26e4/CaviarDreams.ttf) }
+
+    /* This controls the whole body of the profile. You should NOT touch it.*/
+    body{
+        margin:0;
+        overflow:hidden;
+    }
+    
+    /* This controls the top background of the profile. I suggest a color and a texture.  */
+    
+    #top{
+        /* You should make edits starting here. */
+        background-image:url(https://www.transparenttextures.com/patterns/white-diamond-dark.png);
+        background-color:#c0a9a6;
+        /* You should not make any edits after this unless you know what you are doing. */
+        width:100vw;
+        height:50vh;
+        position:absolute;
+        bottom:0vh;
+        top:0vh;
+        background-attachment: fixed;
+    }
+    
+    /* This controls the bottom background of the profile. I suggest a color and a texture.  */
+    
+    #bottom{
+        /* You should make edits starting here. */
+        background-image:url(https://www.transparenttextures.com/patterns/white-diamond-dark.png);
+        background-color:#ab61ed;
+        /* You should not make any edits after this unless you know what you are doing. */
+        width:100vw;
+        height: 50vh;
+        position:absolute;
+        top:50vh;
+        left:0vh;
+        background-attachment: fixed;
+    }
+    
+    /* This controls the image for the profile. I would highly suggest something 'floating' with transparency.  */
+    
+    #splash{
+        /* You should make edits starting here*/
+        background-image:url(https://media.discordapp.net/attachments/946275070572118056/1092665342272225302/Utsu.png);
+        margin-left:-60vh;
+        margin-bottom:-35vh;
+        width:49vh;
+        height:70vh;
+        /* You should not make any edits after this unless you know what you are doing. */
+        background-size:contain;
+        object-fit: cover;
+        position:absolute;
+        bottom:50%;
+        left:50%;
+        z-index:2;
+    }
+    
+    /* This controls the line in the middle of the profile. I suggest a texture on top of a gradient. */
+    
+    #centerline{
+        /* You should make edits starting here*/
+        background-image: url("https://www.transparenttextures.com/patterns/triangular.png"),
+        linear-gradient(90deg,#66a5a5,#862e8e);
+        box-shadow:inset 0vh 0vh 1vh #240e38, 0vh 0vh 2vh 1vh #240e38;
+        /* You should not make any edits after this unless you know what you are doing. */
+        width:102vw;
+        height:30vh;
+        position:absolute;
+        top:50%;
+        left:0vw;
+        margin-left:-1vh;
+        margin-top:-15vh;
+        overflow:hidden;
+    }
+    
+    /* This controls the position and spacing of the navigation bar on the profile. */
+    
+    #navbar{
+        /* You should make edits starting here*/
+        margin-left:-15vh;
+        margin-top:15vh;
+        letter-spacing:2vh;
+        /* You should not make any edits after this unless you know what you are doing. */
+        position:absolute;
+        top:50%;
+        left:50%;
+        z-index:3;
+    }
+    
+    /* This controls the properties of the navigation elements. */
+    
+    a.navlink{
+        /* You should make edits starting here*/
+        font-size:12vh;
+        text-shadow:0vh 0vh .5vh #3ff8fc;
+        text-decoration:none;
+        color:white;
+    }
+    
+    
+    /* This controls the properties of the tab boxes. */
+    
+    .infobox{
+        /* You should make edits starting here*/
+        width:65vh;
+        margin-left:-10vh;
+        font-size:3vh;
+        font-family: Caviar;
+        color:white;
+        /* You should not make any edits after this unless you know what you are doing. */
+        height:30vh;
+        position:relative;
+        padding-top:1vh;
+        left:50%;
+    }
+    
+    /* This controls the properties of the navigation tooltip elements. */
+    
+    .navtooltip {
+        /* You should not make any edits after this unless you know what you are doing. */
+        position: relative;
+        display: inline-block;
+    }
+    
+    /* This controls the properties of the navigation tooltip elements navigation tooltip's contents. */
+    
+    .navtooltip .navtooltiptext {
+        /* You should make edits starting here*/
+        background-color: #bd72eb;
+        color: white;
+        box-shadow:#fff 0vh 0vh .25vh .25vh;
+        font-size:3vh;
+        padding: 1vh;
+        bottom: 13vh;
+        left: -5.5vh;
+        text-shadow:none;
+        border-radius:1vh;
+        font-weight:bold;
+        width:20vh;
+        transition-duration:.25s;
+        transition-timing-function: ease-out;
+        letter-spacing:0vh;
+        /* You should not make any edits after this unless you know what you are doing. */
+        opacity:0;
+        text-align: center;
+        z-index: 1;
+        pointer-events:none;
+        position: absolute;
+        justify-content:center;
+    }
+    
+    /* This controls the properties of the navigation tooltip's contents when hovered over a navigation tooltip. */
+    
+    .navtooltip:hover .navtooltiptext {
+        /* You should not make any edits after this unless you know what you are doing. */
+        opacity:1;
+        pointer-events:auto;
+        text-align:center;
+    }
+    
+    /* This controls the properties of the content tooltip elements and hover elements. */
+    
+    .contenttooltip {
+        /* You should make edits starting here*/
+        color:#3ff8fc;
+        transition-duration:.5s;
+        /* You should not make any edits after this unless you know what you are doing. */
+        position: relative;
+        display: inline-block;
+    }
+    
+    /* This controls the properties of the content tooltip elements and content tooltip's content. */
+    
+    .contenttooltip .contenttooltiptext {
+        /* You should make edits starting here*/
+        background-color: #bd72eb;
+        color: white;
+        border-radius:1vh;
+        padding: .5vh;
+        font-size:2vh;
+        z-index: 1;
+        transition-duration:.25s;
+        bottom: 3vh;
+        left: -7vh;
+        line-height:2.5vh;
+        width:20vh;
+        box-shadow:#fff 0vh 0vh .25vh .25vh;
+        /* You should not make any edits after this unless you know what you are doing. */
+        opacity:0;
+        text-shadow:none;
+        text-align: center;
+        pointer-events:none;
+        position: absolute;
+        transition-timing-function: ease-out;
+        justify-content:center;
+    }
+    
+    /* This controls the properties of the content tooltip's contents when hovering over a content tooltip */
+    
+    .contenttooltip:hover .contenttooltiptext {
+        /* You should not make any edits after this unless you know what you are doing. */
+        opacity:1;
+        pointer-events:auto;
+        text-align:center;
+        font-weight:normal;
+    }
+    
+    /* This controls the properties of the content tooltip after they are hovered. */
+    
+    .contenttooltip:hover{
+        /* You should make edits starting here*/
+        color:#ae64f0;
+        transition-duration:.5s;
+    }
+    
+    
+    /* This controls the header 1 tag*/
+    
+    h1{
+        /* You should make edits starting here*/
+        font-family:Dolce;
+        font-size:5vh;
+        line-height:0vh;
+        color:#ffffff;
+    }
+    
+    
+</style>
+<body>
+    <!-- Profile sections -->
+    <div id="top"></div>
+    <div id="bottom"></div>
+    <div id="splash"></div>
+    <!-- Profile center line content -->
+    <div id="centerline">
+        <!-- Begin tabs -->
+            <!--Tab one-->
+        <div class="infobox" id="one">
+            <!-- Comments here in tab 1 apply to the rest of the tabs but will not be repeated-->
+            <!--Tab title-->
+            <h1>Stats</h1>
+            <!--Content tooltip that has been styled.-->
+            <div class="contenttooltip">Utsugi
+                <!--The content of the tooltip that will show up when hovered over.-->
+                <span class="contenttooltiptext">Named after xyz</span></div> 
+                <!--And then back to paragraph content.-->
+                is a character.
+            </div>
+            <!--End of tab one-->
+            <!--Tab two-->
+            <div class="infobox" id="two">
+                <h1>Story</h1>
+                Story stuff.
+                
+                
+            </div>
+            <!--End of tab two-->
+            <!--Tab three-->
+            <div class="infobox" id="three">
+                <h1>Personality</h1>
+                Personality stuff.
+                
+                
+            </div>
+            <!--End of tab three-->
+            <!--Tab four-->
+            <div class="infobox" id="four">
+                <h1>Headcanons</h1>
+                Headcanon stuff.
+                
+                
+            </div>
+            <!--End of tab four-->
+            <!--Tab five-->
+            <div class="infobox" id="five">
+                <h1>Gallery</h1>
+                Gallery stuff.
+                
+                
+            </div>
+            <!--End of tab five-->
+            <!--Tab six-->
+            <div class="infobox" id="six">
+                <h1>OOC</h1>
+                OOC stuff.
+                
+                
+            </div>
+            <!--End of tab six-->
+            <!-- End of tabs -->
+        </div>
+        <!-- End of center line content -->
+
+        <!-- Navbar -->
+        <div id="navbar">
+            <!-- Navbar contents -->
+            <a class="navlink" href="#one"><div class="navtooltip" >♕<span class="navtooltiptext" style="">Stats</span></div></a>
+            <a class="navlink" href="#two"><div class="navtooltip">♕<span class="navtooltiptext">Story</span></div></a>
+            <a class="navlink" href="#three"><div class="navtooltip">♕<span class="navtooltiptext">Personality</span></div></a>
+            <a class="navlink" href="#four"><div class="navtooltip">♕<span class="navtooltiptext">Headcanons</span></div></a>
+            <a class="navlink" href="#five"><div class="navtooltip">♕<span class="navtooltiptext">Gallery</span></div></a>
+            <a class="navlink" href="#six"><div class="navtooltip">♕<span class="navtooltiptext">OOC</span></div></a>
+            <!-- End of navbar contents -->
+        </div>
+        <!-- End of navbar -->
+    </body>

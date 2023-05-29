@@ -1,0 +1,239 @@
+<style>
+body{
+    margin:0;
+overflow-x:hidden;
+font-family:Roboto;
+}
+
+@font-face{
+ src:url(https://dl.dropboxusercontent.com/s/ykcpapqed85hqm6/Roboto-Light.ttf?dl=0);
+ font-family:'Roboto';
+}
+ 
+splash{
+width:70vh;
+height:60vh;
+position:absolute;
+background-image:url(https://i.imgur.com/FvWNvX6.png);
+background-size:contain;
+background-repeat:no-repeat;
+background-position:center;
+bottom:0vh;
+left:50%;
+margin-left:-35vh;
+z-index:2;
+}
+
+#splashbackgroundcontainer{
+width:60.5vh;
+height:60vh;
+position:absolute;
+bottom:0vh;
+left:50%;
+margin-left:-30vh;
+z-index:1;
+overflow:hidden;
+transition:2s;
+}
+
+#splashbackground1{
+width:60.5vh;
+height:60vh;
+left:0vh;
+background-color:#6f6e95;
+background-image:url(https://www.transparenttextures.com/patterns/cubes.png);
+display:inline-block;
+position:absolute;
+transition:1s;
+}
+#splashbackground2{
+width:60.5vh;
+height:60vh;
+left:60.5vh;
+display:inline-block;
+background-color:white;
+background-image:url(https://www.transparenttextures.com/patterns/axiom-pattern.png);
+position:absolute;
+transition:1s;
+}
+#splashbackground3{ 
+width:60.5vh;
+height:60vh;
+left:121vh;
+display:inline-block;
+background-color:#e6938b;
+background-image:url(https://www.transparenttextures.com/patterns/always-grey.png);
+position:absolute;
+transition:1s;
+}
+
+#page1{
+width:100vw;
+height:100vh;
+position:absolute;
+left:0vw;
+bottom:0vh;
+background-color:white;
+display:inline-block;
+background-image:url(https://www.transparenttextures.com/patterns/axiom-pattern.png);
+}
+#page2{
+width:100vw;
+height:100vh;
+position:absolute;
+left:100vw;
+bottom:0vh;
+background-color:#e6938b;
+background-image:url(https://www.transparenttextures.com/patterns/always-grey.png);
+display:inline-block;
+}
+
+#page3{
+width:100vw;
+height:100vh;
+position:absolute;
+left:200vw;
+bottom:0vh;
+background-color:#6f6e95;
+display:inline-block;
+background-image:url(https://www.transparenttextures.com/patterns/cubes.png);
+}
+
+forward{
+background-image:url(https://i.imgur.com/BKMzX8i.png);
+position:fixed;
+bottom:3vh;
+right:50%;
+width:5vh;
+height:5vh;
+margin-right:-40vh;
+background-size:contain;
+animation:flashing 2s infinite;
+background-repeat:no-repeat;
+background-position:center;
+z-index:3;
+cursor:pointer;
+}
+
+backward{
+background-image:url(https://i.imgur.com/BKMzX8i.png);
+transform: scaleX(-1);;
+position:fixed;
+bottom:3vh;
+right:50%;
+width:5vh;
+height:5vh;
+margin-right:37vh;
+background-size:contain;
+animation : flashing 2s infinite;
+background-repeat:no-repeat;
+background-position:center;
+z-index:3;
+cursor:pointer;
+}
+
+@keyframes flashing {
+  0%   {opacity:0;}
+  50%  {opacity:1;}
+  100% {opacity:0;}
+}
+
+outsidetext{
+
+}
+
+insidetext{
+
+
+}
+
+pagecontainer{
+position:absolute;
+top:0vh;
+left:0vh;
+width:100%;
+height:100%;
+transition-duration:1s;
+transition-timing-function:ease-in-out;
+}
+
+backwardcontainer{
+  transition:1s;
+opacity:0;
+pointer-events:none;
+}
+
+forwardcontainer{
+transition:1s;
+}
+</style>
+<body>
+<splash></splash>
+<div id="splashbackgroundcontainer">
+  <div id="splashbackground1"></div>
+  <div id="splashbackground2"></div>
+  <div id="splashbackground3"></div>
+</div>
+<pagecontainer id="pagecontainer">
+<div id="page1"></div>
+<div id="page2"></div>
+<div id="page3"></div>
+<back></back>
+<forwardcontainer id="forwardcontainer"><forward onclick="moveforward()"></forward></forwardcontainer>
+<backwardcontainer id="backwardcontainer"><backward onclick="movebackward()"></backward></backwardcontainer>
+</pagecontainer>
+
+<script>
+var pageposition = 0;
+var pagecontainer = document.getElementById("pagecontainer");
+var forward = document.getElementById("forwardcontainer");
+var backward = document.getElementById("backwardcontainer");
+var splashbackground1 = document.getElementById("splashbackground1");
+var splashbackground2 = document.getElementById("splashbackground2");
+var splashbackground3 = document.getElementById("splashbackground3");
+function moveforward(){
+switch (pageposition){
+case 0:
+pageposition = pageposition + 100;
+pagecontainer.style.left = "-" + pageposition + "vw";  
+backward.style.opacity ="1";
+backward.style.pointerEvents ="auto";
+splashbackground1.style.left = "-60.5vh";
+splashbackground2.style.left = "0vh";
+splashbackground3.style.left="60.5vh"
+  break;
+case 100:
+pageposition = pageposition + 100;
+pagecontainer.style.left = "-" + pageposition + "vw";  
+forward.style.opacity ="0";
+forward.style.pointerEvents="none";
+splashbackground1.style.left = "-60.5vh";
+splashbackground2.style.left = "-60.5vh";
+splashbackground3.style.left="0vh"
+break;
+}
+}
+function movebackward(){
+switch (pageposition){
+case 200:
+pageposition = pageposition - 100;
+pagecontainer.style.left = "-" + pageposition + "vw";  
+forward.style.opacity ="1";
+forward.style.pointerEvents ="auto";
+splashbackground1.style.left = "-60.5vh";
+splashbackground2.style.left = "0vh";
+splashbackground3.style.left="60.5vh"
+  break;
+case 100:
+pageposition = pageposition - 100;
+pagecontainer.style.left = "-" + pageposition + "vw"; 
+backward.style.opacity ="0"; 
+backward.style.pointerEvents ="none"; 
+splashbackground1.style.left = "0vh";
+splashbackground2.style.left = "60.5vh";
+splashbackground3.style.left="60.5vh"
+break;
+}
+}
+</script>
+</body>
