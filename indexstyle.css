@@ -3,8 +3,8 @@
 @font-face {font-family: Sectionfont; src: url(https://dl.dropboxusercontent.com/s/ykcpapqed85hqm6/Roboto-Light.ttf) }
 
 #logo{
-	background-image:url(commonassets/logoicon.png);
-	background-size:contain;
+	background-image:url(commonassets/recursion.png);
+	background-size:cover;
 	object-fill:fit;
 	background-repeat:no-repeat;
 	background-position:center;
