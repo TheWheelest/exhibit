@@ -3,7 +3,7 @@
 @font-face {font-family: Sectionfont; src: url(https://dl.dropboxusercontent.com/s/ykcpapqed85hqm6/Roboto-Light.ttf) }
 
 #logo{
-	background-image:url(https://media.discordapp.net/attachments/946275070572118056/1087900953086283856/Untitled-1.png);
+	background-image:url(commonassets/logoicon.png);
 	background-size:contain;
 	object-fill:fit;
 	background-repeat:no-repeat;
