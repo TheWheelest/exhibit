@@ -4,12 +4,11 @@
 
 #logo{
 	background-image:url(commonassets/recursion.png);
-	background-size:cover;
-	object-fill:fit;
+	background-size:contain;
 	background-repeat:no-repeat;
 	background-position:center;
 	width:50vh;
-	height:22vh;
+	height:20vh;
 	position:absolute;
 	left:50%;
 	bottom:50%;
